@@ -20,7 +20,7 @@ dim_max = 10
 # data set
 n_eval = 12000
 n_eval_testing = 11000
-n_iter = 10
+n_iter = 50
 n_iter_warmup = 5
 n_eval_warmup = 1e3
 
@@ -88,7 +88,7 @@ def make_plot(importance,stratified,vegas):
     fig, ax = plt.subplots(2,1,sharex=True,figsize=(8,6))
     
     plt.xlabel('dimension (D)')
-    fig.suptitle('Comparison for Rosenbrock Function')
+    fig.suptitle('Comparison for Gaussian Function')
 
     dims = [i for i in range(dim_min,dim_max+1)]
 
@@ -127,7 +127,7 @@ def make_plot(importance,stratified,vegas):
     if SHOW_PLOT:
         plt.show()
     else:
-        plt.savefig('rosen_dimensions.png',bbox_inches='tight')
+        plt.savefig('gauss_dimensions.png',bbox_inches='tight')
 
 def make_second_plot(importance,stratified,vegas):
     fig, ax = plt.subplots(2,1,sharex=True,figsize=(8,6))
@@ -143,7 +143,7 @@ def make_second_plot(importance,stratified,vegas):
 
     plt.xlabel('dimensions D')
     ax[0].set_ylabel(' Percent uncertainty')
-    fig.suptitle('Comparison for Rosenbrock Function')
+    fig.suptitle('Comparison for Gaussian Function')
     ax[0].legend()
 
     ax[1].plot(dims, perc_err_vegas,label="vegas+")
@@ -154,10 +154,10 @@ def make_second_plot(importance,stratified,vegas):
     if SHOW_PLOT:
         plt.show()
     else:
-        plt.savefig('rosen_dims_2.png',bbox_inches='tight')
+        plt.savefig('gauss_dims_2.png',bbox_inches='tight')
     
 if __name__ == '__main__':
 
-    importance, stratified, vegas = generate_simulation(rosen)
+    importance, stratified, vegas = generate_simulation(f)
     make_plot(importance,stratified,vegas)
     make_second_plot(importance,stratified,vegas)
