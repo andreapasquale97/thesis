@@ -38,7 +38,7 @@ def f(x,dim=None):
 def integration(dim,integrand,isStratified,isImportance):
 
     #assign integration volume to integrator
-    region = dim * [[0.,1.]]
+    region = dim * [[-1.,1.]]
 
 
     if isStratified and isImportance:
@@ -86,9 +86,8 @@ def generate_simulation(integrand):
 
 def make_plot(importance,stratified,vegas):
     fig, ax = plt.subplots(2,1,sharex=True,figsize=(8,6))
-    
     plt.xlabel('dimension (D)')
-    fig.suptitle('Comparison for Gaussian Function')
+    fig.suptitle('Comparison for Rosen Function [-1,1]')
 
     dims = [i for i in range(dim_min,dim_max+1)]
 
@@ -127,7 +126,7 @@ def make_plot(importance,stratified,vegas):
     if SHOW_PLOT:
         plt.show()
     else:
-        plt.savefig('gauss_dimensions.png',bbox_inches='tight')
+        plt.savefig('rosen_symm_dimensions.png',bbox_inches='tight')
 
 def make_second_plot(importance,stratified,vegas):
     fig, ax = plt.subplots(2,1,sharex=True,figsize=(8,6))
@@ -143,7 +142,7 @@ def make_second_plot(importance,stratified,vegas):
 
     plt.xlabel('dimensions D')
     ax[0].set_ylabel(' Percent uncertainty')
-    fig.suptitle('Comparison for Gaussian Function')
+    fig.suptitle('Comparison for Rosen Function [-1,1]')
     ax[0].legend()
 
     ax[1].plot(dims, perc_err_vegas,label="vegas+")
@@ -154,10 +153,31 @@ def make_second_plot(importance,stratified,vegas):
     if SHOW_PLOT:
         plt.show()
     else:
-        plt.savefig('gauss_dims_2.png',bbox_inches='tight')
+        plt.savefig('rosen_symm_dims_2.png',bbox_inches='tight')
+
+def make_single_plot(importance,stratified,vegas):
+    fig, ax = plt.subplots(figsize=(8,6))
+    dims = [i for i in range(dim_min,dim_max+1)]
+    perc_err_vegas = [i/j for i,j in zip(vegas[1],vegas[0])]
+    perc_err_stratified = [i/j for i,j in zip(stratified[1],stratified[0])]
+    perc_err_importance = [i/j for i,j in zip(importance[1],importance[0])]
+
+    ax.plot(dims, perc_err_vegas,label="vegas+")
+    ax.plot(dims, perc_err_importance,label="importance sampling")
+    ax.plot(dims, perc_err_stratified,label="stratified")
+
+    ax.set_title('Comparison for Rosenbrock Function [-1,1] after 50 iterations')
+    ax.set_xlabel('dimensions D')
+    ax.set_ylabel('Percent uncertainty')
+    ax.legend()
+
+    if SHOW_PLOT:
+        plt.show()
+    else:
+        plt.savefig('plots/rosen_dims_final.png',bbox_inches='tight')
     
 if __name__ == '__main__':
 
     importance, stratified, vegas = generate_simulation(f)
-    make_plot(importance,stratified,vegas)
-    make_second_plot(importance,stratified,vegas)
+    make_single_plot(importance,stratified,vegas)
+    #make_second_plot(importance,stratified,vegas)

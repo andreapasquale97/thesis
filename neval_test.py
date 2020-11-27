@@ -16,7 +16,7 @@ from scipy.optimize import rosen
 
 SHOW_PLOT = False
 
-dim = 4
+dim = 8
 # data set
 n_eval_min = 1e3
 n_eval_max = 1e6
@@ -42,7 +42,7 @@ def f(x,dim=None):
 def integration(integrand,isStratified,isImportance,n_eval):
 
     #assign integration volume to integrator
-    region = dim * [[0.,1.]]
+    region = dim * [[-1.,1.]]
 
 
     if isStratified and isImportance:
@@ -102,18 +102,19 @@ def make_plot(importance,stratified,vegas):
 
     plt.xlabel('samples')
     ax[0].set_ylabel(' Percent uncertainty')
-    fig.suptitle('Comparison for Rosenbrock Function')
+    fig.suptitle(f'Comparison for Rosen function [-1,1] dim = {dim}')
     ax[0].legend()
 
     ax[1].plot(n_evals, perc_err_vegas,label="vegas+")
-    ax[1].plot(n_evals, perc_err_stratified,label="stratified")
+    ax[1].plot(n_evals, perc_err_importance,label="importance sampling")
+    #ax[1].plot(n_evals, perc_err_stratified,label="stratified")
     ax[1].set_ylabel(' Percent uncertainty')
     ax[1].legend()
 
     if SHOW_PLOT:
         plt.show()
     else:
-        plt.savefig('rosen_samples.png',bbox_inches='tight')
+        plt.savefig(f'rosen_samples_symm_dim{dim}.png',bbox_inches='tight')
 
 if __name__ == '__main__':
 
