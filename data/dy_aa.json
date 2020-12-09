@@ -1,0 +1,326 @@
+[
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.5887651443481445,
+  "iter": 16,
+  "samples/iter": 1000,
+  "result": "0.050714859371841746 +/- 0.0004691075407170412"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 0.39884018898010254,
+  "iter": 27,
+  "samples/iter": 1000,
+  "result": "0.0503624510128585 +/- 0.0005014070620377777"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 1.0878500938415527,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.04924845569337462 +/- 0.001554110243484591"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.6073920726776123,
+  "iter": 4,
+  "samples/iter": 10000,
+  "result": "0.05216933942885171 +/- 0.00040924207860696977"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 0.7967827320098877,
+  "iter": 6,
+  "samples/iter": 10000,
+  "result": "0.05324902212233177 +/- 0.00043563458414289975"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 5.783636093139648,
+  "iter": 50,
+  "samples/iter": 10000,
+  "result": "0.053992415565802705 +/- 0.000538537731676426"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 1.207615852355957,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "0.05389934853065078 +/- 0.00026626568364985316"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 1.1712760925292969,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "0.052553878398899884 +/- 0.0004554974491448688"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 2.132119655609131,
+  "iter": 2,
+  "samples/iter": 100000,
+  "result": "0.053333063602819586 +/- 0.0004705879915019691"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 11.26909589767456,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "0.05357217369332261 +/- 0.00014008084640791484"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 11.953511238098145,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "0.05342268906040533 +/- 0.00010310878953587825"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 10.437820196151733,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "0.05341290774506566 +/- 0.00019384397563749218"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 1.5670087337493896,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.04914128751207194 +/- 0.0001845297570980722"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 1.3240551948547363,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.044920627662363 +/- 0.0002442729848985961"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 0.9878480434417725,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.04947358761338167 +/- 0.0014794041003427585"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 8.78180718421936,
+  "iter": 52,
+  "samples/iter": 10000,
+  "result": "0.05261044326445734 +/- 5.238842441737335e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 11.968503952026367,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.05101627701588295 +/- 7.796578223525582e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 9.614792346954346,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.053399902081083424 +/- 0.0003749926636797675"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 7.607766151428223,
+  "iter": 5,
+  "samples/iter": 100000,
+  "result": "0.0534492632417535 +/- 5.06601702342811e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 24.327917098999023,
+  "iter": 21,
+  "samples/iter": 100000,
+  "result": "0.05332826123626336 +/- 5.308837035595896e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 122.91303277015686,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "0.053382739136741846 +/- 7.795982123556564e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 28.89801025390625,
+  "iter": 2,
+  "samples/iter": 1000000,
+  "result": "0.053469933489605596 +/- 4.588963459745715e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 46.96727395057678,
+  "iter": 4,
+  "samples/iter": 1000000,
+  "result": "0.05331080928018509 +/- 4.530001456645129e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 164.04843497276306,
+  "iter": 15,
+  "samples/iter": 1000000,
+  "result": "0.053495654062035686 +/- 5.334142625982089e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 1.48862624168396,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.04692883376365355 +/- 0.00016741587406148898"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 1.267378330230713,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.046415667450114474 +/- 0.00022751131762500034"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 0.9931039810180664,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.056776809306114645 +/- 0.0017390621711411015"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 15.525798082351685,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.05199944437477539 +/- 3.2916844885510886e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 14.33720588684082,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.05065030251217156 +/- 6.954270222597104e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 9.818955898284912,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.053758115217935894 +/- 0.0003856334557163873"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 182.54379510879517,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "0.053388805741904646 +/- 6.0657821106603885e-06"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 121.03127121925354,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "0.05327593868984426 +/- 2.2159232353856637e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 107.73197293281555,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "0.053383291912398566 +/- 7.824977053071382e-05"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 195.52578902244568,
+  "iter": 12,
+  "samples/iter": 1000000,
+  "result": "0.0534444580515388 +/- 5.305711195202536e-06"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 1281.1207342147827,
+  "iter": 100,
+  "samples/iter": 1000000,
+  "result": "0.05339125146944485 +/- 6.489240870768608e-06"
+ },
+ {
+  "integrand": "Physical Integrand 3-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 1043.8624019622803,
+  "iter": 100,
+  "samples/iter": 1000000,
+  "result": "0.053427650920825395 +/- 2.0276839678949446e-05"
+ }
+]

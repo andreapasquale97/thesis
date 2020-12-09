@@ -18,11 +18,11 @@ import json
 # data set
 EVAL_MIN= 1e3
 EVAL_MAX = 1e6
-MAX_ITER = 200
+MAX_ITER = 100 #data 200
 ITER_WARMUP = 5
 EVAL_WARMUP = 1e3
 
-SHOW_PLOT = False
+SHOW_PLOT = True
 
 
 
@@ -160,51 +160,51 @@ def simulation(integrand=None,dim=None,domain=None,rtol=None):
         result += [vegas,importance,stratified]
     
     return result
- 
-def add_integrand(filename=None,integrand=None,dim=None,domain=[[0.,1.]],rtol=1e-2):
-    results = simulation(integrand=integrand,dim=dim,rtol=rtol)
+def run_simulation(integrand=None,dim=None,domain=[[0.,1.]]):
+
+    first = simulation(integrand=integrand,dim=dim,rtol=1e-2)
+    second = simulation(integrand=integrand,dim=dim,rtol=1e-3)
+    third = simulation(integrand=integrand,dim=dim,rtol=1e-4) 
+
+    return first+second+third
+
+def save_data(filename=None,data=None):
     with open(filename, "w") as f:
-        json.dump(results,f,indent=True)
-            
-def make_histo(first=None,second=None,third=None,filename=None):
+        json.dump(data,f,indent=True)
+
+def prepare_data(data=None,rtol=1e-2,index=None,showStratified=True):
+    vegas_iter = [i["iter"] for i in data if i["integrator"] == "vegas+" and i["perc_uncertainty"] == rtol ]
+    importance_iter = [i["iter"] for i in data if i["integrator"] == "importance" and i["perc_uncertainty"] == rtol]
+    stratified_iter = [i["iter"] for i in data if i["integrator"] == "stratified" and i["perc_uncertainty"] == rtol ]
+    vegas_time = [i["time"] for i in data if i["integrator"] == "vegas+" and i["perc_uncertainty"] == rtol ]
+    importance_time = [i["time"] for i in data if i["integrator"] == "importance" and i["perc_uncertainty"] == rtol]
+    stratified_time = [i["time"] for i in data if i["integrator"] == "stratified" and i["perc_uncertainty"] == rtol]
+
+    if showStratified:
+        df_iter = pd.DataFrame({'vegas+' : vegas_iter, 'importance' : importance_iter,'stratified' : stratified_iter },index=index)
+        df_time = pd.DataFrame({'vegas+' : vegas_time, 'importance' : importance_time,'stratified' : stratified_time },index=index)
+    else:
+        df_iter = pd.DataFrame({'vegas+' : vegas_iter, 'importance' : importance_iter},index=index)
+        df_time = pd.DataFrame({'vegas+' : vegas_time, 'importance' : importance_time},index=index)
+
+    return df_iter, df_time
+
+def make_histo(infile=None, outfile=None, save=True, showStratified=True):
  
+
+
+    with open(infile, "r") as f:
+        data = json.load(f)
+
     fig, axs  = plt.subplots(3, 2, sharey='row',figsize=(10, 10))#12
     #fig.suptitle('Time/iterations comparison')
+    fig.text(0.02, 0.5, 'samples/iteration', ha='center', va='center', rotation='vertical')
     index = ['1000', '10000', '100000', '1000000']
-    plt.ylabel("samples")
 
-    vegas_iter1 = [i["iter"] for i in first if i["integrator"] == "vegas+"]
-    importance_iter1 = [i["iter"] for i in first if i["integrator"] == "importance"]
-    stratified_iter1 = [i["iter"] for i in first if i["integrator"] == "stratified"]
-    vegas_time1 = [i["time"] for i in first if i["integrator"] == "vegas+"]
-    importance_time1 = [i["time"] for i in first if i["integrator"] == "importance"]
-    stratified_time1 = [i["time"] for i in first if i["integrator"] == "stratified"]
-    df_iter1 = pd.DataFrame({'vegas+' : vegas_iter1, 'importance' : importance_iter1,
-                        'stratified' : stratified_iter1 },index=index)
-    df_time1 = pd.DataFrame({'vegas+' : vegas_time1, 'importance' : importance_time1,
-                        'stratified' : stratified_time1 },index=index)
-                    
-    vegas_iter2 = [i["iter"] for i in second if i["integrator"] == "vegas+"]
-    importance_iter2 = [i["iter"] for i in second if i["integrator"] == "importance"]
-    stratified_iter2 = [i["iter"] for i in second if i["integrator"] == "stratified"]
-    vegas_time2 = [i["time"] for i in second if i["integrator"] == "vegas+"]
-    importance_time2 = [i["time"] for i in second if i["integrator"] == "importance"]
-    stratified_time2 = [i["time"] for i in second if i["integrator"] == "stratified"]
-    df_iter2 = pd.DataFrame({'vegas+' : vegas_iter2, 'importance' : importance_iter2,
-                        'stratified' : stratified_iter2 },index=index)
-    df_time2 = pd.DataFrame({'vegas+' : vegas_time2, 'importance' : importance_time2,
-                        'stratified' : stratified_time2 },index=index)
-
-    vegas_iter3 = [i["iter"] for i in third if i["integrator"] == "vegas+"]
-    importance_iter3 = [i["iter"] for i in third if i["integrator"] == "importance"]
-    stratified_iter3 = [i["iter"] for i in third if i["integrator"] == "stratified"]
-    vegas_time3 = [i["time"] for i in third if i["integrator"] == "vegas+"]
-    importance_time3 = [i["time"] for i in third if i["integrator"] == "importance"]
-    stratified_time3 = [i["time"] for i in third if i["integrator"] == "stratified"]
-    df_iter3 = pd.DataFrame({'vegas+' : vegas_iter3, 'importance' : importance_iter3,
-                        'stratified' : stratified_iter3 },index=index)
-    df_time3 = pd.DataFrame({'vegas+' : vegas_time3, 'importance' : importance_time3,
-                        'stratified' : stratified_time3 },index=index)
+    df_iter1, df_time1 = prepare_data(data=data,rtol=1e-2,index=index,showStratified=showStratified)
+    df_iter2, df_time2 = prepare_data(data=data,rtol=1e-3,index=index,showStratified=showStratified)
+    df_iter3, df_time3 = prepare_data(data=data,rtol=1e-4,index=index,showStratified=showStratified)
+    
 
     axs[0,0] = df_time1.plot.barh(ax=axs[0,0],legend=False)
     axs[0,0].set_title('Percent Uncertainty 0.01',fontdict={'fontsize': 8, 'fontweight': 'medium'})
@@ -229,26 +229,19 @@ def make_histo(first=None,second=None,third=None,filename=None):
     axs[2,1].set_xlabel('iterations')
     handles, labels = axs[0,0].get_legend_handles_labels()
     fig.legend(handles, labels,loc='center right')
-    plt.ylabel("samples")
     #for ax in axs.flat:
     #    ax.label_outer()
-
-    if SHOW_PLOT:
-        plt.show()
+    if save:
+        plt.savefig(outfile,bbox_inches='tight')
     else:
-        plt.savefig(filename,bbox_inches='tight')
+        plt.show()
+        
+
 
 
 if __name__ == '__main__':
-    #make_histo('data.json')
-    #result = simulation(integrand=f,dim=4,rtol=1e-2)
-    #filename = 'data.json'
-    #with open(filename, "r") as f:
-    #    json_dict = json.load(f)
-    #add_integrand(filename=filename,integrand=f,dim=1,rtol=1e-2)
-    #print(simulation(integrand=f,dim=1))
-    first = simulation(integrand=f,dim=2,rtol=1e-2)
-    second = simulation(integrand=f,dim=2,rtol=1e-3)
-    third = simulation(integrand=f,dim=2,rtol=1e-4) 
-    make_histo(first=first,second=second,third=third,filename='test.png')
+    
+    #data = run_simulation(integrand=rosen,dim=8,domain=[[-1.,1.]])
+    #save_data('data/rosen8-d.json',data)
+    make_histo(infile='data/rosen8-d.json',outfile='performance_plots/rosen8-d_no_stratified.png',save=True,showStratified=False)
     

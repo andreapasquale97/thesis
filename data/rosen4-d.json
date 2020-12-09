@@ -1,0 +1,326 @@
+[
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.037378787994384766,
+  "iter": 2,
+  "samples/iter": 1000,
+  "result": "60.266356198959144 +/- 0.47505755121184506"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 0.08249902725219727,
+  "iter": 5,
+  "samples/iter": 1000,
+  "result": "61.42213212569106 +/- 0.6112155869155049"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 0.031141996383666992,
+  "iter": 3,
+  "samples/iter": 1000,
+  "result": "60.08831608522769 +/- 0.5998653062116296"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.14557981491088867,
+  "iter": 1,
+  "samples/iter": 10000,
+  "result": "60.99837820950471 +/- 0.12559513656266988"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 0.16705822944641113,
+  "iter": 1,
+  "samples/iter": 10000,
+  "result": "60.855186647171685 +/- 0.4316965907925883"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 0.16751623153686523,
+  "iter": 1,
+  "samples/iter": 10000,
+  "result": "61.00054192764618 +/- 0.1423180040442118"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 1.1981501579284668,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "60.99493057003152 +/- 0.033295545968751505"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 1.0571012496948242,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "61.26582502642323 +/- 0.13599965810231612"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 0.9255199432373047,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "60.97078149116754 +/- 0.029138997476883782"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 9.805446147918701,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "61.00241205891594 +/- 0.008823655625804203"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 13.143404245376587,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "60.99631656161347 +/- 0.04295865687171088"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 13.814449071884155,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "61.00108257171434 +/- 0.004722159771035767"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 1.1141178607940674,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "60.97617408979493 +/- 0.06337625965816455"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 1.0734949111938477,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "61.03495953389177 +/- 0.13056853094140117"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 1.919694185256958,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "61.076789635719805 +/- 0.10113880101893293"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 1.4101440906524658,
+  "iter": 4,
+  "samples/iter": 10000,
+  "result": "60.97297004238631 +/- 0.05765432528748935"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 6.111065149307251,
+  "iter": 45,
+  "samples/iter": 10000,
+  "result": "61.028558225918445 +/- 0.06093267233464234"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 1.2404630184173584,
+  "iter": 6,
+  "samples/iter": 10000,
+  "result": "60.95116630649709 +/- 0.05917318831000388"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 0.9547820091247559,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "61.02781550017131 +/- 0.0336396076919513"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 5.983466863632202,
+  "iter": 5,
+  "samples/iter": 100000,
+  "result": "61.025409899472336 +/- 0.05999416297620087"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 1.4104480743408203,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "61.010522580988855 +/- 0.02900167150457952"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 9.720618963241577,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "60.989210561801656 +/- 0.0075499498575192"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 10.815654277801514,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "60.99239462650133 +/- 0.04309484646008676"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 9.095489740371704,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "60.99535159248985 +/- 0.00472292591287835"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 1.1055030822753906,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "61.08459996728996 +/- 0.06310928171416136"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 0.9976491928100586,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "61.09628980520146 +/- 0.13033428234796582"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 0.9556469917297363,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "60.936717723269574 +/- 0.09997876172312731"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 11.079335927963257,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "61.00353146439074 +/- 0.010266901485110478"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 11.199879169464111,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "60.948081100429434 +/- 0.040735781675347575"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 10.296895027160645,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "60.99941613628527 +/- 0.014541940645930522"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 13.416052103042603,
+  "iter": 12,
+  "samples/iter": 100000,
+  "result": "60.99376262019857 +/- 0.005744937571390228"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 120.24387192726135,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "61.005614832568384 +/- 0.01270977070164138"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 25.998467922210693,
+  "iter": 23,
+  "samples/iter": 100000,
+  "result": "61.00414193449283 +/- 0.006046713359501112"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 29.92853617668152,
+  "iter": 2,
+  "samples/iter": 1000000,
+  "result": "60.99839597037856 +/- 0.004453494370169848"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 447.63297510147095,
+  "iter": 44,
+  "samples/iter": 1000000,
+  "result": "61.001357232749264 +/- 0.00607206556738379"
+ },
+ {
+  "integrand": "Rosenbrock 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 9.108612060546875,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "61.00371712181668 +/- 0.004721802964445004"
+ }
+]

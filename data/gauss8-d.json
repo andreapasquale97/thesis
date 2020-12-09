@@ -1,0 +1,326 @@
+[
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.12414002418518066,
+  "iter": 16,
+  "samples/iter": 1000,
+  "result": "0.9992257606170183 +/- 0.009245457790727298"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 0.11950325965881348,
+  "iter": 16,
+  "samples/iter": 1000,
+  "result": "1.0070328507945958 +/- 0.009516781615178863"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 0.732550859451294,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "3.5101229522755757 +/- 2.585262606405563"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.8906199932098389,
+  "iter": 9,
+  "samples/iter": 10000,
+  "result": "0.9996748434375301 +/- 0.009190814704555787"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 2.617624282836914,
+  "iter": 10,
+  "samples/iter": 10000,
+  "result": "0.9902637040550165 +/- 0.008008633548675812"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 13.042951822280884,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.8483897330384761 +/- 0.23248336012532647"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 5.1590259075164795,
+  "iter": 4,
+  "samples/iter": 100000,
+  "result": "0.9963183183485467 +/- 0.009327347144277371"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 3.419459104537964,
+  "iter": 5,
+  "samples/iter": 100000,
+  "result": "1.002850625264765 +/- 0.008600264318147316"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 79.27782011032104,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "0.7768769978560021 +/- 0.05835001090017239"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 21.945472955703735,
+  "iter": 2,
+  "samples/iter": 1000000,
+  "result": "0.9958050371947323 +/- 0.006269467338716523"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 25.763752937316895,
+  "iter": 2,
+  "samples/iter": 1000000,
+  "result": "0.9949995669388504 +/- 0.007654350589425938"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 643.942440032959,
+  "iter": 100,
+  "samples/iter": 1000000,
+  "result": "0.9533183337192849 +/- 0.0368891991684538"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 1.9963030815124512,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9965422859925399 +/- 0.0026868322226367603"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 1.881699800491333,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9937499825872742 +/- 0.0026111146529166733"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 1.0493011474609375,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "1.9020208164232506 +/- 0.9329121601396324"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 2.662726879119873,
+  "iter": 24,
+  "samples/iter": 10000,
+  "result": "0.9998894981692356 +/- 0.0009862565052933866"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 1.843034267425537,
+  "iter": 25,
+  "samples/iter": 10000,
+  "result": "0.9992497929488351 +/- 0.0009767225654894753"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 7.490198135375977,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "1.2482133709566674 +/- 0.4530632353809545"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 10.637038707733154,
+  "iter": 13,
+  "samples/iter": 100000,
+  "result": "0.999688610780716 +/- 0.0009616915183630645"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 12.924503803253174,
+  "iter": 14,
+  "samples/iter": 100000,
+  "result": "0.998825976737181 +/- 0.0008502551893932575"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 102.5616192817688,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "0.9696361236301043 +/- 0.09857998165640598"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 50.47049283981323,
+  "iter": 6,
+  "samples/iter": 1000000,
+  "result": "0.9999757175225948 +/- 0.0009833032476227513"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 73.59146285057068,
+  "iter": 8,
+  "samples/iter": 1000000,
+  "result": "0.9992864480195797 +/- 0.0009242418597481493"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 1474.3951139450073,
+  "iter": 100,
+  "samples/iter": 1000000,
+  "result": "1.016091146953533 +/- 0.038538152273759854"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 1.8190948963165283,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "1.0025446014202617 +/- 0.0026776593677015122"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 1.539900302886963,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9998393294248599 +/- 0.002690328432786203"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 1.4760560989379883,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.3632381456031857 +/- 0.19922876613647442"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 20.87197208404541,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.9998298466467239 +/- 0.00023498984739178517"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 15.99022102355957,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "1.0000459473277892 +/- 0.0002576944281109746"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 14.592908143997192,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.6827939627559778 +/- 0.18531704796479834"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 278.38562393188477,
+  "iter": 58,
+  "samples/iter": 100000,
+  "result": "0.9999626634313064 +/- 9.891366527095346e-05"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 250.509042263031,
+  "iter": 62,
+  "samples/iter": 100000,
+  "result": "0.999995549226822 +/- 9.907044053895106e-05"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 215.88950300216675,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "0.9924659357226703 +/- 0.08843732508504079"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 390.41837310791016,
+  "iter": 21,
+  "samples/iter": 1000000,
+  "result": "0.9998723555231825 +/- 9.343590026741119e-05"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 367.8669786453247,
+  "iter": 22,
+  "samples/iter": 1000000,
+  "result": "1.0000132474436454 +/- 9.565646327169983e-05"
+ },
+ {
+  "integrand": "SymGauss 8-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 1021.2081050872803,
+  "iter": 100,
+  "samples/iter": 1000000,
+  "result": "1.056226756504002 +/- 0.040147243822684704"
+ }
+]
