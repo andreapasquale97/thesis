@@ -139,6 +139,7 @@ def timing(integrand=None,label=None):
 
 
 if __name__ == '__main__':
+    """
     timing(f,"Gaussian function dim = 4")
     dim = 8
     timing(f,"Gaussian function dim = 8")
@@ -149,4 +150,15 @@ if __name__ == '__main__':
     timing(f,"Rosenbrock function dim = 4")
     dim = 8
     timing(f,"Rosenbrock function dim = 8")
+    """
+    dim = 3
+    region = dim * domain_per_dimension
+    integ = vegas.Integrator(region,rtol=0.01,max_nhcube=1)
+    print(integ.nitn, integ.neval)
+    result = integ(integrand_pineappl,nitn=200,neval=1e4)
+    print(len(result.itn_results), result.itn_results)
+
+   
+    print(result.summary())
+    #print(result)
 

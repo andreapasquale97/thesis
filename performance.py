@@ -243,5 +243,8 @@ if __name__ == '__main__':
     
     #data = run_simulation(integrand=rosen,dim=8,domain=[[-1.,1.]])
     #save_data('data/rosen8-d.json',data)
-    make_histo(infile='data/rosen8-d.json',outfile='performance_plots/rosen8-d_no_stratified.png',save=True,showStratified=False)
+    #make_histo(infile='data/rosen8-d.json',outfile='performance_plots/rosen8-d_no_stratified.png',save=True,showStratified=False)
+    
+    test = integration(dim=4,integrand=rosen,isStratified=False,n_eval=1e6,rtol=1e-4)
+    print(test)
     

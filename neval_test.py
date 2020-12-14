@@ -16,16 +16,15 @@ from scipy.optimize import rosen
 
 SHOW_PLOT = False
 
-dim = 3
+
 # data set
 n_eval_min = 1e3
 n_eval_max = 1e6
 n_evals = np.logspace(3,6,6,dtype=np.int32)
+log_n_evals = np.linspace(3,6,6)
 #print(n_evals)
 n_iter = 10
-domain_per_dimension = [[0.,1.]]
-plot_title = f"Comparison for physics integrand dim = {dim}"
-file_name = "plots/dy_aa_samples.png"
+
 
 
 n_eval_warmup = n_eval_min
@@ -157,7 +156,15 @@ def generate_simulation(integrand=f):
 
     return importance,stratified,vegas
 
-def make_plot(importance,stratified,vegas):
+def save_data(filename=None, data=None):
+    pass    
+
+
+def make_plot(importance,stratified,vegas,showLogScale=False):
+
+    if showLogScale:
+        n_evals = log_n_evals
+
     fig, ax = plt.subplots(2,1,sharex=True,figsize=(8,6))
 
     perc_err_vegas = [i/j for i,j in zip(vegas[1],vegas[0])]
@@ -168,7 +175,7 @@ def make_plot(importance,stratified,vegas):
     ax[0].plot(n_evals, perc_err_importance,label="importance sampling")
     ax[0].plot(n_evals, perc_err_stratified,label="stratified")
 
-    plt.xlabel('samples')
+    plt.xlabel('Log[samples]')
     ax[0].set_ylabel(' Percent uncertainty')
     fig.suptitle(plot_title)
     ax[0].legend()
@@ -186,5 +193,10 @@ def make_plot(importance,stratified,vegas):
 
 if __name__ == '__main__':
 
-    importance, stratified, vegas = generate_simulation(integrand_pineappl)
-    make_plot(importance,stratified,vegas)
+    dim = 8
+    domain_per_dimension = [[-1.,1.]]
+    plot_title = f"Comparison for Rosen Function dim = {dim}"
+    file_name = "plots/rosen_samples_symm_dim8_log.png"
+    importance, stratified, vegas = generate_simulation(rosen)
+    #print(importance)
+    make_plot(importance,stratified,vegas,showLogScale=True)
