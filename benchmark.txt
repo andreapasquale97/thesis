@@ -1,0 +1,11 @@
+benchmark.py 
+
+Python script that accepts 4 arguments:
+integrand name
+integrator name
+ncalls
+accuracy (percent uncertainty)
+
+Plots to be shown:
+percentage uncertainty convergence as a function ncalls
+time and iterations 

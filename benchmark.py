@@ -286,7 +286,7 @@ if __name__ == '__main__':
     """
 
     #COMPARE EXAMPLE
-    
+    """
     import vegas
     import matplotlib.pyplot as plt
     instance = Vegas(4,1000,1e-2,"vegas+")
@@ -295,5 +295,5 @@ if __name__ == '__main__':
     instance.compare("vegas-stratified","vegas-importance")
     #time, iteration = wrapper('vegas+',gauss_v,4,10000,1e-2)
     #instance.show_content()
-    
+    """
 
