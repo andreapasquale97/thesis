@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 import matplotlib.pyplot as plt
 
 MAX_ITERATIONS = 100
