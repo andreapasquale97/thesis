@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 
-
 import matplotlib.pyplot as plt
 
-MAX_ITERATIONS = 100
+
+MAX_ITERATIONS = 110
 
 class Integrator(ABC):
     """

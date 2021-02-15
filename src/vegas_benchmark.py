@@ -1,4 +1,5 @@
 from benchmark import Integrator, MAX_ITERATIONS
+from functions import gauss_v
 import matplotlib.pyplot as plt
 import numpy as np
 

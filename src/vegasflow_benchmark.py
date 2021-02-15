@@ -1,4 +1,6 @@
 from benchmark import Integrator, MAX_ITERATIONS
+from functions import gauss_vf
+import numpy as np
 
 import time
 import vegasflow
@@ -12,9 +14,7 @@ class VegasFlow(Integrator):
 
         super().__init__(n_dim,n_calls,rtol,**kwargs) 
         self.integrator = integrator
-        if integrator == 'vegasflow':
-            self.train=True
-        else:
+        if all((not(self.integrator == i) for i in ["VegasFlow","StratifiedFlow","PlainFlow"])):
             raise RuntimeError("Unknowm vegas integrator")
 
     def recognize_integrand(self,integrand_name=None):
@@ -25,7 +25,7 @@ class VegasFlow(Integrator):
             raise RuntimeError("Integrand not recognized")
 
     def run_integration(self):
-        instance = vegasflow.VegasFlow(self.n_dim,self.n_calls,simplify_signature=True)
+        instance = getattr(vegasflow, self.integrator)(self.n_dim,self.n_calls,simplify_signature=True)
         instance.compile(self.integrand)
         start = time.time()
         self.n_iter = 0
