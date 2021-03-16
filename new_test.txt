@@ -1,0 +1,57 @@
+Gauss 4-d, 1e5 samples per iteration, rtol = 1e-3
+Integrator VegasFlow converged in 4 iterations and took time 5.655084848403931 s
+RESULT: 0.9993409104273627 +/- 0.000965809689537249
+Integrator VegasFlowPlus NOT ADAPTIVE converged in 2 iterations and took time 5.384668827056885 s
+RESULT: 0.9995015958754475 +/- 0.0008564860406092198
+Integrator VegasFlowPlus ADAPTIVE converged in 4 iterations and took time 7.787511110305786 s
+RESULT: 0.9989353608627835 +/- 0.0008786456502239378
+Integrator StratifiedFlow NOT ADAPTIVE cannot converge to the required percent uncertainty
+Integrator StratifiedFlow ADAPTIVE converged in 12 iterations and took time 5.367039918899536 s
+RESULT: 1.0001896774916879 +/- 0.0009626305013822915
+Integrator PlainFlow cannot converge to the required percent uncertainty
+
+Gauss 4-d, 1e6 samples per iteration, rtol = 1e-3
+Integrator VegasFlow converged in 2 iterations and took time 8.210616111755371 s
+RESULT: 0.9993236820002864 +/- 0.000936819639963041
+Integrator VegasFlowPlus NOT ADAPTIVE converged in 2 iterations and took time 7.612981081008911 s
+RESULT: 1.0002676690298231 +/- 0.0001665492603173329
+Integrator VegasFlowPlus ADAPTIVE converged in 2 iterations and took time 22.730028867721558 s
+RESULT: 0.9994933401899051 +/- 0.00023366867390630695
+Integrator StratifiedFlow NOT ADAPTIVE converged in 14 iterations and took time 2.2871060371398926 s
+RESULT: 0.9998585421460836 +/- 0.0009703496505759279
+Integrator StratifiedFlow ADAPTIVE converged in 2 iterations and took time 7.235249996185303 s
+RESULT: 1.0004176455281801 +/- 0.0008649368936204427
+Integrator PlainFlow cannot converge to the required percent uncertainty
+
+Gauss 4-d, 1e6 samples per iteration, rtol = 1e-4
+Integrator VegasFlow converged in 34 iterations and took time 45.46659708023071 s
+RESULT: 0.9999962969344313 +/- 9.986551056617164e-05
+Integrator VegasFlowPlus NOT ADAPTIVE converged in 14 iterations and took time 21.634006023406982 s
+RESULT: 1.0000409380345918 +/- 9.912490182302485e-05
+Integrator VegasFlowPlus ADAPTIVE converged in 29 iterations and took time 59.482861042022705 s
+RESULT: 0.9999712906438414 +/- 9.903354000002737e-05
+Integrator StratifiedFlow NOT ADAPTIVE cannot converge to the required percent uncertainty
+Integrator StratifiedFlow ADAPTIVE converged in 29 iterations and took time 55.56879186630249 s
+RESULT: 1.000074426584269 +/- 9.993836375218238e-05
+Integrator PlainFlow cannot converge to the required percent uncertainty
+
+Gauss 8-d, 1e5 samples per iteration, rtol = 1e-3
+Integrator VegasFlow converged in 9 iterations and took time 7.516407251358032 s
+RESULT: 1.0009366726230078 +/- 0.000984776113135007
+Integrator VegasFlowPlus NOT ADAPTIVE converged in 10 iterations and took time 7.9335150718688965 s
+RESULT: 0.9994356716417616 +/- 0.0009332714071366939
+Integrator VegasFlowPlus ADAPTIVE converged in 17 iterations and took time 25.122905015945435 s
+RESULT: 0.9982687989221374 +/- 0.000990968802332774
+Integrator StratifiedFlow ADAPTIVE cannot converge to the required percent uncertainty
+Integrator StratifiedFlow NOT ADAPTIVE cannot converge to the required percent uncertainty
+Integrator PlainFlow cannot converge to the required percent uncertainty
+
+Gauss 8-d, 1e6 samples per iteration, rtol = 1e-3
+Integrator VegasFlow converged in 3 iterations and took time 12.394267797470093 s
+RESULT: 0.9998351608176701 +/- 0.0008229134163523484
+Integrator VegasFlowPlus NOT ADAPTIVE converged in 3 iterations and took time 11.418985843658447 s
+RESULT: 0.9987114475512487 +/- 0.0008986419556165984
+Integrator VegasFlowPlus ADAPTIVE: Killed: 9
+Integrator StratifiedFlow NOT ADAPTIVE cannot converge to the required percent uncertainty
+Integrator StratifiedFlow ADAPTIVE: Killed: 9
+Integrator PlainFlow cannot converge to the required percent uncertainty

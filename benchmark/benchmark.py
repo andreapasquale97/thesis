@@ -3,7 +3,8 @@ from abc import ABC, abstractmethod
 import matplotlib.pyplot as plt
 
 
-MAX_ITERATIONS = 110
+MAX_ITERATIONS = 100
+#NULL_TIME=0
 
 class Integrator(ABC):
     """
@@ -31,7 +32,6 @@ class Integrator(ABC):
 
         self.integral=None
         self.error=None
-
         
 
     @abstractmethod
@@ -61,7 +61,7 @@ class Integrator(ABC):
             integrators: sequence of tuples (Integrator Class, integrator type)
         """
 
-        fig, (ax1,ax2)  = plt.subplots(1, 2,sharey=True,figsize=(8,4))
+        fig, (ax1,ax2)  = plt.subplots(1, 2,sharey=True,figsize=(10,4))
 
 
 
@@ -70,13 +70,11 @@ class Integrator(ABC):
         times = [self.time] + [i[0] for i in data]
         iterations = [self.n_iter] + [i[1] for i in data]
 
-    
         integrators = [i.replace("-", "\n" ) for i in [self.integrator]+[j[1] for j in integrators] ]
-    
         ax1.barh(integrators,times)
         ax1.set_yticks(integrators)
         ax1.set_xlabel("Time (s)")
-
+        print(integrators)
         ax2.barh(integrators,iterations)
         ax2.set_yticks(integrators)
         ax2.set_xlabel("Iterations")
@@ -85,12 +83,23 @@ class Integrator(ABC):
 
 def wrapper(integrator_class,integrator_type,integrand,n_dim,n_calls,rtol,**kwargs):
 
-    instance = integrator_class(n_dim,n_calls,rtol,integrator_type)
+    #instance = getattr(integrator_class,integrator_type)(n_dim,n_calls,rtol,kwargs)
+    instance = integrator_class(n_dim,n_calls,rtol,integrator_type,**kwargs)
     instance.set_integrand(integrand)
     instance.run_integration()
     instance.show_content()
 
     return instance.time, instance.n_iter
+
+def generate_data(integrator_class,integrator_type,integrand,n_dim,n_calls,rtol,train,adaptive):
+
+    #instance = getattr(integrator_class,integrator_type)(n_dim,n_calls,rtol,kwargs)
+    instance = integrator_class(n_dim,n_calls,rtol,integrator_type,train=train,adaptive=adaptive)
+    instance.set_integrand(integrand)
+    result = instance.run_integration()
+    instance.show_content()
+
+    return result
 
 
   

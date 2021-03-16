@@ -1,5 +1,5 @@
-from benchmark import Integrator, MAX_ITERATIONS
-from functions import gauss_v
+from benchmark.benchmark import Integrator, MAX_ITERATIONS
+from benchmark.functions.gauss import gauss_v
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -58,7 +58,7 @@ class Vegas(Integrator):
         self.time = end - start
         self.n_iter = len(result.itn_results)
         if self.n_iter == MAX_ITERATIONS:
-            print("INFO: Max iterations reached \n")
+            #print("INFO: Max iterations reached \n")
             self.rtol = result.sdev/result.mean
             self.fail=1
 

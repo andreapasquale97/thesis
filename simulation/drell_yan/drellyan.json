@@ -1,0 +1,19 @@
+{
+ "integrator": "VegasFlow",
+ "adaptive": false,
+ "train": true,
+ "perc_uncertainty": 0.01,
+ "time": 240.6071081161499,
+ "iter": 100,
+ "samples/iter": 1000000,
+ "result": "65.97473574864101 +/- 0.6768288237697265"
+}{
+ "integrator": "VegasFlow",
+ "adaptive": false,
+ "train": true,
+ "perc_uncertainty": 0.001,
+ "time": 241.67817091941833,
+ "iter": 100,
+ "samples/iter": 1000000,
+ "result": "243.22161832319142 +/- 1.3312445656684682"
+}

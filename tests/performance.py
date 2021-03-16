@@ -102,7 +102,9 @@ def integrand_pineappl(xarr, dim=None, **kwargs):
 
 
 def integration(dim=None, integrand=None,isStratified=True,
-                isImportance=True,n_eval=None,rtol=None, domain=[[0.,1.]]):
+                isImportance=True,
+                isAdaptive=True,
+                n_eval=None,rtol=None, domain=[[0.,1.]]):
 
     #assign integration volume to integrator
     region = dim * domain
@@ -115,15 +117,27 @@ def integration(dim=None, integrand=None,isStratified=True,
     else:
         raise RuntimeError("Unknown integrand")
 
-    if isStratified and isImportance:
+    if isStratified and isImportance and isAdaptive:
         integ = vegas.Integrator(region,rtol=rtol)
         label_method = "vegas+"
-    elif not isStratified:
-        integ = vegas.Integrator(region,max_nhcube=1,rtol=rtol) # stratified off
-        label_method = "importance"
-    else:
-        integ = vegas.Integrator(region,adapt=False,rtol=rtol) # no adaptation
+    elif isImportance and isStratified and not isAdaptive:
+        integ = vegas.Integrator(region,rtol=rtol,beta=0.)
+        label_method = "vegas"
+    elif isStratified and isAdaptive and not isImportance:
+        integ = vegas.Integrator(region,rtol=rtol,adapt=False)
+        label_method = "adaptive stratified"
+    elif isStratified and not isAdaptive and not isImportance:
+        integ = vegas.Integrator(region,rtol=rtol,adapt=False,beta=0.)
         label_method = "stratified"
+    else:
+        integ = vegas.Integrator(region,rtol=rtol,max_nhcube=1)
+        label_method = "importance"
+
+    #    integ = vegas.Integrator(region,max_nhcube=1,rtol=rtol,beta=0.) # stratified off
+    #    label_method = "importance"
+    #else:
+    #    integ = vegas.Integrator(region,adapt=False,rtol=rtol) # no adaptation
+    #    label_method = "stratified"
     # adapt to the integrand; discard results
     integ(integrand,nitn=ITER_WARMUP,neval=EVAL_WARMUP)
 
@@ -154,10 +168,12 @@ def simulation(integrand=None,dim=None,domain=None,rtol=None):
 
     
     for sample in samples:
-        vegas = integration(integrand=integrand,dim=dim,n_eval=sample,rtol=rtol)
-        importance = integration(integrand=integrand,dim=dim,n_eval=sample,rtol=rtol,isStratified=False)
-        stratified = integration(integrand=integrand,dim=dim,n_eval=sample,rtol=rtol,isImportance=False)
-        result += [vegas,importance,stratified]
+        vegasplus = integration(integrand=integrand,dim=dim,n_eval=sample,rtol=rtol)
+        vegas =  integration(integrand=integrand,dim=dim,n_eval=sample,rtol=rtol,isAdaptive=False)
+        adaptive_stratified = integration(integrand=integrand,dim=dim,n_eval=sample,rtol=rtol,isImportance=False)
+        stratified = integration(integrand=integrand,dim=dim,n_eval=sample,rtol=rtol,isImportance=False,isAdaptive=False)
+        importance = integration(integrand=integrand,dim=dim,n_eval=sample,rtol=rtol,isStratified=False,isAdaptive=False)
+        result += [vegasplus,vegas,importance,adaptive_stratified,stratified]
     
     return result
 def run_simulation(integrand=None,dim=None,domain=[[0.,1.]]):
@@ -173,19 +189,35 @@ def save_data(filename=None,data=None):
         json.dump(data,f,indent=True)
 
 def prepare_data(data=None,rtol=1e-2,index=None,showStratified=True):
-    vegas_iter = [i["iter"] for i in data if i["integrator"] == "vegas+" and i["perc_uncertainty"] == rtol ]
+
+    vegasplus_iter = [i["iter"] for i in data if i["integrator"] == "vegas+" and i["perc_uncertainty"] == rtol ]
+    vegas_iter = [i["iter"] for i in data if i["integrator"] == "vegas" and i["perc_uncertainty"] == rtol ]
     importance_iter = [i["iter"] for i in data if i["integrator"] == "importance" and i["perc_uncertainty"] == rtol]
+    adaptive_stratified_iter = [i["iter"] for i in data if i["integrator"] == "adaptive stratified" and i["perc_uncertainty"] == rtol ]
     stratified_iter = [i["iter"] for i in data if i["integrator"] == "stratified" and i["perc_uncertainty"] == rtol ]
-    vegas_time = [i["time"] for i in data if i["integrator"] == "vegas+" and i["perc_uncertainty"] == rtol ]
+   
+
+
+    vegasplus_time = [i["time"] for i in data if i["integrator"] == "vegas+" and i["perc_uncertainty"] == rtol ]
+    vegas_time = [i["time"] for i in data if i["integrator"] == "vegas" and i["perc_uncertainty"] == rtol ]
     importance_time = [i["time"] for i in data if i["integrator"] == "importance" and i["perc_uncertainty"] == rtol]
+    adaptive_stratified_time = [i["time"] for i in data if i["integrator"] == "adaptive stratified" and i["perc_uncertainty"] == rtol]
     stratified_time = [i["time"] for i in data if i["integrator"] == "stratified" and i["perc_uncertainty"] == rtol]
 
     if showStratified:
-        df_iter = pd.DataFrame({'vegas+' : vegas_iter, 'importance' : importance_iter,'stratified' : stratified_iter },index=index)
-        df_time = pd.DataFrame({'vegas+' : vegas_time, 'importance' : importance_time,'stratified' : stratified_time },index=index)
+        df_iter = pd.DataFrame({'vegas+' : vegasplus_iter, 'vegas' : vegas_iter,
+                                'importance' : importance_iter,
+                                'adaptive stratified' : adaptive_stratified_iter,
+                                'stratified' : stratified_iter 
+                                },index=index)
+        df_time = pd.DataFrame({'vegas+' : vegasplus_time, 'vegas' : vegas_time,
+                                'importance' : importance_time,
+                                'adaptive stratified' : adaptive_stratified_time,
+                                'stratified' : stratified_time
+                                },index=index)
     else:
-        df_iter = pd.DataFrame({'vegas+' : vegas_iter, 'importance' : importance_iter},index=index)
-        df_time = pd.DataFrame({'vegas+' : vegas_time, 'importance' : importance_time},index=index)
+        df_iter = pd.DataFrame({'vegas+' : vegasplus_iter, 'importance' : importance_iter,'vegas' : vegas_iter },index=index)
+        df_time = pd.DataFrame({'vegas+' : vegasplus_time, 'importance' : importance_time,'vegas' : vegas_time },index=index)
 
     return df_iter, df_time
 
@@ -241,10 +273,10 @@ def make_histo(infile=None, outfile=None, save=True, showStratified=True):
 
 if __name__ == '__main__':
     
-    #data = run_simulation(integrand=rosen,dim=8,domain=[[-1.,1.]])
-    #save_data('data/rosen8-d.json',data)
-    #make_histo(infile='data/rosen8-d.json',outfile='performance_plots/rosen8-d_no_stratified.png',save=True,showStratified=False)
+    #data = run_simulation(integrand=f,dim=4,domain=[[0.,1.]])
+    #save_data('data/gauss4-d_TOTAL.json',data)
+    make_histo(infile='data/gauss4-d_TOTAL.json',outfile='test.png',save=True,showStratified=False)
     
-    test = integration(dim=4,integrand=rosen,isStratified=False,n_eval=1e6,rtol=1e-4)
-    print(test)
+    #test = integration(dim=4,integrand=rosen,isStratified=False,n_eval=1e6,rtol=1e-4)
+    #print(test)
     

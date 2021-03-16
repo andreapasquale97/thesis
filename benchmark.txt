@@ -1,0 +1,29 @@
+Gauss 4-d  100000.0 samples per iterations rtol 0.01
+Events sent to the computing device: 100.0 %Events sent to the computing device: 100.0 %Integrator VegasFlow converged in 2 iterations and took time 5.490630149841309 s
+RESULT: 0.9990721811769302 +/- 0.0031243328104604063
+tf.Tensor(41472, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %tf.Tensor(41472, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %Integrator VegasFlowPlus converged in 2 iterations and took time 0.9477360248565674 s
+RESULT: 1.0027129217192894 +/- 0.001455811484547761
+Gauss 4-d  100000.0 samples per iterations rtol 0.001
+Events sent to the computing device: 100.0 %Events sent to the computing device: 100.0 %Events sent to the computing device: 100.0 %Events sent to the computing device: 100.0 %Integrator VegasFlow converged in 4 iterations and took time 0.8113470077514648 s
+RESULT: 0.9996217318500551 +/- 0.0009724053440682385
+tf.Tensor(41472, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %tf.Tensor(41472, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %tf.Tensor(41472, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %tf.Tensor(41472, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %Integrator VegasFlowPlus converged in 4 iterations and took time 0.6143150329589844 s
+RESULT: 0.9999561793806018 +/- 0.0009718403776526696
+Gauss 4-d  1000000.0 samples per iterations rtol 0.01
+Events sent to the computing device: 100.0 %Events sent to the computing device: 100.0 %Integrator VegasFlow converged in 2 iterations and took time 2.758420944213867 s
+RESULT: 0.9993459650806118 +/- 0.0009380635557198672
+tf.Tensor(468512, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %Integrator VegasFlowPlus converged in 1 iterations and took time 0.983936071395874 s
+RESULT: 0.991809283241124 +/- 0.005978734665747156
+Gauss 4-d  1000000.0 samples per iterations rtol 0.001
+Events sent to the computing device: 100.0 %Events sent to the computing device: 100.0 %Integrator VegasFlow converged in 2 iterations and took time 2.7659270763397217 s
+RESULT: 1.0003303623196131 +/- 0.0009407183049519077
+tf.Tensor(468512, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %tf.Tensor(468512, shape=(), dtype=int32)
+Events sent to the computing device: 100.0 %Integrator VegasFlowPlus converged in 2 iterations and took time 1.6043028831481934 s
+RESULT: 1.0002120267769452 +/- 0.0002402580437881327

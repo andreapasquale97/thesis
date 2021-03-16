@@ -1,0 +1,542 @@
+[
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.02275395393371582,
+  "iter": 5,
+  "samples/iter": 1000,
+  "result": "1.006827228958212 +/- 0.008438963925313061"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.01,
+  "time": 0.03689289093017578,
+  "iter": 4,
+  "samples/iter": 1000,
+  "result": "1.0076873264751538 +/- 0.009632875336761644"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 0.030736923217773438,
+  "iter": 7,
+  "samples/iter": 1000,
+  "result": "1.0053114312023566 +/- 0.00889653343864832"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.01,
+  "time": 0.49601197242736816,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9378072814364959 +/- 0.05737323651892698"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 0.6965689659118652,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "1.00054409164106 +/- 0.05455095040865422"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.12772083282470703,
+  "iter": 1,
+  "samples/iter": 10000,
+  "result": "0.9985242928459737 +/- 0.00784343822776256"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.01,
+  "time": 0.17957496643066406,
+  "iter": 1,
+  "samples/iter": 10000,
+  "result": "1.0001698262323349 +/- 0.0063022104128178805"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 0.12666010856628418,
+  "iter": 3,
+  "samples/iter": 10000,
+  "result": "1.0086323607905963 +/- 0.008434675891900863"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.01,
+  "time": 4.18498682975769,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.9767891037852664 +/- 0.012734140436345536"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 7.0641021728515625,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.9948668150848394 +/- 0.011760565128166409"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 0.3440730571746826,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "0.9993151640654037 +/- 0.0018832059561570101"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.01,
+  "time": 0.6358869075775146,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "0.9992603413916505 +/- 0.0013899754415235904"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 0.4117739200592041,
+  "iter": 1,
+  "samples/iter": 100000,
+  "result": "0.9977689277028358 +/- 0.004561904841657179"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.01,
+  "time": 4.449625730514526,
+  "iter": 13,
+  "samples/iter": 100000,
+  "result": "0.9990362449602826 +/- 0.009766989565783172"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 3.1635630130767822,
+  "iter": 5,
+  "samples/iter": 100000,
+  "result": "1.021035961250341 +/- 0.009767871633467182"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.01,
+  "time": 3.8188071250915527,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "1.000121729815675 +/- 0.0003547234818182442"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.01,
+  "time": 7.558489084243774,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "1.000009477558539 +/- 0.000297112609500381"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.01,
+  "time": 4.156028985977173,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "1.0004719266119828 +/- 0.0016644682981550387"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.01,
+  "time": 3.858915090560913,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "1.0065142479855902 +/- 0.005958825004473784"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.01,
+  "time": 7.453027009963989,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "1.0044609075120108 +/- 0.003622822105902289"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 0.5135188102722168,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "1.0017384670176541 +/- 0.0014994088427010706"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.001,
+  "time": 0.6545557975769043,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9984717253659818 +/- 0.0012671814903586717"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 0.43764591217041016,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9935231111086388 +/- 0.0016583242205923815"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.001,
+  "time": 0.4171731472015381,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9675704685631483 +/- 0.055092284273658275"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 0.6766951084136963,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9302545111433729 +/- 0.05296074226737082"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 0.4646170139312744,
+  "iter": 10,
+  "samples/iter": 10000,
+  "result": "1.0003801970265844 +/- 0.0009857088295743411"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.001,
+  "time": 0.6091897487640381,
+  "iter": 9,
+  "samples/iter": 10000,
+  "result": "0.9992674028370719 +/- 0.0009328724367719455"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 0.5812690258026123,
+  "iter": 14,
+  "samples/iter": 10000,
+  "result": "1.0005231750074979 +/- 0.0009403138205581299"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.001,
+  "time": 4.025592088699341,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "1.012068009581738 +/- 0.013130795573748355"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 6.751312971115112,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.9956718058174893 +/- 0.011341793161652559"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 1.2292711734771729,
+  "iter": 3,
+  "samples/iter": 100000,
+  "result": "1.0005676994431962 +/- 0.0008432660631614171"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.001,
+  "time": 1.3061060905456543,
+  "iter": 2,
+  "samples/iter": 100000,
+  "result": "1.000420940340269 +/- 0.0008970177432876983"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 2.8826968669891357,
+  "iter": 7,
+  "samples/iter": 100000,
+  "result": "0.9991480582838006 +/- 0.0009377999100583891"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.001,
+  "time": 33.764540910720825,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "1.003228742494944 +/- 0.0034649861432138403"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 63.68898892402649,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "1.001429606887845 +/- 0.002237545360572653"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.001,
+  "time": 3.817636013031006,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "1.0002832918327764 +/- 0.0003313975956351548"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.001,
+  "time": 7.477791786193848,
+  "iter": 1,
+  "samples/iter": 1000000,
+  "result": "1.0003137579656953 +/- 0.00028312786132979556"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.001,
+  "time": 13.480836868286133,
+  "iter": 3,
+  "samples/iter": 1000000,
+  "result": "0.9986564846416369 +/- 0.0007467414408636692"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.001,
+  "time": 139.81344604492188,
+  "iter": 36,
+  "samples/iter": 1000000,
+  "result": "1.0006704482964208 +/- 0.0009889571465352333"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.001,
+  "time": 109.44166994094849,
+  "iter": 14,
+  "samples/iter": 1000000,
+  "result": "0.9991610766887025 +/- 0.0009705842809088785"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 0.509321928024292,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "1.0000278732777812 +/- 0.0015151422524715878"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.0001,
+  "time": 0.685370922088623,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "1.0007101514699737 +/- 0.0012633835448654807"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 0.4495987892150879,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "1.0000592962204173 +/- 0.0016670101379406875"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 0.4229929447174072,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "1.0239873654540739 +/- 0.06536302557798206"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 0.6707320213317871,
+  "iter": 100,
+  "samples/iter": 1000,
+  "result": "0.9744740435409068 +/- 0.05489459381721641"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 5.471274137496948,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "1.00026867913356 +/- 0.0001528731753542258"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.0001,
+  "time": 7.59301495552063,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "0.9999346590470087 +/- 0.00012285830555732816"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 4.360189199447632,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "1.0000056893415843 +/- 0.00016795219661629325"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 4.313230991363525,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "1.0028490695995935 +/- 0.012670430430648612"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 6.851045846939087,
+  "iter": 100,
+  "samples/iter": 10000,
+  "result": "1.0100191390455728 +/- 0.011893984533447487"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 13.312960863113403,
+  "iter": 27,
+  "samples/iter": 100000,
+  "result": "1.0002485894780655 +/- 9.88063859950482e-05"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.0001,
+  "time": 13.200473070144653,
+  "iter": 20,
+  "samples/iter": 100000,
+  "result": "1.0000128598665607 +/- 9.95752687701941e-05"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 16.353526830673218,
+  "iter": 35,
+  "samples/iter": 100000,
+  "result": "0.9999030518929546 +/- 9.812115989592138e-05"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 47.15114402770996,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "1.0006639580273367 +/- 0.0034161387639293104"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 71.58685088157654,
+  "iter": 100,
+  "samples/iter": 100000,
+  "result": "0.9999259266325469 +/- 0.0022492829714880185"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas+",
+  "perc_uncertainty": 0.0001,
+  "time": 28.719419717788696,
+  "iter": 6,
+  "samples/iter": 1000000,
+  "result": "0.9998928475149179 +/- 9.894399426835626e-05"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "vegas",
+  "perc_uncertainty": 0.0001,
+  "time": 40.258646965026855,
+  "iter": 5,
+  "samples/iter": 1000000,
+  "result": "0.9998805770286293 +/- 8.954256734621865e-05"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "importance",
+  "perc_uncertainty": 0.0001,
+  "time": 57.394481897354126,
+  "iter": 14,
+  "samples/iter": 1000000,
+  "result": "0.9999378912836043 +/- 9.401619276286353e-05"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "adaptive stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 420.4390199184418,
+  "iter": 100,
+  "samples/iter": 1000000,
+  "result": "1.000521839698438 +/- 0.0005997796917701285"
+ },
+ {
+  "integrand": "SymGauss 4-d",
+  "integrator": "stratified",
+  "perc_uncertainty": 0.0001,
+  "time": 787.0179052352905,
+  "iter": 100,
+  "samples/iter": 1000000,
+  "result": "0.999940677463022 +/- 0.0003641767578374941"
+ }
+]

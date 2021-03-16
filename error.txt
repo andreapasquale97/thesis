@@ -1,0 +1,18 @@
+Traceback (most recent call last):e: 100.0 %
+  File "script.py", line 43, in <module>
+    adaptive
+  File "/Users/andreapasquale/Desktop/thesis/benchmark/benchmark.py", line 99, in generate_data
+    result = instance.run_integration()
+  File "/Users/andreapasquale/Desktop/thesis/benchmark/vegasflow.py", line 76, in run_integration
+    res, error = instance._run_iteration()
+  File "/Users/andreapasquale/Desktop/vegasflow/src/vegasflow/vflow.py", line 366, in _run_iteration
+    res, sigma = self.iteration_content()
+  File "/Users/andreapasquale/Desktop/vegasflow/src/vegasflow/vflowplus.py", line 189, in _iteration_content
+    ress, arr_var, arr_res2 = self.run_event(n_ev=self.n_ev)
+  File "/Users/andreapasquale/Desktop/vegasflow/src/vegasflow/vflowplus.py", line 207, in run_event
+    return super().run_event(tensorize_events=self.adaptive, **kwargs)
+  File "/Users/andreapasquale/Desktop/vegasflow/src/vegasflow/monte_carlo.py", line 331, in run_event
+    return _accumulate(accumulators)
+  File "/Users/andreapasquale/Desktop/vegasflow/src/vegasflow/monte_carlo.py", line 76, in _accumulate
+    len_acc = len(accumulators[0])
+IndexError: list index out of range

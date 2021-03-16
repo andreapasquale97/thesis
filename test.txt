@@ -1,0 +1,58 @@
+Gauss 4-d, 1e5 samples per iteration, rtol = 1e-3
+Integrator VegasFlow converged in 4 iterations and took time 6.052872896194458 s
+RESULT: 1.0003468042368207 +/- 0.0009635567255055014
+Integrator PlainFlow cannot converge to the required percent uncertainty
+Integrator StratifiedFlow cannot converge to the required percent uncertainty
+
+Gauss 4-d, 1e5 samples per iteration, rtol = 1e-2
+Integrator VegasFlow converged in 2 iterations and took time 5.815392017364502 s
+RESULT: 1.004303283394375 +/- 0.00301380523785333
+Integrator PlainFlow converged in 26 iterations and took time 0.5862269401550293 s
+RESULT: 0.9950565948150915 +/- 0.009786743905761055
+Integrator StratifiedFlow converged in 3 iterations and took time 1.4338939189910889 s
+RESULT: 0.9842667020935826 +/- 0.009709536189911981
+
+Gauss 4-d, 1e6 samples per iteration, rtol = 1e-3
+Integrator VegasFlow converged in 2 iterations and took time 10.169922113418579 s
+RESULT: 0.9999929734060133 +/- 0.0009445809568101617
+Integrator PlainFlow cannot converge to the required percent uncertainty
+Integrator StratifiedFlow converged in 54 iterations and took time 7.24327278137207 s
+RESULT: 1.0006502778503834 +/- 0.0009941754908833862
+
+
+Gauss 4-d, 1e6 samples per iteration, rtol = 1e-2
+Integrator VegasFlow converged in 2 iterations and took time 10.056797981262207 s
+RESULT: 1.0015330194146999 +/- 0.0009388122928216686
+Integrator PlainFlow converged in 3 iterations and took time 0.5274820327758789 s
+RESULT: 0.996918300290114 +/- 0.009100752007738737
+Integrator StratifiedFlow converged in 1 iterations and took time 0.9030961990356445 s
+RESULT: 0.9979067477189824 +/- 0.0020800953035176426
+
+
+Gauss 8-d, 1e5 samples per iteration, rtol = 1e-2
+Integrator VegasFlow converged in 4 iterations and took time 9.744021892547607 s
+RESULT: 1.0010831277779253 +/- 0.004278006359363039
+Integrator PlainFlow cannot converge to the required percent uncertainty
+Integrator StratifiedFlow cannot converge to the required percent uncertainty
+
+Gauss 8-d, 1e5 samples per iteration, rtol = 1e-3
+Integrator VegasFlow converged in 9 iterations and took time 7.46278190612793 s
+RESULT: 0.9999209309131106 +/- 0.0009953742839453855
+Integrator PlainFlow cannot converge to the required percent uncertainty
+Integrator StratifiedFlow cannot converge to the required percent uncertainty
+
+Gauss 8-d, 1e6 samples per iteration, rtol = 1e-2
+Integrator VegasFlow converged in 2 iterations and took time 13.53518295288086 s
+RESULT: 1.003553386021623 +/- 0.0036343758510322724
+Integrator PlainFlow cannot converge to the required percent uncertainty
+Integrator StratifiedFlow converged in 35 iterations and took time 10.357421159744263 s
+RESULT: 0.8813677900006324 +/- 0.00870484845558766
+
+Gauss 8-d, 1e6 samples per iteration, rtol = 1e-3
+Integrator VegasFlow converged in 3 iterations and took time 13.556339979171753 s
+RESULT: 1.0007357025364503 +/- 0.0009060542874034692
+Integrator PlainFlow cannot converge to the required percent uncertainty
+Integrator StratifiedFlow cannot converge to the required percent uncertainty
+
+
+
