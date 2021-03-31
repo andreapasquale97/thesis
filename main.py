@@ -6,11 +6,9 @@ from benchmark.functions.drellyan_lo_tf import drellyan1
 from benchmark.functions.pineappl import pineappl1
 from benchmark.functions.higgs.higgs import vfh_production_real1, vfh_production_nlo1, vfh_production_leading_order1
 from vegasflow.configflow import float_me, int_me,DTYPE,DTYPEINT
-from vegasflow import VegasFlowPlus
-from benchmark import VegasFlow
-from benchmark.benchmark import generate_data
-from benchmark.utils import updateJsonFile
+import vegasflow
 import argparse
+import time
 
 
 
@@ -24,9 +22,11 @@ if __name__ == '__main__':
     parser.add_argument('--integrand',  default='gauss_vf', type=str, help='Integrand')
     parser.add_argument('--dim',  default=4, type=int, help='Dimension of the integrand')
     parser.add_argument('--ncalls', default=1000000,type=int, help='Number of calls')
-    parser.add_argument('--accuracy', default=1e-2,type=float, help='Percent uncertainty required')
-    parser.add_argument('--outfile',default=None,help='Output file')
-    parser.add_argument('--warmup',default=True)
+    parser.add_argument('--niter', default=10,type=int, help='Number of iterations')
+
+    #parser.add_argument('--accuracy', default=1e-2,type=float, help='Percent uncertainty required')
+    #parser.add_argument('--outfile',default=None,help='Output file')
+    #parser.add_argument('--warmup',default=True)
     args = vars(parser.parse_args())
 
     integrator = args['integrator']
@@ -35,31 +35,29 @@ if __name__ == '__main__':
     integrand = eval(args['integrand'])
     dim = args['dim']
     ncalls = args['ncalls']
-    accuracy = args['accuracy']
-    outfile = args['outfile']
-    warmup = False if args['warmup']=='False' else True
-    
-    elem = generate_data(VegasFlow,
-                         integrator,
-                         integrand,
-                         dim,
-                         ncalls,
-                         accuracy,
-                         train,
-                         adaptive,
-                         warmup
-                         )
+    #accuracy = args['accuracy']
+    #outfile = args['outfile']
+    #warmup = False if args['warmup']=='False' else True
+    niter = args['niter']
+    if adaptive:
+        integrand = eval(args['integrand']+"1")
 
-    if args['outfile'] is not None:
-        updateJsonFile(outfile,elem,args['integrand'])
+    if integrator == 'VegasFlowPlus':
+        instance = getattr(vegasflow,integrator)(dim,ncalls,train=train,adaptive=adaptive)
+    else:
+        instance = getattr(vegasflow,integrator)(dim,ncalls,train=train)   
+
+    niter_warmup = int(niter/2)
+    instance.compile(integrand)
+    start = time.time()
+    instance.run_integration(niter_warmup)
+    print("> Freeze grid and stop sampling redistribution in hypercubes")
+    instance.freeze_grid()
+    instance.adaptive=False
+    instance.run_integration(niter-niter_warmup)
+    end = time.time()
+    print(f"{integrator} took time {end-start}.")
+
+
     
     
-    #instance=VegasFlow(3,int(1e5),1e-2,"VegasFlowPlus",train=True,adaptive=True)
-    #instance.set_integrand(pineappl)
-    #result = instance.run_integration()
-    #instance.show_content()
-
-    #vegas_instance = VegasFlowPlus(6, int(1e6),adaptive=False)
-    #vegas_instance.compile(vfh_production_leading_order)
-    #vegas_instance.run_integration(5)
-

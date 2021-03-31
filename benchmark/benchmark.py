@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 
 
 MAX_ITERATIONS = 100
-#NULL_TIME=0
+WARMUP_ITERATIONS = 5
+WARMUP_CALLS =int(1e6)
 
 class Integrator(ABC):
     """
@@ -46,9 +47,10 @@ class Integrator(ABC):
         """Show results of the integration"""
         if self.fail == 0:
             print(f"Integrator {self.integrator} converged in {self.n_iter} iterations and took time {self.time} s")
-            print(f"RESULT: {self.integral} +/- {self.error}")
+            print(f"RESULT: {self.integral.numpy():g} +/- {self.error:g}")
         else:
             print(f"Integrator {self.integrator} cannot converge to the required percent uncertainty")
+            print(f"RESULT: {self.integral.numpy():g} +/- {self.error:g}")
 
     def set_integrand(self,integrand):
         self.integrand = integrand
@@ -91,10 +93,9 @@ def wrapper(integrator_class,integrator_type,integrand,n_dim,n_calls,rtol,**kwar
 
     return instance.time, instance.n_iter
 
-def generate_data(integrator_class,integrator_type,integrand,n_dim,n_calls,rtol,train,adaptive):
+def generate_data(integrator_class,integrator_type,integrand,n_dim,n_calls,rtol,train,adaptive,warmup):
 
-    #instance = getattr(integrator_class,integrator_type)(n_dim,n_calls,rtol,kwargs)
-    instance = integrator_class(n_dim,n_calls,rtol,integrator_type,train=train,adaptive=adaptive)
+    instance = integrator_class(n_dim,n_calls,rtol,integrator_type,train=train,adaptive=adaptive,warmup=warmup)
     instance.set_integrand(integrand)
     result = instance.run_integration()
     instance.show_content()

@@ -1,0 +1,244 @@
+{
+ "vfh_production_nlo": [
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 13.863067865371704,
+   "iter": 100,
+   "samples/iter": 1000,
+   "result": "0.1992876551215532 +/- 0.01682024958900274"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 17.02628231048584,
+   "iter": 100,
+   "samples/iter": 10000,
+   "result": "1.748369093120085 +/- 0.10179949811374124"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 54.185378074645996,
+   "iter": 100,
+   "samples/iter": 100000,
+   "result": "231.22997721271514 +/- 7.726260461050322"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 411.03075194358826,
+   "iter": 100,
+   "samples/iter": 1000000,
+   "result": "359.4027915800812 +/- 9.67046622176716"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 13.543735980987549,
+   "iter": 100,
+   "samples/iter": 1000,
+   "result": "0.00023272199790901199 +/- 2.0280393180093723e-05"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 17.217257022857666,
+   "iter": 100,
+   "samples/iter": 10000,
+   "result": "21.807360795231695 +/- 0.9449242453449354"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 52.75925803184509,
+   "iter": 100,
+   "samples/iter": 100000,
+   "result": "254.42541388200775 +/- 7.36543948933686"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 416.9770791530609,
+   "iter": 100,
+   "samples/iter": 1000000,
+   "result": "770.5880143059401 +/- 11.570579685922265"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.0001,
+   "time": 13.234257936477661,
+   "iter": 100,
+   "samples/iter": 1000,
+   "result": "1.1982360441828928e-09 +/- 8.562144563218691e-11"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.0001,
+   "time": 17.151405811309814,
+   "iter": 100,
+   "samples/iter": 10000,
+   "result": "27.02195298513291 +/- 1.1482454222220027"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.0001,
+   "time": 51.242592096328735,
+   "iter": 100,
+   "samples/iter": 100000,
+   "result": "420.8939306691871 +/- 11.670857435246754"
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.0001,
+   "time": 399.694372177124,
+   "iter": 100,
+   "samples/iter": 1000000,
+   "result": "776.7655308031977 +/- 11.007233720636474"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 13.665804862976074,
+   "iter": 100,
+   "samples/iter": 1000,
+   "result": "9.995988265602906e-05 +/- 1.3944724096002942e-05"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 17.162678003311157,
+   "iter": 100,
+   "samples/iter": 10000,
+   "result": "2.695300148243677 +/- 0.13843153680759518"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 55.368335008621216,
+   "iter": 100,
+   "samples/iter": 100000,
+   "result": "338.28322695443035 +/- 10.45203773191433"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 340.79414796829224,
+   "iter": 100,
+   "samples/iter": 1000000,
+   "result": "439.74885472554814 +/- 10.764416199326185"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 13.651577234268188,
+   "iter": 100,
+   "samples/iter": 1000,
+   "result": "0.023739841833443322 +/- 0.0016508709852106303"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 17.748900890350342,
+   "iter": 100,
+   "samples/iter": 10000,
+   "result": "7.542845964689932 +/- 0.4266847514597759"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 55.20780968666077,
+   "iter": 100,
+   "samples/iter": 100000,
+   "result": "230.49563067618297 +/- 6.968322980485822"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 333.46853518486023,
+   "iter": 100,
+   "samples/iter": 1000000,
+   "result": "814.1855875577963 +/- 13.327452284941064"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.0001,
+   "time": 13.671473026275635,
+   "iter": 100,
+   "samples/iter": 1000,
+   "result": "0.00011076175030294025 +/- 1.3625677364809724e-05"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.0001,
+   "time": 17.27750301361084,
+   "iter": 100,
+   "samples/iter": 10000,
+   "result": "3.2429537646706748 +/- 0.20016647656553074"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.0001,
+   "time": 54.61846208572388,
+   "iter": 100,
+   "samples/iter": 100000,
+   "result": "507.93034354710267 +/- 11.620378053159474"
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.0001,
+   "time": 335.4777410030365,
+   "iter": 100,
+   "samples/iter": 1000000,
+   "result": "526.1363832021647 +/- 12.05261049909503"
+  }
+ ]
+}

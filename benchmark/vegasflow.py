@@ -1,5 +1,5 @@
 #from vegasflow.stratified import StratifiedFlow
-from benchmark.benchmark import Integrator, MAX_ITERATIONS,generate_data
+from benchmark.benchmark import Integrator, MAX_ITERATIONS, WARMUP_ITERATIONS,WARMUP_CALLS,generate_data
 from benchmark.functions.gauss import gauss_vf
 import numpy as np
 
@@ -30,7 +30,7 @@ class VegasFlow(Integrator):
     """
     Class for benchmark with vegasflow integrator
     """
-    def __init__(self,n_dim,n_calls,rtol,integrator,train=True,adaptive=True):
+    def __init__(self,n_dim,n_calls,rtol,integrator,train=True,adaptive=True,warmup=True):
 
         super().__init__(n_dim,n_calls,rtol) 
         self.integrator = integrator
@@ -40,6 +40,7 @@ class VegasFlow(Integrator):
 
         self.train = train
         self.adaptive = adaptive
+        self.warmup = warmup
 
     def recognize_integrand(self,integrand_name=None):
         if integrand_name == 'gauss':
@@ -66,14 +67,28 @@ class VegasFlow(Integrator):
         else:
             instance = getattr(vegasflow, self.integrator)(self.n_dim,self.n_calls)
                                                        #simplify_signature=True)
-                
+        
         instance.compile(self.integrand)
         start = time.time()
+        if self.warmup:
+            #warmup_integrator = getattr(vegasflow, self.integrator)(self.n_dim,WARMUP_CALLS)
+            #warmup_integrator.compile(self.integrand)
+            #warmup_integrator.run_integration(WARMUP_ITERATIONS)
+            #grid = warmup_integrator.divisions
+            #instance.divisions = grid
+            instance.run_integration(WARMUP_ITERATIONS)
+            instance.adaptive=False
+            instance.freeze_grid()
+            print(" > Freezing the grid")
         self.n_iter = 0
         all_results = []
         for i in range(MAX_ITERATIONS):
             self.n_iter += 1
+            local_time = time.time()
             res, error = instance._run_iteration()
+            local_time = time.time() - local_time
+            time_str = f"(took {local_time:.5f} s)"
+            vegasflow.monte_carlo.print_iteration(self.n_iter,res,error,extra=time_str)
             all_results.append((res, error))
             aux_res = 0.0
             weight_sum = 0.0
