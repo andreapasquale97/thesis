@@ -39,7 +39,10 @@ if __name__ == '__main__':
     #outfile = args['outfile']
     #warmup = False if args['warmup']=='False' else True
     niter = args['niter']
+
+
     if adaptive:
+        # set integrand with input signature if adaptive is ON
         integrand = eval(args['integrand']+"1")
 
     if integrator == 'VegasFlowPlus':
@@ -47,6 +50,7 @@ if __name__ == '__main__':
     else:
         instance = getattr(vegasflow,integrator)(dim,ncalls,train=train)   
 
+    # training with half iterations
     niter_warmup = int(niter/2)
     instance.compile(integrand)
     start = time.time()
@@ -54,6 +58,7 @@ if __name__ == '__main__':
     print("> Freeze grid and stop sampling redistribution in hypercubes")
     instance.freeze_grid()
     instance.adaptive=False
+    # integration at fixed grid and fixed samples per hypercube
     instance.run_integration(niter-niter_warmup)
     end = time.time()
     print(f"{integrator} took time {end-start}.")
