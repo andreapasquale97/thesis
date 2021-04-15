@@ -5,7 +5,7 @@ from benchmark.functions.singletop_lo_tf import singletop1
 from benchmark.functions.drellyan_lo_tf import drellyan1
 from benchmark.functions.pineappl import pineappl1
 from benchmark.functions.higgs.higgs import vfh_production_real1, vfh_production_nlo1, vfh_production_leading_order1
-from vegasflow.configflow import float_me, int_me,DTYPE,DTYPEINT
+from vegasflow.configflow import float_me, int_me,DTYPE,DTYPEINT, run_eager
 from vegasflow import VegasFlowPlus
 from benchmark import VegasFlow
 from benchmark.benchmark import generate_data
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     parser.add_argument('--ncalls', default=1000000,type=int, help='Number of calls')
     parser.add_argument('--accuracy', default=1e-2,type=float, help='Percent uncertainty required')
     parser.add_argument('--outfile',default=None,help='Output file')
-    parser.add_argument('--warmup',default=True)
+    parser.add_argument('--warmup',default=False)
     args = vars(parser.parse_args())
 
     integrator = args['integrator']
@@ -38,6 +38,7 @@ if __name__ == '__main__':
     accuracy = args['accuracy']
     outfile = args['outfile']
     warmup = False if args['warmup']=='False' else True
+
     
     elem = generate_data(VegasFlow,
                          integrator,
@@ -50,6 +51,9 @@ if __name__ == '__main__':
                          warmup
                          )
 
+    
+    #elem['test'] = 'max_nhcube_1e4'
+    
     if args['outfile'] is not None:
         updateJsonFile(outfile,elem,args['integrand'])
     

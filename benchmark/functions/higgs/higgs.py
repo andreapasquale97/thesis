@@ -24,22 +24,24 @@ from benchmark.functions.higgs import me
 #import me
 
 
-@tf.function
-def pdf(fl1, fl2, x1, x2):
-    """Dummy toy PDF"""
-    return x1 * x2
+pdfset = "NNPDF31_nnlo_as_0118/0"
+# Instantiate the PDF
+DIRNAME = (
+    sp.run(["lhapdf-config", "--datadir"], stdout=sp.PIPE, universal_newlines=True).stdout.strip(
+        "\n"
+    )
+    + "/"
+)
+pdf = mkPDF(pdfset, DIRNAME)
 
 ##### PDF calculation
-@tf.function#(input_signature=[TFLOAT1, TFLOAT1, TFLOAT1])
+@tf.function(input_signature=[TFLOAT1, TFLOAT1, TFLOAT1])
 def luminosity(x1, x2, q2array):
     """ Returns f(x1)*f(x2) """
     #     q2array = muR2 * tf.ones_like(x1)
-    #utype = pdf.xfxQ2([2, 4], x1, q2array)
-    #dtype = pdf.xfxQ2([1, 3], x2, q2array)
-    #lumi = tf.reduce_sum(utype * dtype, axis=-1)
-    utype = pdf(2,4,x1,x2)
-    dtype = pdf(1,3,x1,x2)
-    lumi = utype * dtype
+    utype = pdf.xfxQ2([2, 4], x1, q2array)
+    dtype = pdf.xfxQ2([1, 3], x2, q2array)
+    lumi = tf.reduce_sum(utype * dtype, axis=-1)
     return lumi / x1 / x2
 
 @tf.function
