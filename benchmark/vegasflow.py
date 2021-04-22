@@ -30,7 +30,7 @@ class VegasFlow(Integrator):
     """
     Class for benchmark with vegasflow integrator
     """
-    def __init__(self,n_dim,n_calls,rtol,integrator,train=True,adaptive=True,warmup=True):
+    def __init__(self,n_dim,n_calls,rtol,integrator,train=True,adaptive=True,warmup=0):
 
         super().__init__(n_dim,n_calls,rtol) 
         self.integrator = integrator
@@ -70,16 +70,16 @@ class VegasFlow(Integrator):
         
         instance.compile(self.integrand)
         start = time.time()
-        if self.warmup:
-            #warmup_integrator = getattr(vegasflow, self.integrator)(self.n_dim,WARMUP_CALLS)
-            #warmup_integrator.compile(self.integrand)
-            #warmup_integrator.run_integration(WARMUP_ITERATIONS)
-            #grid = warmup_integrator.divisions
-            #instance.divisions = grid
+        if self.warmup == 1:
             instance.run_integration(WARMUP_ITERATIONS)
             instance.adaptive=False
             instance.freeze_grid()
             print(" > Freezing the grid")
+        elif self.warmup == 2:
+            instance.run_integration(WARMUP_ITERATIONS)
+            instance.freeze_grid()
+            print(" > Freezing the grid")
+
         self.n_iter = 0
         all_results = []
         for i in range(MAX_ITERATIONS):
@@ -114,7 +114,9 @@ class VegasFlow(Integrator):
                           "time" : end-start,
                           "iter" : self.n_iter,
                           "samples/iter" : self.n_calls,
-                          "result" : f"{self.integral} +/- {self.error}" 
+                          "result" : f"{self.integral} +/- {self.error}",
+                          "rtol_reached": (self.error/self.integral).numpy(),
+                          "warmup" : self.warmup
                         }
                 return result
                 #return self.integral, self.error
@@ -134,7 +136,9 @@ class VegasFlow(Integrator):
                           "time" : end-start,
                           "iter" : self.n_iter,
                           "samples/iter" : self.n_calls,
-                          "result" : f"{self.integral} +/- {self.error}" 
+                          "result" : f"{self.integral} +/- {self.error}",
+                          "rtol_reached": (self.error/self.integral).numpy(),
+                          "warmup": self.warmup
                         }
                 return result
 

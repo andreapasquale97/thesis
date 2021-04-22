@@ -92,6 +92,44 @@ def prepare_data2(data=None,data1=None,rtol=1e-2,index=None):
 
     return df_iter, df_time, df_rtol
 
+def prepare_data3(data=None,data1=None,rtol=1e-2,index=None):
+
+    vegas_iter = [i["iter"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
+    importance_iter = [i["iter"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol]
+    vegasplus_iter = [i["iter"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1] 
+    vegasplus1_iter = [i["iter"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2] 
+
+    vegas_rtol = [i["rtol_reached"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
+    importance_rtol = [i["rtol_reached"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol]
+    vegasplus_rtol = [i["rtol_reached"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1]
+    vegasplus1_rtol = [i["rtol_reached"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
+
+    vegas_time = [i["time"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
+    importance_time = [i["time"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol] 
+    vegasplus_time = [i["time"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1]
+    vegasplus1_time = [i["time"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
+    
+    df_iter = pd.DataFrame({'vegasflow' : importance_iter,
+                            'vegasflowplus' : vegas_iter,
+                            'vegasflowplus adaptive' : vegasplus_iter,
+                            'vegasflowplus adaptive after warmup' : vegasplus1_iter   
+                            },index=index)
+
+    df_time = pd.DataFrame({'vegasflow' : importance_time,
+                            'vegasflowplus' : vegas_time,
+                            'vegasflowplus adaptive' : vegasplus_time,
+                            'vegasflowplus adaptive after warmup' : vegasplus1_time
+                             },index=index)
+
+    df_rtol= pd.DataFrame({'vegasflow' : importance_rtol,
+                           'vegasflowplus' : vegas_rtol,
+                           'vegasflowplus adaptive' : vegasplus_rtol,
+                           'vegasflowplus adaptive after warmup' : vegasplus1_rtol
+                            },index=index)
+
+    return df_iter, df_time, df_rtol
+
+
 
 def make_histo(infile=None, outfile=None, save=False, showPlus=True):
  
@@ -247,6 +285,7 @@ def make_histo2(infile=None, outfile=None, save=False,title=str):
     axs[2,2] = df_rtol3.plot.barh(ax=axs[2,2],legend=False)
     axs[2,2].set_title('Percent Uncertainty 0.0001',fontdict={'fontsize': 8, 'fontweight': 'medium'})
     axs[2,2].ticklabel_format(style = 'sci', axis='x', scilimits=(0,0))
+    axs[2,2].set_xlim([0,1e-3])
 
     axs[2,0].set_xlabel('time (s)')
     axs[2,1].set_xlabel('iterations')
@@ -259,6 +298,68 @@ def make_histo2(infile=None, outfile=None, save=False,title=str):
         plt.savefig(outfile,bbox_inches='tight')
     else:
         plt.show()
+
+
+def make_histo3(infile=None, outfile=None, save=False,title=str):
+    with open(infile, "r") as f:
+        all = json.load(f)
+        data = []
+        for key in all.keys():
+            data.append(all[key]) 
+
+    index = ['100000', '1000000']
+    #index1 = ['1000', '10000', '100000']
+    
+    fig, axs  = plt.subplots(3, 3, sharey='row',figsize=(13, 10))
+    fig.text(0.02, 0.5, 'samples/iteration', ha='center', va='center', rotation='vertical')
+    df_iter1, df_time1, df_rtol1 = prepare_data3(data=data[0],data1=data[1],rtol=1e-2,index=index)
+    df_iter2, df_time2, df_rtol2 = prepare_data3(data=data[0],data1=data[1],rtol=1e-3,index=index)
+    df_iter3, df_time3, df_rtol3 = prepare_data3(data=data[0],data1=data[1],rtol=1e-4,index=index)
+    
+
+    fig.suptitle(title, fontsize=14)
+
+    axs[0,0] = df_time1.plot.barh(ax=axs[0,0],legend=False)
+    #axs[0,0].set_title('Percent Uncertainty 0.01',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[0,1] = df_iter1.plot.barh(ax=axs[0,1],legend=False)
+    #axs[0,1].set_title('Percent Uncertainty 0.01',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[0,2] = df_rtol1.plot.barh(ax=axs[0,2],legend=False)
+    #axs[0,2].set_title('Percent Uncertainty 0.01',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[0,2].axvline(0.01,color='black',ls='--')
+    axs[0,2].ticklabel_format(style = 'sci', axis='x',  scilimits=(-2,-2))
+
+    axs[1,0] = df_time2.plot.barh(ax=axs[1,0],legend=False)
+    #axs[1,0].set_title('Percent Uncertainty 0.001',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[1,1] = df_iter2.plot.barh(ax=axs[1,1],legend=False)
+    #axs[1,1].set_title('Percent Uncertainty 0.001',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[1,2] = df_rtol2.plot.barh(ax=axs[1,2],legend=False)
+    #axs[1,2].set_title('Percent Uncertainty 0.001',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[1,2].axvline(0.001,color='black',ls='--')
+    axs[1,2].ticklabel_format(style = 'sci', axis='x', scilimits=(-3,-3))
+
+    axs[2,0] = df_time3.plot.barh(ax=axs[2,0],legend=False)
+    #axs[2,0].set_title('Percent Uncertainty 0.0001',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[2,1] = df_iter3.plot.barh(ax=axs[2,1],legend=False)
+    #axs[2,1].set_title('Percent Uncertainty 0.0001',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[2,2] = df_rtol3.plot.barh(ax=axs[2,2],legend=False)
+    #axs[2,2].set_title('Percent Uncertainty 0.0001',fontdict={'fontsize': 8, 'fontweight': 'medium'})
+    axs[2,2].axvline(0.0001,color='black',ls='--')
+    axs[2,2].ticklabel_format(style = 'sci', axis='x', scilimits=(-4,-4))
+    #axs[2,2].set_xlim([0,1e-3])
+
+    axs[2,0].set_xlabel('time (s)')
+    axs[2,1].set_xlabel('iterations')
+    axs[2,2].set_xlabel('rtol')
+
+
+    handles, labels = axs[0,0].get_legend_handles_labels()
+    fig.legend(handles, labels)
+    if save:
+        plt.savefig(outfile,bbox_inches='tight')
+    else:
+        plt.show()
+
+
 
     
 

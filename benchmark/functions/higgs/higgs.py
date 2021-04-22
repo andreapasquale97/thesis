@@ -23,7 +23,7 @@ from benchmark.functions.higgs import me
 #import spinors
 #import me
 
-
+"""
 pdfset = "NNPDF31_nnlo_as_0118/0"
 # Instantiate the PDF
 DIRNAME = (
@@ -33,6 +33,7 @@ DIRNAME = (
     + "/"
 )
 pdf = mkPDF(pdfset, DIRNAME)
+"""
 
 ##### PDF calculation
 @tf.function(input_signature=[TFLOAT1, TFLOAT1, TFLOAT1])

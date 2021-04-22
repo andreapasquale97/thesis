@@ -26,7 +26,7 @@ if __name__ == '__main__':
     parser.add_argument('--ncalls', default=1000000,type=int, help='Number of calls')
     parser.add_argument('--accuracy', default=1e-2,type=float, help='Percent uncertainty required')
     parser.add_argument('--outfile',default=None,help='Output file')
-    parser.add_argument('--warmup',default=False)
+    parser.add_argument('--warmup',default=0,type=int)
     args = vars(parser.parse_args())
 
     integrator = args['integrator']
@@ -37,8 +37,9 @@ if __name__ == '__main__':
     ncalls = args['ncalls']
     accuracy = args['accuracy']
     outfile = args['outfile']
-    warmup = False if args['warmup']=='False' else True
-
+    #warmup = False if args['warmup']=='False' else True
+    warmup = args['warmup']
+    
     
     elem = generate_data(VegasFlow,
                          integrator,

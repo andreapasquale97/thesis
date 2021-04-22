@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 import matplotlib.pyplot as plt
 
 
-MAX_ITERATIONS = 100
+MAX_ITERATIONS = 200
 WARMUP_ITERATIONS = 5
 WARMUP_CALLS =int(1e6)
 
