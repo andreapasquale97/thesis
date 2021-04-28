@@ -1,0 +1,78 @@
+{
+ "drellyan": [
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 86.57980489730835,
+   "iter": 49,
+   "samples/iter": 1000000,
+   "result": "49.82342285980581 +/- 0.49820315314853914",
+   "rtol_reached": 0.009999376288345215,
+   "warmup": 1
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 131.42359018325806,
+   "iter": 78,
+   "samples/iter": 1000000,
+   "result": "51.024957610608595 +/- 0.5075160811819175",
+   "rtol_reached": 0.009946428276432313,
+   "warmup": 1
+  },
+  {
+   "integrator": "VegasFlow",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 653.4537029266357,
+   "iter": 500,
+   "samples/iter": 1000000,
+   "result": "49.58090222970234 +/- 0.21135616383678174",
+   "rtol_reached": 0.0042628543316455625,
+   "warmup": 1
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": false,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 692.1138737201691,
+   "iter": 500,
+   "samples/iter": 1000000,
+   "result": "50.089546224892466 +/- 0.1980650566356677",
+   "rtol_reached": 0.0039542194242765455,
+   "warmup": 1
+  }
+ ],
+ "drellyan1": [
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": true,
+   "train": true,
+   "perc_uncertainty": 0.01,
+   "time": 622.9312541484833,
+   "iter": 70,
+   "samples/iter": 1000000,
+   "result": "46.5228440658874 +/- 0.46497055673779314",
+   "rtol_reached": 0.009994456832417304,
+   "warmup": 1
+  },
+  {
+   "integrator": "VegasFlowPlus",
+   "adaptive": true,
+   "train": true,
+   "perc_uncertainty": 0.001,
+   "time": 815.493047952652,
+   "iter": 500,
+   "samples/iter": 1000000,
+   "result": "55.109830161775186 +/- 0.211152195425749",
+   "rtol_reached": 0.003831479698012327,
+   "warmup": 1
+  }
+ ]
+}

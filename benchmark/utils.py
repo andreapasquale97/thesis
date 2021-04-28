@@ -97,34 +97,34 @@ def prepare_data3(data=None,data1=None,rtol=1e-2,index=None):
     vegas_iter = [i["iter"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
     importance_iter = [i["iter"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol]
     vegasplus_iter = [i["iter"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1] 
-    vegasplus1_iter = [i["iter"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2] 
+    #vegasplus1_iter = [i["iter"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2] 
 
     vegas_rtol = [i["rtol_reached"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
     importance_rtol = [i["rtol_reached"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol]
     vegasplus_rtol = [i["rtol_reached"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1]
-    vegasplus1_rtol = [i["rtol_reached"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
+    #vegasplus1_rtol = [i["rtol_reached"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
 
     vegas_time = [i["time"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
     importance_time = [i["time"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol] 
     vegasplus_time = [i["time"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1]
-    vegasplus1_time = [i["time"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
+    #vegasplus1_time = [i["time"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
     
     df_iter = pd.DataFrame({'vegasflow' : importance_iter,
                             'vegasflowplus' : vegas_iter,
-                            'vegasflowplus adaptive' : vegasplus_iter,
-                            'vegasflowplus adaptive after warmup' : vegasplus1_iter   
+                            'vegasflowplus adaptive' : vegasplus_iter
+                            #'vegasflowplus adaptive after warmup' : vegasplus1_iter   
                             },index=index)
 
     df_time = pd.DataFrame({'vegasflow' : importance_time,
                             'vegasflowplus' : vegas_time,
-                            'vegasflowplus adaptive' : vegasplus_time,
-                            'vegasflowplus adaptive after warmup' : vegasplus1_time
+                            'vegasflowplus adaptive' : vegasplus_time
+                            #'vegasflowplus adaptive after warmup' : vegasplus1_time
                              },index=index)
 
     df_rtol= pd.DataFrame({'vegasflow' : importance_rtol,
                            'vegasflowplus' : vegas_rtol,
-                           'vegasflowplus adaptive' : vegasplus_rtol,
-                           'vegasflowplus adaptive after warmup' : vegasplus1_rtol
+                           'vegasflowplus adaptive' : vegasplus_rtol
+                           #'vegasflowplus adaptive after warmup' : vegasplus1_rtol
                             },index=index)
 
     return df_iter, df_time, df_rtol
