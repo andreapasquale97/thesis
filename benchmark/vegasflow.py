@@ -82,6 +82,7 @@ class VegasFlow(Integrator):
 
         self.n_iter = 0
         all_results = []
+        local_times = []
         for i in range(MAX_ITERATIONS):
             self.n_iter += 1
             local_time = time.time()
@@ -89,6 +90,7 @@ class VegasFlow(Integrator):
             local_time = time.time() - local_time
             time_str = f"(took {local_time:.5f} s)"
             vegasflow.monte_carlo.print_iteration(self.n_iter,res,error,extra=time_str)
+            local_times.append(local_time)
             all_results.append((res, error))
             aux_res = 0.0
             weight_sum = 0.0
@@ -116,7 +118,11 @@ class VegasFlow(Integrator):
                           "samples/iter" : self.n_calls,
                           "result" : f"{self.integral} +/- {self.error}",
                           "rtol_reached": (self.error/self.integral).numpy(),
-                          "warmup" : self.warmup
+                          "warmup" : self.warmup,
+                          "local_times" : local_times,
+                          "avg_time_per_iteration" : np.mean(local_times),
+                          "total_iteration_time" : np.sum(local_times),
+                          "warmup_time" : end-start-np.sum(local_times)
                         }
                 return result
                 #return self.integral, self.error
@@ -138,7 +144,11 @@ class VegasFlow(Integrator):
                           "samples/iter" : self.n_calls,
                           "result" : f"{self.integral} +/- {self.error}",
                           "rtol_reached": (self.error/self.integral).numpy(),
-                          "warmup": self.warmup
+                          "warmup": self.warmup,
+                          "local_times" : local_times,
+                          "avg_time_per_iteration" : np.mean(local_times),
+                          "total_iteration_time" : np.sum(local_times),
+                          "warmup_time" : end-start-np.sum(local_times)
                         }
                 return result
 
