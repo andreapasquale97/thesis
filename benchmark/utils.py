@@ -129,6 +129,42 @@ def prepare_data3(data=None,data1=None,rtol=1e-2,index=None):
 
     return df_iter, df_time, df_rtol
 
+def prepare_data4(data=None,data1=None,rtol=1e-2,index=None):
+
+    vegas_iter = [i["iter"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
+    importance_iter = [i["iter"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol]
+    vegasplus_iter = [i["iter"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1] 
+    vegasplus1_iter = [i["iter"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2] 
+
+    vegas_rtol = [i["rtol_reached"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
+    importance_rtol = [i["rtol_reached"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol]
+    vegasplus_rtol = [i["rtol_reached"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1]
+    vegasplus1_rtol = [i["rtol_reached"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
+
+    vegas_time = [i["avg_time_per_iteration"] for i in data if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == False]
+    importance_time = [i["avg_time_per_iteration"] for i in data if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == rtol] 
+    vegasplus_time = [i["avg_time_per_iteration"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1]
+    vegasplus1_time = [i["avg_time_per_iteration"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
+    
+    df_iter = pd.DataFrame({'vegasflow' : importance_iter,
+                            'vegasflowplus' : vegas_iter,
+                            'vegasflowplus adaptive' : vegasplus_iter,
+                            'vegasflowplus adaptive after warmup' : vegasplus1_iter   
+                            },index=index)
+
+    df_time = pd.DataFrame({'vegasflow' : importance_time,
+                            'vegasflowplus' : vegas_time,
+                            'vegasflowplus adaptive' : vegasplus_time,
+                            'vegasflowplus adaptive after warmup' : vegasplus1_time
+                             },index=index)
+
+    df_rtol= pd.DataFrame({'vegasflow' : importance_rtol,
+                           'vegasflowplus' : vegas_rtol,
+                           'vegasflowplus adaptive' : vegasplus_rtol,
+                           'vegasflowplus adaptive after warmup' : vegasplus1_rtol
+                            },index=index)
+
+    return df_iter, df_time, df_rtol
 
 
 def make_histo(infile=None, outfile=None, save=False, showPlus=True):
@@ -362,14 +398,16 @@ def make_histo3(infile=None, outfile=None, save=False,title=str):
 
 def make_histo4(function=str, save=False, title=str):
     
-    path_CPU= f'simulation_CPU/{function}.json'
-    path_GPU0 = f'simulation_GPU/simulation_titan/{function}.json'
-    path_GPU1 = f'simulation_GPU/simulation_rtx/{function}.json'
-    path_GPU01 = f'simulation_GPU/simulation_both_gpus/{function}.json'
+    path_CPU= f'new_simulation_CPU/{function}.json'
+    path_GPU0 = f'new_simulation_GPU/gpu0/{function}.json'
+    #path_GPU1 = f'simulation_GPU/simulation_rtx/{function}.json'
+    #path_GPU01 = f'simulation_GPU/simulation_both_gpus/{function}.json'
 
-    index = ['CPU', 'GPU0', 'GPU1', 'GPU01']
+    #index = ['CPU', 'GPU0', 'GPU1', 'GPU01']
+    index = ['CPU', 'GPU0']
 
-    files = [path_CPU, path_GPU0, path_GPU1, path_GPU01]
+    #files = [path_CPU, path_GPU0, path_GPU1, path_GPU01]
+    files = [path_CPU, path_GPU0]
 
     data =[]
     for file in files:
@@ -378,14 +416,14 @@ def make_histo4(function=str, save=False, title=str):
             for key in all.keys():
                 data.append(all[key])
 
-    not_adaptive = data[0]+data[2]+data[4]+data[6]
-    adaptive = data[1]+data[3]+data[5]+data[7]
+    not_adaptive = data[0]+data[2]#+data[4]+data[6]
+    adaptive = data[1]+data[3]#+data[5]+data[7]
 
     fig, axs  = plt.subplots(3, 3, sharey='row',figsize=(13, 10))
     #fig.text(0.02, 0.5, 'samples/iteration', ha='center', va='center', rotation='vertical')
-    df_iter1, df_time1, df_rtol1 = prepare_data3(data=not_adaptive,data1=adaptive,rtol=1e-2,index=index)
-    df_iter2, df_time2, df_rtol2 = prepare_data3(data=not_adaptive,data1=adaptive,rtol=1e-3,index=index)
-    df_iter3, df_time3, df_rtol3 = prepare_data3(data=not_adaptive,data1=adaptive,rtol=1e-4,index=index)
+    df_iter1, df_time1, df_rtol1 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-2,index=index)
+    df_iter2, df_time2, df_rtol2 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-3,index=index)
+    df_iter3, df_time3, df_rtol3 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-4,index=index)
 
     fig.suptitle(title, fontsize=14)
 
@@ -407,14 +445,14 @@ def make_histo4(function=str, save=False, title=str):
     axs[2,2].axvline(0.0001,color='black',ls='--')
     axs[2,2].ticklabel_format(style = 'sci', axis='x', scilimits=(-4,-4))
 
-    axs[2,0].set_xlabel('time (s)')
+    axs[2,0].set_xlabel('avg time per iteration (s)')
     axs[2,1].set_xlabel('iterations')
     axs[2,2].set_xlabel('rtol')
 
 
     handles, labels = axs[0,0].get_legend_handles_labels()
     fig.legend(handles, labels)
-    outfile = f'plots_CPU_GPU/{function}'
+    outfile = f'plots_CPU_GPU_FINAL/{function}'
     if save:
         plt.savefig(outfile,bbox_inches='tight')
     else:
