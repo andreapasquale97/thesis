@@ -1,0 +1,17 @@
+Cap 1:
+	- integrazione multidimensionale + tecniche:
+		- VEGAS+ paper
+		- VegasFlow paper
+	- integrazione HEP
+	- utile per simulare degli eventi -> mini review di VegasFlow:
+		- cosa risolve + tecnologie GPUs...
+
+Cap 2: - vflowplus con differenze e novità rispetto a vegas
+       -  implementazione creazione classe come si porta in CPU
+       - problemi di memoria : spiega che è tutto pubblico
+
+Cap 3: benchmark 
+Cap 4: conclusione
+
+Appendix: manuale del codice
+

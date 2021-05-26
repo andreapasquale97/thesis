@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'main.tex.blg'
+[119] biber-darwin:322> INFO - === Dom Mag 23, 2021, 12:29:43
+[364] Utils.pm:320> ERROR - Cannot find 'main.tex.bcf'!
+[364] Biber.pm:132> INFO - ERRORS: 1

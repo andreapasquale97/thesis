@@ -1,0 +1,69 @@
+Integrazione multidimensionale
+- preambolo e importanza del calcolo multidimensionale
+- esempio della sfera per importanza dimensioni
+- ruolo delle simulazioni mc
+- esempio banale simple mc -> voglio ridurre la varianza
+- riduzione della varianza : importance sampling e stratified sampling
+
+
+
+Need for MC tecniques o qualcosa del genere
+
+In tutti gli ambiti della fisica, così come in altre discipline scientifiche, bisogna spesso risolvere degli integrali.
+Basti pensare al fatto che già in meccanica classica per calcolare la traiettoria del moto di un corpo è necessario integrare le equazioni del moto.
+La procedura di integrazione nella maggior parte dei casi risulta impossibile da un punto di vista analitico, ovvero l'integrale non è definibile in forma chiusa.
+Per superare questo problema sono state sviluppate diverse tecniche di integrazione numerica, o quadratura, ben note in letteratura come la tecnica dei trapezi o le formule di Newton-Cote ecc...
+Usando queste tecniche otteniamo una stima dell'integrale accompagnata da un errore su tale valore, ovviamente il risultato è tanto più attendibile tanto più l'errore risulta essera basso.
+Le prime tecniche citate sono efficaci quando bisogna valutare degli integrali monodimensionali, ovvero in cui il dominio è rappresentato da un intervallo (a,b) o una collezione di tali intervalli,
+tuttavia hanno diverse limitazioni.
+Queste tecniche soffrono parecchio se vengono applicate al calcolo di integrali multidimensionali per diversi motivi:
+- il numero di valutazioni della funzione cresce come la dimensione alle N, questo implica che l'errore sul calcolo dell'integrale cresce al crescere della dimensione.
+- la superficie al contorno del dominio di integrazione può diventare terribilmente complicata, può non essere semplicemente connessa o convessa, contrariamente al caso unidimensionale in cui è
+rappresentata da due numeri l'upper bound e il lower bound.
+Una soluzione per ovviare a queste problematiche consiste nell'integrazione MonteCarlo.
+
+A first example: simple MC
+Come sappiamo le tecniche MonteCarlo sono in grado di risolvere diversi problemi numericamente effettuando delle simulazioni su un sistema.
+Nell'ambito del calcolo di un integrale questa simulazione consiste nell'effettuare un sampling dell'integranda, ovvero nel valutare la funzione in diversi punti appartenenti al dominio di integrazione
+generati casualmente. 
+Data una funzione f(x) e un dominio di integrazione d-dimensionale V, supponiamo di effettuare un sampling con N punti generati casualmente uniformemente all'interno del dominio V.
+Usando the basic theorem for MonteCarlo integration è possibile stimare l'integrale della funzione f sul dominio V come:
+
+eq 7.6.1 Numerical Recipes
+
+
+
+A partire da questi punti possiamo calcolare il valore medio della funzione su questi N punti come:
+<f> = 1/N sum f(x_i)
+Una volta fatto questo l'integrale può essere stimato semplicemente come:
+\int_V f(x) dx = V <f>
+Poiché 
+
+
+
+
+
+
+
+
+
+
+
+
+Accanto a queste procedure puramente numeriche esiste poi un altro ramo per il calcolo degli integrali che fa riferimento a simulazioni Monte Carlo; tramite queste metodologie si effettua un sampling 
+dell'integranda in punti generati casualmente e a partire da questi si fornisce una stima dell'integrale e del relativo errore.
+Le tecniche MC sono diventate quelle dominanti soprattutto per il calcolo di integrali multidimensionali, che sono molto ricorrenti specialmente in HEP. La ragione di tale successo risiede nel fatto che 
+l'errore fornito sull'integrale cresce 
+
+Tecniche Monte Carlo
+Il metodo più semplice con il quale possiamo calcolare un integrale attraverso una simulazione montecarlo consiste nell'effettuare un sampling dell'integranda, ovvero si valuta la funzione in N punti
+generati casualmente (appartenenti al dominio di integrazione).
+
+
+
+
+Fonti:
+- Numerical Recipes
+- Recursive Stratified Sampling article
+- Vegas+
+- Vegasflow
