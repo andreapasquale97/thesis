@@ -94,6 +94,7 @@ where $\Gamma(x)$ denotes the famous Dirac Gamma function.
 In literature this phenomenon known as the \emph{curse of dimensionality}.
 
 \subsection{Reducing the variance}
+\label{redu_var}
 In the field of MC integrators the main focus is to improve the error estimate in order to achieve more precise results using less number of
 events. Over the years and also lately with the advent of Machine Learning, several techniques have been proposed, implemented and applied to solve complex multi-dimensional integrals.
 
@@ -171,7 +172,7 @@ The variance of the estimator in Eq.(\ref{SS f}) can be easily computed as:
 \begin{eqnarray}
 	\text{Var}(\langle f \rangle ') &= \dfrac{1}{4}  \big[  \text{Var}(\langle f \rangle_a) +\text{Var}(\langle f \rangle_b)  \big]  \\
 	&= \dfrac{1}{4} \bigg(  \dfrac{\text{Var}_a(f)}{N/2} +\dfrac{\text{Var}_b(f)}{N/2} \bigg) \\
-	&= \dfrac{1}{2N} \big[ \text{Var}_a(f) + \text{Var}_b(f)\big] 
+	&= \dfrac{1}{2N} \big[ \text{Var}_a(f) + \text{Var}_b(f)\big] \label{var_stratified}
 	\label{ SS var}
 \end{eqnarray}
 

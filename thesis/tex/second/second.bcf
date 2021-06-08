@@ -2182,41 +2182,6 @@
     <bcf:datasource type="file" datatype="bibtex">bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Lepage:1977sw</bcf:citekey>
-    <bcf:citekey order="2">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="3">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="4">Lepage:1977sw</bcf:citekey>
-    <bcf:citekey order="5">Campbell:2015qma</bcf:citekey>
-    <bcf:citekey order="5">Campbell:2019dru</bcf:citekey>
-    <bcf:citekey order="6">Gehrmann:2018szu</bcf:citekey>
-    <bcf:citekey order="7">Alwall:2014hca</bcf:citekey>
-    <bcf:citekey order="8">Gleisberg:2008ta</bcf:citekey>
-    <bcf:citekey order="9">Lepage:1977sw</bcf:citekey>
-    <bcf:citekey order="9">Press:1989vk</bcf:citekey>
-    <bcf:citekey order="10">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="11">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="12">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="13">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="14">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="15">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="16">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="17">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="18">peter_lepage_2021_4746454</bcf:citekey>
-    <bcf:citekey order="19">vegasflow_package</bcf:citekey>
-    <bcf:citekey order="20">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="21">peter_lepage_2021_4746454</bcf:citekey>
-    <bcf:citekey order="22">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="23">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="24">Alwall:2014hca</bcf:citekey>
-    <bcf:citekey order="25">vegasflow_package</bcf:citekey>
-    <bcf:citekey order="26">Alwall:2014hca</bcf:citekey>
-    <bcf:citekey order="27">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="28">vegasflow_package</bcf:citekey>
-    <bcf:citekey order="29">Alwall:2014hca</bcf:citekey>
-    <bcf:citekey order="30">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="31">peter_lepage_2021_4746454</bcf:citekey>
-    <bcf:citekey order="32">peter_lepage_2021_4746454</bcf:citekey>
-    <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
@@ -2248,13 +2213,4 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="nty/global//global/global"
-                type="entry"
-                sortingtemplatename="nty"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

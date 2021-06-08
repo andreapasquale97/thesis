@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{tensorflow} \PYG{k}{as} \PYG{n+nn}{tf}
+
+\PYG{k}{with} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{device}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/CPU:0\PYGZsq{}}\PYG{p}{):}
+	\PYG{c+c1}{\PYGZsh{} these operations will run on CPU}
+	\PYG{n}{a} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{constant}\PYG{p}{([[}\PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{2.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{],} \PYG{p}{[}\PYG{l+m+mf}{4.0}\PYG{p}{,} \PYG{l+m+mf}{5.0}\PYG{p}{,} \PYG{l+m+mf}{6.0}\PYG{p}{]])}
+	\PYG{n}{b} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{constant}\PYG{p}{([[}\PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{2.0}\PYG{p}{],} \PYG{p}{[}\PYG{l+m+mf}{3.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{],} \PYG{p}{[}\PYG{l+m+mf}{5.0}\PYG{p}{,} \PYG{l+m+mf}{6.0}\PYG{p}{]])}
+		
+\PYG{c+c1}{\PYGZsh{} this will run on GPU	}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}
+\end{Verbatim}

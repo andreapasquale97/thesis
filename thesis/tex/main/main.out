@@ -1,0 +1,21 @@
+\BOOKMARK [0][-]{chapter.1}{Multi-dimensional integration in HEP}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Monte Carlo methods for multi-dimensional integration}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{A first example of Monte Carlo integration}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Reducing the variance}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{HEP and multi-dimensional integration}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.2.1}{Cross Section and Decay Rates}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.2}{The S-matrix formalism}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.3}{Feynman diagrams}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.4}{Basics of QCD}{section.1.2}% 9
+\BOOKMARK [1][-]{section.1.3}{Modern techniques and limitations}{chapter.1}% 10
+\BOOKMARK [2][-]{subsection.1.3.1}{Problematic of HEP integration}{section.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.3.2}{CPU costs and computational times}{section.1.3}% 12
+\BOOKMARK [2][-]{subsection.1.3.3}{Possible solutions and aim of the thesis}{section.1.3}% 13
+\BOOKMARK [0][-]{chapter.2}{Algorithms and implementation}{}% 14
+\BOOKMARK [1][-]{section.2.1}{Algorithms}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.1.1}{VEGAS}{section.2.1}% 16
+\BOOKMARK [2][-]{subsection.2.1.2}{A new algorithm: VEGAS+}{section.2.1}% 17
+\BOOKMARK [1][-]{section.2.2}{Implementation}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.1}{VegasFlow: a brief overview}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.2}{A new implementation: VegasFlowPlus}{section.2.2}% 20
+\BOOKMARK [0][-]{section*.23}{Bibliography}{}% 21
