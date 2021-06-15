@@ -163,7 +163,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
-      <bcf:value>none</bcf:value>
+      <bcf:value>nty</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortsets</bcf:key>
@@ -2182,102 +2182,35 @@
     <bcf:datasource type="file" datatype="bibtex">bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Press:1992zz</bcf:citekey>
-    <bcf:citekey order="2">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="2">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="2">unknown</bcf:citekey>
-    <bcf:citekey order="3">unknown</bcf:citekey>
-    <bcf:citekey order="4">Lepage:1977sw</bcf:citekey>
-    <bcf:citekey order="4">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="4">unknown</bcf:citekey>
-    <bcf:citekey order="5">Press:1989vk</bcf:citekey>
-    <bcf:citekey order="5">Press:1992zz</bcf:citekey>
-    <bcf:citekey order="6">Press:1989vk</bcf:citekey>
-    <bcf:citekey order="7">Peskin:1995ev</bcf:citekey>
-    <bcf:citekey order="7">Schwartz:2017hep</bcf:citekey>
-    <bcf:citekey order="8">Collins:2011zzd</bcf:citekey>
-    <bcf:citekey order="8">Muta:2010xua</bcf:citekey>
-    <bcf:citekey order="8">Ellis:1991qj</bcf:citekey>
-    <bcf:citekey order="8">Skands:2012ts</bcf:citekey>
-    <bcf:citekey order="9">Peskin:1995ev</bcf:citekey>
-    <bcf:citekey order="10">Peskin:1995ev</bcf:citekey>
-    <bcf:citekey order="11">Mathematica</bcf:citekey>
-    <bcf:citekey order="12">Buckley:2019wov</bcf:citekey>
-    <bcf:citekey order="13">ATL-SOFT-PUB-2021-001</bcf:citekey>
-    <bcf:citekey order="14">ATL-SOFT-PUB-2021-001</bcf:citekey>
-    <bcf:citekey order="15">Buckley:2019wov</bcf:citekey>
-    <bcf:citekey order="16">Buckley:2019wov</bcf:citekey>
-    <bcf:citekey order="17">Bendavid:2017zhk</bcf:citekey>
-    <bcf:citekey order="18">unknown</bcf:citekey>
-    <bcf:citekey order="19">Lepage:1977sw</bcf:citekey>
-    <bcf:citekey order="20">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="21">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="22">Lepage:1977sw</bcf:citekey>
-    <bcf:citekey order="23">Campbell:2015qma</bcf:citekey>
-    <bcf:citekey order="23">Campbell:2019dru</bcf:citekey>
-    <bcf:citekey order="24">Gehrmann:2018szu</bcf:citekey>
-    <bcf:citekey order="25">Alwall:2014hca</bcf:citekey>
-    <bcf:citekey order="26">Gleisberg:2008ta</bcf:citekey>
-    <bcf:citekey order="27">Lepage:1977sw</bcf:citekey>
-    <bcf:citekey order="27">Press:1989vk</bcf:citekey>
-    <bcf:citekey order="28">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="29">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="30">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="31">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="32">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="33">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="34">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="35">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="36">peter_lepage_2021_4746454</bcf:citekey>
-    <bcf:citekey order="37">vegasflow_package</bcf:citekey>
-    <bcf:citekey order="38">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="39">peter_lepage_2021_4746454</bcf:citekey>
-    <bcf:citekey order="40">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="41">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="42">Alwall:2014hca</bcf:citekey>
-    <bcf:citekey order="43">vegasflow_package</bcf:citekey>
-    <bcf:citekey order="44">Alwall:2014hca</bcf:citekey>
-    <bcf:citekey order="45">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="46">vegasflow_package</bcf:citekey>
-    <bcf:citekey order="47">Alwall:2014hca</bcf:citekey>
-    <bcf:citekey order="48">Carrazza:2020rdn</bcf:citekey>
-    <bcf:citekey order="49">peter_lepage_2021_4746454</bcf:citekey>
-    <bcf:citekey order="50">peter_lepage_2021_4746454</bcf:citekey>
-    <bcf:citekey order="51">Lepage:2020tgj</bcf:citekey>
-    <bcf:citekey order="52">Lepage:1977sw</bcf:citekey>
-    <bcf:citekey order="53">Dixon:1613349</bcf:citekey>
-    <bcf:citekey order="54">article</bcf:citekey>
-    <bcf:citekey order="55">article</bcf:citekey>
-    <bcf:citekey order="56">Carrazza_2020</bcf:citekey>
-    <bcf:citekey order="57">Carrazza_2020</bcf:citekey>
-    <bcf:citekey order="58">Carrazza_2020</bcf:citekey>
-    <bcf:citekey order="59">Brucherseifer_2014</bcf:citekey>
-    <bcf:citekey order="60">Brucherseifer_2014</bcf:citekey>
-    <bcf:citekey order="61">Brucherseifer_2014</bcf:citekey>
-    <bcf:citekey order="62">Cruz_Martinez_2018</bcf:citekey>
-    <bcf:citekey order="63">Cruz_Martinez_2018</bcf:citekey>
-    <bcf:citekey order="64">Cruz_Martinez_2018</bcf:citekey>
-    <bcf:citekey order="65">Carrazza_2021</bcf:citekey>
-    <bcf:citekey order="65">juan_m_cruz_martinez_2021_4903010</bcf:citekey>
-    <bcf:citekey order="66">juan_m_cruz_martinez_2021_4903010</bcf:citekey>
-    <bcf:citekey order="67">Brucherseifer_2014</bcf:citekey>
-    <bcf:citekey order="68">Brucherseifer_2014</bcf:citekey>
-    <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="none">
+  <bcf:sortingtemplate name="nty">
     <bcf:sort order="1">
-      <bcf:sortitem order="1">citeorder</bcf:sortitem>
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="none/global//global/global"
-                type="entry"
-                sortingtemplatename="none"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

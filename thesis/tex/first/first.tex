@@ -12,7 +12,7 @@ is facing the High-Luminosity LHC programme.
 Monte Carlo (MC) methods are a powerful tool which can provide the answer to a 
 problem by simply running a simulation on the system studied.
 In the field of multi-dimensional integration techniques MC methods are the solution of choice, since contrary 
-to the standard numerical integration formulas  the error on the integral does not scale with the dimension. 
+to the standard numerical integration formulas  the error on the integral does not scale with the dimension \cite{Press:1992zz}. 
 
 
 \subsection{A first example of Monte Carlo integration}
@@ -96,7 +96,7 @@ In literature this phenomenon known as the \emph{curse of dimensionality}.
 \subsection{Reducing the variance}
 \label{redu_var}
 In the field of MC integrators the main focus is to improve the error estimate in order to achieve more precise results using less number of
-events. Over the years and also lately with the advent of Machine Learning, several techniques have been proposed, implemented and applied to solve complex multi-dimensional integrals.
+events. Over the years and also lately with the advent of Machine Learning, several techniques have been proposed, implemented and applied to solve complex multi-dimensional integrals \cite{Lepage:2020tgj, Carrazza:2020rdn, unknown}.
 
 In literature there are two main ways of reducing the variance: importance sampling and stratified sampling.
 
@@ -121,7 +121,7 @@ cumulative distribution of  $p(\textbf{x}) $.
 From Eq.(\ref{samplig2}) we can deduce that to compute the integral $I$, instead of using a uniform sampling of the function $f$,
 we can also perform a non-uniform sampling of the function $f/p$ in the same integration volume $V$.
 \newline
-The integral and the relative error will be given by:
+The integral and the relative error will be given by \cite{unknown}:
 \begin{equation}
 	I \approx I_{\text{MC}}  = V \langle f/p \rangle_P
 \end{equation}
@@ -134,12 +134,12 @@ The integral and the relative error will be given by:
 where $\langle \rangle_P$ denotes the average taken with respect to the non-uniform distribution $p(\textbf{x})$.
 
 This is the concept of \emph{importance sampling}: by changing the distribution of the sampling we can reduce the variance by choosing
-a suitable $p(\textbf{x})$.
+a suitable $p(\textbf{x})$ \cite{Lepage:1977sw, Lepage:2020tgj, unknown}.
 
-What is the best choice for the sampling density p?
+What is the best choice for the sampling density $p$?
 It can be shown that by minimizing the variance, as a functional of sampling density $p$, the optimal choice for $p$ is to be proportional 
 to $|f|$. This choice is not surprising, in fact by replacing $p$ with $|f|$ in Eq.(\ref{sigma_IP}) we get a vanishing variance.
-Moreover in order to satisfy the normalization requirement in Eq.(\ref{normalization}) the exact solution for $p$ is:
+Moreover, in order to satisfy the normalization requirement in Eq.(\ref{normalization}) the exact solution for $p$ is:
 \begin{equation}
 	p = \frac{|f|}{\int_V |f| d\textbf{x}}
 \end{equation}
@@ -149,7 +149,7 @@ As we can see we arrive at a paradox since the optimal sampling density requires
 Therefore to minimize the variance the aim is to find a function $p$ that resemble the shape of the integrand function $f$, this is usually done 
 using adaptive recursive strategies which can provide a better sampling distribution using the sampled points.
 \subsubsection{Stratified Sampling}
-Another technique which is a standard one in literature is based on the idea of  "stratified sampling".
+Another technique which is a standard one in literature is based on the idea of  "stratified sampling" \cite{Press:1989vk, Press:1992zz}.
 We have already observed that we can estimate the variance of our integral by computing the variance of the random variable $I_{MC}$; we can exploit this relation by focusing on the average value of the function $f$ over the domain $V$, denoted by $\llangle  f \rrangle $, and the correspoding MC estimate using a uniform sampling $ \langle f \rangle$:
 \begin{equation}
 	\llangle  f \rrangle = \frac{1}{V} \int_V f(\textbf{x}) d\textbf{x} \quad \quad 
@@ -191,7 +191,7 @@ We can generalize the previous formulas by adding the possibility to sample a sp
 points from each subvolume. Considering again the subvolumes $V_a$ and $V_b$ we can suppose 
 to sample the first one with $N_a$ points and the second one with $N_b$ with the constraint that $N = N_a + N_b$. 
 \newline
-It can be shown that in this case the variance is minimized when:
+It can be shown that in this case the variance is minimized when \cite{Press:1989vk}:
 \begin{equation}
 	\frac{N_a}{N} = \frac{\sqrt{\text{Var}_a(f)}}{\sqrt{\text{Var}_a(f)}+
 		\sqrt{\text{Var}_b(f)}}
@@ -210,10 +210,10 @@ In fact if we divide the integration volume in $M$ subvolumes for each dimension
 
 \section{HEP and multi-dimensional integration}
 One of the main fields of physics which requires computing multi-dimensional integrals is High Energy Physics (HEP).
-In this section we give a brief overview on some aspects of quantum field theory, in particular we show that a prediction for a physical
+In this section we give a brief overview on some aspects of quantum field theory \cite{Peskin:1995ev, Schwartz:2017hep}, in particular we show that a prediction for a physical
 observable can be made as a series of perturbative terms which involve the evaluation of high dimensional integrals.
 
-Finally we present shortly the quantum theory of strong interactions known as Quantum Chromodynamics (QCD).
+Finally we present shortly the quantum theory of strong interactions known as Quantum Chromodynamics (QCD) \cite{Collins:2011zzd, Muta:2010xua, Ellis:1991qj, Skands:2012ts}.
 
 
 \subsection{Cross Section and Decay Rates}
@@ -226,7 +226,7 @@ Suppose that we have two species of particle, $\mathcal{A}$, at rest with densit
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{../images/peskin.png}
-	\caption{Symbolic representation of a scattering process}
+	\caption{Symbolic representation of a scattering process. Image from Ref\cite{Peskin:1995ev}.}
 	\label{Potential}
 \end{figure}
 
@@ -416,9 +416,20 @@ fraction $x_a$ of the hadron's  momentum when probed at a scale $\mu_F$ which is
 	\label{QCD fact}
 	d\sigma = \sum_{a,b}\int_0^1 dx_a dx_b \sum_F \int d\Phi_F f_{a/h_1}(x_a,\mu_F) f_{b/h_2}(x_b,\mu_F)  d\hat{\sigma}_{ab \rightarrow F}
 \end{equation}
-where the sum over $a$ and $b$ runs over all the partonic constituents of the two hadrons $h_1$ and $h_2$ and the inner sum over $F$ runs over all the possible final states $F$.
+where the sum over $a$ and $b$ runs over all the partonic constituents of the two hadrons $h_1$ and $h_2$ and the inner sum over $F$ runs over all the possible final states $F$
+
+\subsection{Need for MC integration in HEP}
+The theoretical framework presented in the previous sections shows us that to make a prediction we need to solve complicated integrals. 
+The complexity of the integrals will increase as we approach higher levels of precision since there will be more Feynman diagrams to consider. Moreover, the Feynman diagrams will be more intricate leading to difficult mathematical expressions.
+
+The aforementioned integrals can be solved analytically only if we are dealing with the first perturbative terms of a simple process. Eventually one can use also tools such as the language program \texttt{Mathematica} \cite{Mathematica} to solve such integrals analytically. However the majority of the calculations performed nowadays involves integrals that cannot be solved analytically or for which the analytical result is often not known.
+
+This is a common problem also in other sectors of physics. The solution is to switch to a numerical approach in order to solve the integrals. This is why we need to use numerical techniques such as Monte Carlo integrators which are particularly suited for complex multi-dimensional integration problems.  
+
+
 
 \section{Modern techniques and limitations}
+
 Thanks to the technological development at LHC we are able to obtain experimental data with a very high precision. To test whether 
 the SM can explain and predict correctly these data we need to compare them with  theoretical predictions that have the same accuracy.
 This leads us to the problem of increasing the precision of the theoretical results. 
@@ -426,10 +437,11 @@ This leads us to the problem of increasing the precision of the theoretical resu
 As we saw in the previous section, we can obtain an expression for physical observables such as the differential cross section as a series of terms which involves the calculation of high-dimensional integrals. The most relevant technique used to solve these integrals are MC methods, due to the high-dimensions as expected. The problem of reaching higher accuracy is therefore related 
 to the possibility of reducing the MC estimate of the variance of the considered integral.
 
-In the first section we already discussed some MC techniques that enable us to reduce the variance, however, in the particular case of HEP integrands the task of variance reduction can become problematic.
+In section \ref{redu_var} we already discussed some MC techniques that enable us to reduce the variance, however, in the particular case of HEP integrands the task of variance reduction can become problematic.
 
-\subsection{Problematic of HEP integration}
-One of the first problems when predicting physical observable based on a quantum field theory, such as QCD, is the fact we need to compute the observable beyond the LO term in order to match the experimental data.
+\subsection{Problems of HEP integration}
+One of the first problems when predicting physical observable based on a quantum field theory, such as QCD, is the fact we need to compute the observable beyond the LO term in order to match the experimental data. 
+
 Even if we start with a process with a relatively small dimensional phase space  at LO, the next terms in the perturbation series will involve the computation of integrals with more complicated functions which are defined in a higher dimensional phase-space.
 
 In particular the dimensionality of the integral will increase s.t.:
@@ -459,9 +471,10 @@ In particular the problem related to the CPU cost and the long computational tim
 
 
 \subsection{CPU costs and computational times}
+\label{cost}
 The CPU cost of MC methods is one of the biggest problem that is driving the budget of big experiments such as ATLAS or CSM.
 Since 2010, MC integration has gone from being a trivial element of an experiment's CPU budget to, particularly in the case of top 
-quark production processes, an important consumer up to 20\% of the experiment's CPU budget. 
+quark production processes, an important consumer up to 20\% of the experiment's CPU budget \cite{Buckley:2019wov}. 
 The main driver for this CPU usage has been the availability of the complex multileg and NLO QCD processes. 
 
 This trend of high CPU resources  is in contrast with the CPU budgets currently available at the LHC experiments.   
@@ -473,7 +486,7 @@ The main problem for the ATLAS experiment is the heavy use of the \texttt{SHERPA
 \begin{figure}[h]
 	\centering
 	\includegraphics[width = 12cm]{../images/CPU-cost.png}
-	\caption{ATLAS CPU resource needs 2018 estimates}
+	\caption{ATLAS CPU resource needs 2018 estimates. Image from Ref\cite{ATL-SOFT-PUB-2021-001}.}
 	\label{CPU cost}
 \end{figure}
 
@@ -485,7 +498,7 @@ In particular in the case of integration we need to repeat the process of sampli
 
 The current importance sampling techniques can provide an approximate estimate for the sampling distribution by discarding or re-weighting
 the samples from such distribution, in particular the aggregation of these imperfect phase-space mappings is one of the major cause for
-the poor efficiencies of MC event sampling at high fixed order in the strong coupling $\alpha_s$.
+the poor efficiencies of MC event sampling at high fixed order in the strong coupling $\alpha_s$ .
 
 The ideal distribution would by definition always have unit weights, i.e. if the sampling density matches the optimal one, but in practice 
 the sample weights have a tail to lower values, since the proposal density includes phase-space points which are not relevant for the integration.
@@ -500,7 +513,7 @@ In particular this sample rejection from broad distribution of weights combined 
 \begin{figure}[]
 	\centering
 	\includegraphics[width = 10cm]{../images/CPU-time.png}
-	\caption{CPU time per event using different MC generators}
+	\caption{CPU time per event using different MC generators. Image from Ref\cite{Buckley:2019wov}.}
 	\label{CPU-time}
 \end{figure}
 
@@ -515,7 +528,7 @@ We can work in two different directions in order to achieve our goal.
 
 Firstly we can develop new algorithms for multi-dimensional integration. In particular new techniques which are able to reach the target accuracy
 with a lower number of events thus reducing both the computational times and the CPU usage. These new techniques may include new numerical
-MC algorithms as well as ML techniques such as  learning the integration phase-space using boosted decision trees or deep neural networks. 
+MC algorithms as well as ML techniques such as  learning the integration phase-space using boosted decision trees \cite{Bendavid:2017zhk} or deep neural networks \cite{unknown}. 
 
 
 Secondly we can lower the CPU usage by looking at new computer architecture such as GPUs or multi-threading CPUs.

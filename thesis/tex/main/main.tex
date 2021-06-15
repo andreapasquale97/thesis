@@ -13,10 +13,11 @@
 \usepackage[a4paper, left = 35mm, top=30mm,bottom=30mm,right=30mm,
 bindingoffset=6mm ]{geometry}
 \usepackage{graphicx}
-\usepackage[]{biblatex}
+\usepackage[sorting=none]{biblatex}
 \usepackage{minted}
+\usepackage{tablefootnote}
 
-\usepackage[font=small,skip=0pt]{caption}
+\usepackage[font=footnotesize,skip=0pt]{caption}
 \addbibresource{bib.bib}
 
 \begin{document}
@@ -25,8 +26,11 @@ bindingoffset=6mm ]{geometry}
 
 \subfile{../first/first.tex}
 \subfile{../second/second.tex}
+\subfile{../third/third.tex}
 \nocite{*}
 
+\appendix
+\subfile{../appendix/appendix.tex}
 \addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
 
