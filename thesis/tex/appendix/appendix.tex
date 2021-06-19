@@ -1,5 +1,107 @@
 \documentclass[../main/main.tex]{subfiles}
 \begin{document}
-\chapter{VegasFlow example}
+\chapter{Integrating with VegasFlow}
+
+\section{Basic Usage}
+In this appendix we present directly how to use the \texttt{VegasFlow} library and the new algorithms implemented in the \texttt{VegasFlowPlus} class. The integration of a function is done in three steps:
+\begin{enumerate}
+	\item Create an instance of the integrator. At this step the user needs to set the dimension and the number of events per iterations. For the \texttt{VegasFlow} integrator this step can be performed as follows:
+	\begin{minted}[fontsize=\footnotesize]{python}
+from vegasflow import VegasFlow
+		
+dims = 3
+n_calls = int(1e7)
+vegas_instance = VegasFlow(dims, n_calls)
+\end{minted}
+\item Compile the integrand function. Obviously the user need to specify to the integrator which function will be integrated. The integrand can be implemented as a simple python function that accept three arguments: the number of dimensions \texttt{n\_dim}, the weight of each sampled point \texttt{weight} and an array of random numbers \texttt{xarr}.
+\begin{minted}[fontsize=\footnotesize]{python}
+import tensorflow as tf
+	
+def example_integrand(xarr, n_dim=None, weight=None):
+	s = tf.reduce_sum(xarr, axis=1)
+	result = tf.pow(0.1/s, 2)
+	return result
+
+vegas_instance.compile(example_integrand)
+\end{minted}
+
+As we can see the function is defined using only \texttt{TensorFlow} primitives, since it allows for the usage of all the hardware \texttt{TensorFlow} is compatible with. In particular when is called the method \texttt{compile} the integrand is registered and it is compiled using the decorator \texttt{tf.function} that enable us to use the benefits of the graph-mode implementation discussed in Sect. \ref{tensorflow}.
+
+\item Run the integration. After having completed the setup we just need to tell the integrators for how many iterations we need to run the simulation. The integration is performed using the method \texttt{run\_integration(n\_iter)} as follows:
+\begin{minted}[fontsize=\footnotesize]{python}
+n_iter = 5
+result = vegas_instance.run_integration(n_iter)
+\end{minted}
+The output variable \texttt{result} is a tuple variable where the first element is the result of the integration while the second element is the error of the integration.
+\item The program will display the following output during the integrations.
+\begin{minted}[fontsize=\footnotesize]{python}
+[INFO] Result for iteration 0: 8.607e-03 +/- 4.039e-05(took 16.11334 s)
+[INFO] Result for iteration 1: 8.628e-03 +/- 5.101e-06(took 9.36287 s)
+[INFO] Result for iteration 2: 8.631e-03 +/- 2.715e-06(took 9.58453 s)
+[INFO] Result for iteration 3: 8.633e-03 +/- 2.292e-06(took 9.56779 s)
+[INFO] Result for iteration 4: 8.632e-03 +/- 2.161e-06(took 9.55856 s)
+[INFO]  > Final results: 0.00863171 +/- 1.31392e-06
+\end{minted}
+The final result is a weighted average of the results obtained in each iterations.
+\end{enumerate}
+
+Since we are using the integrator \texttt{VegasFlow} the VEGAS grid will be refined after each iteration using the importance sampling algorithm presented in section \ref{vegas}.
+
+\section{How to use the \texttt{VegasFlowPlus} class}
+If we want to use the new integrators implemented we simply need to import the \texttt{VegasFlowPlus} class. The setup is quite similar with the only difference that we can set the parameter \texttt{adaptive} to \texttt{True} if we want to use the VEGAS+ algorithm \cite{Lepage:2020tgj} or to \texttt{False} if the we want to use the classic VEGAS algorithm \cite{Lepage:1977sw}. By default the \texttt{adaptive} flag is set to \texttt{True}.
+
+
+\begin{minted}[fontsize=\footnotesize]{python}
+from vegasflow import VegasFlowPlus
+		
+dim = 4
+n_calls = int(1e6)
+# VEGAS+ integrator: importance sampling + adaptive stratified sampling
+vegas+_instance =  VegasFlowPlus(dims, n_calls)
+# VEGAS integrator: importance sampling + stratified sampling
+vegas_instance = VegasFlowPlus(dims, n_calls, adaptive = False )
+\end{minted}
+
+The integrand definition is identical to the \texttt{VegasFlow} case if we are using the VEGAS integrator. 
+For the VEGAS+ integrator, as already discussed in Section \ref{vfp problem}, we need to specify an input signature due to the fact that the VEGAS+ integrator uses a different number of events in each iteration.
+
+For the case of a Gaussian integral we show how to add this signature to the function:
+
+\begin{minted}[fontsize=\footnotesize]{python}
+@tf.function(input_signature=[
+tf.TensorSpec(shape=[None,dim], dtype=tf.float32),
+tf.TensorSpec(shape=[], dtype=tf.int32),
+tf.TensorSpec(shape=[None], dtype=tf.float32)
+]
+)
+def symgauss(xarr, n_dim=None, weight=None, **kwargs):
+"""symgauss test function"""
+if n_dim is None:
+n_dim = xarr.shape[-1]
+a = tf.constant(0.1, dtype=DTYPE)
+n100 = tf.cast(100 * n_dim, dtype=DTYPE)
+pref = tf.pow(1.0 / a / np.sqrt(np.pi), float_me(n_dim))
+coef = tf.reduce_sum(tf.range(n100 + 1))
+coef += tf.reduce_sum(tf.square((xarr - 1.0 / 2.0) / a), axis=1)
+coef -= (n100 + 1) * n100 / 2.0
+return pref * tf.exp(-coef)
+\end{minted}
+
+By adding \texttt{None} to the signature we allow \texttt{TensorFlow} to build only one graph corresponding to the function \texttt{symgauss}, avoiding the creation of multiple graphs for the same function (\emph{retracing}) .
+
+After that the integration is performed exactly in the same way using the method \texttt{run\_integration(n\_iter)}.
+
+\begin{minted}[fontsize=\footnotesize]{python}
+n_iter = 5
+# VEGAS+ result
+result_vegas+ = vegas+_instance.run_integration(n_iter)
+# VEGAS result
+result_vegas = vegas_instance.run_integration(n_iter)
+\end{minted}
+
+
+
+
+
 
 \end{document}

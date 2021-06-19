@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{vegasflow} \PYG{k+kn}{import} \PYG{n}{VegasFlowPlus}
+		
+\PYG{n}{dim} \PYG{o}{=} \PYG{l+m+mi}{4}
+\PYG{n}{n\PYGZus{}calls} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mf}{1e6}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} VEGAS+ integrator: importance sampling + adaptive stratified sampling}
+\PYG{n}{vegas}\PYG{o}{+}\PYG{n}{\PYGZus{}instance} \PYG{o}{=}  \PYG{n}{VegasFlowPlus}\PYG{p}{(}\PYG{n}{dims}\PYG{p}{,} \PYG{n}{n\PYGZus{}calls}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} VEGAS integrator: importance sampling + stratified sampling}
+\PYG{n}{vegas\PYGZus{}instance} \PYG{o}{=} \PYG{n}{VegasFlowPlus}\PYG{p}{(}\PYG{n}{dims}\PYG{p}{,} \PYG{n}{n\PYGZus{}calls}\PYG{p}{,} \PYG{n}{adaptive} \PYG{o}{=} \PYG{k+kc}{False} \PYG{p}{)}
+\end{Verbatim}

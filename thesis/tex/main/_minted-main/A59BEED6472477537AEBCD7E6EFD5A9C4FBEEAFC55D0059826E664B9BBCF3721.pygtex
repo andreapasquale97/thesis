@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{n\PYGZus{}iter} \PYG{o}{=} \PYG{l+m+mi}{5}
+\PYG{n}{result} \PYG{o}{=} \PYG{n}{vegas\PYGZus{}instance}\PYG{o}{.}\PYG{n}{run\PYGZus{}integration}\PYG{p}{(}\PYG{n}{n\PYGZus{}iter}\PYG{p}{)}
+\end{Verbatim}

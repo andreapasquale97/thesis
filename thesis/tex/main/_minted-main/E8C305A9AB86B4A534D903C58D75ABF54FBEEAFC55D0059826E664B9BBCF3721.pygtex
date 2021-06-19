@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{vegasflow} \PYG{k+kn}{import} \PYG{n}{VegasFlow}
+		
+\PYG{n}{dims} \PYG{o}{=} \PYG{l+m+mi}{3}
+\PYG{n}{n\PYGZus{}calls} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mf}{1e7}\PYG{p}{)}
+\PYG{n}{vegas\PYGZus{}instance} \PYG{o}{=} \PYG{n}{VegasFlow}\PYG{p}{(}\PYG{n}{dims}\PYG{p}{,} \PYG{n}{n\PYGZus{}calls}\PYG{p}{)}
+\end{Verbatim}

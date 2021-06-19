@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{[}\PYG{n}{INFO}\PYG{p}{]} \PYG{n}{Result} \PYG{k}{for} \PYG{n}{iteration} \PYG{l+m+mi}{0}\PYG{p}{:} \PYG{l+m+mf}{8.607e\PYGZhy{}03} \PYG{o}{+/\PYGZhy{}} \PYG{l+m+mf}{4.039e\PYGZhy{}05}\PYG{p}{(}\PYG{n}{took} \PYG{l+m+mf}{16.11334} \PYG{n}{s}\PYG{p}{)}
+\PYG{p}{[}\PYG{n}{INFO}\PYG{p}{]} \PYG{n}{Result} \PYG{k}{for} \PYG{n}{iteration} \PYG{l+m+mi}{1}\PYG{p}{:} \PYG{l+m+mf}{8.628e\PYGZhy{}03} \PYG{o}{+/\PYGZhy{}} \PYG{l+m+mf}{5.101e\PYGZhy{}06}\PYG{p}{(}\PYG{n}{took} \PYG{l+m+mf}{9.36287} \PYG{n}{s}\PYG{p}{)}
+\PYG{p}{[}\PYG{n}{INFO}\PYG{p}{]} \PYG{n}{Result} \PYG{k}{for} \PYG{n}{iteration} \PYG{l+m+mi}{2}\PYG{p}{:} \PYG{l+m+mf}{8.631e\PYGZhy{}03} \PYG{o}{+/\PYGZhy{}} \PYG{l+m+mf}{2.715e\PYGZhy{}06}\PYG{p}{(}\PYG{n}{took} \PYG{l+m+mf}{9.58453} \PYG{n}{s}\PYG{p}{)}
+\PYG{p}{[}\PYG{n}{INFO}\PYG{p}{]} \PYG{n}{Result} \PYG{k}{for} \PYG{n}{iteration} \PYG{l+m+mi}{3}\PYG{p}{:} \PYG{l+m+mf}{8.633e\PYGZhy{}03} \PYG{o}{+/\PYGZhy{}} \PYG{l+m+mf}{2.292e\PYGZhy{}06}\PYG{p}{(}\PYG{n}{took} \PYG{l+m+mf}{9.56779} \PYG{n}{s}\PYG{p}{)}
+\PYG{p}{[}\PYG{n}{INFO}\PYG{p}{]} \PYG{n}{Result} \PYG{k}{for} \PYG{n}{iteration} \PYG{l+m+mi}{4}\PYG{p}{:} \PYG{l+m+mf}{8.632e\PYGZhy{}03} \PYG{o}{+/\PYGZhy{}} \PYG{l+m+mf}{2.161e\PYGZhy{}06}\PYG{p}{(}\PYG{n}{took} \PYG{l+m+mf}{9.55856} \PYG{n}{s}\PYG{p}{)}
+\PYG{p}{[}\PYG{n}{INFO}\PYG{p}{]}  \PYG{o}{\PYGZgt{}} \PYG{n}{Final} \PYG{n}{results}\PYG{p}{:} \PYG{l+m+mf}{0.00863171} \PYG{o}{+/\PYGZhy{}} \PYG{l+m+mf}{1.31392e\PYGZhy{}06}
+\end{Verbatim}

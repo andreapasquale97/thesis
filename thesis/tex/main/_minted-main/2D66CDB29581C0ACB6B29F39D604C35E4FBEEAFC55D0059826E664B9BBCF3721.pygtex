@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{tensorflow} \PYG{k}{as} \PYG{n+nn}{tf}
+	
+\PYG{k}{def} \PYG{n+nf}{example\PYGZus{}integrand}\PYG{p}{(}\PYG{n}{xarr}\PYG{p}{,} \PYG{n}{n\PYGZus{}dim}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,} \PYG{n}{weight}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{):}
+	\PYG{n}{s} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}sum}\PYG{p}{(}\PYG{n}{xarr}\PYG{p}{,} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+	\PYG{n}{result} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{pow}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{o}{/}\PYG{n}{s}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+	\PYG{k}{return} \PYG{n}{result}
+
+\PYG{n}{vegas\PYGZus{}instance}\PYG{o}{.}\PYG{n}{compile}\PYG{p}{(}\PYG{n}{example\PYGZus{}integrand}\PYG{p}{)}
+\end{Verbatim}

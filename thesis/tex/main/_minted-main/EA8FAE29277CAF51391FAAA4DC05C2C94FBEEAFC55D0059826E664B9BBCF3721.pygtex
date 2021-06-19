@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@tf}\PYG{o}{.}\PYG{n}{function}\PYG{p}{(}\PYG{n}{input\PYGZus{}signature}\PYG{o}{=}\PYG{p}{[}
+\PYG{n}{tf}\PYG{o}{.}\PYG{n}{TensorSpec}\PYG{p}{(}\PYG{n}{shape}\PYG{o}{=}\PYG{p}{[}\PYG{k+kc}{None}\PYG{p}{,}\PYG{n}{dim}\PYG{p}{],} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{),}
+\PYG{n}{tf}\PYG{o}{.}\PYG{n}{TensorSpec}\PYG{p}{(}\PYG{n}{shape}\PYG{o}{=}\PYG{p}{[],} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{int32}\PYG{p}{),}
+\PYG{n}{tf}\PYG{o}{.}\PYG{n}{TensorSpec}\PYG{p}{(}\PYG{n}{shape}\PYG{o}{=}\PYG{p}{[}\PYG{k+kc}{None}\PYG{p}{],} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+\PYG{p}{]}
+\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{symgauss}\PYG{p}{(}\PYG{n}{xarr}\PYG{p}{,} \PYG{n}{n\PYGZus{}dim}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,} \PYG{n}{weight}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kwargs}\PYG{p}{):}
+\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}symgauss test function\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{if} \PYG{n}{n\PYGZus{}dim} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+\PYG{n}{n\PYGZus{}dim} \PYG{o}{=} \PYG{n}{xarr}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{n}{a} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{constant}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{DTYPE}\PYG{p}{)}
+\PYG{n}{n100} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{l+m+mi}{100} \PYG{o}{*} \PYG{n}{n\PYGZus{}dim}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{DTYPE}\PYG{p}{)}
+\PYG{n}{pref} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{pow}\PYG{p}{(}\PYG{l+m+mf}{1.0} \PYG{o}{/} \PYG{n}{a} \PYG{o}{/} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{),} \PYG{n}{float\PYGZus{}me}\PYG{p}{(}\PYG{n}{n\PYGZus{}dim}\PYG{p}{))}
+\PYG{n}{coef} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}sum}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{range}\PYG{p}{(}\PYG{n}{n100} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{))}
+\PYG{n}{coef} \PYG{o}{+=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}sum}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{square}\PYG{p}{((}\PYG{n}{xarr} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{1.0} \PYG{o}{/} \PYG{l+m+mf}{2.0}\PYG{p}{)} \PYG{o}{/} \PYG{n}{a}\PYG{p}{),} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{coef} \PYG{o}{\PYGZhy{}=} \PYG{p}{(}\PYG{n}{n100} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{*} \PYG{n}{n100} \PYG{o}{/} \PYG{l+m+mf}{2.0}
+\PYG{k}{return} \PYG{n}{pref} \PYG{o}{*} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{exp}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{coef}\PYG{p}{)}
+\end{Verbatim}

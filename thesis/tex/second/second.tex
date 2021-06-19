@@ -20,6 +20,7 @@ These algorithms usually implement the techniques of variance reduction presente
 We will focus on two algorithms which employ both importance and stratified sampling: VEGAS and VEGAS+.
 
 \subsection{VEGAS}
+\label{vegas}
 VEGAS is an algorithm for adaptive multi-dimensional MC integration formulated by Peter Lepage in 1977 in Ref\cite{Lepage:1977sw}.
 Since then it has been used in numerous fields including chemistry, applied finance and physics.
 
@@ -409,6 +410,7 @@ Finally we also needed to overload the fundamental methods of the class that des
 
 All the implementation is publicly available at the following GitHub repository: \url{https://github.com/N3PDF/vegasflow}.
 \subsubsection{Problems during the implementation}
+\label{vfp problem}
 The process of implementing the VEGAS+ algorithm within the \texttt{VegasFlow} library has not been free of problems.
 
 The choice of TensorFlow was motivated also by the fact that the graph implementation enable us to achieve better performances. In particular if a function is called more than once the program will refer to the same graph of the function if the type and the shape of the input tensors are the same.

@@ -1,0 +1,31 @@
+\documentclass[../main/main.tex]{subfiles}
+\begin{document}
+\chapter{Conclusions}
+
+In this thesis we have considered the problem of solving high-dimensional integrals in the context of HEP.
+These integrals are usually solved by means of MC integration techniques which requires long computational time, as well as high CPU resources.
+The cost of these calculations is currently driving the budget of important experiments such as ATLAS or CMS \cite{Buckley:2019wov}.
+
+To shorten the computational times, we focus on implementing new integration algorithms, which can take advantage of hardware acceleration devices such as GPU or multi-thread CPUs.
+In particular we have considered a new algorithm proposed in Ref\cite{Lepage:2020tgj}, called VEGAS+,  which consists in a modification of the classic VEGAS algorithm \cite{Lepage:1977sw}, ubiquitous in the particle physics community.
+The algorithm has been implemented within the \texttt{VegasFlow} library \cite{Carrazza:2020rdn}, which enable us to run our computations using hardware acceleration thanks to Google's TensorFlow library
+\cite{tensorflow2015-whitepaper}. 
+
+We have compared the performance of different variations of the new algorithm with the importance sampling "à la" VEGAS already implemented in the \texttt{VegasFlow} library. The benchmark was performed by using classical integrands, such gaussian distributions, as well as integrands taken from common particle physics processes, such as the Drell-Yan process, the single top production and the vector fusion boson Higgs production. In particular we run the integrations on a professional-grade CPU and on a professional-grade GPU to quantify the benefits of hardware acceleration.
+
+The results show that the new integrators benefits from highly parallel scenarios, with speed-up factors up to 10 when comparing the average time per iteration on CPU and GPU. The new integrators are also more accurate when dealing with particular HEP integrads, i.e. they converge using less iterations of the chosen algorithm. For example, 
+in the case of the single top production at LO we observe that all the newly implemented integrators converge using only one fifth of the iterations needed by the importance sampling algorithm. Also for the case of the vector fusion boson Higgs production at LO, which involves the computation of a 6-dimensional integral, the new algorithms are more accurate than the importance sampling method.
+
+We have also presented to the reader a full comparison of all the results obtained from each integral analysed. The aim is to suggest which integrator performs better by looking at the average time per iterations, as well as, the number of iterations needed to reach the target accuracy. On CPU, except for the Drell-Yan integrand, the integrator which implements the full VEGAS+ algorithm is the fastest. While on GPU, we have found that the importance sampling seem to be the more fast integrator, except for the Higgs integrand.
+The comparison of the number of iterations shows that the classic VEGAS algorithm, here presented as a variation of the VEGAS+ method, is overall the most efficient 
+integrator, despite his slower computational times. 
+
+All the new integrators implemented are publicly on github at \url{https://github.com/N3PDF/vegasflow}.
+
+We believe that, based on the accuracy and the computational times, the new integrators implemented are a very useful tool when computing complicated integrals, especially in the field of HEP. Moreover, our implementation aims at empowering the new VEGAS+ algorithm by enabling to run the integrations in all kinds of hardware supported by the TensorFlow library.
+
+For future developments it will be interesting to implement new algorithms in the \texttt{VegasFlow} library, by exploiting the design of the library which enable us to implement new integrators simply as derived class of the \texttt{MonteCarloFlow} class. In particular, there are several algorithms which implement an importance sampling based on machine-learning techniques, such as neural network or boosted decision trees \cite{Bendavid:2017zhk}, which can outperform the VEGAS algorithm as in Ref\cite{Gao:2020vdv}. 
+By implementing these techniques in the \texttt{VegasFlow} library we will combined the efficiency of these integrators with hardware acceleration, thus lowering the computational cost of these complex computations.
+
+
+\end{document}

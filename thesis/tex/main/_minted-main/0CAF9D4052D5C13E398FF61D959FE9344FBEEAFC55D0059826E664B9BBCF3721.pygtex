@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{n\PYGZus{}iter} \PYG{o}{=} \PYG{l+m+mi}{5}
+\PYG{c+c1}{\PYGZsh{} VEGAS+ result}
+\PYG{n}{result\PYGZus{}vegas}\PYG{o}{+} \PYG{o}{=} \PYG{n}{vegas}\PYG{o}{+}\PYG{n}{\PYGZus{}instance}\PYG{o}{.}\PYG{n}{run\PYGZus{}integration}\PYG{p}{(}\PYG{n}{n\PYGZus{}iter}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} VEGAS result}
+\PYG{n}{result\PYGZus{}vegas} \PYG{o}{=} \PYG{n}{vegas\PYGZus{}instance}\PYG{o}{.}\PYG{n}{run\PYGZus{}integration}\PYG{p}{(}\PYG{n}{n\PYGZus{}iter}\PYG{p}{)}
+\end{Verbatim}
