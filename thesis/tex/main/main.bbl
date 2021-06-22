@@ -19,112 +19,124 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{Press:1992zz}{article}{}
-      \name{author}{4}{}{%
-        {{hash=0eab1ccd4d6c57a2ff6794a4724ccafb}{%
-           family={Press},
-           familyi={P\bibinitperiod},
-           given={William\bibnamedelima H.},
-           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=ff8354846900d7ef6c94cb025f7e938c}{%
-           family={Teukolsky},
-           familyi={T\bibinitperiod},
-           given={Saul\bibnamedelima A.},
-           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=0bb298496cc38e45b21c576a005078a0}{%
-           family={Vetterling},
+    \entry{Dainese:2703572}{report}{}
+      \name{author}{6}{}{%
+        {{hash=b03d755e8ed81b3cf966ff9c40dd39b2}{%
+           family={Dainese},
+           familyi={D\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=29c0a47f41350640ce2cbf8e426cfc1c}{%
+           family={Mangano},
+           familyi={M\bibinitperiod},
+           given={Michelangelo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=37bf092014769df2c6715e2b994a6e7a}{%
+           family={Meyer},
+           familyi={M\bibinitperiod},
+           given={Andreas\bibnamedelima B},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=1f425e889879a9daf2c5fa971897b026}{%
+           family={Nisati},
+           familyi={N\bibinitperiod},
+           given={Aleandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5241ac0f0cc83fc88b08b2e72b39aa7a}{%
+           family={Salam},
+           familyi={S\bibinitperiod},
+           given={Gavin},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1cd4f515e0c3ce1f3dd31d94c48f087f}{%
+           family={Vesterinen},
            familyi={V\bibinitperiod},
-           given={William\bibnamedelima T.},
-           giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=f40726c661611c8a024d53294b6e0ad0}{%
-           family={Flannery},
-           familyi={F\bibinitperiod},
-           given={Brian\bibnamedelima P.},
-           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+           given={Mika\bibnamedelima Anton},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
-      \strng{namehash}{618fa62f030076edf2937faa1b1684fb}
-      \strng{fullhash}{f75c24a04994b574cb620c685a1f8229}
-      \strng{bibnamehash}{618fa62f030076edf2937faa1b1684fb}
-      \strng{authorbibnamehash}{618fa62f030076edf2937faa1b1684fb}
-      \strng{authornamehash}{618fa62f030076edf2937faa1b1684fb}
-      \strng{authorfullhash}{f75c24a04994b574cb620c685a1f8229}
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \strng{namehash}{08d96813d19ef6c429ad7a4735e3efbf}
+      \strng{fullhash}{50144702cd12becf423681a2683e53e0}
+      \strng{bibnamehash}{08d96813d19ef6c429ad7a4735e3efbf}
+      \strng{authorbibnamehash}{08d96813d19ef6c429ad7a4735e3efbf}
+      \strng{authornamehash}{08d96813d19ef6c429ad7a4735e3efbf}
+      \strng{authorfullhash}{50144702cd12becf423681a2683e53e0}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{9}
-      \field{title}{{Numerical Recipes in FORTRAN: The Art of Scientific Computing}}
-      \field{year}{1992}
+      \field{title}{{Report on the Physics at the HL-LHC, and Perspectives for the HE-LHC}}
+      \field{type}{techreport}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.23731/CYRM-2019-007
+      \endverb
+      \verb{urlraw}
+      \verb http://cds.cern.ch/record/2703572
+      \endverb
+      \verb{url}
+      \verb http://cds.cern.ch/record/2703572
+      \endverb
     \endentry
-    \entry{unknown}{}{}
-      \name{author}{3}{}{%
-        {{hash=4abb00fb4eeeb2f40342ba10fbb79fb4}{%
-           family={Gao},
-           familyi={G\bibinitperiod},
-           given={Christina},
-           giveni={C\bibinitperiod}}}%
-        {{hash=306023d19c0e8f5a1efccd6f2be7696e}{%
-           family={Isaacson},
-           familyi={I\bibinitperiod},
-           given={Joshua},
-           giveni={J\bibinitperiod}}}%
-        {{hash=cdc28b316def66e6ffb399ab3d2c3b72}{%
-           family={Krause},
-           familyi={K\bibinitperiod},
-           given={Claudius},
-           giveni={C\bibinitperiod}}}%
+    \entry{Buckley:2019wov}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cf14b4248868b27ef72a04add5c449d9}{%
+           family={Buckley},
+           familyi={B\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod}}}%
       }
-      \strng{namehash}{ea65b8a7fcf1fd51474429446da0135c}
-      \strng{fullhash}{ea65b8a7fcf1fd51474429446da0135c}
-      \strng{bibnamehash}{ea65b8a7fcf1fd51474429446da0135c}
-      \strng{authorbibnamehash}{ea65b8a7fcf1fd51474429446da0135c}
-      \strng{authornamehash}{ea65b8a7fcf1fd51474429446da0135c}
-      \strng{authorfullhash}{ea65b8a7fcf1fd51474429446da0135c}
-      \field{extraname}{1}
+      \strng{namehash}{cf14b4248868b27ef72a04add5c449d9}
+      \strng{fullhash}{cf14b4248868b27ef72a04add5c449d9}
+      \strng{bibnamehash}{cf14b4248868b27ef72a04add5c449d9}
+      \strng{authorbibnamehash}{cf14b4248868b27ef72a04add5c449d9}
+      \strng{authornamehash}{cf14b4248868b27ef72a04add5c449d9}
+      \strng{authorfullhash}{cf14b4248868b27ef72a04add5c449d9}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{01}
-      \field{title}{i-flow: High-dimensional Integration and Sampling with Normalizing Flows}
-      \field{year}{2020}
-    \endentry
-    \entry{Carrazza:2020rdn}{article}{}
-      \name{author}{2}{}{%
-        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
-           family={Carrazza},
-           familyi={C\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod}}}%
-        {{hash=e1d0918cc2b061a7688d9333a42d734a}{%
-           family={Cruz-Martinez},
-           familyi={C\bibinithyphendelim M\bibinitperiod},
-           given={Juan\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{94f544541294888bfcfbbefd7ee80f1f}
-      \strng{fullhash}{94f544541294888bfcfbbefd7ee80f1f}
-      \strng{bibnamehash}{94f544541294888bfcfbbefd7ee80f1f}
-      \strng{authorbibnamehash}{94f544541294888bfcfbbefd7ee80f1f}
-      \strng{authornamehash}{94f544541294888bfcfbbefd7ee80f1f}
-      \strng{authorfullhash}{94f544541294888bfcfbbefd7ee80f1f}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{physics.comp-ph}
+      \field{eprintclass}{hep-ph}
       \field{eprinttype}{arXiv}
-      \field{journaltitle}{Comput. Phys. Commun.}
-      \field{title}{{VegasFlow: accelerating Monte Carlo simulation across multiple hardware platforms}}
-      \field{volume}{254}
+      \field{journaltitle}{J. Phys. Conf. Ser.}
+      \field{number}{1}
+      \field{title}{{Computational challenges for MC event generation}}
+      \field{volume}{1525}
       \field{year}{2020}
-      \field{pages}{107376}
+      \field{pages}{012023}
       \range{pages}{1}
       \verb{doi}
-      \verb 10.1016/j.cpc.2020.107376
+      \verb 10.1088/1742-6596/1525/1/012023
       \endverb
       \verb{eprint}
-      \verb 2002.12921
+      \verb 1908.00167
+      \endverb
+    \endentry
+    \entry{Bendavid:2017zhk}{article}{}
+      \name{author}{1}{}{%
+        {{hash=09cd74222294c0d1f1b1b90b2c140614}{%
+           family={Bendavid},
+           familyi={B\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{09cd74222294c0d1f1b1b90b2c140614}
+      \strng{fullhash}{09cd74222294c0d1f1b1b90b2c140614}
+      \strng{bibnamehash}{09cd74222294c0d1f1b1b90b2c140614}
+      \strng{authorbibnamehash}{09cd74222294c0d1f1b1b90b2c140614}
+      \strng{authornamehash}{09cd74222294c0d1f1b1b90b2c140614}
+      \strng{authorfullhash}{09cd74222294c0d1f1b1b90b2c140614}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{title}{{Efficient Monte Carlo Integration Using Boosted Decision Trees and Generative Deep Neural Networks}}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1707.00028
       \endverb
     \endentry
     \entry{Lepage:2020tgj}{article}{}
@@ -142,8 +154,8 @@
       \strng{authornamehash}{b74a0a4242e088db9f8ea5b0a0a36f11}
       \strng{authorfullhash}{b74a0a4242e088db9f8ea5b0a0a36f11}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{physics.comp-ph}
@@ -176,8 +188,8 @@
       \strng{authornamehash}{b74a0a4242e088db9f8ea5b0a0a36f11}
       \strng{authorfullhash}{b74a0a4242e088db9f8ea5b0a0a36f11}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Comput. Phys.}
@@ -188,656 +200,6 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1016/0021-9991(78)90004-9
-      \endverb
-    \endentry
-    \entry{Press:1989vk}{article}{}
-      \name{author}{2}{}{%
-        {{hash=0eab1ccd4d6c57a2ff6794a4724ccafb}{%
-           family={Press},
-           familyi={P\bibinitperiod},
-           given={William\bibnamedelima H.},
-           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=17a12f46d860fa4533a90f7b585227fa}{%
-           family={Farrar},
-           familyi={F\bibinitperiod},
-           given={Glennys\bibnamedelima R.},
-           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \strng{namehash}{d8d367e4aa0ce89005e8c2d33a6c2669}
-      \strng{fullhash}{d8d367e4aa0ce89005e8c2d33a6c2669}
-      \strng{bibnamehash}{d8d367e4aa0ce89005e8c2d33a6c2669}
-      \strng{authorbibnamehash}{d8d367e4aa0ce89005e8c2d33a6c2669}
-      \strng{authornamehash}{d8d367e4aa0ce89005e8c2d33a6c2669}
-      \strng{authorfullhash}{d8d367e4aa0ce89005e8c2d33a6c2669}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{title}{{RECURSIVE STRATIFIED SAMPLING FOR MULTIDIMENSIONAL MONTE CARLO INTEGRATION}}
-      \field{year}{1989}
-    \endentry
-    \entry{Peskin:1995ev}{book}{}
-      \name{author}{2}{}{%
-        {{hash=7bad35ca708cc14703fbf71be1b2dda8}{%
-           family={Peskin},
-           familyi={P\bibinitperiod},
-           given={Michael\bibnamedelima E.},
-           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=cc0fe4ad0bcb2f8883e7f5e5b5287dd9}{%
-           family={Schroeder},
-           familyi={S\bibinitperiod},
-           given={Daniel\bibnamedelima V.},
-           giveni={D\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Reading, USA}%
-      }
-      \list{publisher}{1}{%
-        {Addison-Wesley}%
-      }
-      \strng{namehash}{cbcdd646a15ae9af77377e5f1358ecb4}
-      \strng{fullhash}{cbcdd646a15ae9af77377e5f1358ecb4}
-      \strng{bibnamehash}{cbcdd646a15ae9af77377e5f1358ecb4}
-      \strng{authorbibnamehash}{cbcdd646a15ae9af77377e5f1358ecb4}
-      \strng{authornamehash}{cbcdd646a15ae9af77377e5f1358ecb4}
-      \strng{authorfullhash}{cbcdd646a15ae9af77377e5f1358ecb4}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0-201-50397-5}
-      \field{title}{{An Introduction to quantum field theory}}
-      \field{year}{1995}
-    \endentry
-    \entry{Schwartz:2017hep}{inbook}{}
-      \name{author}{1}{}{%
-        {{hash=1e7b6dde56467cb787f369fadc91b2df}{%
-           family={Schwartz},
-           familyi={S\bibinitperiod},
-           given={Matthew\bibnamedelima D.},
-           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-      }
-      \name{editor}{2}{}{%
-        {{hash=ca8ba4941a272f13ce044f1a7f60ef86}{%
-           family={Essig},
-           familyi={E\bibinitperiod},
-           given={Rouven},
-           giveni={R\bibinitperiod}}}%
-        {{hash=37e9dde2ea0bc91292dfd8e7520d95d6}{%
-           family={Low},
-           familyi={L\bibinitperiod},
-           given={Ian},
-           giveni={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{1e7b6dde56467cb787f369fadc91b2df}
-      \strng{fullhash}{1e7b6dde56467cb787f369fadc91b2df}
-      \strng{bibnamehash}{1e7b6dde56467cb787f369fadc91b2df}
-      \strng{authorbibnamehash}{1e7b6dde56467cb787f369fadc91b2df}
-      \strng{authornamehash}{1e7b6dde56467cb787f369fadc91b2df}
-      \strng{authorfullhash}{1e7b6dde56467cb787f369fadc91b2df}
-      \strng{editorbibnamehash}{fc7f790e62150da205fe87d33acd308f}
-      \strng{editornamehash}{fc7f790e62150da205fe87d33acd308f}
-      \strng{editorfullhash}{fc7f790e62150da205fe87d33acd308f}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{{Proceedings, Theoretical Advanced Study Institute in Elementary Particle Physics : Anticipating the Next Discoveries in Particle Physics (TASI 2016)}: {Boulder, CO, USA, June 6-July 1, 2016}}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{title}{{TASI Lectures on Collider Physics}}
-      \field{year}{2018}
-      \verb{doi}
-      \verb 10.1142/9789813233348_0002
-      \endverb
-      \verb{eprint}
-      \verb 1709.04533
-      \endverb
-    \endentry
-    \entry{Collins:2011zzd}{book}{}
-      \name{author}{1}{}{%
-        {{hash=9ce85096ac99b1153b0e74e12b6bfe89}{%
-           family={Collins},
-           familyi={C\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{9ce85096ac99b1153b0e74e12b6bfe89}
-      \strng{fullhash}{9ce85096ac99b1153b0e74e12b6bfe89}
-      \strng{bibnamehash}{9ce85096ac99b1153b0e74e12b6bfe89}
-      \strng{authorbibnamehash}{9ce85096ac99b1153b0e74e12b6bfe89}
-      \strng{authornamehash}{9ce85096ac99b1153b0e74e12b6bfe89}
-      \strng{authorfullhash}{9ce85096ac99b1153b0e74e12b6bfe89}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-1-107-64525-7, 978-1-107-64525-7, 978-0-521-85533-4, 978-1-139-09782-6}
-      \field{month}{11}
-      \field{title}{{Foundations of perturbative QCD}}
-      \field{volume}{32}
-      \field{year}{2013}
-    \endentry
-    \entry{Muta:2010xua}{book}{}
-      \name{author}{1}{}{%
-        {{hash=11c2ecac34f47d34db6f72f30416619b}{%
-           family={Muta},
-           familyi={M\bibinitperiod},
-           given={Taizo},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hackensack, N.J.}%
-      }
-      \list{publisher}{1}{%
-        {World Scientific}%
-      }
-      \strng{namehash}{11c2ecac34f47d34db6f72f30416619b}
-      \strng{fullhash}{11c2ecac34f47d34db6f72f30416619b}
-      \strng{bibnamehash}{11c2ecac34f47d34db6f72f30416619b}
-      \strng{authorbibnamehash}{11c2ecac34f47d34db6f72f30416619b}
-      \strng{authornamehash}{11c2ecac34f47d34db6f72f30416619b}
-      \strng{authorfullhash}{11c2ecac34f47d34db6f72f30416619b}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{3rd}
-      \field{isbn}{978-981-279-353-9}
-      \field{series}{World scientific Lecture Notes in Physics}
-      \field{title}{{Foundations of Quantum Chromodynamics: An Introduction to Perturbative Methods in Gauge Theories, (3rd ed.)}}
-      \field{volume}{78}
-      \field{year}{2010}
-    \endentry
-    \entry{Ellis:1991qj}{book}{}
-      \name{author}{3}{}{%
-        {{hash=646149a8f5c3245fd414214c586b32df}{%
-           family={Ellis},
-           familyi={E\bibinitperiod},
-           given={R.\bibnamedelimi Keith},
-           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=5343193611f477808345b8d53a297d4a}{%
-           family={Stirling},
-           familyi={S\bibinitperiod},
-           given={W.\bibnamedelimi James},
-           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=fab4c5289b2146af0bcda20af58ba567}{%
-           family={Webber},
-           familyi={W\bibinitperiod},
-           given={B.\bibnamedelimi R.},
-           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{dbeb9700370fc58a9f2c998ff0109659}
-      \strng{fullhash}{dbeb9700370fc58a9f2c998ff0109659}
-      \strng{bibnamehash}{dbeb9700370fc58a9f2c998ff0109659}
-      \strng{authorbibnamehash}{dbeb9700370fc58a9f2c998ff0109659}
-      \strng{authornamehash}{dbeb9700370fc58a9f2c998ff0109659}
-      \strng{authorfullhash}{dbeb9700370fc58a9f2c998ff0109659}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0-511-82328-2, 978-0-521-54589-1}
-      \field{month}{2}
-      \field{title}{{QCD and collider physics}}
-      \field{volume}{8}
-      \field{year}{2011}
-    \endentry
-    \entry{Skands:2012ts}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=c3c22a8af414c765ccbebc1bec6b6bdf}{%
-           family={Skands},
-           familyi={S\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{c3c22a8af414c765ccbebc1bec6b6bdf}
-      \strng{fullhash}{c3c22a8af414c765ccbebc1bec6b6bdf}
-      \strng{bibnamehash}{c3c22a8af414c765ccbebc1bec6b6bdf}
-      \strng{authorbibnamehash}{c3c22a8af414c765ccbebc1bec6b6bdf}
-      \strng{authornamehash}{c3c22a8af414c765ccbebc1bec6b6bdf}
-      \strng{authorfullhash}{c3c22a8af414c765ccbebc1bec6b6bdf}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{{Theoretical Advanced Study Institute in Elementary Particle Physics}: {Searching for New Physics at Small and Large Scales}}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{month}{7}
-      \field{title}{{Introduction to QCD}}
-      \field{year}{2012}
-      \verb{doi}
-      \verb 10.1142/9789814525220_0008
-      \endverb
-      \verb{eprint}
-      \verb 1207.2389
-      \endverb
-    \endentry
-    \entry{Mathematica}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=ee82c41bd9fdbe2adafdbf5f5e0d6e3d}{%
-           family={Wolfram\bibnamedelima Research},
-           familyi={W\bibinitperiod\bibinitdelim R\bibinitperiod},
-           given={Inc.},
-           giveni={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
-      \strng{fullhash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
-      \strng{bibnamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
-      \strng{authorbibnamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
-      \strng{authornamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
-      \strng{authorfullhash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Champaign, IL, 2021}
-      \field{title}{Mathematica, {V}ersion 12.3}
-      \verb{urlraw}
-      \verb https://www.wolfram.com/mathematica
-      \endverb
-      \verb{url}
-      \verb https://www.wolfram.com/mathematica
-      \endverb
-    \endentry
-    \entry{Buckley:2019wov}{article}{}
-      \name{author}{1}{}{%
-        {{hash=cf14b4248868b27ef72a04add5c449d9}{%
-           family={Buckley},
-           familyi={B\bibinitperiod},
-           given={Andy},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{cf14b4248868b27ef72a04add5c449d9}
-      \strng{fullhash}{cf14b4248868b27ef72a04add5c449d9}
-      \strng{bibnamehash}{cf14b4248868b27ef72a04add5c449d9}
-      \strng{authorbibnamehash}{cf14b4248868b27ef72a04add5c449d9}
-      \strng{authornamehash}{cf14b4248868b27ef72a04add5c449d9}
-      \strng{authorfullhash}{cf14b4248868b27ef72a04add5c449d9}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{J. Phys. Conf. Ser.}
-      \field{number}{1}
-      \field{title}{{Computational challenges for MC event generation}}
-      \field{volume}{1525}
-      \field{year}{2020}
-      \field{pages}{012023}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1088/1742-6596/1525/1/012023
-      \endverb
-      \verb{eprint}
-      \verb 1908.00167
-      \endverb
-    \endentry
-    \entry{ATL-SOFT-PUB-2021-001}{report}{}
-      \list{institution}{1}{%
-        {CERN}%
-      }
-      \list{location}{1}{%
-        {Geneva}%
-      }
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{note}{All figures including auxiliary figures are available at https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-SOFT-PUB-2021-001}
-      \field{title}{{The ATLAS Collaboration Software and Firmware}}
-      \field{type}{techreport}
-      \field{year}{2021}
-      \verb{urlraw}
-      \verb https://cds.cern.ch/record/2767187
-      \endverb
-      \verb{url}
-      \verb https://cds.cern.ch/record/2767187
-      \endverb
-    \endentry
-    \entry{Bendavid:2017zhk}{article}{}
-      \name{author}{1}{}{%
-        {{hash=09cd74222294c0d1f1b1b90b2c140614}{%
-           family={Bendavid},
-           familyi={B\bibinitperiod},
-           given={Joshua},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{09cd74222294c0d1f1b1b90b2c140614}
-      \strng{fullhash}{09cd74222294c0d1f1b1b90b2c140614}
-      \strng{bibnamehash}{09cd74222294c0d1f1b1b90b2c140614}
-      \strng{authorbibnamehash}{09cd74222294c0d1f1b1b90b2c140614}
-      \strng{authornamehash}{09cd74222294c0d1f1b1b90b2c140614}
-      \strng{authorfullhash}{09cd74222294c0d1f1b1b90b2c140614}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{month}{6}
-      \field{title}{{Efficient Monte Carlo Integration Using Boosted Decision Trees and Generative Deep Neural Networks}}
-      \field{year}{2017}
-      \verb{eprint}
-      \verb 1707.00028
-      \endverb
-    \endentry
-    \entry{Campbell:2015qma}{article}{}
-      \name{author}{3}{}{%
-        {{hash=6c13471c295386710db34cfcb5ada593}{%
-           family={Campbell},
-           familyi={C\bibinitperiod},
-           given={John\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=646149a8f5c3245fd414214c586b32df}{%
-           family={Ellis},
-           familyi={E\bibinitperiod},
-           given={R.\bibnamedelimi Keith},
-           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=29dab31c468a70f591f3f05e0b8ffaff}{%
-           family={Giele},
-           familyi={G\bibinitperiod},
-           given={Walter\bibnamedelima T.},
-           giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-      }
-      \strng{namehash}{fbf86319eb19c4d6de1589293c5e85ec}
-      \strng{fullhash}{fbf86319eb19c4d6de1589293c5e85ec}
-      \strng{bibnamehash}{fbf86319eb19c4d6de1589293c5e85ec}
-      \strng{authorbibnamehash}{fbf86319eb19c4d6de1589293c5e85ec}
-      \strng{authornamehash}{fbf86319eb19c4d6de1589293c5e85ec}
-      \strng{authorfullhash}{fbf86319eb19c4d6de1589293c5e85ec}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{physics.comp-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{Eur. Phys. J. C}
-      \field{number}{6}
-      \field{title}{{A Multi-Threaded Version of MCFM}}
-      \field{volume}{75}
-      \field{year}{2015}
-      \field{pages}{246}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1140/epjc/s10052-015-3461-2
-      \endverb
-      \verb{eprint}
-      \verb 1503.06182
-      \endverb
-    \endentry
-    \entry{Campbell:2019dru}{article}{}
-      \name{author}{2}{}{%
-        {{hash=4b04cb15d0d768a854f0de031a941c53}{%
-           family={Campbell},
-           familyi={C\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod}}}%
-        {{hash=19943735b3c7e0b7eba38a3989091807}{%
-           family={Neumann},
-           familyi={N\bibinitperiod},
-           given={Tobias},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{95884702e42bca47d309958e23188c3d}
-      \strng{fullhash}{95884702e42bca47d309958e23188c3d}
-      \strng{bibnamehash}{95884702e42bca47d309958e23188c3d}
-      \strng{authorbibnamehash}{95884702e42bca47d309958e23188c3d}
-      \strng{authornamehash}{95884702e42bca47d309958e23188c3d}
-      \strng{authorfullhash}{95884702e42bca47d309958e23188c3d}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{JHEP}
-      \field{title}{{Precision Phenomenology with MCFM}}
-      \field{volume}{12}
-      \field{year}{2019}
-      \field{pages}{034}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1007/JHEP12(2019)034
-      \endverb
-      \verb{eprint}
-      \verb 1909.09117
-      \endverb
-    \endentry
-    \entry{Gehrmann:2018szu}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=44fcf09480a1b38c618d044c135d07a2}{%
-           family={Gehrmann},
-           familyi={G\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-      }
-      \name{editor}{2}{}{%
-        {{hash=12e0485770dede3c9464ee80717a77b7}{%
-           family={Hoang},
-           familyi={H\bibinitperiod},
-           given={Andre},
-           giveni={A\bibinitperiod}}}%
-        {{hash=9c3be1d2ecbc82af87fd2e4b4148103c}{%
-           family={Schneider},
-           familyi={S\bibinitperiod},
-           given={Carsten},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{27f5d2d3811cf0485ce59baef4eafd4e}
-      \strng{fullhash}{27f5d2d3811cf0485ce59baef4eafd4e}
-      \strng{bibnamehash}{27f5d2d3811cf0485ce59baef4eafd4e}
-      \strng{authorbibnamehash}{27f5d2d3811cf0485ce59baef4eafd4e}
-      \strng{authornamehash}{27f5d2d3811cf0485ce59baef4eafd4e}
-      \strng{authorfullhash}{27f5d2d3811cf0485ce59baef4eafd4e}
-      \strng{editorbibnamehash}{4ed06315504523d6f342753808ae805f}
-      \strng{editornamehash}{4ed06315504523d6f342753808ae805f}
-      \strng{editorfullhash}{4ed06315504523d6f342753808ae805f}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{PoS}
-      \field{title}{{Jet cross sections and transverse momentum distributions with NNLOJET}}
-      \field{volume}{RADCOR2017}
-      \field{year}{2018}
-      \field{pages}{074}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.22323/1.290.0074
-      \endverb
-      \verb{eprint}
-      \verb 1801.06415
-      \endverb
-    \endentry
-    \entry{Alwall:2014hca}{article}{}
-      \name{author}{10}{}{%
-        {{hash=db770a0dfc4628a7437bedbd56f940d4}{%
-           family={Alwall},
-           familyi={A\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=87f8432b90fa1363547627dd900ac62d}{%
-           family={Frederix},
-           familyi={F\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-        {{hash=36ec2b0a28a3159dd489a8e0ce4c5e16}{%
-           family={Frixione},
-           familyi={F\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=da2920448eb87fb33798abb131da464b}{%
-           family={Hirschi},
-           familyi={H\bibinitperiod},
-           given={V.},
-           giveni={V\bibinitperiod}}}%
-        {{hash=146d5a62e8ec749ce3c087e42804f0a6}{%
-           family={Maltoni},
-           familyi={M\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=d6305f4a2bb37c97934d4f0cae42109e}{%
-           family={Mattelaer},
-           familyi={M\bibinitperiod},
-           given={O.},
-           giveni={O\bibinitperiod}}}%
-        {{hash=437e153e70283e1bc3b1ec3ad54d6fae}{%
-           family={Shao},
-           familyi={S\bibinitperiod},
-           given={H.\bibnamedelimi -S.},
-           giveni={H\bibinitperiod\bibinitdelim \bibinithyphendelim S\bibinitperiod}}}%
-        {{hash=86e07bd86b6c081d973cbedd27c360ab}{%
-           family={Stelzer},
-           familyi={S\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=9ef6ecb08c2c6e622eec344decdbb82c}{%
-           family={Torrielli},
-           familyi={T\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-        {{hash=97b1b02748b4a359125a674e12ece48b}{%
-           family={Zaro},
-           familyi={Z\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{98c22186c090664cd0aa787235a12e76}
-      \strng{fullhash}{261fa39fa69c14924b0287f2a0cd40a4}
-      \strng{bibnamehash}{98c22186c090664cd0aa787235a12e76}
-      \strng{authorbibnamehash}{98c22186c090664cd0aa787235a12e76}
-      \strng{authornamehash}{98c22186c090664cd0aa787235a12e76}
-      \strng{authorfullhash}{261fa39fa69c14924b0287f2a0cd40a4}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{JHEP}
-      \field{title}{{The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton shower simulations}}
-      \field{volume}{07}
-      \field{year}{2014}
-      \field{pages}{079}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1007/JHEP07(2014)079
-      \endverb
-      \verb{eprint}
-      \verb 1405.0301
-      \endverb
-    \endentry
-    \entry{Gleisberg:2008ta}{article}{}
-      \name{author}{7}{}{%
-        {{hash=1aa16f2a2a02bc86279bce38a68afb94}{%
-           family={Gleisberg},
-           familyi={G\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=8c8cc4ddc51a9065fffc3b4c16c35dc4}{%
-           family={Hoeche},
-           familyi={H\bibinitperiod},
-           given={Stefan.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=b02544f275933e3cb52c7e9d66bed93d}{%
-           family={Krauss},
-           familyi={K\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=0e5f4b2e3c35963dac991981b63fe17f}{%
-           family={Schonherr},
-           familyi={S\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=9278cca32bf432b7f2d93be757b86623}{%
-           family={Schumann},
-           familyi={S\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=9beee89b28d80a136beb9d99bfa92258}{%
-           family={Siegert},
-           familyi={S\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=a1dfb7a33c0d6f5e2a1a09b29b10e258}{%
-           family={Winter},
-           familyi={W\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{e4a4f0518508ca02ff5bd35318c9ab16}
-      \strng{fullhash}{ef0bd809db27762683b9c12cebee0039}
-      \strng{bibnamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
-      \strng{authorbibnamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
-      \strng{authornamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
-      \strng{authorfullhash}{ef0bd809db27762683b9c12cebee0039}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{JHEP}
-      \field{title}{{Event generation with SHERPA 1.1}}
-      \field{volume}{02}
-      \field{year}{2009}
-      \field{pages}{007}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1088/1126-6708/2009/02/007
-      \endverb
-      \verb{eprint}
-      \verb 0811.4622
-      \endverb
-    \endentry
-    \entry{peter_lepage_2021_4746454}{software}{}
-      \name{author}{1}{}{%
-        {{hash=933971bececedec13f6a142b6f98a78d}{%
-           family={Lepage},
-           familyi={L\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Zenodo}%
-      }
-      \strng{namehash}{933971bececedec13f6a142b6f98a78d}
-      \strng{fullhash}{933971bececedec13f6a142b6f98a78d}
-      \strng{bibnamehash}{933971bececedec13f6a142b6f98a78d}
-      \strng{authorbibnamehash}{933971bececedec13f6a142b6f98a78d}
-      \strng{authornamehash}{933971bececedec13f6a142b6f98a78d}
-      \strng{authorfullhash}{933971bececedec13f6a142b6f98a78d}
-      \field{extraname}{3}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{title}{gplepage/vegas: vegas version 4.0.1}
-      \field{version}{v4.0.1}
-      \field{year}{2021}
-      \verb{doi}
-      \verb 10.5281/zenodo.4746454
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.5281/zenodo.4746454
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.5281/zenodo.4746454
       \endverb
     \endentry
     \entry{vegasflow_package}{software}{}
@@ -862,8 +224,8 @@
       \strng{authorbibnamehash}{b3807f0a046fc6a2c32df01f3e1ddee9}
       \strng{authornamehash}{b3807f0a046fc6a2c32df01f3e1ddee9}
       \strng{authorfullhash}{b3807f0a046fc6a2c32df01f3e1ddee9}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
@@ -878,324 +240,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.5281/zenodo.3691926
-      \endverb
-    \endentry
-    \entry{Dixon:1613349}{article}{}
-      \name{author}{1}{}{%
-        {{hash=f59324a2d86c9409b000a16ba05ab9cd}{%
-           family={Dixon},
-           familyi={D\bibinitperiod},
-           given={Lance\bibnamedelima J.},
-           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \strng{namehash}{f59324a2d86c9409b000a16ba05ab9cd}
-      \strng{fullhash}{f59324a2d86c9409b000a16ba05ab9cd}
-      \strng{bibnamehash}{f59324a2d86c9409b000a16ba05ab9cd}
-      \strng{authorbibnamehash}{f59324a2d86c9409b000a16ba05ab9cd}
-      \strng{authornamehash}{f59324a2d86c9409b000a16ba05ab9cd}
-      \strng{authorfullhash}{f59324a2d86c9409b000a16ba05ab9cd}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprinttype}{arXiv}
-      \field{month}{10}
-      \field{note}{Comments: 48 pages, 15 figures. Lectures presented at the 2012 European School of High-Energy Physics and at TASI 2013}
-      \field{title}{{A brief introduction to modern amplitude methods}}
-      \field{year}{2013}
-      \field{pages}{31\bibrangedash 67. 48 p}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.5170/CERN-2014-008.31
-      \endverb
-      \verb{eprint}
-      \verb 1310.5353
-      \endverb
-      \verb{urlraw}
-      \verb https://cds.cern.ch/record/1613349
-      \endverb
-      \verb{url}
-      \verb https://cds.cern.ch/record/1613349
-      \endverb
-    \endentry
-    \entry{article}{article}{}
-      \name{author}{2}{}{%
-        {{hash=d5a7a7b18680e1a1477943fadd1090b3}{%
-           family={Bechtel},
-           familyi={B\bibinitperiod},
-           given={Florian},
-           giveni={F\bibinitperiod}}}%
-        {{hash=8f97fef3581233430ed254d8c371ba9d}{%
-           family={Schleper},
-           familyi={S\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{8bc8dc4449245f184c51650423e85e98}
-      \strng{fullhash}{8bc8dc4449245f184c51650423e85e98}
-      \strng{bibnamehash}{8bc8dc4449245f184c51650423e85e98}
-      \strng{authorbibnamehash}{8bc8dc4449245f184c51650423e85e98}
-      \strng{authornamehash}{8bc8dc4449245f184c51650423e85e98}
-      \strng{authorfullhash}{8bc8dc4449245f184c51650423e85e98}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{06}
-      \field{title}{The Underlying Event in Proton-Proton Collisions}
-      \field{year}{2021}
-    \endentry
-    \entry{Carrazza_2020}{article}{}
-      \name{author}{4}{}{%
-        {{hash=3afb0ecbc3841e9d0ce795916253bf39}{%
-           family={Carrazza},
-           familyi={C\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=c5c527ce2c1e12df62eab8ab99bb203f}{%
-           family={Nocera},
-           familyi={N\bibinitperiod},
-           given={E.\bibnamedelimi R.},
-           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=e3de6e2f533da35e2f0a4aab493e98f5}{%
-           family={Schwan},
-           familyi={S\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-        {{hash=97b1b02748b4a359125a674e12ece48b}{%
-           family={Zaro},
-           familyi={Z\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{2}{%
-        {Springer Science}%
-        {Business Media LLC}%
-      }
-      \strng{namehash}{da89cbc831da0c2fb6df41a3b2d4f288}
-      \strng{fullhash}{a605fdb2d9b09b27214daeb6a669a4ae}
-      \strng{bibnamehash}{da89cbc831da0c2fb6df41a3b2d4f288}
-      \strng{authorbibnamehash}{da89cbc831da0c2fb6df41a3b2d4f288}
-      \strng{authornamehash}{da89cbc831da0c2fb6df41a3b2d4f288}
-      \strng{authorfullhash}{a605fdb2d9b09b27214daeb6a669a4ae}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1029-8479}
-      \field{journaltitle}{Journal of High Energy Physics}
-      \field{month}{12}
-      \field{number}{12}
-      \field{title}{PineAPPL: combining EW and QCD corrections for fast evaluation of LHC processes}
-      \field{volume}{2020}
-      \field{year}{2020}
-      \verb{doi}
-      \verb 10.1007/jhep12(2020)108
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1007/JHEP12(2020)108
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1007/JHEP12(2020)108
-      \endverb
-    \endentry
-    \entry{Brucherseifer_2014}{article}{}
-      \name{author}{3}{}{%
-        {{hash=d79f8a28f9c8bac182c2ac7ba4a59e87}{%
-           family={Brucherseifer},
-           familyi={B\bibinitperiod},
-           given={Mathias},
-           giveni={M\bibinitperiod}}}%
-        {{hash=bbfb4ff95460567d636c0438543c5a5b}{%
-           family={Caola},
-           familyi={C\bibinitperiod},
-           given={Fabrizio},
-           giveni={F\bibinitperiod}}}%
-        {{hash=415b55859fd8bb4a7ad3888c6ad296b8}{%
-           family={Melnikov},
-           familyi={M\bibinitperiod},
-           given={Kirill},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier BV}%
-      }
-      \strng{namehash}{4a23f73e7d5914028c63286b237c7a6e}
-      \strng{fullhash}{4a23f73e7d5914028c63286b237c7a6e}
-      \strng{bibnamehash}{4a23f73e7d5914028c63286b237c7a6e}
-      \strng{authorbibnamehash}{4a23f73e7d5914028c63286b237c7a6e}
-      \strng{authornamehash}{4a23f73e7d5914028c63286b237c7a6e}
-      \strng{authorfullhash}{4a23f73e7d5914028c63286b237c7a6e}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0370-2693}
-      \field{journaltitle}{Physics Letters B}
-      \field{month}{9}
-      \field{title}{On the NNLO QCD corrections to single-top production at the LHC}
-      \field{volume}{736}
-      \field{year}{2014}
-      \field{pages}{58\bibrangedash 63}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1016/j.physletb.2014.06.075
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1016/j.physletb.2014.06.075
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1016/j.physletb.2014.06.075
-      \endverb
-    \endentry
-    \entry{Cruz_Martinez_2018}{article}{}
-      \name{author}{4}{}{%
-        {{hash=4cddeea0a2f718f3aaae067954312cae}{%
-           family={Cruz-Martinez},
-           familyi={C\bibinithyphendelim M\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=27680809a3b924b4d40dc16a470b2667}{%
-           family={Gehrmann},
-           familyi={G\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=bc988eb2a1a7278a6cf603e868848281}{%
-           family={Glover},
-           familyi={G\bibinitperiod},
-           given={E.W.N.},
-           giveni={E\bibinitperiod}}}%
-        {{hash=6541cc1b34fc9a35c4bab2b4944a325f}{%
-           family={Huss},
-           familyi={H\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier BV}%
-      }
-      \strng{namehash}{a83d1eacad1466510cfc611bf99b56fe}
-      \strng{fullhash}{6586e3ad2c1158275e1a422442586861}
-      \strng{bibnamehash}{a83d1eacad1466510cfc611bf99b56fe}
-      \strng{authorbibnamehash}{a83d1eacad1466510cfc611bf99b56fe}
-      \strng{authornamehash}{a83d1eacad1466510cfc611bf99b56fe}
-      \strng{authorfullhash}{6586e3ad2c1158275e1a422442586861}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0370-2693}
-      \field{journaltitle}{Physics Letters B}
-      \field{month}{6}
-      \field{title}{Second-order QCD effects in Higgs boson production through vector boson fusion}
-      \field{volume}{781}
-      \field{year}{2018}
-      \field{pages}{672\bibrangedash 677}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1016/j.physletb.2018.04.046
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1016/j.physletb.2018.04.046
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1016/j.physletb.2018.04.046
-      \endverb
-    \endentry
-    \entry{Carrazza_2021}{article}{}
-      \name{author}{3}{}{%
-        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
-           family={Carrazza},
-           familyi={C\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod}}}%
-        {{hash=e1d0918cc2b061a7688d9333a42d734a}{%
-           family={Cruz-Martinez},
-           familyi={C\bibinithyphendelim M\bibinitperiod},
-           given={Juan\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=ee8dddd87b207e6b999f59a7e5e44a31}{%
-           family={Rossi},
-           familyi={R\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier BV}%
-      }
-      \strng{namehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{fullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{bibnamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{authorbibnamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{authornamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{authorfullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0010-4655}
-      \field{journaltitle}{Computer Physics Communications}
-      \field{month}{7}
-      \field{title}{PDFFlow: Parton distribution functions on GPU}
-      \field{volume}{264}
-      \field{year}{2021}
-      \field{pages}{107995}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.cpc.2021.107995
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1016/j.cpc.2021.107995
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1016/j.cpc.2021.107995
-      \endverb
-    \endentry
-    \entry{juan_m_cruz_martinez_2021_4903010}{software}{}
-      \name{author}{3}{}{%
-        {{hash=e1d0918cc2b061a7688d9333a42d734a}{%
-           family={Cruz-Martinez},
-           familyi={C\bibinithyphendelim M\bibinitperiod},
-           given={Juan\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=ee8dddd87b207e6b999f59a7e5e44a31}{%
-           family={Rossi},
-           familyi={R\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod}}}%
-        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
-           family={Carrazza},
-           familyi={C\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Zenodo}%
-      }
-      \strng{namehash}{bf1d99b18618090abea53179b071a0ff}
-      \strng{fullhash}{bf1d99b18618090abea53179b071a0ff}
-      \strng{bibnamehash}{bf1d99b18618090abea53179b071a0ff}
-      \strng{authorbibnamehash}{bf1d99b18618090abea53179b071a0ff}
-      \strng{authornamehash}{bf1d99b18618090abea53179b071a0ff}
-      \strng{authorfullhash}{bf1d99b18618090abea53179b071a0ff}
-      \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{6}
-      \field{title}{N3PDF/pdfflow: PDFFlow 1.2.1}
-      \field{version}{v1.2.1}
-      \field{year}{2021}
-      \verb{doi}
-      \verb 10.5281/zenodo.4903010
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.5281/zenodo.4903010
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.5281/zenodo.4903010
       \endverb
     \endentry
     \entry{tensorflow2015-whitepaper}{misc}{}
@@ -1343,6 +387,1081 @@
       \verb https://www.tensorflow.org/
       \endverb
     \endentry
+    \entry{Press:1992zz}{article}{}
+      \name{author}{4}{}{%
+        {{hash=0eab1ccd4d6c57a2ff6794a4724ccafb}{%
+           family={Press},
+           familyi={P\bibinitperiod},
+           given={William\bibnamedelima H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ff8354846900d7ef6c94cb025f7e938c}{%
+           family={Teukolsky},
+           familyi={T\bibinitperiod},
+           given={Saul\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0bb298496cc38e45b21c576a005078a0}{%
+           family={Vetterling},
+           familyi={V\bibinitperiod},
+           given={William\bibnamedelima T.},
+           giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=f40726c661611c8a024d53294b6e0ad0}{%
+           family={Flannery},
+           familyi={F\bibinitperiod},
+           given={Brian\bibnamedelima P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{618fa62f030076edf2937faa1b1684fb}
+      \strng{fullhash}{f75c24a04994b574cb620c685a1f8229}
+      \strng{bibnamehash}{618fa62f030076edf2937faa1b1684fb}
+      \strng{authorbibnamehash}{618fa62f030076edf2937faa1b1684fb}
+      \strng{authornamehash}{618fa62f030076edf2937faa1b1684fb}
+      \strng{authorfullhash}{f75c24a04994b574cb620c685a1f8229}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{{Numerical Recipes in FORTRAN: The Art of Scientific Computing}}
+      \field{year}{1992}
+    \endentry
+    \entry{unknown}{}{}
+      \name{author}{3}{}{%
+        {{hash=4abb00fb4eeeb2f40342ba10fbb79fb4}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Christina},
+           giveni={C\bibinitperiod}}}%
+        {{hash=306023d19c0e8f5a1efccd6f2be7696e}{%
+           family={Isaacson},
+           familyi={I\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cdc28b316def66e6ffb399ab3d2c3b72}{%
+           family={Krause},
+           familyi={K\bibinitperiod},
+           given={Claudius},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea65b8a7fcf1fd51474429446da0135c}
+      \strng{fullhash}{ea65b8a7fcf1fd51474429446da0135c}
+      \strng{bibnamehash}{ea65b8a7fcf1fd51474429446da0135c}
+      \strng{authorbibnamehash}{ea65b8a7fcf1fd51474429446da0135c}
+      \strng{authornamehash}{ea65b8a7fcf1fd51474429446da0135c}
+      \strng{authorfullhash}{ea65b8a7fcf1fd51474429446da0135c}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{i-flow: High-dimensional Integration and Sampling with Normalizing Flows}
+      \field{year}{2020}
+    \endentry
+    \entry{Carrazza:2020rdn}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
+           family={Carrazza},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e1d0918cc2b061a7688d9333a42d734a}{%
+           family={Cruz-Martinez},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={Juan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{94f544541294888bfcfbbefd7ee80f1f}
+      \strng{fullhash}{94f544541294888bfcfbbefd7ee80f1f}
+      \strng{bibnamehash}{94f544541294888bfcfbbefd7ee80f1f}
+      \strng{authorbibnamehash}{94f544541294888bfcfbbefd7ee80f1f}
+      \strng{authornamehash}{94f544541294888bfcfbbefd7ee80f1f}
+      \strng{authorfullhash}{94f544541294888bfcfbbefd7ee80f1f}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.comp-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Comput. Phys. Commun.}
+      \field{title}{{VegasFlow: accelerating Monte Carlo simulation across multiple hardware platforms}}
+      \field{volume}{254}
+      \field{year}{2020}
+      \field{pages}{107376}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2020.107376
+      \endverb
+      \verb{eprint}
+      \verb 2002.12921
+      \endverb
+    \endentry
+    \entry{Press:1989vk}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0eab1ccd4d6c57a2ff6794a4724ccafb}{%
+           family={Press},
+           familyi={P\bibinitperiod},
+           given={William\bibnamedelima H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=17a12f46d860fa4533a90f7b585227fa}{%
+           family={Farrar},
+           familyi={F\bibinitperiod},
+           given={Glennys\bibnamedelima R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d8d367e4aa0ce89005e8c2d33a6c2669}
+      \strng{fullhash}{d8d367e4aa0ce89005e8c2d33a6c2669}
+      \strng{bibnamehash}{d8d367e4aa0ce89005e8c2d33a6c2669}
+      \strng{authorbibnamehash}{d8d367e4aa0ce89005e8c2d33a6c2669}
+      \strng{authornamehash}{d8d367e4aa0ce89005e8c2d33a6c2669}
+      \strng{authorfullhash}{d8d367e4aa0ce89005e8c2d33a6c2669}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{{RECURSIVE STRATIFIED SAMPLING FOR MULTIDIMENSIONAL MONTE CARLO INTEGRATION}}
+      \field{year}{1989}
+    \endentry
+    \entry{Peskin:1995ev}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7bad35ca708cc14703fbf71be1b2dda8}{%
+           family={Peskin},
+           familyi={P\bibinitperiod},
+           given={Michael\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=cc0fe4ad0bcb2f8883e7f5e5b5287dd9}{%
+           family={Schroeder},
+           familyi={S\bibinitperiod},
+           given={Daniel\bibnamedelima V.},
+           giveni={D\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Reading, USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{cbcdd646a15ae9af77377e5f1358ecb4}
+      \strng{fullhash}{cbcdd646a15ae9af77377e5f1358ecb4}
+      \strng{bibnamehash}{cbcdd646a15ae9af77377e5f1358ecb4}
+      \strng{authorbibnamehash}{cbcdd646a15ae9af77377e5f1358ecb4}
+      \strng{authornamehash}{cbcdd646a15ae9af77377e5f1358ecb4}
+      \strng{authorfullhash}{cbcdd646a15ae9af77377e5f1358ecb4}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-201-50397-5}
+      \field{title}{{An Introduction to quantum field theory}}
+      \field{year}{1995}
+    \endentry
+    \entry{Schwartz:2017hep}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=1e7b6dde56467cb787f369fadc91b2df}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=ca8ba4941a272f13ce044f1a7f60ef86}{%
+           family={Essig},
+           familyi={E\bibinitperiod},
+           given={Rouven},
+           giveni={R\bibinitperiod}}}%
+        {{hash=37e9dde2ea0bc91292dfd8e7520d95d6}{%
+           family={Low},
+           familyi={L\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e7b6dde56467cb787f369fadc91b2df}
+      \strng{fullhash}{1e7b6dde56467cb787f369fadc91b2df}
+      \strng{bibnamehash}{1e7b6dde56467cb787f369fadc91b2df}
+      \strng{authorbibnamehash}{1e7b6dde56467cb787f369fadc91b2df}
+      \strng{authornamehash}{1e7b6dde56467cb787f369fadc91b2df}
+      \strng{authorfullhash}{1e7b6dde56467cb787f369fadc91b2df}
+      \strng{editorbibnamehash}{fc7f790e62150da205fe87d33acd308f}
+      \strng{editornamehash}{fc7f790e62150da205fe87d33acd308f}
+      \strng{editorfullhash}{fc7f790e62150da205fe87d33acd308f}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings, Theoretical Advanced Study Institute in Elementary Particle Physics : Anticipating the Next Discoveries in Particle Physics (TASI 2016)}: {Boulder, CO, USA, June 6-July 1, 2016}}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{{TASI Lectures on Collider Physics}}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1142/9789813233348_0002
+      \endverb
+      \verb{eprint}
+      \verb 1709.04533
+      \endverb
+    \endentry
+    \entry{Collins:2011zzd}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9ce85096ac99b1153b0e74e12b6bfe89}{%
+           family={Collins},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{9ce85096ac99b1153b0e74e12b6bfe89}
+      \strng{fullhash}{9ce85096ac99b1153b0e74e12b6bfe89}
+      \strng{bibnamehash}{9ce85096ac99b1153b0e74e12b6bfe89}
+      \strng{authorbibnamehash}{9ce85096ac99b1153b0e74e12b6bfe89}
+      \strng{authornamehash}{9ce85096ac99b1153b0e74e12b6bfe89}
+      \strng{authorfullhash}{9ce85096ac99b1153b0e74e12b6bfe89}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-107-64525-7, 978-1-107-64525-7, 978-0-521-85533-4, 978-1-139-09782-6}
+      \field{month}{11}
+      \field{title}{{Foundations of perturbative QCD}}
+      \field{volume}{32}
+      \field{year}{2013}
+    \endentry
+    \entry{Muta:2010xua}{book}{}
+      \name{author}{1}{}{%
+        {{hash=11c2ecac34f47d34db6f72f30416619b}{%
+           family={Muta},
+           familyi={M\bibinitperiod},
+           given={Taizo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hackensack, N.J.}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{11c2ecac34f47d34db6f72f30416619b}
+      \strng{fullhash}{11c2ecac34f47d34db6f72f30416619b}
+      \strng{bibnamehash}{11c2ecac34f47d34db6f72f30416619b}
+      \strng{authorbibnamehash}{11c2ecac34f47d34db6f72f30416619b}
+      \strng{authornamehash}{11c2ecac34f47d34db6f72f30416619b}
+      \strng{authorfullhash}{11c2ecac34f47d34db6f72f30416619b}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{978-981-279-353-9}
+      \field{series}{World scientific Lecture Notes in Physics}
+      \field{title}{{Foundations of Quantum Chromodynamics: An Introduction to Perturbative Methods in Gauge Theories, (3rd ed.)}}
+      \field{volume}{78}
+      \field{year}{2010}
+    \endentry
+    \entry{Ellis:1991qj}{book}{}
+      \name{author}{3}{}{%
+        {{hash=646149a8f5c3245fd414214c586b32df}{%
+           family={Ellis},
+           familyi={E\bibinitperiod},
+           given={R.\bibnamedelimi Keith},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=5343193611f477808345b8d53a297d4a}{%
+           family={Stirling},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi James},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=fab4c5289b2146af0bcda20af58ba567}{%
+           family={Webber},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{dbeb9700370fc58a9f2c998ff0109659}
+      \strng{fullhash}{dbeb9700370fc58a9f2c998ff0109659}
+      \strng{bibnamehash}{dbeb9700370fc58a9f2c998ff0109659}
+      \strng{authorbibnamehash}{dbeb9700370fc58a9f2c998ff0109659}
+      \strng{authornamehash}{dbeb9700370fc58a9f2c998ff0109659}
+      \strng{authorfullhash}{dbeb9700370fc58a9f2c998ff0109659}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-511-82328-2, 978-0-521-54589-1}
+      \field{month}{2}
+      \field{title}{{QCD and collider physics}}
+      \field{volume}{8}
+      \field{year}{2011}
+    \endentry
+    \entry{Skands:2012ts}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=c3c22a8af414c765ccbebc1bec6b6bdf}{%
+           family={Skands},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3c22a8af414c765ccbebc1bec6b6bdf}
+      \strng{fullhash}{c3c22a8af414c765ccbebc1bec6b6bdf}
+      \strng{bibnamehash}{c3c22a8af414c765ccbebc1bec6b6bdf}
+      \strng{authorbibnamehash}{c3c22a8af414c765ccbebc1bec6b6bdf}
+      \strng{authornamehash}{c3c22a8af414c765ccbebc1bec6b6bdf}
+      \strng{authorfullhash}{c3c22a8af414c765ccbebc1bec6b6bdf}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Theoretical Advanced Study Institute in Elementary Particle Physics}: {Searching for New Physics at Small and Large Scales}}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{month}{7}
+      \field{title}{{Introduction to QCD}}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1142/9789814525220_0008
+      \endverb
+      \verb{eprint}
+      \verb 1207.2389
+      \endverb
+    \endentry
+    \entry{Aad:2008zzm}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=50f20d3c6dfbe5459d0f39bcb67740ec}{%
+           family={Aad},
+           familyi={A\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1cec2969fb25fe3621ef4c33b2c003a}
+      \strng{fullhash}{f1cec2969fb25fe3621ef4c33b2c003a}
+      \strng{bibnamehash}{f1cec2969fb25fe3621ef4c33b2c003a}
+      \strng{authorbibnamehash}{f1cec2969fb25fe3621ef4c33b2c003a}
+      \strng{authornamehash}{f1cec2969fb25fe3621ef4c33b2c003a}
+      \strng{authorfullhash}{f1cec2969fb25fe3621ef4c33b2c003a}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JINST}
+      \field{title}{{The ATLAS Experiment at the CERN Large Hadron Collider}}
+      \field{volume}{3}
+      \field{year}{2008}
+      \field{pages}{S08003}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1088/1748-0221/3/08/S08003
+      \endverb
+    \endentry
+    \entry{Chatrchyan:2008aa}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8ce87b4dc27b48d204336f9068ca8918}{%
+           family={Chatrchyan},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ab7e1f61569e4e3756a7f94d2498349}
+      \strng{fullhash}{4ab7e1f61569e4e3756a7f94d2498349}
+      \strng{bibnamehash}{4ab7e1f61569e4e3756a7f94d2498349}
+      \strng{authorbibnamehash}{4ab7e1f61569e4e3756a7f94d2498349}
+      \strng{authornamehash}{4ab7e1f61569e4e3756a7f94d2498349}
+      \strng{authorfullhash}{4ab7e1f61569e4e3756a7f94d2498349}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JINST}
+      \field{title}{{The CMS Experiment at the CERN LHC}}
+      \field{volume}{3}
+      \field{year}{2008}
+      \field{pages}{S08004}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1088/1748-0221/3/08/S08004
+      \endverb
+    \endentry
+    \entry{Mathematica}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ee82c41bd9fdbe2adafdbf5f5e0d6e3d}{%
+           family={Wolfram\bibnamedelima Research},
+           familyi={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Inc.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{fullhash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{bibnamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{authorbibnamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{authornamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{authorfullhash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Champaign, IL, 2021}
+      \field{title}{Mathematica, {V}ersion 12.3}
+      \verb{urlraw}
+      \verb https://www.wolfram.com/mathematica
+      \endverb
+      \verb{url}
+      \verb https://www.wolfram.com/mathematica
+      \endverb
+    \endentry
+    \entry{ATL-SOFT-PUB-2021-001}{report}{}
+      \list{institution}{1}{%
+        {CERN}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{note}{All figures including auxiliary figures are available at https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-SOFT-PUB-2021-001}
+      \field{title}{{The ATLAS Collaboration Software and Firmware}}
+      \field{type}{techreport}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/2767187
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/2767187
+      \endverb
+    \endentry
+    \entry{Campbell:2015qma}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6c13471c295386710db34cfcb5ada593}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=646149a8f5c3245fd414214c586b32df}{%
+           family={Ellis},
+           familyi={E\bibinitperiod},
+           given={R.\bibnamedelimi Keith},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=29dab31c468a70f591f3f05e0b8ffaff}{%
+           family={Giele},
+           familyi={G\bibinitperiod},
+           given={Walter\bibnamedelima T.},
+           giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{fbf86319eb19c4d6de1589293c5e85ec}
+      \strng{fullhash}{fbf86319eb19c4d6de1589293c5e85ec}
+      \strng{bibnamehash}{fbf86319eb19c4d6de1589293c5e85ec}
+      \strng{authorbibnamehash}{fbf86319eb19c4d6de1589293c5e85ec}
+      \strng{authornamehash}{fbf86319eb19c4d6de1589293c5e85ec}
+      \strng{authorfullhash}{fbf86319eb19c4d6de1589293c5e85ec}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.comp-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Eur. Phys. J. C}
+      \field{number}{6}
+      \field{title}{{A Multi-Threaded Version of MCFM}}
+      \field{volume}{75}
+      \field{year}{2015}
+      \field{pages}{246}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1140/epjc/s10052-015-3461-2
+      \endverb
+      \verb{eprint}
+      \verb 1503.06182
+      \endverb
+    \endentry
+    \entry{Campbell:2019dru}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4b04cb15d0d768a854f0de031a941c53}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=19943735b3c7e0b7eba38a3989091807}{%
+           family={Neumann},
+           familyi={N\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{95884702e42bca47d309958e23188c3d}
+      \strng{fullhash}{95884702e42bca47d309958e23188c3d}
+      \strng{bibnamehash}{95884702e42bca47d309958e23188c3d}
+      \strng{authorbibnamehash}{95884702e42bca47d309958e23188c3d}
+      \strng{authornamehash}{95884702e42bca47d309958e23188c3d}
+      \strng{authorfullhash}{95884702e42bca47d309958e23188c3d}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Precision Phenomenology with MCFM}}
+      \field{volume}{12}
+      \field{year}{2019}
+      \field{pages}{034}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP12(2019)034
+      \endverb
+      \verb{eprint}
+      \verb 1909.09117
+      \endverb
+    \endentry
+    \entry{Gehrmann:2018szu}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=44fcf09480a1b38c618d044c135d07a2}{%
+           family={Gehrmann},
+           familyi={G\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=12e0485770dede3c9464ee80717a77b7}{%
+           family={Hoang},
+           familyi={H\bibinitperiod},
+           given={Andre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9c3be1d2ecbc82af87fd2e4b4148103c}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{27f5d2d3811cf0485ce59baef4eafd4e}
+      \strng{fullhash}{27f5d2d3811cf0485ce59baef4eafd4e}
+      \strng{bibnamehash}{27f5d2d3811cf0485ce59baef4eafd4e}
+      \strng{authorbibnamehash}{27f5d2d3811cf0485ce59baef4eafd4e}
+      \strng{authornamehash}{27f5d2d3811cf0485ce59baef4eafd4e}
+      \strng{authorfullhash}{27f5d2d3811cf0485ce59baef4eafd4e}
+      \strng{editorbibnamehash}{4ed06315504523d6f342753808ae805f}
+      \strng{editornamehash}{4ed06315504523d6f342753808ae805f}
+      \strng{editorfullhash}{4ed06315504523d6f342753808ae805f}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{PoS}
+      \field{title}{{Jet cross sections and transverse momentum distributions with NNLOJET}}
+      \field{volume}{RADCOR2017}
+      \field{year}{2018}
+      \field{pages}{074}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.22323/1.290.0074
+      \endverb
+      \verb{eprint}
+      \verb 1801.06415
+      \endverb
+    \endentry
+    \entry{Alwall:2014hca}{article}{}
+      \name{author}{10}{}{%
+        {{hash=db770a0dfc4628a7437bedbd56f940d4}{%
+           family={Alwall},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=87f8432b90fa1363547627dd900ac62d}{%
+           family={Frederix},
+           familyi={F\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=36ec2b0a28a3159dd489a8e0ce4c5e16}{%
+           family={Frixione},
+           familyi={F\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=da2920448eb87fb33798abb131da464b}{%
+           family={Hirschi},
+           familyi={H\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=146d5a62e8ec749ce3c087e42804f0a6}{%
+           family={Maltoni},
+           familyi={M\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d6305f4a2bb37c97934d4f0cae42109e}{%
+           family={Mattelaer},
+           familyi={M\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+        {{hash=437e153e70283e1bc3b1ec3ad54d6fae}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={H.\bibnamedelimi -S.},
+           giveni={H\bibinitperiod\bibinitdelim \bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=86e07bd86b6c081d973cbedd27c360ab}{%
+           family={Stelzer},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9ef6ecb08c2c6e622eec344decdbb82c}{%
+           family={Torrielli},
+           familyi={T\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=97b1b02748b4a359125a674e12ece48b}{%
+           family={Zaro},
+           familyi={Z\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{98c22186c090664cd0aa787235a12e76}
+      \strng{fullhash}{261fa39fa69c14924b0287f2a0cd40a4}
+      \strng{bibnamehash}{98c22186c090664cd0aa787235a12e76}
+      \strng{authorbibnamehash}{98c22186c090664cd0aa787235a12e76}
+      \strng{authornamehash}{98c22186c090664cd0aa787235a12e76}
+      \strng{authorfullhash}{261fa39fa69c14924b0287f2a0cd40a4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton shower simulations}}
+      \field{volume}{07}
+      \field{year}{2014}
+      \field{pages}{079}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP07(2014)079
+      \endverb
+      \verb{eprint}
+      \verb 1405.0301
+      \endverb
+    \endentry
+    \entry{Gleisberg:2008ta}{article}{}
+      \name{author}{7}{}{%
+        {{hash=1aa16f2a2a02bc86279bce38a68afb94}{%
+           family={Gleisberg},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8c8cc4ddc51a9065fffc3b4c16c35dc4}{%
+           family={Hoeche},
+           familyi={H\bibinitperiod},
+           given={Stefan.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b02544f275933e3cb52c7e9d66bed93d}{%
+           family={Krauss},
+           familyi={K\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0e5f4b2e3c35963dac991981b63fe17f}{%
+           family={Schonherr},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9278cca32bf432b7f2d93be757b86623}{%
+           family={Schumann},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9beee89b28d80a136beb9d99bfa92258}{%
+           family={Siegert},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a1dfb7a33c0d6f5e2a1a09b29b10e258}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4a4f0518508ca02ff5bd35318c9ab16}
+      \strng{fullhash}{ef0bd809db27762683b9c12cebee0039}
+      \strng{bibnamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
+      \strng{authorbibnamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
+      \strng{authornamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
+      \strng{authorfullhash}{ef0bd809db27762683b9c12cebee0039}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Event generation with SHERPA 1.1}}
+      \field{volume}{02}
+      \field{year}{2009}
+      \field{pages}{007}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1126-6708/2009/02/007
+      \endverb
+      \verb{eprint}
+      \verb 0811.4622
+      \endverb
+    \endentry
+    \entry{peter_lepage_2021_4746454}{software}{}
+      \name{author}{1}{}{%
+        {{hash=933971bececedec13f6a142b6f98a78d}{%
+           family={Lepage},
+           familyi={L\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{933971bececedec13f6a142b6f98a78d}
+      \strng{fullhash}{933971bececedec13f6a142b6f98a78d}
+      \strng{bibnamehash}{933971bececedec13f6a142b6f98a78d}
+      \strng{authorbibnamehash}{933971bececedec13f6a142b6f98a78d}
+      \strng{authornamehash}{933971bececedec13f6a142b6f98a78d}
+      \strng{authorfullhash}{933971bececedec13f6a142b6f98a78d}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{gplepage/vegas: vegas version 4.0.1}
+      \field{version}{v4.0.1}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.5281/zenodo.4746454
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.4746454
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.4746454
+      \endverb
+    \endentry
+    \entry{Dixon:1613349}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f59324a2d86c9409b000a16ba05ab9cd}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={Lance\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f59324a2d86c9409b000a16ba05ab9cd}
+      \strng{fullhash}{f59324a2d86c9409b000a16ba05ab9cd}
+      \strng{bibnamehash}{f59324a2d86c9409b000a16ba05ab9cd}
+      \strng{authorbibnamehash}{f59324a2d86c9409b000a16ba05ab9cd}
+      \strng{authornamehash}{f59324a2d86c9409b000a16ba05ab9cd}
+      \strng{authorfullhash}{f59324a2d86c9409b000a16ba05ab9cd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{month}{10}
+      \field{note}{Comments: 48 pages, 15 figures. Lectures presented at the 2012 European School of High-Energy Physics and at TASI 2013}
+      \field{title}{{A brief introduction to modern amplitude methods}}
+      \field{year}{2013}
+      \field{pages}{31\bibrangedash 67. 48 p}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.5170/CERN-2014-008.31
+      \endverb
+      \verb{eprint}
+      \verb 1310.5353
+      \endverb
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1613349
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1613349
+      \endverb
+    \endentry
+    \entry{article}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d5a7a7b18680e1a1477943fadd1090b3}{%
+           family={Bechtel},
+           familyi={B\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8f97fef3581233430ed254d8c371ba9d}{%
+           family={Schleper},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8bc8dc4449245f184c51650423e85e98}
+      \strng{fullhash}{8bc8dc4449245f184c51650423e85e98}
+      \strng{bibnamehash}{8bc8dc4449245f184c51650423e85e98}
+      \strng{authorbibnamehash}{8bc8dc4449245f184c51650423e85e98}
+      \strng{authornamehash}{8bc8dc4449245f184c51650423e85e98}
+      \strng{authorfullhash}{8bc8dc4449245f184c51650423e85e98}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{The Underlying Event in Proton-Proton Collisions}
+      \field{year}{2021}
+    \endentry
+    \entry{Carrazza_2020}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3afb0ecbc3841e9d0ce795916253bf39}{%
+           family={Carrazza},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c5c527ce2c1e12df62eab8ab99bb203f}{%
+           family={Nocera},
+           familyi={N\bibinitperiod},
+           given={E.\bibnamedelimi R.},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=e3de6e2f533da35e2f0a4aab493e98f5}{%
+           family={Schwan},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=97b1b02748b4a359125a674e12ece48b}{%
+           family={Zaro},
+           familyi={Z\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{da89cbc831da0c2fb6df41a3b2d4f288}
+      \strng{fullhash}{a605fdb2d9b09b27214daeb6a669a4ae}
+      \strng{bibnamehash}{da89cbc831da0c2fb6df41a3b2d4f288}
+      \strng{authorbibnamehash}{da89cbc831da0c2fb6df41a3b2d4f288}
+      \strng{authornamehash}{da89cbc831da0c2fb6df41a3b2d4f288}
+      \strng{authorfullhash}{a605fdb2d9b09b27214daeb6a669a4ae}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1029-8479}
+      \field{journaltitle}{Journal of High Energy Physics}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{PineAPPL: combining EW and QCD corrections for fast evaluation of LHC processes}
+      \field{volume}{2020}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1007/jhep12(2020)108
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/JHEP12(2020)108
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/JHEP12(2020)108
+      \endverb
+    \endentry
+    \entry{Brucherseifer_2014}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d79f8a28f9c8bac182c2ac7ba4a59e87}{%
+           family={Brucherseifer},
+           familyi={B\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bbfb4ff95460567d636c0438543c5a5b}{%
+           family={Caola},
+           familyi={C\bibinitperiod},
+           given={Fabrizio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=415b55859fd8bb4a7ad3888c6ad296b8}{%
+           family={Melnikov},
+           familyi={M\bibinitperiod},
+           given={Kirill},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{4a23f73e7d5914028c63286b237c7a6e}
+      \strng{fullhash}{4a23f73e7d5914028c63286b237c7a6e}
+      \strng{bibnamehash}{4a23f73e7d5914028c63286b237c7a6e}
+      \strng{authorbibnamehash}{4a23f73e7d5914028c63286b237c7a6e}
+      \strng{authornamehash}{4a23f73e7d5914028c63286b237c7a6e}
+      \strng{authorfullhash}{4a23f73e7d5914028c63286b237c7a6e}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0370-2693}
+      \field{journaltitle}{Physics Letters B}
+      \field{month}{9}
+      \field{title}{On the NNLO QCD corrections to single-top production at the LHC}
+      \field{volume}{736}
+      \field{year}{2014}
+      \field{pages}{58\bibrangedash 63}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.physletb.2014.06.075
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.physletb.2014.06.075
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.physletb.2014.06.075
+      \endverb
+    \endentry
+    \entry{Cruz_Martinez_2018}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4cddeea0a2f718f3aaae067954312cae}{%
+           family={Cruz-Martinez},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=27680809a3b924b4d40dc16a470b2667}{%
+           family={Gehrmann},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=bc988eb2a1a7278a6cf603e868848281}{%
+           family={Glover},
+           familyi={G\bibinitperiod},
+           given={E.W.N.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=6541cc1b34fc9a35c4bab2b4944a325f}{%
+           family={Huss},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{a83d1eacad1466510cfc611bf99b56fe}
+      \strng{fullhash}{6586e3ad2c1158275e1a422442586861}
+      \strng{bibnamehash}{a83d1eacad1466510cfc611bf99b56fe}
+      \strng{authorbibnamehash}{a83d1eacad1466510cfc611bf99b56fe}
+      \strng{authornamehash}{a83d1eacad1466510cfc611bf99b56fe}
+      \strng{authorfullhash}{6586e3ad2c1158275e1a422442586861}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0370-2693}
+      \field{journaltitle}{Physics Letters B}
+      \field{month}{6}
+      \field{title}{Second-order QCD effects in Higgs boson production through vector boson fusion}
+      \field{volume}{781}
+      \field{year}{2018}
+      \field{pages}{672\bibrangedash 677}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.physletb.2018.04.046
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.physletb.2018.04.046
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.physletb.2018.04.046
+      \endverb
+    \endentry
+    \entry{Carrazza_2021}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
+           family={Carrazza},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e1d0918cc2b061a7688d9333a42d734a}{%
+           family={Cruz-Martinez},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={Juan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ee8dddd87b207e6b999f59a7e5e44a31}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{fullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{bibnamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{authorbibnamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{authornamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{authorfullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-4655}
+      \field{journaltitle}{Computer Physics Communications}
+      \field{month}{7}
+      \field{title}{PDFFlow: Parton distribution functions on GPU}
+      \field{volume}{264}
+      \field{year}{2021}
+      \field{pages}{107995}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2021.107995
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.cpc.2021.107995
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.cpc.2021.107995
+      \endverb
+    \endentry
+    \entry{juan_m_cruz_martinez_2021_4903010}{software}{}
+      \name{author}{3}{}{%
+        {{hash=e1d0918cc2b061a7688d9333a42d734a}{%
+           family={Cruz-Martinez},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={Juan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ee8dddd87b207e6b999f59a7e5e44a31}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
+           family={Carrazza},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{bf1d99b18618090abea53179b071a0ff}
+      \strng{fullhash}{bf1d99b18618090abea53179b071a0ff}
+      \strng{bibnamehash}{bf1d99b18618090abea53179b071a0ff}
+      \strng{authorbibnamehash}{bf1d99b18618090abea53179b071a0ff}
+      \strng{authornamehash}{bf1d99b18618090abea53179b071a0ff}
+      \strng{authorfullhash}{bf1d99b18618090abea53179b071a0ff}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{N3PDF/pdfflow: PDFFlow 1.2.1}
+      \field{version}{v1.2.1}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.5281/zenodo.4903010
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.4903010
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.4903010
+      \endverb
+    \endentry
     \entry{Gao:2020vdv}{article}{}
       \name{author}{3}{}{%
         {{hash=4abb00fb4eeeb2f40342ba10fbb79fb4}{%
@@ -1368,8 +1487,8 @@
       \strng{authornamehash}{ea65b8a7fcf1fd51474429446da0135c}
       \strng{authorfullhash}{ea65b8a7fcf1fd51474429446da0135c}
       \field{extraname}{2}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{physics.comp-ph}
@@ -1386,66 +1505,6 @@
       \endverb
       \verb{eprint}
       \verb 2001.05486
-      \endverb
-    \endentry
-    \entry{Dainese:2703572}{report}{}
-      \name{author}{6}{}{%
-        {{hash=b03d755e8ed81b3cf966ff9c40dd39b2}{%
-           family={Dainese},
-           familyi={D\bibinitperiod},
-           given={Andrea},
-           giveni={A\bibinitperiod}}}%
-        {{hash=29c0a47f41350640ce2cbf8e426cfc1c}{%
-           family={Mangano},
-           familyi={M\bibinitperiod},
-           given={Michelangelo},
-           giveni={M\bibinitperiod}}}%
-        {{hash=37bf092014769df2c6715e2b994a6e7a}{%
-           family={Meyer},
-           familyi={M\bibinitperiod},
-           given={Andreas\bibnamedelima B},
-           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-        {{hash=1f425e889879a9daf2c5fa971897b026}{%
-           family={Nisati},
-           familyi={N\bibinitperiod},
-           given={Aleandro},
-           giveni={A\bibinitperiod}}}%
-        {{hash=5241ac0f0cc83fc88b08b2e72b39aa7a}{%
-           family={Salam},
-           familyi={S\bibinitperiod},
-           given={Gavin},
-           giveni={G\bibinitperiod}}}%
-        {{hash=1cd4f515e0c3ce1f3dd31d94c48f087f}{%
-           family={Vesterinen},
-           familyi={V\bibinitperiod},
-           given={Mika\bibnamedelima Anton},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Geneva, Switzerland}%
-      }
-      \strng{namehash}{08d96813d19ef6c429ad7a4735e3efbf}
-      \strng{fullhash}{50144702cd12becf423681a2683e53e0}
-      \strng{bibnamehash}{08d96813d19ef6c429ad7a4735e3efbf}
-      \strng{authorbibnamehash}{08d96813d19ef6c429ad7a4735e3efbf}
-      \strng{authornamehash}{08d96813d19ef6c429ad7a4735e3efbf}
-      \strng{authorfullhash}{50144702cd12becf423681a2683e53e0}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Report on the Physics at the HL-LHC, and Perspectives for the HE-LHC}}
-      \field{type}{techreport}
-      \field{year}{2019}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.23731/CYRM-2019-007
-      \endverb
-      \verb{urlraw}
-      \verb http://cds.cern.ch/record/2703572
-      \endverb
-      \verb{url}
-      \verb http://cds.cern.ch/record/2703572
       \endverb
     \endentry
     \entry{Carrazza:2020qwu}{article}{}
@@ -1473,8 +1532,8 @@
       \strng{authornamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
       \strng{authorfullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{hep-ph}
@@ -1521,8 +1580,8 @@
       \strng{authornamehash}{04eea6c71304a8e398a411fac590e225}
       \strng{authorfullhash}{04eea6c71304a8e398a411fac590e225}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}

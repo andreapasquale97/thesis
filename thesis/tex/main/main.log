@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.24)  19 JUN 2021 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.24)  22 JUN 2021 11:47
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -6,10 +6,10 @@ entering extended mode
 (./main.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/book.cls
-Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/bk11.clo
-File: bk11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
 \c@chapter=\count168
@@ -754,6 +754,27 @@ Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 (/usr/local/texlive/2020/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip81
+\f@nch@O@elh=\skip82
+\f@nch@O@erh=\skip83
+\f@nch@O@olh=\skip84
+\f@nch@O@orh=\skip85
+\f@nch@O@elf=\skip86
+\f@nch@O@erf=\skip87
+\f@nch@O@olf=\skip88
+\f@nch@O@orf=\skip89
+)
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 27.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 29.
+
 (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 
@@ -810,24 +831,24 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 34.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -839,9 +860,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count430
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
  (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -855,7 +876,7 @@ LaTeX Info: Redefining \nameref on input line 26.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * bindingoffset: 17.07164pt
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(99.58464pt, 395.49333pt, 85.35826pt)
 * v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
 * \paperwidth=597.50787pt
@@ -863,22 +884,22 @@ LaTeX Info: Redefining \nameref on input line 26.
 * \textwidth=395.49333pt
 * \textheight=674.33032pt
 * \oddsidemargin=44.38629pt
-* \evensidemargin=13.08827pt
-* \topmargin=-18.78552pt
+* \evensidemargin=27.31465pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
-* \headsep=19.8738pt
-* \topskip=11.0pt
-* \footskip=27.46295pt
-* \marginparwidth=106.0pt
-* \marginparsep=7.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -919,35 +940,35 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 26.
-Package biblatex Info: Reference segment=0 on input line 26.
+Package biblatex Info: Reference section=0 on input line 34.
+Package biblatex Info: Reference segment=0 on input line 34.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<../images/tesiSCIENZE_TECNOLOGIE.jpg, id=163, 398.4486pt x 156.585pt>
+<../images/tesiSCIENZE_TECNOLOGIE.jpg, id=167, 398.4486pt x 156.585pt>
 File: ../images/tesiSCIENZE_TECNOLOGIE.jpg Graphic file (type jpg)
 <use ../images/tesiSCIENZE_TECNOLOGIE.jpg>
 Package pdftex.def Info: ../images/tesiSCIENZE_TECNOLOGIE.jpg  used on input li
-ne 31.
+ne 39.
 (pdftex.def)             Requested size: 398.44762pt x 156.58461pt.
 
-Overfull \hbox (2.95428pt too wide) in paragraph at lines 31--32
+Overfull \hbox (2.95428pt too wide) in paragraph at lines 39--40
  [] 
  []
 
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../imag
-es/tesiSCIENZE_TECNOLOGIE.jpg>] [2
-
-] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+esint on input line 6
+es/tesiSCIENZE_TECNOLOGIE.jpg>] (./main.toc
+LaTeX Font Info:    Trying to load font information for U+esint on input line 8
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
-) [3]
+) [2
+
+]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-02.
+04.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -956,130 +977,139 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \openout7 = `main.toc'.
 
 
-(../intro/../intro/intro.tex [1] [2
+(../intro/../intro/intro.tex
 
-]) (../first/../first/first.tex [3] [4
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+Make it at least 14.49998pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
 
-]
+[1] [2
+
+] [3]) (../first/../first/first.texpdfTeX warning (ext4): destination with the 
+same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \chapter
+            [Multi-dimensional integration in HEP]{Multi-dimensional integra...
+[1]
 Chapter 1.
-[5] [6] [7] [8]
-<../first/../images/peskin.png, id=329, 966.61125pt x 232.87pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.18 \subsection
+                {A first example of Monte Carlo integration} [2
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.66 \begin{equation}
+                      [3] [4] [5] [6] [7] [8]
+<../first/../images/peskin.png, id=356, 966.61125pt x 232.87pt>
 File: ../first/../images/peskin.png Graphic file (type png)
 <use ../first/../images/peskin.png>
-Package pdftex.def Info: ../first/../images/peskin.png  used on input line 228.
+Package pdftex.def Info: ../first/../images/peskin.png  used on input line 230.
 
 (pdftex.def)             Requested size: 341.43306pt x 82.25546pt.
+ [9 <../first/../images/peskin.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 257.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 257.
 
-[9] [10 <../first/../images/peskin.png>] [11] [12] [13]
-<../first/../images/asymptotic_freedom.png, id=385, 570.13pt x 578.16pt>
+[10] [11] [12] [13] [14] [15]
+<../first/../images/asymptotic_freedom.png, id=420, 570.13pt x 578.16pt>
 File: ../first/../images/asymptotic_freedom.png Graphic file (type png)
 <use ../first/../images/asymptotic_freedom.png>
 Package pdftex.def Info: ../first/../images/asymptotic_freedom.png  used on inp
-ut line 411.
+ut line 414.
 (pdftex.def)             Requested size: 227.62204pt x 230.82762pt.
- [14 <../first/../images/asymptotic_freedom.png>] [15]
-<../first/../images/CPU-cost.png, id=406, 980.66376pt x 717.68124pt>
+ [16 <../first/../images/asymptotic_freedom.png>]
+[17] [18] [19]
+<../first/../images/CPU-cost.png, id=452, 980.66376pt x 717.68124pt>
 File: ../first/../images/CPU-cost.png Graphic file (type png)
 <use ../first/../images/CPU-cost.png>
-Package pdftex.def Info: ../first/../images/CPU-cost.png  used on input line 48
-8.
+Package pdftex.def Info: ../first/../images/CPU-cost.png  used on input line 49
+3.
 (pdftex.def)             Requested size: 341.43306pt x 249.86713pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16]
+ [20 <../first/../images/CPU-cost.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 513.
+               Default added (so using `tbp') on input line 517.
 
-<../first/../images/CPU-time.png, id=417, 853.1875pt x 635.37375pt>
+<../first/../images/CPU-time.png, id=464, 853.1875pt x 635.37375pt>
 File: ../first/../images/CPU-time.png Graphic file (type png)
 <use ../first/../images/CPU-time.png>
 Package pdftex.def Info: ../first/../images/CPU-time.png  used on input line 51
-5.
+9.
 (pdftex.def)             Requested size: 284.52756pt x 211.89413pt.
-[17 <../first/../images/CPU-cost.png>]) (../second/../second/second.tex
-[18 <../first/../images/CPU-time.png>]
+[21]) (../second/../second/second.tex [22 <../first/../images/CPU-time.png>]
 Chapter 2.
-[19
+[23
 
-] [20]
-<../second/../images/vegas_grid.png, id=479, 704.6325pt x 654.445pt>
+] [24] [25]
+<../second/../images/vegas_grid.png, id=529, 704.6325pt x 654.445pt>
 File: ../second/../images/vegas_grid.png Graphic file (type png)
 <use ../second/../images/vegas_grid.png>
 Package pdftex.def Info: ../second/../images/vegas_grid.png  used on input line
  87.
 (pdftex.def)             Requested size: 227.62204pt x 211.4039pt.
+ [26 <../second/../images/vegas_grid.png>]
+Overfull \hbox (7.55069pt too wide) in paragraph at lines 129--133
+\T1/cmr/m/n/12 fied sam-pling works bet-ter with low-dimensional in-te-grals. F
+or high-dimensional
+ []
 
-Underfull \vbox (badness 1755) has occurred while \output is active []
-
- [21 <../second/../images/vegas_grid.png>] [22] [23]
-<../second/../images/VEGAS-VEGAS+.png, id=526, 735.74875pt x 452.69125pt>
+[27] [28] [29] [30]
+<../second/../images/VEGAS-VEGAS+.png, id=589, 735.74875pt x 452.69125pt>
 File: ../second/../images/VEGAS-VEGAS+.png Graphic file (type png)
 <use ../second/../images/VEGAS-VEGAS+.png>
 Package pdftex.def Info: ../second/../images/VEGAS-VEGAS+.png  used on input li
 ne 229.
 (pdftex.def)             Requested size: 284.52756pt x 175.07066pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[24]
+ [31 <../second/../images/VEGAS-VEGAS+.png>]
 \openout4 = `main.pyg'.
 
- (./_minted-main/default-pyg-prefix.pygstyle)
-(./_minted-main/friendly.pygstyle)
+
+(./_minted-main/default-pyg-prefix.pygstyle) (./_minted-main/friendly.pygstyle)
+
 (./_minted-main/795A5BE88933AA10BDD1B37C5D4966774FBEEAFC55D0059826E664B9BBCF372
 1.pygtex
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2.
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
 4.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-[25 <../second/../images/VEGAS-VEGAS+.png>])
-Overfull \hbox (24.90775pt too wide) in paragraph at lines 306--309
-[]\T1/cmr/m/n/10.95 The proper MC in-te-gra-tors are im-ple-mented as de-rived 
-class from the \T1/cmtt/m/n/10.95 MonteCarloFlow
- []
-
-[26]
-<../second/../images/graph_mode.png, id=568, 1095.09125pt x 654.445pt>
+[32]) [33] [34]
+<../second/../images/graph_mode.png, id=631, 1095.09125pt x 654.445pt>
 File: ../second/../images/graph_mode.png Graphic file (type png)
 <use ../second/../images/graph_mode.png>
 Package pdftex.def Info: ../second/../images/graph_mode.png  used on input line
  324.
 (pdftex.def)             Requested size: 341.43306pt x 204.04422pt.
-
-Overfull \hbox (24.10828pt too wide) in paragraph at lines 330--331
-\T1/cmr/m/n/10.95 der. The re-sults in Fig.[]2.4[] show how \T1/cmtt/m/n/10.95 
-VegasFlow \T1/cmr/m/n/10.95 can out-per-form Mad-Graph5_aMC@NLO
- []
-
-<../second/../images/vf_singletop.png, id=573, 1561.835pt x 869.2475pt>
+<../second/../images/vf_singletop.png, id=636, 1561.835pt x 869.2475pt>
 File: ../second/../images/vf_singletop.png Graphic file (type png)
 <use ../second/../images/vf_singletop.png>
 Package pdftex.def Info: ../second/../images/vf_singletop.png  used on input li
 ne 334.
 (pdftex.def)             Requested size: 341.43306pt x 190.02805pt.
-[27 <../second/../images/graph_mode.png>]
-<../second/../../../tests/plots/gauss_dims_2.png, id=594, 518.1759pt x 422.7795
+ [35 <../second/../images/graph_mode.png>] [36 <../second/../images/vf_singleto
+p.png>]
+<../second/../../../tests/plots/gauss_dims_2.png, id=663, 518.1759pt x 422.7795
 pt>
 File: ../second/../../../tests/plots/gauss_dims_2.png Graphic file (type png)
 <use ../second/../../../tests/plots/gauss_dims_2.png>
 Package pdftex.def Info: ../second/../../../tests/plots/gauss_dims_2.png  used 
 on input line 365.
 (pdftex.def)             Requested size: 284.52756pt x 232.14882pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../second/../../../tests/plots/rosen_dims_final.png, id=595, 518.1759pt x 395.
+<../second/../../../tests/plots/rosen_dims_final.png, id=664, 518.1759pt x 395.
 3169pt>
 File: ../second/../../../tests/plots/rosen_dims_final.png Graphic file (type pn
 g)
@@ -1088,10 +1118,10 @@ Package pdftex.def Info: ../second/../../../tests/plots/rosen_dims_final.png  u
 sed on input line 372.
 (pdftex.def)             Requested size: 284.52756pt x 217.06906pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28 <../second/../images/vf_singletop.png>]
-<../second/../../../tests/performance_plots/dy_aa.png, id=605, 722.7pt x 613.57
+<../second/../../../tests/performance_plots/dy_aa.png, id=665, 722.7pt x 613.57
 23pt>
 File: ../second/../../../tests/performance_plots/dy_aa.png Graphic file (type p
 ng)
@@ -1104,41 +1134,47 @@ Overfull \hbox (31.298pt too wide) in paragraph at lines 388--389
  [][] 
  []
 
-[29 <../second/../../../tests/plots/gauss_dims_2.png>] [30 <../second/../../../
-tests/plots/rosen_dims_final.png>] [31 <../second/../../../tests/performance_pl
-ots/dy_aa.png>]
+[37 <../second/../../../tests/plots/gauss_dims_2.png>] [38 <../second/../../../
+tests/plots/rosen_dims_final.png>] [39 <../second/../../../tests/performance_pl
+ots/dy_aa.png>] [40]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/C4572661FED61FA229581894EA2615404FBEEAFC55D0059826E664B9BBCF372
-1.pygtex)) (../third/../third/third.tex [32]
+1.pygtex) [41]) (../third/../third/third.tex [42]
 Chapter 3.
-[33
+[43
 
 ]
-<../third/../images/gauss4d_final.png, id=648, 770.3982pt x 627.3036pt>
+Overfull \hbox (25.3413pt too wide) in paragraph at lines 28--29
+[]\T1/cmr/m/n/12 Importance Sam-pling: in-te-gra-tor al-ready im-ple-mented in 
+the class \T1/cmtt/m/n/12 VegasFlow 
+ []
+
+[44]
+<../third/../images/gauss4d_final.png, id=724, 770.3982pt x 627.3036pt>
 File: ../third/../images/gauss4d_final.png Graphic file (type png)
 <use ../third/../images/gauss4d_final.png>
 Package pdftex.def Info: ../third/../images/gauss4d_final.png  used on input li
 ne 65.
 (pdftex.def)             Requested size: 395.49333pt x 322.03598pt.
- [34] [35 <../third/../images/gauss4d_final.png>]
-<../third/../images/gauss8d_final.png, id=668, 770.3982pt x 627.3036pt>
+ [45] [46 <../third/../images/gauss4d_final.png>]
+<../third/../images/gauss8d_final.png, id=743, 770.3982pt x 627.3036pt>
 File: ../third/../images/gauss8d_final.png Graphic file (type png)
 <use ../third/../images/gauss8d_final.png>
 Package pdftex.def Info: ../third/../images/gauss8d_final.png  used on input li
 ne 81.
 (pdftex.def)             Requested size: 395.49333pt x 322.03598pt.
- [36 <../third/../images/gauss8d_final.png>]
-<../third/../images/gauss12d_final.png, id=681, 777.6252pt x 627.3036pt>
+ [47 <../third/../images/gauss8d_final.png>] [48]
+<../third/../images/gauss12d_final.png, id=760, 777.6252pt x 627.3036pt>
 File: ../third/../images/gauss12d_final.png Graphic file (type png)
 <use ../third/../images/gauss12d_final.png>
 Package pdftex.def Info: ../third/../images/gauss12d_final.png  used on input l
 ine 111.
 (pdftex.def)             Requested size: 395.49333pt x 319.04956pt.
- [37] [38 <../third/../images/gauss12d_final.png>]
+ [49] [50 <../third/../images/gauss12d_final.png>]
 <../third/../images/Drell-Yan-process-a-quark-of-one-hadron-and-an-antiquark-of
--another-hadron-annihilate.png, id=696, 807.015pt x 492.84125pt>
+-another-hadron-annihilate.png, id=777, 807.015pt x 492.84125pt>
 File: ../third/../images/Drell-Yan-process-a-quark-of-one-hadron-and-an-antiqua
 rk-of-another-hadron-annihilate.png Graphic file (type png)
 <use ../third/../images/Drell-Yan-process-a-quark-of-one-hadron-and-an-antiquar
@@ -1148,68 +1184,74 @@ dron-and-an-antiquark-of-another-hadron-annihilate.png  used on input line 130.
 
 (pdftex.def)             Requested size: 170.71652pt x 104.25172pt.
 
+[51 <../third/../images/Drell-Yan-process-a-quark-of-one-hadron-and-an-antiquar
+k-of-another-hadron-annihilate.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 152.
 
-<../third/../images/pineappl_final.png, id=702, 770.3982pt x 627.3036pt>
+<../third/../images/pineappl_final.png, id=793, 770.3982pt x 627.3036pt>
 File: ../third/../images/pineappl_final.png Graphic file (type png)
 <use ../third/../images/pineappl_final.png>
 Package pdftex.def Info: ../third/../images/pineappl_final.png  used on input l
 ine 154.
 (pdftex.def)             Requested size: 395.49333pt x 322.03598pt.
-[39 <../third/../images/Drell-Yan-process-a-quark-of-one-hadron-and-an-antiquar
-k-of-another-hadron-annihilate.png>] [40 <../third/../images/pineappl_final.png
->]
+[52 <../third/../images/pineappl_final.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 186.
 
-<../third/../images/singletop_final.png, id=725, 770.3982pt x 627.3036pt>
+<../third/../images/singletop_final.png, id=804, 770.3982pt x 627.3036pt>
 File: ../third/../images/singletop_final.png Graphic file (type png)
 <use ../third/../images/singletop_final.png>
 Package pdftex.def Info: ../third/../images/singletop_final.png  used on input 
 line 188.
 (pdftex.def)             Requested size: 395.49333pt x 322.03598pt.
+[53]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 195.
 
-<../third/../images/vfb_image.png, id=728, 530.98375pt x 421.575pt>
+<../third/../images/vfb_image.png, id=814, 530.98375pt x 421.575pt>
 File: ../third/../images/vfb_image.png Graphic file (type png)
 <use ../third/../images/vfb_image.png>
 Package pdftex.def Info: ../third/../images/vfb_image.png  used on input line 1
 97.
 (pdftex.def)             Requested size: 142.26378pt x 112.95192pt.
-[41] [42 <../third/../images/singletop_final.png> <../third/../images/vfb_image
-.png>]
-<../third/../images/higgs_LO_final.png, id=756, 770.3982pt x 627.3036pt>
+[54 <../third/../images/singletop_final.png>]
+<../third/../images/higgs_LO_final.png, id=830, 770.3982pt x 627.3036pt>
 File: ../third/../images/higgs_LO_final.png Graphic file (type png)
 <use ../third/../images/higgs_LO_final.png>
 Package pdftex.def Info: ../third/../images/higgs_LO_final.png  used on input l
 ine 225.
 (pdftex.def)             Requested size: 395.49333pt x 322.03598pt.
- [43 <../third/../images/higgs_LO_final.png>]
-<../third/../images/dim_comparison_CPU.png, id=765, 1040.688pt x 578.16pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[55 <../third/../images/vfb_image.png>] [56 <../third/../images/higgs_LO_final.
+png>]
+<../third/../images/dim_comparison_CPU.png, id=848, 1040.688pt x 578.16pt>
 File: ../third/../images/dim_comparison_CPU.png Graphic file (type png)
 <use ../third/../images/dim_comparison_CPU.png>
 Package pdftex.def Info: ../third/../images/dim_comparison_CPU.png  used on inp
 ut line 246.
 (pdftex.def)             Requested size: 395.49333pt x 219.72072pt.
 
-Overfull \hbox (1.1099pt too wide) in paragraph at lines 255--256
-[]\T1/cmr/m/n/10.95 The case of the VFB Higgs pro-duc-tion is also in-ter-est-i
-ng. The VE-GAS/VEGAS+
- []
 
-<../third/../images/dim_comparison_GPU.png, id=767, 1040.688pt x 578.16pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../third/../images/dim_comparison_GPU.png, id=850, 1040.688pt x 578.16pt>
 File: ../third/../images/dim_comparison_GPU.png Graphic file (type png)
 <use ../third/../images/dim_comparison_GPU.png>
 Package pdftex.def Info: ../third/../images/dim_comparison_GPU.png  used on inp
 ut line 259.
 (pdftex.def)             Requested size: 395.49333pt x 219.72072pt.
-[44 <../third/../images/dim_comparison_CPU.png>]
-<../third/../images/dim_comparison_iter.png, id=777, 1040.688pt x 578.16pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[57]
+<../third/../images/dim_comparison_iter.png, id=859, 1040.688pt x 578.16pt>
 File: ../third/../images/dim_comparison_iter.png Graphic file (type png)
 <use ../third/../images/dim_comparison_iter.png>
 Package pdftex.def Info: ../third/../images/dim_comparison_iter.png  used on in
@@ -1219,13 +1261,19 @@ put line 276.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45 <../third/../images/dim_comparison_GPU.png>])
-(../conclusion/../conclusion/conclusion.tex [46 <../third/../images/dim_compari
-son_iter.png>]
+[58 <../third/../images/dim_comparison_CPU.png>] [59 <../third/../images/dim_co
+mparison_GPU.png>]) (../conclusion/../conclusion/conclusion.tex [60 <../third/.
+./images/dim_comparison_iter.png>]
 Chapter 4.
-[47
+[61
 
-]) (../appendix/../appendix/appendix.tex [48]
+]
+Overfull \hbox (1.3209pt too wide) in paragraph at lines 27--29
+\T1/cmr/m/n/12 us to im-ple-ment new in-te-gra-tors sim-ply as de-rived class o
+f the \T1/cmtt/m/n/12 MonteCarloFlow
+ []
+
+[62]) (../appendix/../appendix/appendix.tex [63]
 Appendix A.
 \openout4 = `main.pyg'.
 
@@ -1236,20 +1284,26 @@ Appendix A.
 
 
 (./_minted-main/2D66CDB29581C0ACB6B29F39D604C35E4FBEEAFC55D0059826E664B9BBCF372
-1.pygtex)
+1.pygtex [64
+
+])
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/A59BEED6472477537AEBCD7E6EFD5A9C4FBEEAFC55D0059826E664B9BBCF372
-1.pygtex) [49
+1.pygtex
+Overfull \hbox (40.53024pt too wide) in paragraph at lines 30--1
+\T1/cmr/m/n/12 tion. The in-te-gra-tion is per-formed us-ing the method \T1/cmt
+t/m/n/12 run_integration(n_iter)
+ []
 
-]
+)
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/4302DAD4F8021C2C58E74A9FB9FA27794FBEEAFC55D0059826E664B9BBCF372
-1.pygtex)
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
+1.pygtex) [65]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 50.
 \openout4 = `main.pyg'.
 
@@ -1260,109 +1314,128 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
 
 
 (./_minted-main/EA8FAE29277CAF51391FAAA4DC05C2C94FBEEAFC55D0059826E664B9BBCF372
-1.pygtex [50])
+1.pygtex [66])
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/0CAF9D4052D5C13E398FF61D959FE9344FBEEAFC55D0059826E664B9BBCF372
-1.pygtex)) [51] [52
+1.pygtex)) [67] [68
 
 ]
 
 Package biblatex Warning: No driver for entry type ''.
-(biblatex)                Using fallback driver on input line 73.
+(biblatex)                Using fallback driver on input line 90.
 
 
-Overfull \hbox (2.04108pt too wide) in paragraph at lines 74--74
-[]\T1/cmr/m/n/10.95 Christina Gao, Joshua Isaac-son, and Claudius Krause. \T1/c
-mr/m/it/10.95 i-flow: High-dimensional
+Overfull \hbox (4.50818pt too wide) in paragraph at lines 91--91
+\T1/cmr/m/it/12 dimensional In-te-gra-tion and Sam-pling with Nor-mal-iz-ing Fl
+ows\T1/cmr/m/n/12 . Jan. 2020. 
  []
 
-[53]
-Overfull \hbox (171.19032pt too wide) in paragraph at lines 74--74
-\T1/cmr/m/n/10.95 clud-ing aux-il-iary fig-ures are avail-able at https://atlas
+[69]
+Overfull \hbox (225.60603pt too wide) in paragraph at lines 91--91
+\T1/cmr/m/n/12 in-clud-ing aux-il-iary fig-ures are avail-able at https://atlas
 .web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-
  []
 
 
-Overfull \hbox (3.3095pt too wide) in paragraph at lines 74--74
-[]\T1/cmr/m/n/10.95 John Camp-bell and To-bias Neu-mann. ``Pre-ci-sion Phe-nome
-nol-ogy with MCFM''.
+Overfull \hbox (59.08618pt too wide) in paragraph at lines 91--91
+\T1/cmr/m/sc/12 doi\T1/cmr/m/n/12 : []$\T1/cmtt/m/n/12 10 . 1140 / epjc / s1005
+2 -[] 015 -[] 3461 -[] 2$[]\T1/cmr/m/n/12 . arXiv: []$\T1/cmtt/m/n/12 1503 . 06
+182$ [physics.comp-ph][]\T1/cmr/m/n/12 . 
  []
 
-[54]
-Overfull \hbox (5.39665pt too wide) in paragraph at lines 74--74
-[]\T1/cmr/m/n/10.95 Christina Gao, Joshua Isaac-son, and Claudius Krause. ``i-f
-low: High-dimensional
+[70]
+Overfull \hbox (3.61786pt too wide) in paragraph at lines 91--91
+\T1/cmr/m/n/12 NNLO QCD cor-rec-tions to single-top pro-duc-tion at the LHC''. 
+In: \T1/cmr/m/it/12 Physics
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
-[55]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
+[71]
+Overfull \hbox (25.5511pt too wide) in paragraph at lines 91--91
+[]\T1/cmr/m/n/12 Juan M. Cruz-Martinez, Marco Rossi, and Ste-fano Car-razza. \T
+1/cmr/m/it/12 N3PDF/pdfflow:
+ []
+
+
+Overfull \hbox (7.00441pt too wide) in paragraph at lines 91--91
+\T1/cmr/m/n/12 dimensional In-te-gra-tion and Sam-pling with Nor-mal-iz-ing Flo
+ws''. In: \T1/cmr/m/it/12 Mach.
+ []
+
+
+Overfull \hbox (8.57484pt too wide) in paragraph at lines 91--91
+[]\T1/cmr/m/n/12 Juan Cruz-Martinez, Marco Rossi, and Ste-fano Car-razza. \T1/c
+mr/m/it/12 N3PDF/pdfflow\T1/cmr/m/n/12 .
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
+[72]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 977B0B75C0123A6EE2B4DA74969C9043;2899.
+(rerunfilecheck)             Checksum: 8A9B3DC2EB47E067727A9CD495F3E9B8;2948.
 runsystem(rm main.pyg)...executed.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
  ) 
 Here is how much of TeX's memory you used:
- 22986 strings out of 480608
- 402759 string characters out of 5903630
- 1086008 words of memory out of 5000000
- 38174 multiletter control sequences out of 15000+600000
- 563740 words of font info for 100 fonts, out of 8000000 for 9000
+ 23151 strings out of 480608
+ 404899 string characters out of 5903630
+ 1087233 words of memory out of 5000000
+ 38312 multiletter control sequences out of 15000+600000
+ 565988 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,14n,72p,928b,2774s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,14n,72p,1117b,2826s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
-/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/us
+r/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr
 /local/texlive/2020/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/loc
 al/texlive/2020/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/local/t
 exlive/2020/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/local/texli
 ve/2020/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{/usr/local/texlive/2
 020/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}</usr/local/texlive/2020/
 texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></usr/local/texlive/2020/
 texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/mnsymbol/MnSymbol9.pfb></usr/local/texlive/2020/tex
+exmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb></usr/local/texlive/2020/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
-1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/
-public/cm-super/sfbx1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/cm-super/sfbx1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
-ic/cm-super/sfbx1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
-/cm-super/sfbx2074.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/c
-m-super/sfbx2488.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-
-super/sfcc1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-su
-per/sfit0900.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm0600.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/
-sfrm0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sf
-rm0900.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm
-1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm12
-00.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1440
-.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1728.p
-fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb
-></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfst1095.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on main.pdf (58 pages, 1838188 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
+ublic/cm-super/sfbx0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
+lic/cm-super/sfbx1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
+c/cm-super/sfbx1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
+cm-super/sfbx1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm
+-super/sfbx2488.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-s
+uper/sfcc1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
+er/sfit1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super
+/sfrm0700.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/s
+frm0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfr
+m1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1
+200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm144
+0.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1728.
+pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pf
+b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb>
+Output written on main.pdf (77 pages, 1808958 bytes).
 PDF statistics:
- 1106 PDF objects out of 1200 (max. 8388607)
- 939 compressed objects within 10 object streams
- 248 named destinations out of 1000 (max. 500000)
- 436 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1211 PDF objects out of 1440 (max. 8388607)
+ 1024 compressed objects within 11 object streams
+ 268 named destinations out of 1000 (max. 500000)
+ 444 words of extra memory for PDF output out of 10000 (max. 10000000)
 

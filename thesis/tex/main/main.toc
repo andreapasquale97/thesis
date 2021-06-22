@@ -1,104 +1,106 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Multi-dimensional integration in HEP}{5}{chapter.1}%
+\contentsline {chapter}{Introduction}{1}{chapter*.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}MC methos for multi-dimensional integration}{5}{section.1.1}%
+\contentsline {chapter}{\numberline {1}Multi-dimensional integration in HEP}{2}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.1}A first example of Monte Carlo integration}{5}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.1}MC methos for multi-dimensional integration}{2}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.2}Reducing the variance}{7}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.1}A first example of Monte Carlo integration}{3}{subsection.1.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Importance Sampling}{7}{section*.3}%
+\contentsline {subsection}{\numberline {1.1.2}Reducing the variance}{5}{subsection.1.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Stratified Sampling}{8}{section*.4}%
+\contentsline {subsubsection}{Importance Sampling}{5}{section*.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Stratified Sampling}{7}{section*.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}HEP and multi-dimensional integration}{9}{section.1.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.1}Cross Section and Decay Rates}{9}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}The S-matrix formalism}{10}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}The $S$-matrix formalism}{10}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.3}Feynman diagrams}{12}{subsection.1.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}Basics of QCD}{13}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.4}Basics of QCD}{15}{subsection.1.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.5}Need for MC integration in HEP}{14}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.5}Need for MC integration in HEP}{17}{subsection.1.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Modern techniques and limitations}{15}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Modern techniques and limitations}{18}{section.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.1}Problems of HEP integration}{15}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.1}Problems of HEP integration}{18}{subsection.1.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.2}CPU costs and computational times}{16}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.2}CPU costs and computational times}{19}{subsection.1.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.3}Possible solutions and aim of the thesis}{17}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.3}Possible solutions and aim of the thesis}{21}{subsection.1.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Algorithms and implementation}{19}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Algorithms and implementation}{23}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Algorithms}{19}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Algorithms}{23}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}VEGAS}{19}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.1}VEGAS}{24}{subsection.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Importance sampling}{19}{section*.9}%
+\contentsline {subsubsection}{Importance sampling}{24}{section*.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Stratified Sampling}{22}{section*.11}%
+\contentsline {subsubsection}{Stratified Sampling}{27}{section*.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}A new algorithm: VEGAS+}{22}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.2}A new algorithm: VEGAS+}{28}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Limitations}{24}{section*.13}%
+\contentsline {subsubsection}{Limitations}{31}{section*.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Implementation}{25}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Implementation}{31}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}VegasFlow: a brief overview}{25}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}VegasFlow: a brief overview}{32}{subsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Why TensorFlow?}{25}{section*.14}%
+\contentsline {subsubsection}{Why TensorFlow?}{32}{section*.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Design and algorithms}{26}{section*.15}%
+\contentsline {subsubsection}{Design and algorithms}{34}{section*.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Results}{27}{section*.16}%
+\contentsline {subsubsection}{Results}{34}{section*.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}A new implementation: VegasFlowPlus}{27}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.2}A new implementation: VegasFlowPlus}{35}{subsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Motivation}{27}{section*.19}%
+\contentsline {subsubsection}{Motivation}{35}{section*.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Implementation}{29}{section*.23}%
+\contentsline {subsubsection}{Implementation}{38}{section*.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Problems during the implementation}{30}{section*.24}%
+\contentsline {subsubsection}{Problems during the implementation}{40}{section*.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Result benchmark}{33}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Result benchmark}{43}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Setup and goals}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Setup and goals}{43}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Result for Gaussian integrals}{34}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Result for Gaussian integrals}{45}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Dimension 4}{34}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.1}Dimension 4}{45}{subsection.3.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Dimension 8}{36}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}Dimension 8}{47}{subsection.3.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Dimension 12}{37}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Dimension 12}{48}{subsection.3.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}HEP integrands}{37}{section.3.3}%
+\contentsline {section}{\numberline {3.3}HEP integrands}{49}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Drell-Yan process}{39}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Drell-Yan process}{51}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Single Top Production}{41}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.2}Single Top Production}{53}{subsection.3.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Vector Fusion Boson Production Higgs at LO}{41}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.3}Vector Fusion Boson Production Higgs at LO}{54}{subsection.3.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Recipe for the reader}{43}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Recipe for the reader}{56}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Average time per iteration}{44}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.1}Average time per iteration}{57}{subsection.3.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Number of iterations}{45}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}Number of iterations}{58}{subsection.3.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Final comments}{45}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.3}Final comments}{59}{subsection.3.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusions}{47}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Conclusions}{61}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Integrating with VegasFlow}{49}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Integrating with VegasFlow}{64}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Basic Usage}{49}{section.A.1}%
+\contentsline {section}{\numberline {A.1}Basic Usage}{64}{section.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}How to use the \texttt {VegasFlowPlus} class}{50}{section.A.2}%
+\contentsline {section}{\numberline {A.2}How to use the \texttt {VegasFlowPlus} class}{66}{section.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{51}{section.A.2}%
+\contentsline {chapter}{Bibliography}{67}{section.A.2}%

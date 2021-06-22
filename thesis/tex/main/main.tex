@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{book}
+\documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage [ T1 ]{ fontenc }
 \usepackage{subfiles}
@@ -11,6 +11,8 @@
 \usepackage{interval}
 \usepackage{MnSymbol}
 \usepackage{braket}
+%\usepackage[top=2.5cm, bottom=2.5cm, left=4cm, right=2.5cm, centering]{geometry}
+\linespread{1.5}
 \usepackage[a4paper, left = 35mm, top=30mm,bottom=30mm,right=30mm,
 bindingoffset=6mm ]{geometry}
 %\usepackage[left=1.5in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
@@ -19,6 +21,12 @@ bindingoffset=6mm ]{geometry}
 \usepackage{minted}
 \usemintedstyle{friendly}
 \usepackage{tablefootnote}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[EL]{\nouppercase\leftmark}
+\fancyhead[OR]{\nouppercase\rightmark}
+\fancyhead[ER,OL]{\thepage}
 
 \usepackage[font=footnotesize,skip=0pt]{caption}
 \addbibresource{bib.bib}
@@ -34,11 +42,11 @@ bindingoffset=6mm ]{geometry}
 	{\LARGE Corso di Laurea Magistrale in Fisica}
 \end{center}
 \begin{center}
-	\vspace{3cm}
+	\vspace{2cm}
 	{\Large NEW MONTE CARLO ALGORITHMS  FOR\\MULTI-DIMENSIONAL  INTEGRATION  WITH\\HARDWARE ACCELERATION \\} 
 \end{center}
 \par
-\vspace{3 cm}
+\vspace{1 cm}
 \begin{flushleft}  		 
 	\textbf{Relatore}:\\ {Dott. Stefano CARRAZZA}\\
 	\textbf{Correlatore}:\\ {Dott. Juan M. CRUZ-MARTINEZ}\\
@@ -55,12 +63,21 @@ bindingoffset=6mm ]{geometry}
 	{\large Anno Accademico 2020/2021}
 \end{center}
 
+
 \pagenumbering{roman}
+\setcounter{page}{1}
+
 \tableofcontents
 
 
+
+
+
 \pagenumbering{arabic}
+\addcontentsline{toc}{chapter}{Introduction}
+
 \subfile{../intro/intro.tex}
+\setcounter{page}{1}
 \subfile{../first/first.tex}
 \subfile{../second/second.tex}
 \subfile{../third/third.tex}
