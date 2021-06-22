@@ -9,6 +9,7 @@ import tensorflow as tf
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 def compute_rtol_from_result(results):
     rtol = [ float(i.split("+/-")[1])/float(i.split("+/-")[0])  for i in results]
     return rtol
@@ -146,25 +147,94 @@ def prepare_data4(data=None,data1=None,rtol=1e-2,index=None):
     vegasplus_time = [i["avg_time_per_iteration"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 1]
     vegasplus1_time = [i["avg_time_per_iteration"] for i in data1 if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == rtol and i["adaptive"] == True and i["warmup"] == 2]
     
-    df_iter = pd.DataFrame({'vegasflow' : importance_iter,
-                            'vegasflowplus' : vegas_iter,
-                            'vegasflowplus adaptive' : vegasplus_iter,
-                            'vegasflowplus adaptive after warmup' : vegasplus1_iter   
+    df_iter = pd.DataFrame({'importance sampling' : importance_iter,
+                            'classic VEGAS' : vegas_iter,
+                            'VEGAS/VEGAS+ hybrid' : vegasplus_iter,
+                            'VEGAS+' : vegasplus1_iter   
                             },index=index)
 
-    df_time = pd.DataFrame({'vegasflow' : importance_time,
-                            'vegasflowplus' : vegas_time,
-                            'vegasflowplus adaptive' : vegasplus_time,
-                            'vegasflowplus adaptive after warmup' : vegasplus1_time
+    df_time = pd.DataFrame({'importance sampling' : importance_time,
+                            'classic VEGAS' : vegas_time,
+                            'VEGAS/VEGAS+ hybrid' : vegasplus_time,
+                            'VEGAS+' : vegasplus1_time
                              },index=index)
 
-    df_rtol= pd.DataFrame({'vegasflow' : importance_rtol,
-                           'vegasflowplus' : vegas_rtol,
-                           'vegasflowplus adaptive' : vegasplus_rtol,
-                           'vegasflowplus adaptive after warmup' : vegasplus1_rtol
+    df_rtol= pd.DataFrame({'importance sampling' : importance_rtol,
+                           'classic VEGAS' : vegas_rtol,
+                           'VEGAS/VEGAS+ hybrid' : vegasplus_rtol,
+                           'VEGAS+' : vegasplus1_rtol
                             },index=index)
 
     return df_iter, df_time, df_rtol
+
+def dim_comparison(device=str, show='time'):
+
+    labels = ['pineappl', 'singletop', 'gauss4d', 'higgs_LO', 'gauss8d', 'gauss12d']
+    labels1 = ["importance sampling", "classic VEGAS", "VEGAS/VEGAS+ hybrid", "VEGAS+"]
+    x = np.arange(len(labels1))
+
+    pineappl = []
+    singletop = []
+    gauss4d = []
+    higgs_LO = []
+    gauss8d = []
+    gauss12d = []
+
+    integrands = [pineappl, singletop, gauss4d, higgs_LO, gauss8d, gauss12d]
+
+    for j in range(len(labels)):
+        if device == 'CPU':
+            path= f'new_simulation_{device}/{labels[j]}.json'
+        else:
+            path = f'new_simulation_{device}/gpu0/{labels[j]}.json'
+
+        data =[]
+        with open(path, "r") as f:
+            all = json.load(f)
+            for key in all.keys():
+                data.append(all[key])
+
+        
+        not_adaptive = data[0]
+        adaptive = data[1]
+        if show == 'time':
+            item = 'avg_time_per_iteration'
+        else:
+            item = 'iter'
+        
+        integrands[j].append([i[item] for i in not_adaptive if i["integrator"] == "VegasFlow" and i["perc_uncertainty"] == 1e-4][0]) 
+        integrands[j].append([i[item] for i in not_adaptive if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == 1e-4 and i["adaptive"] == False][0]) 
+        integrands[j].append([i[item] for i in adaptive if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == 1e-4 and i["adaptive"] == True and i["warmup"] == 1][0])
+        integrands[j].append([i[item] for i in adaptive if i["integrator"] == "VegasFlowPlus" and i["perc_uncertainty"] == 1e-4 and i["adaptive"] == True and i["warmup"] == 2][0])
+       
+        data = []
+        
+    width = 0.8 / len(integrands)
+    Pos = np.array(range(4)) - 2*width
+
+    new_labels = ['Drell-Yan LO', 'Single top LO', 'gauss4d', 'vfb higgs LO', 'gauss8d', 'gauss12d']
+    fig, ax = plt.subplots(figsize=(15, 8))
+    for i in range(len(integrands)):
+        ax.bar(Pos + i * width, integrands[i], width = width, label=new_labels[i%6])
+    if show == 'time':
+        ax.set_ylabel('average time per iterations (s)')
+    else:
+        ax.set_ylabel('iterations')
+
+    if device == 'GPU':
+        ax.set_title('Dimensional comparison on NVIDIA Titan V')
+    else:
+        ax.set_title('Dimensional comparison - number of iterations')
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels1)
+    ax.legend()
+
+    fig.tight_layout()
+    plt.show()
+    
+    
+
 
 
 def make_histo(infile=None, outfile=None, save=False, showPlus=True):
@@ -404,7 +474,7 @@ def make_histo4(function=str, save=False, title=str):
     #path_GPU01 = f'simulation_GPU/simulation_both_gpus/{function}.json'
 
     #index = ['CPU', 'GPU0', 'GPU1', 'GPU01']
-    index = ['CPU', 'GPU0']
+    index = ['Intel i9-9980XE', 'NVIDIA Titan V']
 
     #files = [path_CPU, path_GPU0, path_GPU1, path_GPU01]
     files = [path_CPU, path_GPU0]
@@ -419,13 +489,13 @@ def make_histo4(function=str, save=False, title=str):
     not_adaptive = data[0]+data[2]#+data[4]+data[6]
     adaptive = data[1]+data[3]#+data[5]+data[7]
 
-    fig, axs  = plt.subplots(3, 3, sharey='row',figsize=(13, 10))
+    fig, axs  = plt.subplots(3, 3, sharey='row',figsize=(12, 9))
     #fig.text(0.02, 0.5, 'samples/iteration', ha='center', va='center', rotation='vertical')
     df_iter1, df_time1, df_rtol1 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-2,index=index)
     df_iter2, df_time2, df_rtol2 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-3,index=index)
     df_iter3, df_time3, df_rtol3 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-4,index=index)
 
-    fig.suptitle(title, fontsize=14)
+    fig.suptitle(title, fontsize=14,  y=0.95)
 
     axs[0,0] = df_time1.plot.barh(ax=axs[0,0],legend=False)
     axs[0,1] = df_iter1.plot.barh(ax=axs[0,1],legend=False)
@@ -445,14 +515,14 @@ def make_histo4(function=str, save=False, title=str):
     axs[2,2].axvline(0.0001,color='black',ls='--')
     axs[2,2].ticklabel_format(style = 'sci', axis='x', scilimits=(-4,-4))
 
-    axs[2,0].set_xlabel('avg time per iteration (s)')
+    axs[2,0].set_xlabel('average time per iteration (s)')
     axs[2,1].set_xlabel('iterations')
-    axs[2,2].set_xlabel('rtol')
+    axs[2,2].set_xlabel('percent uncertainty')
 
 
     handles, labels = axs[0,0].get_legend_handles_labels()
-    fig.legend(handles, labels)
-    outfile = f'plots_CPU_GPU_FINAL/{function}'
+    fig.legend(handles, labels,ncol=4, loc='lower center')
+    outfile = f'plots_CPU_GPU_FINAL/{function}_final'
     if save:
         plt.savefig(outfile,bbox_inches='tight')
     else:
