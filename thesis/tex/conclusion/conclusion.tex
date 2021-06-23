@@ -2,13 +2,13 @@
 \begin{document}
 \chapter{Conclusions}
 
-In this thesis we have considered the problem of solving high-dimensional integrals in the context of HEP.
+In this thesis we have considered the problem of evaluating high-dimensional integrals in the context of HEP.
 These integrals are usually solved by means of MC integration techniques which requires long computational time, as well as high CPU resources.
-The cost of these calculations is currently driving the budget of important experiments such as ATLAS or CMS \cite{Buckley:2019wov}.
+The costs of these calculations are currently driving the budget of important experiments such as ATLAS or CMS \cite{Buckley:2019wov}.
 
-To shorten the computational times, we focus on implementing new integration algorithms, which can take advantage of hardware acceleration devices such as GPU or multi-thread CPUs.
+In order to reduce the computational times, we focus on implementing new integration algorithms, which can take advantage of hardware acceleration devices such as GPU or multi-thread CPUs.
 In particular we have considered a new algorithm proposed in Ref\cite{Lepage:2020tgj}, called VEGAS+,  which consists in a modification of the classic VEGAS algorithm \cite{Lepage:1977sw}, ubiquitous in the particle physics community.
-The algorithm has been implemented within the \texttt{VegasFlow} library \cite{Carrazza:2020rdn}, which enable us to run our computations using hardware acceleration thanks to Google's TensorFlow library
+The algorithm has been implemented within the \texttt{VegasFlow} library \cite{Carrazza:2020rdn}, which enable us to run our computations using hardware acceleration thanks to the TensorFlow library
 \cite{tensorflow2015-whitepaper}. 
 
 We have compared the performance of different variations of the new algorithm with the importance sampling "à la" VEGAS already implemented in the \texttt{VegasFlow} library. The benchmark was performed by using classical integrands, such gaussian distributions, as well as integrands taken from common particle physics processes, such as the Drell-Yan process, the single top production and the vector fusion boson Higgs production. In particular we run the integrations on a professional-grade CPU and on a professional-grade GPU to quantify the benefits of hardware acceleration.

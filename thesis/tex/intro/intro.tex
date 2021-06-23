@@ -2,29 +2,65 @@
 \begin{document}
 \chapter*{Introduction}
 
-In many fields of science, high-dimensional integration is often required. Particularly in physics one has to deal with very complex integrals for which the analytical result is not known. Several numerical methods have been developed to evaluate these complex integrals. Monte Carlo (MC) techniques are usually the solution of choice, especially with high-dimensional integrals, since the variance of the integral estimate does not increase with the dimension \cite{Press:1992zz}.
+In many fields of science, high-dimensional integration is often required. In particular in physics one has to deal with very complex integrals for which the analytical result is not known. Several numerical methods have been developed to evaluate these complex integrals. Monte Carlo (MC) techniques are usually the solution of choice, especially with high-dimensional integrals, since the variance of the integral estimate does not increase with the dimension \cite{Press:1992zz}.
 
-We focus our analysis on High Energy Physics (HEP), where the solution of high-dimensional integrals is required in order to make physical predictions. In fact, thanks to the technological development at the Large Hadron Collider (LHC) we are able to obtain experimental data with a very high precision, that need to be compared with theoretical predictions of the same accuracy. 
-One of the problems which is currently facing the LHC programme at CERN \cite{Dainese:2703572} is the fact that MC integration is computationally expensive. The current integration algorithms requires long computational times  and high CPU resources, to the point where the theoretical predictions will not be able to match the experimental precision in the next years \cite{Buckley:2019wov}.
+We focus our analysis on High Energy Physics (HEP), where the solution of high-dimensional integrals is required in order to compute physical predictions. In fact, thanks to the technological development at the Large Hadron Collider (LHC) at CERN we are able to obtain experimental data at very high precision, that needs to be compared with accurate theoretical predictions.
+One of the problems which is currently facing the LHC programme at CERN \cite{Dainese:2703572} is the fact that MC integration is computationally expensive. The current integration algorithms requires long computational times  and high CPU resources, to the point where the theoretical predictions will not be able to match the experimental precision in the next years \cite{Buckley:2019wov, Apollinari:2017cqg, Abada:2019zxq}.
 
-We can overcome this problem in two different ways. Firstly, we can develop new algorithms that are more efficient than the current ones. For example, we can design new algorithms that converge to the required accuracy using less iterations of the simulation, or that are able to reach the target accuracy using smaller samples, lowering the CPU usage. These new techniques could involve MC techniques or Machine Learning (ML) based method that use boosted decision trees or neural network to perform integration \cite{Bendavid:2017zhk}.
-Secondly, we can also lower the CPU usage and the computational times  by working at the hardware level.
+We can overcome this problem in two different ways. First, we can develop new algorithms that are more efficient than the current ones. For example, we can design new algorithms that converge to the required accuracy using less iterations of the simulation, or that are able to reach the target accuracy using smaller samples, lowering the CPU usage. These new techniques could involve MC techniques or Machine Learning (ML) based method that use neural network to perform integration \cite{Bendavid:2017zhk}.
+On the other hand, we can also lower the CPU usage and the computational times  by working at the hardware level.
 We can consider implementing our integration algorithms using new computer architectures such as GPUs or multi-threading CPUs. This choice is particularly appealing since MC computations are embarrassingly parallel. In fact, during the sampling process we can just use a different random-number generator seeds for each run.
 
 In this thesis we consider both the aforementioned approaches by studying and implementing new MC integration algorithms using hardware acceleration devices.
 
-In particular, we focus on the new integration algorithm proposed in Ref\cite{Lepage:2020tgj}, named VEGAS+, which consists in a modification of the classic VEGAS algorithm \cite{Lepage:1977sw}, well known especially in particle physics. This algorithm has been proven to perform better than VEGAS for non-separable integrand functions, moreover we observe that can outperform the importance sampling of VEGAS for physical integrands.
+In particular, we focus on the new integration algorithm proposed in Ref.~\cite{Lepage:2020tgj}, named VEGAS+, which consists in a modification of the classic VEGAS algorithm \cite{Lepage:1977sw}, well known especially in particle physics. This algorithm has been proven to perform better than VEGAS for non-separable integrand functions, moreover we observe that can outperform the importance sampling of VEGAS for physical integrands.
 
-The original implementation of this algorithm, as well as other MC integrators, was written for a single CPU. In order to take advantage of hardware acceleration, we implement this method within the \texttt{VegasFlow} library \cite{vegasflow_package},  a MC integration library which enable us to run our computations on all the devices compatible with Google's TensorFlow library \cite{tensorflow2015-whitepaper}, including GPUs and multi-threading CPUs. 
+The original implementation of this algorithm, as well as other MC integrators, was written for a single CPU. In order to take advantage of hardware acceleration, we implement VEGAS+ within the \texttt{VegasFlow} library \cite{vegasflow_package},  a MC integration library which enable us to run our computations on all the devices compatible with TensorFlow library \cite{tensorflow2015-whitepaper}, including GPUs and multi-threading CPUs. The VEGAS+ algorithm is implemented in the class \texttt{VegasFlowPlus}.
 
-We benchmark the performance of different variations of the newly implemented algorithm with the integrator already present in \texttt{VegasFlow} which implements  the importance sampling "à la" VEGAS. The benchmark is performed using classical integrands, as well as integrands taken from common particle physics processes: Drell-Yan, single top production and vector fusion boson Higgs production. All the integral evaluations are performed both on a professional-grade CPU and on a professional-grade GPU to quantify the benefits of hardware acceleration.
+We benchmark the performance of different VEGAS integrators shown in Fig.~\ref{scheme}.
+The benchmark is performed using classical integrands, as well as integrands taken from common particle physics processes: Drell-Yan, single top production and vector fusion boson Higgs production. All the integral evaluations are performed both on a professional-grade CPU and on a professional-grade GPU to quantify the benefits of hardware acceleration.
 
-The results show that the new integrator, as expected, benefits from highly parallel scenarios with speed-up factors up to 10 when comparing the average time per iteration on CPU and GPU. The new integrator is also more accurate when dealing with particular HEP integrands compare to the importance sampling integrator already implemented in \texttt{VegasFlow}.
+\tikzstyle{algorithm} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{method} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{software} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{arrow1} = [thick,->,>=stealth, dashed]
+
+\begin{figure}
+	
+	\centering
+		\begin{tikzpicture}[node distance=2cm]
+		
+		\setstretch{1}
+		{
+			
+			\node (vegas) [algorithm] {\texttt{VEGAS}};
+			\node (importance) [method, below of = vegas, right of = vegas, align = center] {importance\\sampling};
+			\node (stratified) [method, below of = vegas, left of = vegas, align = center] {stratified\\sampling};
+			\node(vegasflow)[software, right of = importance, xshift = +2cm] {\texttt{VegasFlow}};
+			\node (adaptive) [method, below of = stratified,align=center] {adaptive\\stratified\\sampling};
+			\node(vegas+)[algorithm, below of = importance] {\texttt{VEGAS+}};
+			\node(vegasflowplus)[software, right of = vegas+, xshift = +2cm] {\texttt{VegasFlowPlus}};
+		}
+		
+		\draw [arrow] (vegas) -- (importance);
+		\draw [arrow] (vegas) -- (stratified);
+		\draw[arrow] (importance) -- (vegasflow);
+		\draw[arrow] (adaptive) -- (vegas+);
+		\draw[arrow] (importance) -- (vegas+);
+		\draw[arrow] (vegas+) -- (vegasflowplus);
+		\draw[arrow1] (stratified) -- (adaptive);
+	\end{tikzpicture}
+\vspace{2mm}
+\caption{Scheme of the integration algorithms studied in this thesis. The blocks are colour-coded as following: red for the algorithms, green for the MC techniques and violet for the class implementing the algorithm/MC technique.}
+\label{scheme}
+\end{figure}
 
 
-The thesis is organized as follows.
+The results show that the new integrator, as expected, benefits from highly parallel scenarios with speed-up factors up to 10 when comparing the average time per iteration on CPU and GPU. The new integrator is also more accurate when dealing with particular HEP integrands compared to the importance sampling integrator already implemented in \texttt{VegasFlow}.
 
-In Chapter 1 we introduce the reader to the problem of multi-dimensional integration. We also give a brief review on some theoretical aspects of HEP to show how such high-dimensional integrals appear when making theoretical predictions.  Finally, we present the problem of high CPU resources needed for Monte Carlo event generators.
+
+The thesis is organized as follows. In Chapter 1 we introduce the reader to the problem of multi-dimensional integration. We also give a brief review on some theoretical aspects of HEP to show how such high-dimensional integrals appear when making theoretical predictions.  Finally, we present the problem of high CPU resources needed for Monte Carlo event generators.
 
 The second chapter is devoted to the presentation of the integration algorithms analysed in this thesis and their implementation.
 

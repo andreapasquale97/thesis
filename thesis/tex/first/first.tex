@@ -33,7 +33,6 @@ An estimate of the integral using $N$ random points can be given as
 \begin{equation}
 	I \approx I_{\text{MC}} = V \frac{1}{N} \sum_{\textbf{x}_i \in V} f(\textbf{x}_i) = V \langle f \rangle \ ,
 \end{equation}
-
 where $\langle f \rangle$ denotes the arithmetic average of the function $f$.
 
 $I_{\text{MC}}$ is a random number, whose value depends on the sampled points, whose mean 
@@ -66,28 +65,28 @@ the function $h$ with a new function $g$ defined as:
 \begin{equation}
 	g(\textbf{x}) = \begin{cases}
 		h(\textbf{x}) &\text{ if $\textbf{x} \in H$} \\
-		0 &\text{ if $\textbf{x} \in G - H$}
+		0 &\text{ if $\textbf{x} \in G - H$} \ .
 	\end{cases}
 \end{equation}
 
 Obviously one should try to make the new region $G$ not too oversized with respect to $H$, because every 
 point $\textbf{x} \in G - H$ will contain no information about the integrand. Therefore the number of 
-effective points used during the sampling $N$ will reduce by raising the error in Eq.\eqref{sigma_MC}.
+effective points used during the sampling $N$ will reduce by raising the error in Eq.~\eqref{sigma_MC}.
 
 This first MC integrator has a few disadvantages:
 \begin{enumerate}
-\item Firstly, we have already observed that the error decreases as the square root of the number of sampled points, 
+\item We have already observed that the error decreases as the square root of the number of sampled points, 
 	this implies that if the accuracy requirements are high we will need to increase the size of the sampling. 
 	Dealing with huge sizes of sampled points could be, even for a computer with large memory and a fast processor, 
 	challenging and we expect that the process of sampling could take a significant amount of time.
-	\item Secondly, one will probably have to work with large samples, even if the accuracy requirements are modest, when
+	\item One will probably have to work with large samples, even if the accuracy requirements are modest, when
 	the dimensionality of the integration domain is high. The reason being that if the integrand function is peaked in a small
 	region compared to the volume $V$, we will need to generate more random points to make sure that the peak is correctly 
 	identified; such process of finding the peaks becomes more challenging in large number of dimensions.
 	This can be seen for example by considering the ratio of the volume of a $D$ dimensional hypersphere with unity radius to the $D$ dimensional hypercube with a side of twice the unity radius , which vanishes as the $D$ goes to infinity as:
 	
 	\begin{equation}
-		\frac{V_{\text{hypersphere}}}{V_{\text{hypercube} }} = \frac{1}{2^D} \frac{\pi^{\frac{D}{2}}}{\Gamma\big(\frac{D}{2} + 1\big)} \approx  \bigg( \frac{\sqrt{\pi}}{2} \bigg)^D \xrightarrow{D \rightarrow  \infty} 0
+		\frac{V_{\text{hypersphere}}}{V_{\text{hypercube} }} = \frac{1}{2^D} \frac{\pi^{\frac{D}{2}}}{\Gamma\big(\frac{D}{2} + 1\big)} \approx  \bigg( \frac{\sqrt{\pi}}{2} \bigg)^D \xrightarrow{D \rightarrow  \infty} 0 \ ,
 	\end{equation}
 	where $\Gamma(x)$ denotes the famous Gamma function.
 	
@@ -122,7 +121,7 @@ We can calculate the integral $I$ as:
 where in the last step we used the transformation $d\textbf{x} = dP(\textbf{x})/p(\textbf{x}) $, with $P(\textbf{x})$ the 
 cumulative distribution of  $p(\textbf{x}) $.
 \newline
-From Eq.(\ref{samplig2}) we can deduce that in order to compute the integral $I$, instead of using a uniform sampling of the function $f$,
+From Eq.~\ref{samplig2} we can deduce that in order to compute the integral $I$, instead of using a uniform sampling of the function $f$,
 we can also perform a non-uniform sampling of the function $f/p$ in the same integration volume $V$.
 \newline
 The integral and the relative error will be given by \cite{unknown}:
@@ -140,8 +139,8 @@ a suitable $p(\textbf{x})$ \cite{Lepage:1977sw, Lepage:2020tgj, unknown}.
 
 What is the best choice for the sampling density $p$?
 It can be shown that by minimizing the variance, as a functional of sampling density $p$, the optimal choice for $p$ is to be proportional 
-to $|f|$. This choice is not surprising, in fact by replacing $p$ with $|f|$ in Eq.(\ref{sigma_IP}) we get a vanishing variance.
-Moreover, in order to satisfy the normalization requirement in Eq.(\ref{normalization}) the exact solution for $p$ is:
+to $|f|$. This choice is not surprising, in fact by replacing $p$ with $|f|$ in Eq.~\ref{sigma_IP} we get a vanishing variance.
+Moreover, in order to satisfy the normalization requirement in Eq.~\ref{normalization} the exact solution for $p$ is:
 \begin{equation}
 	p = \frac{|f|}{\int_V |f| d\textbf{x}} \ .
 \end{equation}
@@ -152,7 +151,7 @@ Therefore to minimize the variance the aim is to find a function $p$ that resemb
 using adaptive recursive strategies which can provide a better sampling distribution using the sampled points.
 \subsubsection{Stratified Sampling}
 Another technique which is a standard one in literature is based on the idea of  "stratified sampling" \cite{Press:1989vk, Press:1992zz}.
-We have already observed that we can estimate the variance of our integral by computing the variance of the random variable $I_{\text{MC}}$; we can exploit this relation by focusing on the average value of the function $f$ over the domain $V$, denoted by $\llangle  f \rrangle $, and the correspoding MC estimate using an uniform sampling $ \langle f \rangle$:
+We have already observed that we can estimate the variance of our integral by computing the variance of the random variable $I_{\text{MC}}$; we can exploit this relation by focusing on the average value of the function $f$ over the domain $V$, denoted by $\llangle  f \rrangle $, and the corresponding MC estimate using an uniform sampling $ \langle f \rangle$:
 \begin{equation}
 	\llangle  f \rrangle = \frac{1}{V} \int_V f(\textbf{x}) d\textbf{x} \quad ,  \quad 
 	\langle f \rangle = \frac{1}{N} \sum_{\textbf{x}_i} f(\textbf{x}_i) \ .
@@ -186,7 +185,7 @@ One could ask how the variance in subvolumes $V_i$ is related to the variance of
 
 As we can see, the stratified sampling gives a variance which is always equal or smaller than the variance of the naive MC integrator. In particular whenever the function $f$ behaves differently in 
 the two regions $V_a$ and $V_b$, the variance of $f$ increases as $ ( 
-\llangle f \rrangle_a - \llangle f \rrangle_b)^2$ and such difference does not affect the $\text{Var}(\langle f \rangle')$ given by Eq.(\ref{ SS var}).
+\llangle f \rrangle_a - \llangle f \rrangle_b)^2$ and such difference does not affect the $\text{Var}(\langle f \rangle')$ given by Eq.~\ref{ SS var}.
 \newline
 We can generalize the previous formulas by adding the possibility to sample a specific number of 
 points from each subvolume. Considering again the subvolumes $V_a$ and $V_b$ we can suppose 
@@ -442,7 +441,7 @@ This leads us to the problem of increasing the precision of the theoretical resu
 As we saw in the previous section, we can obtain an expression for physical observables such as the differential cross section as a series of terms which involves the calculation of high-dimensional integrals. The most relevant technique used to solve these integrals are MC methods, due to the high-dimensions as expected. The problem of reaching higher accuracy is therefore related 
 to the possibility of reducing the MC estimate of the variance of the considered integral.
 
-In section \ref{redu_var} we already discussed some MC techniques that enable us to reduce the variance, however, in the particular case of HEP integrands the task of variance reduction can become problematic.
+In Section \ref{redu_var} we already discussed some MC techniques that enable us to reduce the variance, however, in the particular case of HEP integrands the task of variance reduction can become problematic.
 
 \subsection{Problems of HEP integration}
 One of the first problems when predicting physical observable based on a quantum field theory, such as QCD, is the fact we need to compute the observable beyond the LO term in order to match the experimental data. 

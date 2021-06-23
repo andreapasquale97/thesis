@@ -2,9 +2,9 @@
 \begin{document}
 \chapter{Result benchmark}
 	
-In this chapter we present the benchmark between the integrator already available in \texttt{VegasFlow} and different variations of the VEGAS+ algorithm just implemented. We run the integrations both on CPU and GPU and quantify the benefits given from hardware acceleration.
+In this chapter we present the benchmark between the integrator already available in \texttt{VegasFlow} and different variations of the VEGAS+ algorithm just described. We run the integrations both on CPU and GPU and quantify the benefits given from hardware acceleration.
 
-We test different functions from the standard Gaussian distribution in various dimensions to integrands more relevant for HEP processes. In particular we consider three different computations: Drell-Yan, single top production and vector fusion boson Higgs production all at LO.
+We test different functions from the standard Gaussian distribution in various dimensions to integrands more relevant for HEP processes. In particular we consider three different computations: Drell-Yan \cite{Carrazza_2020}, single top production \cite{Brucherseifer_2014} and vector fusion boson Higgs production \cite{Carrazza_2021} all at LO.
 
 After a detailed analysis of the performance of each integrator, we compare all the results together. Our aim is to present to the reader which integrators works best depending on the integrand considered.
 \section{Setup and goals}
@@ -18,28 +18,28 @@ We would like to answer the following questions:
 To answer the first question we compare the number of iterations needed to reach different levels of accuracy for various type of integrands.
 Obviously we expect that the more accurate integrator will converge using less iterations of the MC simulation. Moreover, in the case where one or more integrators cannot achieve the target accuracy within the maximum number of iterations, we compare the accuracies reached at the end of the simulation.
 
-To highlight the benefits of hardware acceleration we run all the benchmark in a professional-grade CPU (Intel i9-9980XE\footnote{More specific about CPU}) as well as a professional-grade GPU (NVIDIA Titan V\footnote{More specific about GPU}). In particular, we measure the average time per iteration to see if the new integrator exhibit the same speed-up already observed in \texttt{VegasFlow} when running on 
+To highlight the benefits of hardware acceleration we run all the benchmark in a professional-grade CPU (Intel i9-9980XE\footnote{In the benchmark we use all the 36 threads available.}) as well as a professional-grade GPU (NVIDIA Titan V). In particular, we measure the average time per iteration to see if the new integrator exhibit the same speed-up already observed in \texttt{VegasFlow} when running on 
 high-parallel scenarios. Moreover, we want to observe if \texttt{VegasFlowPlus} can run faster than \texttt{VegasFlow}.
 
 The integration is performed using 1M samples per each iteration. We also include a warm-up of 5 iterations using 1M sampled points in which the VEGAS grid is refined after each iteration. After that the VEGAS map is kept fixed for the rest of the simulation.
 
  We consider four different configurations of the aforementioned integrators shown in Table \ref{only table}:
 \begin{itemize}
-	\item Importance Sampling: integrator already implemented in the class \texttt{VegasFlow}
-	\item Classic VEGAS: integrator that implements exactly the VEGAS algorithm, i.e. importance sampling and stratified sampling without redistribution of samples ($\beta_\text{warm-up} = \beta = 0$)
-	\item VEGAS-VEGAS+: integrator that implements the VEGAS+ algorithm in the warm-up phase, i.e. allowing a redistribution of samples between the hypercube, then performs a classic VEGAS integration 
-	\item VEGAS+: integrator that implements the VEGAS+ algorithm 
+	\item Importance Sampling: integrator that implements the importance sampling "à la" VEGAS already present in the \texttt{VegasFlow} library. This integrator does not  involve stratified sampling techniques.
+	\item Classic VEGAS: integrator that implements exactly the VEGAS algorithm, i.e.\ it employs the same importance sampling of the previous integrator plus a stratified sampling method which does not involve the redistribution of samples across the hypercubes($\beta_\text{warm-up} = \beta = 0$).
+	\item VEGAS/VEGAS+ hybrid: integrator that implements the VEGAS+ algorithm in the warm-up phase, i.e. allowing a redistribution of samples between the hypercubes, then performs a classic VEGAS integration. 
+	\item VEGAS+: integrator that implements the VEGAS+ algorithm.
 \end{itemize}
 
 
 \begin{table}
 	\centering
 	\begin{tabular}{c| c| c| c | c | c   } 
-		Integrator Name & Class & $\beta_\text{warm-up}$ & $\beta$ & $\alpha_\text{warm-up}$ \tablefootnote{\label{note}The parameter $\alpha$ is defined in Ref\cite{Lepage:2020tgj}. Setting $\alpha=0$ implies no grid-refinement. } & $\alpha$ \tablefootnote{See footnote \ref{note}} \\
+		Integrator Name & Class & $\beta_\text{warm-up}$ & $\beta$ & $\alpha_\text{warm-up}$ \tablefootnote{\label{note}The parameter $\alpha$ is defined in Ref.~\cite{Lepage:2020tgj}. Setting $\alpha=0$ implies no grid-refinement. } & $\alpha$ \tablefootnote{See footnote \ref{note}} \\
 		\hline
 		Importance Sampling & \texttt{VegasFlow} & \texttt{None} & \texttt{None} & 1.5 & 0\\ 
 		Classic VEGAS & \texttt{VegasFlowPlus}& 0 & 0& 1.5 & 0 \\
-		VEGAS-VEGAS+ & \texttt{VegasFlowPlus} & 0.75 & 0 & 1.5 & 0\\
+		VEGAS/VEGAS+ hybrid  & \texttt{VegasFlowPlus} & 0.75 & 0 & 1.5 & 0\\
 		VEGAS+ & \texttt{VegasFlowPlus}& 0.75 & 0.75 & 1.5 & 0\\ 
 		\hline
 		
@@ -51,7 +51,7 @@ The integration is performed using 1M samples per each iteration. We also includ
 
 
 \section{Result for Gaussian integrals}
-Firstly we test the previous integrators with a symmetric Gaussian placed in the center of the integration region as it was also the first 
+Firstly, we test the previous integrators with a symmetric Gaussian placed in the center of the integration region as it was also the first 
 example shown in the original paper of Vegas \cite{Lepage:1977sw}:
 \begin{equation}
 	\label{gauss_example}
@@ -63,26 +63,26 @@ We benchmark the previous integral for three different dimensions: 4, 8 and 12.
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../images/gauss4d_final.png}
-	\caption{Benchmark  for the integral $I_4$ in Eq.\eqref{gauss_example}. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
+	\caption{Benchmark  for the integral $I_4$ in Eq.~\ref{gauss_example}. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
 	\label{gauss4d}
 \end{figure}
-In Fig.\ref{gauss4d} we can observe the benchmark results for dimension 4.
+In Fig.~\ref{gauss4d} we can observe the benchmark results for dimension 4.
 For a percent uncertainty of $10^{-2}$  or $10^{-3}$ all the algorithms converge in only 1 iteration after the warm-up. Looking at the accuracy reached the importance sampling and the classic VEGAS  are slightly more precise compared to the VEGAS+ algorithms.
 
 In the last row of the plot we can see the results with a target accuracy of $10^{-4}$ percent uncertainty. 
 This time all the algorithms converge within 40 iterations. The classic VEGAS integrator converges using a couple of  iterations less compared to the importance sampling of \texttt{VegasFlow}. The VEGAS+ integrators need more iterations to reach the target accuracy.
 
-We can easily explain this behaviour since the integral in Eq.\eqref{gauss_example} is separable. Moreover, there is a sharp peak at the center of the integration region which favours the importance sampling. VEGAS+ is not effective in this case since we are not dealing with diagonal-structured integrands.
+We can easily explain this behaviour since the integral in Eq.~\ref{gauss_example} is separable. Moreover, there is a sharp peak at the center of the integration region which favours the importance sampling. VEGAS+ is not effective in this case since we are not dealing with diagonal-structured integrands.
 
 The average time per iteration (first column of the plot) is fairly similar for all the integrators even if the classic VEGAS algorithm, which converge in less iterations, seem to be the slower one. All the newly implemented integrators show better performances when running on GPU compared to the CPU. In particular, for the classic VEGAS integrator we observe a 3x improvements when running on the Titan V.
 \subsection{Dimension 8}
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../images/gauss8d_final.png}
-	\caption{Benchmark  for the integral $I_8$ in Eq.\eqref{gauss_example}. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
+	\caption{Benchmark  for the integral $I_8$ in Eq.~\ref{gauss_example}. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
 	\label{gauss8d}
 \end{figure}
-In Fig.\ref{gauss8d} are presented the result for the integral $I_n$ of Eq.\eqref{gauss_example} with $n = 8$.
+In Fig.~\ref{gauss8d} are presented the result for the integral $I_n$ of Eq.~\ref{gauss_example} with $n = 8$.
 
 The trend is similar to the previous case studied. As expected the importance sampling and the classic VEGAS are the better performing 
 integrators. In fact, they converge using less iterations particularly for a percent uncertainty of $10^{-4}$ where they converge using 50-60 iterations compared to the 98-100 iterations of  VEGAS+ and VEGAS/VEGAS+ hybrid.
@@ -91,11 +91,11 @@ By looking at the average time per iteration we can observe that the VEGAS+ algo
 the classic VEGAS one.
 
 In a GPU environment we can see great improvements especially when the simulation involves a larger number of iterations.
-This is expected since, as discuss in Sect.\ref{tensorflow},  the graph-mode implementation of TensorFlow  is more effective when a function is called a large number of times. The importance sampling and the classic VEGAS integrators exhibit a 10x and a 8x improvement respectively in the average time per iterations, while the VEGAS+ algorithms show a speed-up by a factor 6.5.
+This is expected since, as discuss in Sect.~\ref{tensorflow},  the graph-mode implementation of TensorFlow  is more effective when a function is called a large number of times. The importance sampling and the classic VEGAS integrators exhibit a 10x and a 8x improvement respectively in the average time per iterations, while the VEGAS+ algorithms show a speed-up by a factor 6.5.
 
  
  \subsection{Dimension 12}
- Next we move to dimension 12 by considering the integral $I_n$ of Eq.\eqref{gauss_example} with $n = 12$.
+ Next we move to dimension 12 by considering the integral $I_n$ of Eq.~\ref{gauss_example} with $n = 12$.
  
  For lower accuracies we can see that all the integrators converge using roughly the same number of iterations. For the case of a target accuracy of $10^{-4}$ relative tolerance the integrators exhibit different behaviours. The importance sampling and the classic VEGAS algorithms reach the accuracy required using the same number of iterations. We observe that more iterations are required on GPU but this is somewhat expected since we are dealing with MC integrators, therefore the number of iterations for the same algorithm can vary.
  
@@ -109,7 +109,7 @@ The significant improvement in VEGAS/VEGAS+ is mainly due to the odd result obse
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../images/gauss12d_final.png}
-	\caption{Benchmark  for the integral $I_{12}$ in Eq.\eqref{gauss_example}. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
+	\caption{Benchmark  for the integral $I_{12}$ in Eq.~\ref{gauss_example}. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
 	\label{gauss12d}
 \end{figure}
 
@@ -121,25 +121,25 @@ of important experiments such as ATLAS or CMS, as already discussed in Section \
 
 We are interested in seeing if any of the new implemented integrators can perform better than the importance sampling of \texttt{VegasFlow} in the computation of physical integrals.
 
-In particular according to modern amplitude methods we use the spinor helicity formalism described in Ref\cite{Dixon:1613349}. We no longer consider the four-momenta of the particles $k_i^\mu$, since the majority of the particle in the Standard Model have spin, but we work with a smaller representation of the Lorentz group, the spinor representation.
+In particular according to modern amplitude methods we use the spinor helicity formalism described in Ref.~\cite{Dixon:1613349}. We no longer consider the four-momenta of the particles $k_i^\mu$, since the majority of the particle in the Standard Model have spin, but we work with a smaller representation of the Lorentz group, the spinor representation.
     
 \subsection{Drell-Yan process}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=6cm]{../images/Drell-Yan-process-a-quark-of-one-hadron-and-an-antiquark-of-another-hadron-annihilate.png}
-	\caption{Representation of the DY process at LO. Image from Ref\cite{article}.}
+	\caption{Representation of the DY process at LO. Image from Ref.~\cite{article}.}
 	\label{DY}
 \end{figure}
 The first example that we consider is the Drell-Yan (DY) process, which consists in an inclusive production of high-mass lepton pairs in hadron-hadron collision:
 \begin{equation}
-	h_A + h_B \rightarrow ( \gamma^* + l \bar{l}) + X 
+	h_A + h_B \rightarrow ( \gamma^* + l \bar{l}) + X  \ ,
 \end{equation}
-where $X$ is an undetected final state, as shown in Fig.\ref{DY}.
+where $X$ is an undetected final state, as shown in Fig.~\ref{DY}.
 
-In particular we consider the aforementioned process at the partonic level, this is, without considering the convolution with the parton density functions. We use the expression for the cross section computed at LO take from Ref\cite{Carrazza_2020}.
+In particular we consider the aforementioned process at the partonic level, this is, without considering the convolution with the parton density functions. We use the expression for the cross section computed at LO take from Ref.~\cite{Carrazza_2020}.
 
-The benchmark results are shown in Fig.\ref{pineappl_plot}. 
+The benchmark results are shown in Fig.~\ref{pineappl_plot}. 
 
 As for the previous cases, at lower accuracies all the integrators converges using less the 3 iterations. We can observe that the importance sampling and the classic VEGAS at a percent uncertainty of 0.001\% reach the target accuracy using only one iteration after the warm-up.
 This trend continues for higher accuracies where there is a major different in the number of iterations needed to satisfy the precision requirements. Classic VEGAS is the better performing integrator compared to the importance sampling. The VEGAS+ algorithms have a more difficult time reaching the desired accuracy, they can need up to 5 times the number of iterations required to the classic VEGAS integrator.
@@ -195,7 +195,7 @@ We can conclude that the adaptive stratified sampling technique of VEGAS+ seem t
 \begin{figure}[]
 	\centering
 	\includegraphics[width=5cm]{../images/vfb_image.png}
-	\caption{ Born-level vector boson fusion process. Image from Ref\cite{Cruz_Martinez_2018}.}
+	\caption{ Born-level vector boson fusion process. Image from Ref.~\cite{Cruz_Martinez_2018}.}
 	\label{vfb}
 \end{figure}
 
@@ -203,9 +203,9 @@ Next we study a more complicated involving the Higgs boson $H$, which can be pro
 
 For this process we don't just compute the integral at the partonic level, but we also include the convolution with the PDFs. 
 The parton density functions are including in the \texttt{VegasFlow} environment using the \texttt{PDFFlow} software \cite{Carrazza_2021,juan_m_cruz_martinez_2021_4903010}, which is implemented using the TensorFlow library and enable us to evaluate a generic set of PDFs on GPU. 
-The integrand used is taken from Ref\cite{juan_m_cruz_martinez_2021_4903010}.
+The integrand used is taken from Ref.~\cite{juan_m_cruz_martinez_2021_4903010}.
 
-The results are shown in Fig.\ref{higgs_plot}.
+The results are shown in Fig.~\ref{higgs_plot}.
 
 Looking at the number of iterations needed to reach the target accuracy we can observe that the classic VEGAS algorithm is the more efficient integrator both at low and high precisions. The importance sampling method cannot outperform the other integration algorithms and in some cases struggle to converge to the required accuracy. This is interesting since we are computing a multi-dimensional integral of dimension 6. Usually we expect that the (adaptive) stratified sampling techniques have only small effects for high-dimensional integrals.
 
@@ -231,7 +231,7 @@ Regarding the average time per iteration, we can see that VEGAS+ and VEGAS/VEGAS
 We now compare all the results obtained in the previous section. We would like to see if we can suggest to the user which integrators works best depending on the integral to compute. We base this analysis on the average time per iteration and on the number of iterations needed for the precision of 0.0001\% percent uncertainty.
 
 \subsection{Average time per iteration}
-In Fig.\ref{cpu_time_comparison} we show the average time per iteration (after the warm-up) for all the integrands used in the benchmark when running on the Intel i9-9980XE.
+In Fig.~\ref{cpu_time_comparison} we show the average time per iteration (after the warm-up) for all the integrands used in the benchmark when running on the Intel i9-9980XE.
 
 As expected all the integrators requires more time per iteration when computing the single top and the higgs production due to the more complex integrands to evaluate. However, it is interesting to observe that for the previous cases the average time per iteration is shorter for the two VEGAS+ algorithms compared to the classic VEGAS and the importance sampling of \texttt{VegasFlow}.
 This is very important for our analysis since we are concerned by the CPU usage when integrating physical integrands. 
@@ -248,7 +248,7 @@ By looking at the standard gaussian integrals for all the integrators the time i
 	\label{cpu_time_comparison}
 \end{figure}
 
-In Fig.\ref{gpu_time_comparison} we present the same plot when all the integrations are performed on the NVIDIA Titan V GPU. We can see that all the times are shortened and have similar values except for the more complicated integrals (single top and higgs production).
+In Fig.~\ref{gpu_time_comparison} we present the same plot when all the integrations are performed on the NVIDIA Titan V GPU. We can see that all the times are shortened and have similar values except for the more complicated integrals (single top and higgs production).
 
 Overall the fastest integrator seem to be the importance sampling. In fact, there is a great improvement on the computational time of the single top integral compared to the CPU case. That same time cannot be reached by the other integrators when running on GPU.
 
@@ -265,10 +265,10 @@ The case of the VFB Higgs production is also interesting. The VEGAS/VEGAS+ hybri
 \subsection{Number of iterations}
 We consider now the number of iterations needed to reach the target accuracy of 0.0001 percent uncertainty for all the previous integrands. Since the number of iterations are independent on the hardware environment (CPU or GPU) we have decided to present the results from the integration on CPU. 
 
-The results are shown in Fig.\ref{cpu_iter_comparison}. The integrator that in general converge
+The results are shown in Fig.~\ref{cpu_iter_comparison}. The integrator that in general converge
 using less iterations is the classic VEGAS algorithm, i.e. without the redistribution of samples. It is more accurate than the importance sampling for all the physical integrands: DY, single top and Higgs production. In fact, for the Higgs production integrand classic VEGAS converges using less than half iterations used by the importance sampling.
 
-For the single top production all the new implemented algorithms can outperform the importance sampling, as already observed in Section \ref{singletop_sect}.
+For the single top production all the new implemented algorithms can outperform the importance sampling, as already observed in Section~\ref{singletop_sect}.
 
 As expected the adaptive stratified sampling methods needs more iterations as the dimensionality of the integrands increases, especially if the peaks are easy to find by the VEGAS grid, as for the case of a Gaussian distribution with a single peak.
 \begin{figure}[h]
@@ -284,8 +284,9 @@ The newly implemented integrators in the \texttt{VegasFlow} library provide soli
 By looking at the average time per iterations,we have shown that the integrators that employs the VEGAS+ algorithms can outperform the importance sampling method when dealing with high-dimensional and complicated integrals such as the VFB Higgs production.
 For the case of gaussian integration all the integrators exhibit the same performance, especially on GPU, with a few differences on CPU that seem to favour the VEGAS+ algorithms.
 
-For low-dimensional physical integrands such as the DY and the single top production the importance sampling perform better especially in the case of the DY process both on CPU and GPU.
-In computing the single top integral the importance sampling  performs better on GPU while on CPU the VEGAS+ algorithm seem to be the fastest.
+For low-dimensional physical integrands such as the DY and the single top production the importance sampling is the fastest integrator especially in the case of the DY process both on CPU and GPU. This is due to the fact for low-dimensional integrands the importance sampling has the major speed-up factors.
+In computing the single top integral the importance sampling is the fastest on GPU while on CPU the VEGAS+ algorithm seem to be the fastest. A possible explanation for this behaviour is the fact that in VEGAS+ we sample from the hypercubes while in the importance sampling we sample directly from the entire domain of integration.
+
 
 When comparing the number of iterations we have observed that the classic VEGAS is the more efficient integrator in general. Therefore, even if his computational time are not as fast the other integrators, is still a valuable option since the simulation will require less iterations. 
 
