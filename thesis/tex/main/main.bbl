@@ -1249,6 +1249,93 @@
       \verb https://doi.org/10.5281/zenodo.4746454
       \endverb
     \endentry
+    \entry{Carrazza:2021gpx}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
+           family={Carrazza},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b063fa7218981df34543c179795adb34}{%
+           family={Cruz-Martinez},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ee8dddd87b207e6b999f59a7e5e44a31}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dcc2b2d62b4a1d673a5e9d32cdd86371}{%
+           family={Zaro},
+           familyi={Z\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{516c6a829c335e022fa7d6bb6f42c1b0}
+      \strng{fullhash}{c50948668f382c071f3b5a6559d381a5}
+      \strng{bibnamehash}{516c6a829c335e022fa7d6bb6f42c1b0}
+      \strng{authorbibnamehash}{516c6a829c335e022fa7d6bb6f42c1b0}
+      \strng{authornamehash}{516c6a829c335e022fa7d6bb6f42c1b0}
+      \strng{authorfullhash}{c50948668f382c071f3b5a6559d381a5}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.comp-ph}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{title}{{MadFlow: automating Monte Carlo simulation on GPU for particle physics processes}}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2106.10279
+      \endverb
+    \endentry
+    \entry{Carrazza:2021zug}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
+           family={Carrazza},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b063fa7218981df34543c179795adb34}{%
+           family={Cruz-Martinez},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ee8dddd87b207e6b999f59a7e5e44a31}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dcc2b2d62b4a1d673a5e9d32cdd86371}{%
+           family={Zaro},
+           familyi={Z\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{516c6a829c335e022fa7d6bb6f42c1b0}
+      \strng{fullhash}{c50948668f382c071f3b5a6559d381a5}
+      \strng{bibnamehash}{516c6a829c335e022fa7d6bb6f42c1b0}
+      \strng{authorbibnamehash}{516c6a829c335e022fa7d6bb6f42c1b0}
+      \strng{authornamehash}{516c6a829c335e022fa7d6bb6f42c1b0}
+      \strng{authorfullhash}{c50948668f382c071f3b5a6559d381a5}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{25th International Conference on Computing in High-Energy and Nuclear Physics}}
+      \field{eprintclass}{physics.comp-ph}
+      \field{eprinttype}{arXiv}
+      \field{month}{5}
+      \field{title}{{Towards the automation of Monte Carlo simulation on GPU for particle physics processes}}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2105.10529
+      \endverb
+    \endentry
     \entry{10.1093/comjnl/3.3.175}{article}{}
       \name{author}{1}{}{%
         {{hash=c590405dd2553f2a0311f2bffbb0b053}{%
@@ -1323,6 +1410,7 @@
       \strng{authorbibnamehash}{da89cbc831da0c2fb6df41a3b2d4f288}
       \strng{authornamehash}{da89cbc831da0c2fb6df41a3b2d4f288}
       \strng{authorfullhash}{a605fdb2d9b09b27214daeb6a669a4ae}
+      \field{extraname}{3}
       \field{sortinit}{6}
       \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
@@ -1421,8 +1509,8 @@
       \strng{authornamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
       \strng{authorfullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0010-4655}
