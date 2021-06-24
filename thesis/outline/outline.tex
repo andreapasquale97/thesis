@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage [ T1 ]{ fontenc }
+\usepackage[english]{babel}
+
+\begin{document}
+In this thesis we focus on Monte Carlo integration techniques with a particular attention on multi-dimensional High Energy Physics (HEP) integrands.
+We are concerned by the computational cost of fixed order calculations involved in the simulation of important experiments such as ATLAS or CMS. A possible solution is to take advantage of hardware acceleration devices such as GPUs to lower the computational times.
+
+
+In the first chapter we introduce the reader to the problem of multi-dimensional integration. We discuss the simplest possible Monte Carlo integrator highlighting his benefits compared to the classical numerical quadrature techniques. Then, we focus on the problem of variance reduction and we present the two main techniques used in literature: importance sampling and stratified sampling.
+Afterwards, we give a brief overview on some theoretical aspects of HEP to show that the computation of a physical observable involves the evaluation of high-dimensional integrals. We also review some basic concepts of Quantum Chromodynamics since we are interested in processes which involve hadronic collisions.
+Finally, we describe the main problems when dealing with the integration of HEP integrands. We also present the problem of high CPU resources needed for Monte Carlo event generators.
+
+
+The second chapter is devoted to the presentation of the integration algorithms analyzed in this thesis and their implementation.
+We start by considering the classic VEGAS algorithm. We discuss how the importance sampling and the stratified sampling techniques are implemented and we also discuss the limitations of both. We then move on to VEGAS+, a modification of the classic VEGAS algorithm, which employs a new adaptive stratified sampling technique. We present the algorithm in detail showing that can perform better than VEGAS for non-separable integrands.
+Afterwards, we give a brief overview on a Monte Carlo integration library able to run both in CPU and GPU, VegasFlow. The library is written using TensorFlow, which is primarily used for
+Machine Learning applications. The main integration algorithm is the importance sampling “à la” Vegas which converges faster than other implementations when running both on CPU and GPU.
+Finally, we present a novel implementation of the VEGAS+ algorithm within the VegasFlow library. We discuss the motivation behind this choice and the problems faced during the implementation.
+
+
+In the third chapter we present a benchmark between the different integrators analyzed both on CPU and GPU.
+In particular we consider the importance sampling already implemented in VegasFlow together with the VEGAS+ algorithm newly implemented in VegasFlow.
+The integrands chosen for the benchmark are primarily taken from HEP processes such as Drell- Yan, single top production and vector boson fusion Higgs production.
+The results show that the new algorithm usually converge to the required accuracy with less iterations compared to the importance sampling. The average time per iteration is comparable between the integrators. In particular, the new integrator can run up to 8 times faster (average time per iteration) on GPU compared to CPU.
+Finally, we present a recipe for the user describing which integrator works best for a given integrand based on the results from the benchmark.
+\end{document}
