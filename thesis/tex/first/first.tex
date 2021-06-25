@@ -51,16 +51,15 @@ we can estimate the value of $\sigma^2_I$ in the limit of large $N$ as
 	- I^2_{\text{MC}}\Big] \ .
 \end{equation}
 
-In both cases we observe that the standard deviation decreases as the sample increased 
-as $N^{-\frac{1}{2}}$ regardless of the dimension of the volume $V$. This is a remarkable feature 
-typical of MC integration which differs from the standard quadrature techniques where the error 
+In both cases we observe that the standard deviation decreases as the sample increases 
+as $N^{-\frac{1}{2}}$ regardless of the dimension of the volume $V$. This is a remarkable feature of MC integration which differs from the standard quadrature techniques where the error 
 increases with the dimension.
 
 MC integration can also deal with the complicated boundaries problem of quadrature integration.
 Suppose that we need to integrate a function $h$ over some complicated region $H$, for which the 
 random sampling becomes challenging. 
 In this particular case we can easily overcome such problem by replacing the region $H$ with a new volume 
-$G$ that includes $H$ more suitable for the process of sampling. After that all we need to do is to replace also 
+$G$ that includes $H$ and it is more suitable for the process of sampling. After that all we need to do is to replace also 
 the function $h$ with a new function $g$ defined as:
 \begin{equation}
 	g(\textbf{x}) = \begin{cases}
@@ -98,8 +97,7 @@ This first MC integrator has a few disadvantages:
 
 \subsection{Reducing the variance}
 \label{redu_var}
-In the field of MC integrators the main focus is to improve the error estimate in order to achieve more precise results using less number of
-events. Over the years and also lately with the advent of Machine Learning, several techniques have been proposed, implemented and applied to solve complex multi-dimensional integrals \cite{Lepage:2020tgj, Carrazza:2020rdn, unknown}.
+In the field of MC integrators the main focus is to improve the error estimate in order to achieve more precise results using less events. Over the years and also lately with the advent of Machine Learning, several techniques have been proposed, implemented and applied to solve complex multi-dimensional integrals \cite{Lepage:2020tgj, Carrazza:2020rdn, unknown}.
 
 In literature there are two main ways of reducing the variance: importance sampling and stratified sampling.
 
@@ -148,7 +146,7 @@ Moreover, in order to satisfy the normalization requirement in Eq.~\ref{normaliz
 As we can see we arrive at a paradox since the optimal sampling density requires the knowledge of $\int_V |f(\textbf{x})| d\textbf{x}$ which is the integral that we are trying to compute!
 \newline
 Therefore to minimize the variance the aim is to find a function $p$ that resemble the shape of the integrand function $f$, this is usually done 
-using adaptive recursive strategies which can provide a better sampling distribution using the sampled points.
+using adaptive recursive strategies which can provide a better sampling distribution using the previously sampled points.
 \subsubsection{Stratified Sampling}
 Another technique which is a standard one in literature is based on the idea of  "stratified sampling" \cite{Press:1989vk, Press:1992zz}.
 We have already observed that we can estimate the variance of our integral by computing the variance of the random variable $I_{\text{MC}}$; we can exploit this relation by focusing on the average value of the function $f$ over the domain $V$, denoted by $\llangle  f \rrangle $, and the corresponding MC estimate using an uniform sampling $ \langle f \rangle$:
@@ -175,7 +173,7 @@ The variance of the estimator in Eq.(\ref{SS f}) can be easily computed as:
 	&= \dfrac{1}{2N} \big[ \text{Var}_a(f) + \text{Var}_b(f)\big] \label{var_stratified} \ ,
 	\label{ SS var}
 \end{eqnarray}
-where $\text{Var}(\langle f \rangle)_{i} = \llangle f^2 \rrangle_i - = \llangle f \rrangle^2_i$ denotes the variance of $f$ limited to the subvolume $V_i$.
+where $\text{Var}(\langle f \rangle)_{i} = \llangle f^2 \rrangle_i - \llangle f \rrangle^2_i$ denotes the variance of $f$ limited to the subvolume $V_i$.
 
 One could ask how the variance in subvolumes $V_i$ is related to the variance of $f$ in the whole integration domain $V$. This can be easily done using the additivity of the integral, the result is known in literature as the parallel axis theorem:
 \begin{equation}
@@ -201,7 +199,7 @@ Consequently, we observe that the number of sample in a particular subvolume is 
 integrand function.
 \newline
 With the aim of taking full advantage from stratified sampling, the standard procedure is to divide
-the integration domain in several subvolumes each one with a different number of samples. Again by minimizing the variance we obtain that the number of samples in each subregion must be proportional
+the integration domain in several subvolumes each one with a different number of samples. Again by minimizing the variance we find that the number of samples in each subregion must be proportional
 to the standard deviation in that particular subregion.
 \newline
 Stratified sampling can struggle in higher dimensions due to the large number of subregions.
@@ -243,9 +241,9 @@ where $\sigma|_\Omega$ gives the cross section for scattering in the region of f
 
 Firstly, the total four-momentum of the incoming particles must be equal to the total momentum of the outgoing particles by four-momentum conservation. Secondly, each particle detected will have a given mass (or zero for massless ones) which fixes the four momentum components, $p_i^2 = m_i^2$.
 
-The majority of the particles produced during the collision are unstable, that is the lifetime $\tau$ of 
+The majority of the particles produced during the collision are unstable, that is, the lifetime $\tau$ of 
 such particles is so short that they cannot be detected by the experimental apparatus.
-Nevertheless we know that an unstable particle decays in other particles species some of which can be detected. 
+Nevertheless we know that an unstable particle decays in other particle species some of which can be detected. 
 For an unstable particle $\delta$  we can define a new observable, the decay rate $\Gamma$ defined as 
 \begin{equation}
 	\Gamma = \frac{\text{Number of decays per unit time}}{\text{Number of  $\delta$  particles present }} \ .
@@ -284,15 +282,15 @@ In literature the matrix element of the $T$ matrix is written as:
 	(2 \pi)^4 \delta^{(4)}\big(k_1+k_2- \sum_{i=1}^n p_i\big) \cdot i \mathcal{M} \ ,
 \end{equation}
 where we introduced the invariant matrix element $\mathcal{M}$ by removing a factor that reflects the four-momentum conservation.
-The previous separation is useful since $\mathcal{M}$ contains all the informations regarding the interaction, while all the other factors depends merely on the kinematics of the process.
+The previous separation is useful since $\mathcal{M}$ contains all the information regarding the interaction, while all the other factors depends merely on the kinematics of the process.
 
-In particular, it can be shown that the differential cross section $d\sigma$ can computed using the square modulus of the invariant 
+In particular, it can be shown that the differential cross section $d\sigma$ can be computed using the square modulus of the invariant 
 matrix element and the kinematic quantities of the particles involved in the collision:
 \begin{equation}
 	\label{sigma}
 	d \sigma = \frac{1}{4 E_A E_B |v_A - v_B|} \  d\Pi_n \times |\mathcal{M}(k_A, k_B \to p_1, ..., p_n)|^2  \ ,
 \end{equation}
-where $ |v_A - v_B|$ is the relative velocity between the two beams.  To compute the cross section $\sigma$ we need to perform integral over the final momenta, which is of the form
+where $ |v_A - v_B|$ is the relative velocity between the two beams.  To compute the cross section $\sigma$ we need to perform the integral over the final momenta, which is of the form
 \begin{equation}
 	\int d\Pi_n  = \bigg( \prod_{i=1}^{n}\int
 	\frac{d^3 p_i}{(2 \pi)^3}
@@ -329,7 +327,7 @@ To be more specific Feynman diagrams are graphs in which each part from the line
 The set of rules that allows us to pass from the pictorial representation to the correct mathematical formula are called Feynman rules, and
 are easily obtainable from the Lagrangian of the theory.
 
-As for the matrix $S$ also the matrix element $\mathcal{M}$ can be written as a perturbative expansion:
+As for the matrix $S$, also the matrix element $\mathcal{M}$ can be written as a perturbative expansion:
 \begin{equation}
 	\label{exp M}
 	\mathcal{M}= \sum_{n = 1}^{\infty} \mathcal{M}^{(n)} \ ,
@@ -337,12 +335,12 @@ As for the matrix $S$ also the matrix element $\mathcal{M}$ can be written as a 
 where the contribution $\mathcal{M}^{(n)} $ comes from the $n$th order perturbation term $S^{(n)}$ and can be obtained by drawing 
 all topologically different, connected Feynman diagrams which contain $n$ vertices and the correct number of external lines.
 
-Among the different diagrams there are some which may contains some loop lines, which correspond to quantum corrections.
+Among the different diagrams there are some which may contain loop lines, which correspond to quantum corrections.
  The Feynman rules tell us that for each loop line we must add an integration over the momentum $k$ of that line, since such momentum is not fixed by the process.
 
-The perturbative expansion of $\mathcal{M}$ can be seen as a sum of integral with increasing dimension. The first contribution comes 
-from the diagrams that contain no loops, which is referred as \emph{tree-level} since such diagram obeys the definition of a tree in graph
-theory. The second contribution contribution will come from the one-loop diagrams in which the dimension of the integral increases 
+The perturbative expansion of $\mathcal{M}$ can be seen as a sum of integrals with increasing dimension. The first contribution comes 
+from the diagrams that contain no loops, which is referred as \emph{tree-level} since such diagrams obey the definition of a tree in graph
+theory. The second contribution will come from the one-loop diagrams in which the dimension of the integral increases 
 since we are also integrating over the loop momentum. By repeating this process we can express $\mathcal{M}$ as:
 \begin{equation}
 	\mathcal{M}=\mathcal{M}^{\text{tree}} + \mathcal{M}^{\text{1-loop}} + \mathcal{M}^{\text{2-loop}} + \dots \ .
@@ -353,7 +351,7 @@ If the considered theory is \emph{renormalizable} there are specific techniques 
 field of \emph{renormalization}.
 
 Infra-red IR divergences also appear in perturbation theory for the $S$-matrix of theories such as QCD and QED that have massless fields.
-This type of infinities arise when we consider radiative corrections to the tree-level diagram, i.e. when other particles with vanishing energy are emitted other than the final state particles.
+This type of infinities arise when we consider radiative corrections to the tree-level diagram, i.e.\ when extra particles with vanishing energy are emitted.
 
 For example in QED we can start from the process $e^- e^+ \to \mu^+ \mu^-$ at tree-level and then consider a radiative correction which 
 involves the emission of a photon from one of the two final-state quarks. The second order radiative correction will involve the emission of 
@@ -370,10 +368,10 @@ IR singularities also appear in loop diagrams and thanks to the Kinoshita-Lee-Na
 
 We have therefore shown that when computing a physical observable in quantum field theory we obtain a perturbative expansion which 
 involves both loop diagrams and radiative correction which is finite. We can denote the first non vanishing term in this series as the 
-\emph{lowest order} (LO) term, the next term will be the \emph{next-to-leading-order} term (NLO) and so no.
+\emph{leading order} (LO) term, the next term will be the \emph{next-to-leading-order} term (NLO) and so no.
 For a physical observable $\mathcal{O}$ the perturbative series will be of the form:
 \begin{equation}
-	\mathcal{O} = \mathcal{O}^{\text{LO}}+\mathcal{O}^{\text{NLO}}+ \mathcal{O}^{\text{NNLO}} \ ,
+	\mathcal{O} = \mathcal{O}^{\text{LO}}+\mathcal{O}^{\text{NLO}}+ \mathcal{O}^{\text{NNLO}} + \dots  \ ,
 \end{equation}
 	where $ \mathcal{O}^{\text{NNLO}}$ denotes the \emph{next-to-next-to-leading-order }contribution.
 
@@ -426,7 +424,7 @@ The theoretical framework presented in the previous sections shows us that to ma
 The integrals will become more difficult to evaluate as we approach higher levels of precision. As shown in Eq.~\ref{QCD fact}, we first need to compute the partonic level cross section  $d\hat{\sigma}_{ab \rightarrow F}$ for each possible final state $F$ and for each possible partonic constituents of the hadrons involved in the collisions $a$ and $b$. The partonic cross section is computed at fixed order by integrating the squared matrix element $|\mathcal{M}|^2$ over the phase-space density $d\Phi_n$ (Eq.~\ref{partonic cross section}). For high order terms we obtain difficult mathematical expressions, due to the more intricate Feynman diagrams accessible to the process, that need to be integrated over high-dimensional phase-space, depending on the number of outgoing particles. Moreover, we may be interested in particular kinematics cuts that can further complicate the evaluation of the integral. Finally, if we are interested hadronic-level computations we will need to perform a convolution over the PDFs for each partonic constituents.
 %The complexity of the integrals will increase as we approach higher levels of precision since there will be more Feynman diagrams to consider. Moreover, the Feynman diagrams will be more intricate leading to difficult mathematical expressions.
 
-The aforementioned integrals can be solved analytically only if we are dealing with the first perturbative terms of a simple process. Eventually for one dimensional integrals we can use also tools such as the language program \texttt{Mathematica} \cite{Mathematica} to solve such integrals analytically. However the majority of the calculations performed nowadays involves integrals in dimension greater than 1 that cannot be solved analytically or for which the analytical result is often not known.
+The aforementioned integrals can be solved analytically only if we are dealing with the first perturbative terms of a simple process. Eventually for one dimensional integrals we can use also tools such as the language program \texttt{Mathematica} \cite{Mathematica} to solve such integrals analytically. However, the majority of the calculations performed nowadays involves integrals in high dimensions that cannot be solved analytically or for which the analytical result is often not known.
 
 This is a common problem also in other sectors of physics. The solution is to switch to a numerical approach in order to solve the integrals. This is why we need to use numerical techniques such as Monte Carlo integrators which are particularly suited for complex multi-dimensional integration problems.  
 
@@ -455,7 +453,7 @@ In particular the dimensionality of the integral will increase s.t.:
 \end{itemize}
 
 Secondly the squared matrix element $|\mathcal{M}^2|$ can become difficult to sample even for common low-dimensional SM processes, since 
-in general is particularly peaked in smaller region of the integration domain in the vicinity of kinematic divergences. These regions become even smaller for high-dimensional integrands due to the large number of parameters.
+in general is particularly peaked in a small region of the integration domain in the vicinity of kinematic divergences. These regions become even smaller for high-dimensional integrands due to the large number of parameters.
 
 This tendency of having sharp peaks in limited regions is the cause of the terrible statistical convergence of naive MC integrators which 
 perform uniform sampling. Thus importance sampling techniques are the solution of choice, since they enable us to perform a more effective 
@@ -478,19 +476,19 @@ In particular the problem related to the CPU cost and the long computational tim
 \label{cost}
 The CPU cost of MC methods is one of the biggest problem that is driving the budget of big experiments such as ATLAS or CMS.
 Since 2010, MC integration has gone from being a trivial element of an experiment's CPU budget to, particularly in the case of top 
-quark production processes, an important consumer up to 20\% of the experiment's CPU budget \cite{Buckley:2019wov}. 
+quark production processes, an important consumer of up to 20\% of the experiment's CPU budget \cite{Buckley:2019wov}. 
 The main driver for this CPU usage has been the availability of the complex multileg and NLO QCD processes. 
 
 This trend of high CPU resources  is in contrast with the CPU budgets currently available at the LHC experiments.   
 From Figure \ref{CPU cost} we can see that the annual CPU consumption will overcome the CPU budget especially in Run 4 and Run 5 of the ATLAS
 experiment. 
-The main problem for the ATLAS experiment is the heavy use of the \texttt{SHERPA} event generator which is demanding more CPU  by comparison with
-\texttt{MadGraph5} which dominates the CMS simulation budget. 
+The main problem for the ATLAS experiment is the heavy use of the \texttt{SHERPA} \cite{Gleisberg:2008ta} event generator which is demanding more CPU  by comparison with
+\texttt{MadGraph5} \cite{Alwall:2014hca} which dominates the CMS simulation budget. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width = 12cm]{../images/CPU-cost.png}
-	\caption{ATLAS CPU resource needs 2018 estimates. Image from Ref\cite{ATL-SOFT-PUB-2021-001}.}
+	\caption{ATLAS CPU resource needs 2018 estimates. Image from Ref.~\cite{ATL-SOFT-PUB-2021-001}.}
 	\label{CPU cost}
 \end{figure}
 
@@ -500,17 +498,17 @@ will be expressed as a weighted average of all the previous outputs.
 In particular in the case of integration we need to repeat the process of sampling and the following instructions to compute the integral according to the technique used. When dealing with complex integrands, such as the NLO contribution for a QCD process, sampling could require long computational times.
 
 The current importance sampling techniques can provide an approximate estimate for the sampling distribution by discarding or re-weighting
-the samples from such distribution, in particular the aggregation of these imperfect phase-space mappings is one of the major cause for
+the samples from such distribution, in particular the aggregation of these imperfect phase-space mappings is one of the major causes for
 the poor efficiencies of MC event sampling at high fixed order in the strong coupling $\alpha_S$ .
 
-The ideal distribution would by definition always have unit weights, i.e. if the sampling density matches the optimal one, but in practice 
+The ideal distribution would by definition always have unit weights, i.e.\ if the sampling density matches the optimal one, but in practice 
 the sample weights have a tail to lower values, since the proposal density includes phase-space points which are not relevant for the integration.
 These lower weights can lead to poor statistical convergence in our computations.
 
- We can also have greater than unit weights , these usually occur when the proposal density underestimated the maximum due to a failure in the
+ We can also have greater than unit weights, these usually occur when the proposal density underestimates the maximum due to a failure in the
 previous sampling, with consequently single-event spikes.
 
-In particular this sample rejection from broad distribution of weights combined with an already CPU-intensive computation of the matrix element value for each sample,  can explain the huge CPU cost needed in the latest HEP experiments.  From Figure \ref{CPU-time} we can see that the CPU-time per event can become particularly large,  for some current processes it can take up to 24 hours for a single event.
+This sample rejection from broad distribution of weights combined with an already CPU-intensive computation of the matrix element explains the huge CPU cost needed in the latest HEP experiments.  From Figure \ref{CPU-time} we can see that the CPU-time per event can become particularly large,  for some current processes it can take up to 24 hours for a single event.
 
 
 \begin{figure}[]
@@ -537,7 +535,7 @@ MC algorithms as well as ML techniques such as  learning the integration phase-s
 Secondly, we can lower the CPU usage by looking at new computer architecture such as GPUs or multi-threading CPUs.
  For the purpose of MC integration of the squared matrix element, which comes down to the event sampling and adaptive strategies to compute
  the integral, the use of hardware acceleration devices is particularly appealing. In fact the sampling process is embarrassing parallel since we can
- just use a different random-number generator seeds for each run. Also the other operations used in MC techniques such as stratified sampling may
+ just use a different random-number generator seed for each run. Also the other operations used in MC techniques such as stratified sampling may
  take advantage of parallelizability due to the fact that we can express the integral as a sum of the MC integration in subregions of the integration volume.
  
  The aim of this thesis is to study and implement new MC integration algorithms with the aim of achieving the target accuracies and at the same time overcoming the computational limitations by taking advantage of hardware acceleration devices.

@@ -918,6 +918,147 @@
       \verb https://www.wolfram.com/mathematica
       \endverb
     \endentry
+    \entry{Gleisberg:2008ta}{article}{}
+      \name{author}{7}{}{%
+        {{hash=1aa16f2a2a02bc86279bce38a68afb94}{%
+           family={Gleisberg},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8c8cc4ddc51a9065fffc3b4c16c35dc4}{%
+           family={Hoeche},
+           familyi={H\bibinitperiod},
+           given={Stefan.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b02544f275933e3cb52c7e9d66bed93d}{%
+           family={Krauss},
+           familyi={K\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0e5f4b2e3c35963dac991981b63fe17f}{%
+           family={Schonherr},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9278cca32bf432b7f2d93be757b86623}{%
+           family={Schumann},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9beee89b28d80a136beb9d99bfa92258}{%
+           family={Siegert},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a1dfb7a33c0d6f5e2a1a09b29b10e258}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4a4f0518508ca02ff5bd35318c9ab16}
+      \strng{fullhash}{ef0bd809db27762683b9c12cebee0039}
+      \strng{bibnamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
+      \strng{authorbibnamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
+      \strng{authornamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
+      \strng{authorfullhash}{ef0bd809db27762683b9c12cebee0039}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Event generation with SHERPA 1.1}}
+      \field{volume}{02}
+      \field{year}{2009}
+      \field{pages}{007}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1126-6708/2009/02/007
+      \endverb
+      \verb{eprint}
+      \verb 0811.4622
+      \endverb
+    \endentry
+    \entry{Alwall:2014hca}{article}{}
+      \name{author}{10}{}{%
+        {{hash=db770a0dfc4628a7437bedbd56f940d4}{%
+           family={Alwall},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=87f8432b90fa1363547627dd900ac62d}{%
+           family={Frederix},
+           familyi={F\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=36ec2b0a28a3159dd489a8e0ce4c5e16}{%
+           family={Frixione},
+           familyi={F\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=da2920448eb87fb33798abb131da464b}{%
+           family={Hirschi},
+           familyi={H\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=146d5a62e8ec749ce3c087e42804f0a6}{%
+           family={Maltoni},
+           familyi={M\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d6305f4a2bb37c97934d4f0cae42109e}{%
+           family={Mattelaer},
+           familyi={M\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+        {{hash=437e153e70283e1bc3b1ec3ad54d6fae}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={H.\bibnamedelimi -S.},
+           giveni={H\bibinitperiod\bibinitdelim \bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=86e07bd86b6c081d973cbedd27c360ab}{%
+           family={Stelzer},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9ef6ecb08c2c6e622eec344decdbb82c}{%
+           family={Torrielli},
+           familyi={T\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=97b1b02748b4a359125a674e12ece48b}{%
+           family={Zaro},
+           familyi={Z\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{98c22186c090664cd0aa787235a12e76}
+      \strng{fullhash}{261fa39fa69c14924b0287f2a0cd40a4}
+      \strng{bibnamehash}{98c22186c090664cd0aa787235a12e76}
+      \strng{authorbibnamehash}{98c22186c090664cd0aa787235a12e76}
+      \strng{authornamehash}{98c22186c090664cd0aa787235a12e76}
+      \strng{authorfullhash}{261fa39fa69c14924b0287f2a0cd40a4}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton shower simulations}}
+      \field{volume}{07}
+      \field{year}{2014}
+      \field{pages}{079}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP07(2014)079
+      \endverb
+      \verb{eprint}
+      \verb 1405.0301
+      \endverb
+    \endentry
     \entry{ATL-SOFT-PUB-2021-001}{report}{}
       \list{institution}{1}{%
         {CERN}%
@@ -1070,147 +1211,6 @@
       \endverb
       \verb{eprint}
       \verb 1801.06415
-      \endverb
-    \endentry
-    \entry{Alwall:2014hca}{article}{}
-      \name{author}{10}{}{%
-        {{hash=db770a0dfc4628a7437bedbd56f940d4}{%
-           family={Alwall},
-           familyi={A\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=87f8432b90fa1363547627dd900ac62d}{%
-           family={Frederix},
-           familyi={F\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-        {{hash=36ec2b0a28a3159dd489a8e0ce4c5e16}{%
-           family={Frixione},
-           familyi={F\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=da2920448eb87fb33798abb131da464b}{%
-           family={Hirschi},
-           familyi={H\bibinitperiod},
-           given={V.},
-           giveni={V\bibinitperiod}}}%
-        {{hash=146d5a62e8ec749ce3c087e42804f0a6}{%
-           family={Maltoni},
-           familyi={M\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=d6305f4a2bb37c97934d4f0cae42109e}{%
-           family={Mattelaer},
-           familyi={M\bibinitperiod},
-           given={O.},
-           giveni={O\bibinitperiod}}}%
-        {{hash=437e153e70283e1bc3b1ec3ad54d6fae}{%
-           family={Shao},
-           familyi={S\bibinitperiod},
-           given={H.\bibnamedelimi -S.},
-           giveni={H\bibinitperiod\bibinitdelim \bibinithyphendelim S\bibinitperiod}}}%
-        {{hash=86e07bd86b6c081d973cbedd27c360ab}{%
-           family={Stelzer},
-           familyi={S\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=9ef6ecb08c2c6e622eec344decdbb82c}{%
-           family={Torrielli},
-           familyi={T\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-        {{hash=97b1b02748b4a359125a674e12ece48b}{%
-           family={Zaro},
-           familyi={Z\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{98c22186c090664cd0aa787235a12e76}
-      \strng{fullhash}{261fa39fa69c14924b0287f2a0cd40a4}
-      \strng{bibnamehash}{98c22186c090664cd0aa787235a12e76}
-      \strng{authorbibnamehash}{98c22186c090664cd0aa787235a12e76}
-      \strng{authornamehash}{98c22186c090664cd0aa787235a12e76}
-      \strng{authorfullhash}{261fa39fa69c14924b0287f2a0cd40a4}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{JHEP}
-      \field{title}{{The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton shower simulations}}
-      \field{volume}{07}
-      \field{year}{2014}
-      \field{pages}{079}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1007/JHEP07(2014)079
-      \endverb
-      \verb{eprint}
-      \verb 1405.0301
-      \endverb
-    \endentry
-    \entry{Gleisberg:2008ta}{article}{}
-      \name{author}{7}{}{%
-        {{hash=1aa16f2a2a02bc86279bce38a68afb94}{%
-           family={Gleisberg},
-           familyi={G\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=8c8cc4ddc51a9065fffc3b4c16c35dc4}{%
-           family={Hoeche},
-           familyi={H\bibinitperiod},
-           given={Stefan.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=b02544f275933e3cb52c7e9d66bed93d}{%
-           family={Krauss},
-           familyi={K\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=0e5f4b2e3c35963dac991981b63fe17f}{%
-           family={Schonherr},
-           familyi={S\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=9278cca32bf432b7f2d93be757b86623}{%
-           family={Schumann},
-           familyi={S\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=9beee89b28d80a136beb9d99bfa92258}{%
-           family={Siegert},
-           familyi={S\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=a1dfb7a33c0d6f5e2a1a09b29b10e258}{%
-           family={Winter},
-           familyi={W\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{e4a4f0518508ca02ff5bd35318c9ab16}
-      \strng{fullhash}{ef0bd809db27762683b9c12cebee0039}
-      \strng{bibnamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
-      \strng{authorbibnamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
-      \strng{authornamehash}{e4a4f0518508ca02ff5bd35318c9ab16}
-      \strng{authorfullhash}{ef0bd809db27762683b9c12cebee0039}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{JHEP}
-      \field{title}{{Event generation with SHERPA 1.1}}
-      \field{volume}{02}
-      \field{year}{2009}
-      \field{pages}{007}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1088/1126-6708/2009/02/007
-      \endverb
-      \verb{eprint}
-      \verb 0811.4622
       \endverb
     \endentry
     \entry{peter_lepage_2021_4746454}{software}{}
@@ -1459,8 +1459,8 @@
       \strng{authorbibnamehash}{4a23f73e7d5914028c63286b237c7a6e}
       \strng{authornamehash}{4a23f73e7d5914028c63286b237c7a6e}
       \strng{authorfullhash}{4a23f73e7d5914028c63286b237c7a6e}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0370-2693}

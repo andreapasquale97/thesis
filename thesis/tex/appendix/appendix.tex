@@ -25,7 +25,7 @@ def example_integrand(xarr, n_dim=None, weight=None):
 vegas_instance.compile(example_integrand)
 \end{minted}
 
-As we can see the function is defined using only \texttt{TensorFlow} primitives, since it allows for the usage of all the hardware \texttt{TensorFlow} is compatible with. In particular when is called the method \texttt{compile} the integrand is registered and it is compiled using the decorator \texttt{tf.function} that enable us to use the benefits of the graph-mode implementation discussed in Sect. \ref{tensorflow}.
+As we can see the function is defined using only \texttt{TensorFlow} primitives, since it allows for the usage of all the hardware \texttt{TensorFlow} is compatible with. In particular when is called the method \texttt{compile} the integrand is registered and it is compiled using the decorator \texttt{tf.function} that enable us to use the benefits of the graph-mode implementation discussed in Sect.~\ref{tensorflow}.
 
 \item Run the integration. After having completed the setup we just need to tell the integrators for how many iterations we need to run the simulation. The integration is performed using the method \texttt{run\_integration(n\_iter)} as follows:
 \begin{minted}[fontsize=\footnotesize]{python}
@@ -45,7 +45,7 @@ The output variable \texttt{result} is a tuple variable where the first element 
 The final result is a weighted average of the results obtained in each iterations.
 \end{enumerate}
 
-Since we are using the integrator \texttt{VegasFlow} the VEGAS grid will be refined after each iteration using the importance sampling algorithm presented in section \ref{vegas}.
+Since we are using the integrator \texttt{VegasFlow} the VEGAS grid will be refined after each iteration using the importance sampling algorithm presented in Section~\ref{vegas}.
 
 \section{How to use the \texttt{VegasFlowPlus} class}
 If we want to use the new integrators implemented we simply need to import the \texttt{VegasFlowPlus} class. The setup is quite similar with the only difference that we can set the parameter \texttt{adaptive} to \texttt{True} if we want to use the VEGAS+ algorithm \cite{Lepage:2020tgj} or to \texttt{False} if the we want to use the classic VEGAS algorithm \cite{Lepage:1977sw}. By default the \texttt{adaptive} flag is set to \texttt{True}.
@@ -63,7 +63,7 @@ vegas_instance = VegasFlowPlus(dims, n_calls, adaptive = False )
 \end{minted}
 
 The integrand definition is identical to the \texttt{VegasFlow} case if we are using the VEGAS integrator. 
-For the VEGAS+ integrator, as already discussed in Section \ref{vfp problem}, we need to specify an input signature due to the fact that the VEGAS+ integrator uses a different number of events in each iteration.
+For the VEGAS+ integrator, as already discussed in Section~\ref{vfp problem}, we need to specify an input signature due to the fact that the VEGAS+ integrator uses a different number of events in each iteration.
 
 For the case of a Gaussian integral we show how to add this signature to the function:
 

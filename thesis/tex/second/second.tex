@@ -75,7 +75,7 @@ VEGAS initially estimates the integral with a uniform grid (all the intervals ha
 \end{equation}
 Using these parameters the algorithm presented in Ref.~\cite{Lepage:2020tgj} is able to generate new intervals $\{x'_i - \Delta x'_i, x'_i \}$ that contains an equal fraction of the total $d = \sum_i d_i$ thus fulfilling the constraint of Eq.~\ref{vegas importance optimal}.
 
-To better understand the importance sampling used in VEGAS we show an example of an optimize grid.
+To better understand the importance sampling used in VEGAS we show an example of an optimized grid.
 Suppose that we need to compute the following integral:
 \begin{equation}
 	\label{example_integrand}
@@ -140,7 +140,7 @@ Also functions with multiple peaks can become challenging for the current implem
 A new algorithm has been formulated which has been proven to perform better than classic VEGAS in these particular instances \cite{Lepage:2020tgj}.
 This new method consists in a modification of the classic VEGAS by adding a second adaptive strategy in addition to the importance sampling, hence the name VEGAS+.
 
-We saw that VEGAS also uses a stratified sampling by dividing the integration in $N_\text{st}^D$ hypercubes then performing a MC estimates of 
+We saw that VEGAS can also use stratified sampling by dividing the integration in $N_\text{st}^D$ hypercubes then performing a MC estimates of 
 the integral using at least $2$ points per hypercube. In the classic implementation the number of samples per hypercube is the same for all the 
 subvolumes.
 
@@ -180,13 +180,12 @@ Being $\lambda$ constant we get that the previous equation is satisfied if
 The algorithm presented in Ref.~\cite{Lepage:2020tgj} redistribute the samples in the hypercubes as follows:
 
 \begin{enumerate}
-	\item Choose as number of stratifications
-	\begin{equation}
+\item Choose as number of stratifications
+\begin{equation}
 		\label{nstrat}
 		N_\text{st} = \lfloor (N_\text{ev}/4)^{1/D}\rfloor  \ .
-	\end{equation}
-\item 
-During each iteration estimate the variance of each hypercube with same samples used to compute the integral
+\end{equation}
+\item During each iteration estimate the variance of each hypercube with same samples used to compute the integral
 \begin{equation}
 	\sigma^2_h \approx \frac{V_h^2}{n_h} \sum_{\textbf{x} \in V_h} f^2(\textbf{x}) - \bigg( \frac{V_h}{n_h} \sum_{\textbf{x} \in V_h} f(\textbf{x})\bigg)^2 \ ,
 \end{equation}
@@ -209,7 +208,7 @@ have enough samples in each hypercube to have a better estimates of the variance
 
 Secondly, the damping parameter $\beta$ is being introduced to avoid overreactions to random fluctuations in the first steps of the simulation. The optimal choice will be $\beta=1$, in the limit where $\beta=0$ we have VEGAS usual stratified sampling without the redistribution of samples.
 
-At the same time after each iteration the VEGAS map is updated according to the standard VEGAS importance sampling algorithm. The optimal VEGAS grid is independent of the allocation of samples, but the reallocation of samples can speed the convergence to the optimal map. This is due to the fact that by reallocating the samples we are able to find more quickly all the peaks of the integrand, even for diagonal structures.
+At the same time after each iteration the VEGAS map is updated according to the standard VEGAS importance sampling algorithm. The optimal VEGAS grid is independent of the allocation of samples, but the reallocation of samples can speed up the convergence to the optimal map. This is due to the fact that by reallocating the samples we are able to find more quickly all the peaks of the integrand, even for diagonal structures.
 In fact Ref.~\cite{Lepage:2020tgj}considered the following diagonal-structured integral:
 \begin{equation}
 	\label{example_vegas+}
@@ -244,8 +243,8 @@ therefore the number of stratifications is suppressed as the dimension increases
 In this section we discuss a novel implementation of the algorithms aforementioned.
 In particular the VEGAS algorithm has been available since the '80s and has been implemented in different programming languages.
 The new VEGAS+ algorithm is currently available at Ref.~\cite{peter_lepage_2021_4746454}.
-The original implementations are usually written for a single CPU or at most they support multi-processor evaluation of integrands using
-MPI, via the python module \texttt{mpi4py} \cite{peter_lepage_2021_4746454}.
+The original implementations are usually written for a single CPU or at most they support multi-processor evaluation of integrands ( for instance using
+MPI, via the python module \texttt{mpi4py} \cite{peter_lepage_2021_4746454} ).
 
 We have instead decided to focus on an implementation that can also run in hardware acceleration devices such as multi-threading CPUs and GPUs.
 
@@ -282,7 +281,7 @@ Secondly, TF has two execution modes one is the so called eager mode and the oth
 The eager execution, which is turned on by default, implements an imperative programming environment that evaluates operations immediately: each operation returns concrete values. 
 
 There is also the possibility to create and run a  TF graph by adding the decorator \texttt{@tf.function} to the functions defined by the user. In particular the function defined with such decorator will be a python callable that builds TensorFlow graphs from the python function.
-A TF graph requires that his input must have a specified data and dimension type since it cannot contains all the statements of the eager program. The code is separated in two stages:
+A TF graph requires that his input must have a specified data and dimension type. The code is separated in two stages:
 \begin{enumerate}
 	\item In the first step a graph is created by the function, all the python code runs normally while the statement expressed by TF primitives are deferred: they are simply stored in the graph. This first step is referred as \emph{tracing}.
 	\item In the second step the graph created in the first one is run.
@@ -290,7 +289,7 @@ A TF graph requires that his input must have a specified data and dimension type
 
 One of the main advantages is that the second step is much faster than the first one, due to the fact that the statements have been converted to a graph. 
 Graphs are easily optimized and allow the compiler to do transformations like separating sub-parts of a computation that are independent and splitting them between threads or devices.
-If a function is called more than once with the same arguments the first step, the \emph{tracing}, will be performed only the first time. In all the successive calls of the function the first step will be skipped since TF already as a graph available for that particular function.
+If a function is called more than once with the same type of arguments the first step, the \emph{tracing}, will be performed only the first time. In all the successive calls of the function the first step will be skipped since TF already as a graph available for that particular function.
 This possibility of skipping the tracing step is what enable TF to reach better performances when compared to the eager mode. 
 
 This feature can be exploited in MC simulation where we expect to call a function a different number of times depending on the accuracy required. 
@@ -300,7 +299,7 @@ The library has an abstract class called \texttt{MonteCarloFlow} which implement
 of events across multiple devices with a job scheduling for multi-GPU synchronization using TF graph technology.
 
 The proper MC integrators are implemented as derived class from the \texttt{MonteCarloFlow} class. The library provides two different integrators: one is a vey simple MC integrator in the class \texttt{PlainFlow} and the main one is an implementation of Vegas's importance sampling algorithm in the class \texttt{VegasFlow}.
-The ladder one is the first implementation of the importance sampling algorithm in VEGAS using TensorFlow as the back-end development framework.
+The latter one is the first implementation of the importance sampling algorithm in VEGAS using TensorFlow as the back-end development framework.
 The two subclasses focus only on the integration algorithm chosen, in particular they need to specifies what the algorithm does to run one single event and secondly what to do in a full iteration of the MC simulation.
 
 Therefore the library is designed such that new algorithms can easily be implemented as derived class from the \texttt{MonteCarloFlow} abstract class which handles all the technicalities such as GPU distribution, multi-threading or vectorization.
@@ -309,7 +308,7 @@ The developer, as already shown in the integrators available, should only focus 
  
  \subsubsection{Results}
 We now comment some results of \texttt{VegasFlow} presented in Ref\cite{Carrazza:2020rdn}.
-\texttt{VegasFlow} (running on both CPU and GPU) has been compare to the current implementation of the Vegas importance sampling algorithm available in python \cite{peter_lepage_2021_4746454}. The results show that in order to reach the same accuracy integrating a Gaussian distribution in 20 dimension the previous implementation of VEGAS takes  38 minutes, while VegasFlow running on CPU\footnote{\setstretch{1}These results are obtained using all CPUs (36 threads) from an Intel(R) Core(TM) i9-9980XE CPU for both Vegas and \texttt{VegasFlow}.} takes 26 minutes and only 5 minutes when running of GPU \footnote{The GPU used is the NVIDIA Titan V.}.
+\texttt{VegasFlow} (running on both CPU and GPU) has been compared to the current implementation of the Vegas importance sampling algorithm available in python \cite{peter_lepage_2021_4746454}. The results show that in order to reach the same accuracy integrating a Gaussian distribution in 20 dimension the previous implementation of VEGAS takes  38 minutes, while VegasFlow running on CPU\footnote{\setstretch{1}These results are obtained using all CPUs (36 threads) from an Intel(R) Core(TM) i9-9980XE CPU for both Vegas and \texttt{VegasFlow}.} takes 26 minutes and only 5 minutes when running of GPU \footnote{The GPU used is the NVIDIA Titan V.}.
 Therefore as expected when \texttt{VegasFlow} runs on GPU there are some significant improvements in the computational times.
 
 Moreover, \texttt{VegasFlow} shows better performance thanks to the graph compilation mode when running on highly parallel scenarios such as
@@ -384,11 +383,11 @@ The possibility of reaching the target accuracy using less than 20 iterations le
 \begin{figure}
 	\centering
 	\includegraphics[width=15cm]{../../../tests/performance_plots/dy_aa.png}
-	\caption{Comparison of perfomances between different integration methods at fixed percent uncertainty ( $10^{-2}$, $10^{-3}$ or $10^{-4}$) and at fixed samples per iteration ($10^3$,$10^4$,$10^5$ or $10^6$ ) with $100$ maximum iterations. The integrand used is the LO partonic cross section for the Drell-Yan process from Ref.~\cite{Carrazza_2020}.}
+	\caption{Comparison of perfomances between different integration methods at fixed percent uncertainty ($10^{-2}$, $10^{-3}$ or $10^{-4}$) and at fixed samples per iteration ($10^3$,$10^4$,$10^5$ or $10^6$ ) with $100$ maximum iterations. The integrand used is the LO partonic cross section for the Drell-Yan process from Ref.~\cite{Carrazza_2020}.}
 	\label{dy_aa}
 \end{figure}
 
-Overall all the tests performed show that VEGAS+ is  the more efficient integration algorithm and can outperform the implementation of the importance sampling in VEGAS. The adaptive stratified sampling alone was effective only with low-dimensional integrands without sharp peaks, like the RosenBrock function. In general, it couldn't compete with the other two methods.
+Overall all tests performed show that VEGAS+ is  the most efficient integration algorithm and can outperform the implementation of the importance sampling in VEGAS. The adaptive stratified sampling alone was effective only with low-dimensional integrands without sharp peaks, like the RosenBrock function. In general, it couldn't compete with the other two methods.
 
 Moreover, the fact that for a physical integrand VEGAS+ converged way more rapidly than the importance sampling convinced us even more to exploit the VEGAS+ algorithm by running it on hardware acceleration devices.
 
@@ -406,7 +405,7 @@ After each iteration this tensor is updated according to the VEGAS+ algorithm ex
 
 Finally, we also needed to overload the fundamental methods of the class that describe what the integrator should do for each event and for each iteration of the simulation. In particular since the integral is expressed as a contribution from a MC estimate of the integral in each hypercube both the integral estimate and the variance are computed by summing the partial results from all the hypercubes according to Eq.~\ref{i str} and Eq.~\ref{sigma str}.
 
-All the implementation is publicly available at the following GitHub repository: \url{https://github.com/N3PDF/vegasflow}.
+The implementation is publicly available at the following GitHub repository: \url{https://github.com/N3PDF/vegasflow}.
 \subsubsection{Problems during the implementation}
 \label{vfp problem}
 The process of implementing the VEGAS+ algorithm within the \texttt{VegasFlow} library has not been free of problems.
@@ -430,7 +429,7 @@ def _compute_x(x_ini, xn, xdelta):
 Therefore we made all the programming environment flexible with respect to the number of events used in each iteration by specifying an input signature for each function.
 
 There was a second problem the VEGAS+ algorithm.
-We experienced some crashes while the program was running due to a high CPU usage even for high performing machines. After some tests we found out that when generating the samples per hypercube there was a problem with the primitive of TensorFlow \texttt{tf.repeat}. In particular inside the function at some point a rank-3 tensor was initialized using the total number of hypercubes, the dimension of the integrand and the maximum number of samples in one hypercube. Due to some overreaction of the algorithm in the first iterations the redistribution of the samples can accumulate a large number of samples in one particular hypercube. This lead to rank-3 tensors such as \texttt{[65536,51749,8]} which are too big to handle even for professional-grade CPUs and GPUs.
+We experienced some crashes while the program was running due to a high CPU usage even for high performing machines. After some tests we found out that when generating the samples per hypercube there was a problem with the primitive of TensorFlow \texttt{tf.repeat}. In particular inside the function at some point a rank-3 double precision tensor was initialized using the total number of hypercubes, the dimension of the integrand and the maximum number of samples in one hypercube. Due to some overreaction of the algorithm in the first iterations the redistribution of the samples can accumulate a large number of samples in one particular hypercube. This lead to rank-3 tensors such as \texttt{[65536,51749,8]} which are too big to handle even for professional-grade CPUs and GPUs.
 
 To solve this issue we decided to modify the program in the following way.
 First of all we tried to reach the same output desired using alternatives to \texttt{tf.repeat}. These options could lower the CPU-usage however there were still some problems involving \texttt{tf.repeat}. So we decided to simply put a limit of $10000$ maximum hypercubes because by limiting the number of hypercubes we could avoid the big tensors that caused the problems.

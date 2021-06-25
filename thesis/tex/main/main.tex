@@ -27,16 +27,19 @@ bindingoffset=6mm ]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[EL]{\nouppercase\leftmark}
-\fancyhead[OR]{\nouppercase\rightmark}
-\fancyhead[ER,OL]{\thepage}
+\fancyhead[L]{\nouppercase\leftmark}
+\fancyhead[R]{\nouppercase\rightmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{}}
 
 \usepackage[font=footnotesize,skip=0pt]{caption}
 \addbibresource{bib.bib}
 
 \begin{document}
 	
-\thispagestyle{empty}
+\begin{titlepage}
+	\thispagestyle{empty}
+
 
 \begin{center}
 \includegraphics{../images/tesiSCIENZE_TECNOLOGIE.jpg}
@@ -65,22 +68,23 @@ bindingoffset=6mm ]{geometry}
 \begin{center}
 	{\large Anno Accademico 2020/2021}
 \end{center}
+\end{titlepage}
 
 
 \pagenumbering{roman}
 \setcounter{page}{1}
 
 \tableofcontents
+\clearpage
 
 
 
 
 
+
+\addcontentsline{toc}{chapter}{Introduction}\chaptermark{Introduction}
 \pagenumbering{arabic}
-\addcontentsline{toc}{chapter}{Introduction}
-
 \subfile{../intro/intro.tex}
-\setcounter{page}{1}
 \subfile{../first/first.tex}
 \subfile{../second/second.tex}
 \subfile{../third/third.tex}
