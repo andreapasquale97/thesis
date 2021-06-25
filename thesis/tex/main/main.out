@@ -1,41 +1,41 @@
 \BOOKMARK [0][-]{chapter*.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.1}{Multi-dimensional integration in HEP}{}% 2
-\BOOKMARK [1][-]{section.1.1}{MC methos for multi-dimensional integration}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.1}{A first example of Monte Carlo integration}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.2}{Reducing the variance}{section.1.1}% 5
-\BOOKMARK [1][-]{section.1.2}{HEP and multi-dimensional integration}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.2.1}{Cross Section and Decay Rates}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.2}{The S-matrix formalism}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.3}{Feynman diagrams}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.4}{Basics of QCD}{section.1.2}% 10
-\BOOKMARK [2][-]{subsection.1.2.5}{Need for MC integration in HEP}{section.1.2}% 11
-\BOOKMARK [1][-]{section.1.3}{Modern techniques and limitations}{chapter.1}% 12
-\BOOKMARK [2][-]{subsection.1.3.1}{Problems of HEP integration}{section.1.3}% 13
-\BOOKMARK [2][-]{subsection.1.3.2}{CPU costs and computational times}{section.1.3}% 14
-\BOOKMARK [2][-]{subsection.1.3.3}{Possible solutions and aim of the thesis}{section.1.3}% 15
-\BOOKMARK [0][-]{chapter.2}{Algorithms and implementation}{}% 16
+\BOOKMARK [0][-]{chapter.1}{Multi-dimensional\040integration\040in\040HEP}{}% 2
+\BOOKMARK [1][-]{section.1.1}{MC\040methos\040for\040multi-dimensional\040integration}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.1}{A\040first\040example\040of\040Monte\040Carlo\040integration}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.2}{Reducing\040the\040variance}{section.1.1}% 5
+\BOOKMARK [1][-]{section.1.2}{HEP\040and\040multi-dimensional\040integration}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.2.1}{Cross\040Section\040and\040Decay\040Rates}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.2}{The\040S-matrix\040formalism}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.3}{Feynman\040diagrams}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.4}{Basics\040of\040QCD}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.5}{Need\040for\040MC\040integration\040in\040HEP}{section.1.2}% 11
+\BOOKMARK [1][-]{section.1.3}{Modern\040techniques\040and\040limitations}{chapter.1}% 12
+\BOOKMARK [2][-]{subsection.1.3.1}{Problems\040of\040HEP\040integration}{section.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.3.2}{CPU\040costs\040and\040computational\040times}{section.1.3}% 14
+\BOOKMARK [2][-]{subsection.1.3.3}{Possible\040solutions\040and\040aim\040of\040the\040thesis}{section.1.3}% 15
+\BOOKMARK [0][-]{chapter.2}{Algorithms\040and\040implementation}{}% 16
 \BOOKMARK [1][-]{section.2.1}{Algorithms}{chapter.2}% 17
 \BOOKMARK [2][-]{subsection.2.1.1}{VEGAS}{section.2.1}% 18
-\BOOKMARK [2][-]{subsection.2.1.2}{A new algorithm: VEGAS+}{section.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.1.2}{A\040new\040algorithm:\040VEGAS+}{section.2.1}% 19
 \BOOKMARK [1][-]{section.2.2}{Implementation}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.2.1}{VegasFlow: a brief overview}{section.2.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.2}{A new implementation: VegasFlowPlus}{section.2.2}% 22
-\BOOKMARK [0][-]{chapter.3}{Result benchmark}{}% 23
-\BOOKMARK [1][-]{section.3.1}{Setup and goals}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.2}{Result for Gaussian integrals}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.2.1}{Dimension 4}{section.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.2.2}{Dimension 8}{section.3.2}% 27
-\BOOKMARK [2][-]{subsection.3.2.3}{Dimension 12}{section.3.2}% 28
-\BOOKMARK [1][-]{section.3.3}{HEP integrands}{chapter.3}% 29
-\BOOKMARK [2][-]{subsection.3.3.1}{Drell-Yan process}{section.3.3}% 30
-\BOOKMARK [2][-]{subsection.3.3.2}{Single Top Production}{section.3.3}% 31
-\BOOKMARK [2][-]{subsection.3.3.3}{Vector Boson Fusion Production Higgs at LO}{section.3.3}% 32
-\BOOKMARK [1][-]{section.3.4}{Recipe for the reader}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.4.1}{Average time per iteration}{section.3.4}% 34
-\BOOKMARK [2][-]{subsection.3.4.2}{Number of iterations}{section.3.4}% 35
-\BOOKMARK [2][-]{subsection.3.4.3}{Final comments}{section.3.4}% 36
+\BOOKMARK [2][-]{subsection.2.2.1}{VegasFlow:\040a\040brief\040overview}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.2}{A\040new\040implementation:\040VegasFlowPlus}{section.2.2}% 22
+\BOOKMARK [0][-]{chapter.3}{Result\040benchmark}{}% 23
+\BOOKMARK [1][-]{section.3.1}{Setup\040and\040goals}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.2}{Result\040for\040Gaussian\040integrals}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.2.1}{Dimension\0404}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.2}{Dimension\0408}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.3}{Dimension\04012}{section.3.2}% 28
+\BOOKMARK [1][-]{section.3.3}{HEP\040integrands}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.1}{Drell-Yan\040process}{section.3.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.2}{Single\040Top\040Production}{section.3.3}% 31
+\BOOKMARK [2][-]{subsection.3.3.3}{Vector\040Boson\040Fusion\040Production\040Higgs\040at\040LO}{section.3.3}% 32
+\BOOKMARK [1][-]{section.3.4}{Recipe\040for\040the\040reader}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.4.1}{Average\040time\040per\040iteration}{section.3.4}% 34
+\BOOKMARK [2][-]{subsection.3.4.2}{Number\040of\040iterations}{section.3.4}% 35
+\BOOKMARK [2][-]{subsection.3.4.3}{Final\040comments}{section.3.4}% 36
 \BOOKMARK [0][-]{chapter.4}{Conclusions}{}% 37
-\BOOKMARK [0][-]{appendix.A}{Integrating with VegasFlow}{}% 38
-\BOOKMARK [1][-]{section.A.1}{Basic Usage}{appendix.A}% 39
-\BOOKMARK [1][-]{section.A.2}{How to use the VegasFlowPlus class}{appendix.A}% 40
+\BOOKMARK [0][-]{appendix.A}{Integrating\040with\040VegasFlow}{}% 38
+\BOOKMARK [1][-]{section.A.1}{Basic\040Usage}{appendix.A}% 39
+\BOOKMARK [1][-]{section.A.2}{How\040to\040use\040the\040VegasFlowPlus\040class}{appendix.A}% 40
 \BOOKMARK [0][-]{section.A.2}{Bibliography}{}% 41
