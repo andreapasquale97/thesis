@@ -13,7 +13,7 @@ dims = 3
 n_calls = int(1e7)
 vegas_instance = VegasFlow(dims, n_calls)
 \end{minted}
-\item Compile the integrand function. Obviously the user need to specify to the integrator which function will be integrated. The integrand can be implemented as a simple python function that accept three arguments: the number of dimensions \texttt{n\_dim}, the weight of each sampled point \texttt{weight} and an array of random numbers \texttt{xarr}.
+\item Compile the integrand function. Obviously the user need to specify to the integrator which function will be integrated. The integrand can be implemented as a simple python function that accepts three arguments: the number of dimensions \texttt{n\_dim}, the weight of each sampled point \texttt{weight} and an array of random numbers \texttt{xarr}.
 \begin{minted}[fontsize=\footnotesize]{python}
 import tensorflow as tf
 	
@@ -27,7 +27,7 @@ vegas_instance.compile(example_integrand)
 
 As we can see the function is defined using only \texttt{TensorFlow} primitives, since it allows for the usage of all the hardware \texttt{TensorFlow} is compatible with. In particular when is called the method \texttt{compile} the integrand is registered and it is compiled using the decorator \texttt{tf.function} that enable us to use the benefits of the graph-mode implementation discussed in Sect.~\ref{tensorflow}.
 
-\item Run the integration. After having completed the setup we just need to tell the integrators for how many iterations we need to run the simulation. The integration is performed using the method \texttt{run\_integration(n\_iter)} as follows:
+\item Run the integration. After having completed the setup we just need to tell the integrator for how many iterations we need to run the simulation. The integration is performed using the method \texttt{run\_integration(n\_iter)} as follows:
 \begin{minted}[fontsize=\footnotesize]{python}
 n_iter = 5
 result = vegas_instance.run_integration(n_iter)
