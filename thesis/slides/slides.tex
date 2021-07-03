@@ -34,7 +34,7 @@
 		\end{beamercolorbox}%
 		\begin{beamercolorbox}[wd=.8\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
 			\usebeamerfont{title in head/foot}\insertshortinstitute\hspace*{3em}
-			%\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+			\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
 	\end{beamercolorbox}}%
 	\vskip0pt%
 }
@@ -84,6 +84,8 @@ The variance of $I_\text{MC}$  can be computed using the previously sampled poin
 \textbf{Advantage of MC}: the error depends only on $N$ $\nRightarrow$ quadrature integration
 \vspace{0.3cm}
 
+Move in other slide:
+
 \textbf{Aim of MC algorithms}: reduce the variance in the integral estimate through
 \begin{itemize}
 	\item stratified sampling techniques $\Rightarrow$ divide the integration region
@@ -101,49 +103,49 @@ The variance of $I_\text{MC}$  can be computed using the previously sampled poin
 
 
 \begin{frame}{Monte Carlo integration in HEP}
-	\scriptsize
-	\tikzstyle{first} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-	\tikzstyle{second} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
-	\tikzstyle{software} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-	\tikzstyle{arrow} = [thick,->,>=stealth]
-	\tikzstyle{arrow1} = [thick,->,>=stealth, dashed]
-	\tikzstyle{arrow2} = [thick,-,>=stealth]
-	What does Monte Carlo integration have to deal with High Energy Physics?
-	
-\begin{figure}
-		
-		\centering
-		\begin{tikzpicture}[node distance=2cm]
-			
-			\setstretch{1}
-			{
-				
-				\node (experiment) [first] {LHC at CERN};
-				\node(data)[first,below of = experiment] {Experimental Data};
-				\node(theory)[first, right of = experiment, xshift = +5cm]{Standard Model};
-				\node(predictions)[first, below of = theory] {Theoretical predictions};
-				\node(integration)[first, below of = predictions, yshift = -0.5cm, align = center] {Monte Carlo \\ Integration Techniques};
-				\node(apparatus)[first, below of = data, yshift = -0.5cm] {Technlogical development};
-				\node(question)[first, right of = data, xshift = + 1.5cm,align = center] {Can the SM explain\\ the data?};
-				%\node (importance) [method, below of = vegas, right of = vegas, align = center] {importance\\sampling};
-				%\node (stratified) [method, below of = vegas, left of = vegas, align = center] {stratified\\sampling};
-				%\node(vegasflow)[software, right of = importance, xshift = +2cm] {\texttt{VegasFlow}};
-				%\node (adaptive) [method, below of = stratified,align=center] {adaptive\\stratified\\sampling};
-				%\node(vegas+)[algorithm, below of = importance] {\texttt{VEGAS+}};
-				%\node(vegasflowplus)[software, right of = vegas+, xshift = +2cm] {\texttt{VegasFlowPlus}};
-			}
-			
-			\draw [arrow] (experiment) -- (data);
-			\draw [arrow] (theory) -- (predictions);
-			\draw[arrow](data) -- (question);
-			\draw[arrow]  (predictions) -- (question);
-			\draw[arrow]  (apparatus) --  (data);
-			\draw[arrow]  (integration) -- (predictions);
-			
-
-		\end{tikzpicture}
-		\label{scheme}
-	\end{figure}
+%	\scriptsize
+%	\tikzstyle{first} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+%	\tikzstyle{second} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+%	\tikzstyle{software} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+%	\tikzstyle{arrow} = [thick,->,>=stealth]
+%	\tikzstyle{arrow1} = [thick,->,>=stealth, dashed]
+%	\tikzstyle{arrow2} = [thick,-,>=stealth]
+%	What does Monte Carlo integration have to deal with High Energy Physics?
+%	
+%\begin{figure}
+%		
+%		\centering
+%		\begin{tikzpicture}[node distance=2cm]
+%			
+%			\setstretch{1}
+%			{
+%				
+%				\node (experiment) [first] {LHC at CERN};
+%				\node(data)[first,below of = experiment] {Experimental Data};
+%				\node(theory)[first, right of = experiment, xshift = +5cm]{Standard Model};
+%				\node(predictions)[first, below of = theory] {Theoretical predictions};
+%				\node(integration)[first, below of = predictions, yshift = -0.5cm, align = center] {Monte Carlo \\ Integration Techniques};
+%				\node(apparatus)[first, below of = data, yshift = -0.5cm] {Technlogical development};
+%				\node(question)[first, right of = data, xshift = + 1.5cm,align = center] {Can the SM explain\\ the data?};
+%				%\node (importance) [method, below of = vegas, right of = vegas, align = center] {importance\\sampling};
+%				%\node (stratified) [method, below of = vegas, left of = vegas, align = center] {stratified\\sampling};
+%				%\node(vegasflow)[software, right of = importance, xshift = +2cm] {\texttt{VegasFlow}};
+%				%\node (adaptive) [method, below of = stratified,align=center] {adaptive\\stratified\\sampling};
+%				%\node(vegas+)[algorithm, below of = importance] {\texttt{VEGAS+}};
+%				%\node(vegasflowplus)[software, right of = vegas+, xshift = +2cm] {\texttt{VegasFlowPlus}};
+%			}
+%			
+%			\draw [arrow] (experiment) -- (data);
+%			\draw [arrow] (theory) -- (predictions);
+%			\draw[arrow](data) -- (question);
+%			\draw[arrow]  (predictions) -- (question);
+%			\draw[arrow]  (apparatus) --  (data);
+%			\draw[arrow]  (integration) -- (predictions);
+%			
+%
+%		\end{tikzpicture}
+%		\label{scheme}
+%	\end{figure}
 		
 \end{frame}
 
@@ -364,15 +366,7 @@ This is possible thanks to the \texttt{TensorFlow} library which enable us to di
 			Better computational times for physical integrand!
 			\vspace{-0.3cm}
 			\begin{figure}
-				\includegraphics[ width = \columnwidth]{../tex/images/vf_singletop.png}
-				
-				\vspace{-0.2cm}
-					\caption{Comparison of a Leading Order calculation ran in both \texttt{VegasFlow} 
-					 and MG5\_aMC@NLO . For the same level 
-					of target accuracy \texttt{VegasFlow} is faster than  MG5\_aMC@NLO when using both CPUs and GPUs devices. }
-
-				
-				
+				\includegraphics[ width = \columnwidth]{../tex/images/vf_singletop.png}				
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5 \textwidth}
@@ -382,9 +376,6 @@ This is possible thanks to the \texttt{TensorFlow} library which enable us to di
 				Advantage of graph implementation!
 				
 				\includegraphics[ width = \columnwidth]{../tex/images/graph_mode.png}
-				
-								\vspace{-0.3cm}
-				\caption{Comparison of performance between the eager and graph compilation TensorFlow mode. The results are shown as a ratio of the time it took the eager computation to complete one iteration.}
 			\end{figure}
 		\end{column}
 		
@@ -479,9 +470,6 @@ We would like to answer the following questions:
 	\end{column}
 	
 \end{columns}
-\begin{figure}
-	\caption{Benchmark  for the Gaussian integral in 4 dimensions. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
-\end{figure}
 
 
 \end{frame}
@@ -505,9 +493,7 @@ We would like to answer the following questions:
 	\end{column}
 	
 \end{columns}
-\begin{figure}
-	\caption{Benchmark  for the Gaussian integral in 8 dimensions. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
-\end{figure}
+
 \end{frame}
 
 \begin{frame}{Gaussian Integral Benchmark - Dimension 12}
@@ -529,9 +515,7 @@ We would like to answer the following questions:
 	\end{column}
 	
 \end{columns}
-\begin{figure}
-	\caption{Benchmark  for the Gaussian integral in 12 dimensions. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
-\end{figure}
+
 \end{frame}
 
 
@@ -557,10 +541,7 @@ We would like to answer the following questions:
 		\end{column}
 		
 	\end{columns}
-\begin{figure}
-					
-	\caption{Benchmark  for the partonic level cross section for the DY photon induced process  at LO. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
-\end{figure}
+
 \end{frame}
 %\begin{figure}
 %\includegraphics[height=0.7 \textheight]{../tex/images/pineappl_final.png}
@@ -592,9 +573,7 @@ We would like to answer the following questions:
 		\end{column}
 		
 	\end{columns}
-\begin{figure}
-					\caption{Benchmark  for the partonic level cross section for the single $t$-quark production (t-channel)  at LO. From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
-\end{figure}
+
 	
 	
 	
@@ -620,11 +599,7 @@ We would like to answer the following questions:
 		\end{column}
 		
 	\end{columns}
-\begin{figure}
-					
-	\caption{Benchmark  for the cross section for the vector boson fusion (VBF) Higgs production at LO. The set of PDFs is \texttt{NNPDF31\_nnlo\_as\_0118} From right to left are presented the average time per iteration (after the warm-up), the number of iterations needed to reach target accuracy and the percent uncertainty reached at the end of the simulation. From the first row to the last one the target accuracies (dashed in the last column) are at $10^{-2}$, $10^{-3}$ and $10^{-4}$ percent uncertainty.}
-\end{figure}
-	
+
 
 	
 	
@@ -651,10 +626,7 @@ We would like to answer the following questions:
 	\end{itemize}
 	\end{column}
 	\end{columns}
-	\begin{figure}
-		%\includegraphics[height= 0.6 \textheight]{../tex/images/CPU_final.png}
-		\caption{Average time per iteration (after the warm-up) for all the previously studied cases. The results are sorted by the integrand dimension for each integrator. All the integration are performed on the Intel i9-9980XE CPU. }
-	\end{figure}
+
 
 \end{frame}
 
@@ -679,10 +651,7 @@ We would like to answer the following questions:
 			\end{itemize}
 		\end{column}
 	\end{columns}
-	\begin{figure}
-		%\includegraphics[height= 0.6 \textheight]{../tex/images/GPU_final.png}
-		\caption{Average time per iteration (after the warm-up) for all the previously studied cases. The results are sorted by the integrand dimension for each integrator. All the integration are performed on the NVIDIA Titan V GPU. }
-	\end{figure}
+
 
 \end{frame}
 
@@ -712,10 +681,7 @@ We would like to answer the following questions:
 		\end{column}
 	\end{columns}
 	
-		\begin{figure}
-		%\includegraphics[height= 0.6 \textheight]{../tex/images/iter_final.png}
-		\caption{Iterations needed to reach the accuracy of $10^{-4}$ percent uncertainty (after the warm-up) for all the previously studied cases. The results are sorted by the integrand dimension for each integrator. All the integration are performed on the Intel i9-9980XE CPU. }
-	\end{figure}
+
 	
 \end{frame}
 

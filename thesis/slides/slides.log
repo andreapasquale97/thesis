@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.24)  3 JUL 2021 10:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.24)  3 JUL 2021 11:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1243,13 +1243,13 @@ Dictionary: translator-theorem-dictionary, Language: English
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1262,15 +1262,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [5
 
 ]
-<../tex/images/CPU-cost.png, id=84, 980.66376pt x 717.68124pt>
+<../tex/images/CPU-cost.png, id=83, 980.66376pt x 717.68124pt>
 File: ../tex/images/CPU-cost.png Graphic file (type png)
 <use ../tex/images/CPU-cost.png>
-Package pdftex.def Info: ../tex/images/CPU-cost.png  used on input line 199.
+Package pdftex.def Info: ../tex/images/CPU-cost.png  used on input line 201.
 (pdftex.def)             Requested size: 171.14764pt x 125.24567pt.
-<../tex/images/CPU-time.png, id=86, 853.1875pt x 635.37375pt>
+<../tex/images/CPU-time.png, id=85, 853.1875pt x 635.37375pt>
 File: ../tex/images/CPU-time.png Graphic file (type png)
 <use ../tex/images/CPU-time.png>
-Package pdftex.def Info: ../tex/images/CPU-time.png  used on input line 199.
+Package pdftex.def Info: ../tex/images/CPU-time.png  used on input line 201.
 (pdftex.def)             Requested size: 171.14764pt x 127.45059pt.
  [6
 
@@ -1280,7 +1280,7 @@ Package pdftex.def Info: ../tex/images/CPU-time.png  used on input line 199.
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-65.
+67.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1288,19 +1288,19 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 ]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 309.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 311.
  [10
 
 ]
-<../tex/images/dy_aa.png, id=123, 722.7pt x 613.5723pt>
+<../tex/images/dy_aa.png, id=122, 722.7pt x 613.5723pt>
 File: ../tex/images/dy_aa.png Graphic file (type png)
 <use ../tex/images/dy_aa.png>
-Package pdftex.def Info: ../tex/images/dy_aa.png  used on input line 352.
+Package pdftex.def Info: ../tex/images/dy_aa.png  used on input line 354.
 (pdftex.def)             Requested size: 201.07542pt x 170.71652pt.
-<../tex/images/VEGAS-VEGAS+.png, id=124, 735.74875pt x 452.69125pt>
+<../tex/images/VEGAS-VEGAS+.png, id=123, 735.74875pt x 452.69125pt>
 File: ../tex/images/VEGAS-VEGAS+.png Graphic file (type png)
 <use ../tex/images/VEGAS-VEGAS+.png>
-Package pdftex.def Info: ../tex/images/VEGAS-VEGAS+.png  used on input line 352
+Package pdftex.def Info: ../tex/images/VEGAS-VEGAS+.png  used on input line 354
 .
 (pdftex.def)             Requested size: 136.91603pt x 84.237pt.
  [11
@@ -1309,16 +1309,16 @@ Package pdftex.def Info: ../tex/images/VEGAS-VEGAS+.png  used on input line 352
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
-<../tex/images/vf_singletop.png, id=138, 1561.835pt x 869.2475pt>
+<../tex/images/vf_singletop.png, id=137, 1561.835pt x 869.2475pt>
 File: ../tex/images/vf_singletop.png Graphic file (type png)
 <use ../tex/images/vf_singletop.png>
 Package pdftex.def Info: ../tex/images/vf_singletop.png  used on input line 12.
 
 (pdftex.def)             Requested size: 171.14764pt x 95.24614pt.
-<../tex/images/graph_mode.png, id=139, 1095.09125pt x 654.445pt>
+<../tex/images/graph_mode.png, id=138, 1095.09125pt x 654.445pt>
 File: ../tex/images/graph_mode.png Graphic file (type png)
 <use ../tex/images/graph_mode.png>
-Package pdftex.def Info: ../tex/images/graph_mode.png  used on input line 29.
+Package pdftex.def Info: ../tex/images/graph_mode.png  used on input line 21.
 (pdftex.def)             Requested size: 171.14764pt x 102.27675pt.
 ) [12
 
@@ -1329,110 +1329,92 @@ Package pdftex.def Info: ../tex/images/graph_mode.png  used on input line 29.
 ] [15
 
 ]
-<../tex/images/gauss4d_final.png, id=166, 770.3982pt x 627.3036pt>
+<../tex/images/gauss4d_final.png, id=165, 770.3982pt x 627.3036pt>
 File: ../tex/images/gauss4d_final.png Graphic file (type png)
 <use ../tex/images/gauss4d_final.png>
-Package pdftex.def Info: ../tex/images/gauss4d_final.png  used on input line 48
-7.
+Package pdftex.def Info: ../tex/images/gauss4d_final.png  used on input line 47
+5.
 (pdftex.def)             Requested size: 205.37926pt x 167.23013pt.
-
-Overfull \vbox (1.95155pt too high) detected at line 487
- []
 
 [16
 
  <../tex/images/gauss4d_final.png>]
-<../tex/images/gauss8d_final.png, id=173, 770.3982pt x 627.3036pt>
+<../tex/images/gauss8d_final.png, id=172, 770.3982pt x 627.3036pt>
 File: ../tex/images/gauss8d_final.png Graphic file (type png)
 <use ../tex/images/gauss8d_final.png>
-Package pdftex.def Info: ../tex/images/gauss8d_final.png  used on input line 51
-1.
+Package pdftex.def Info: ../tex/images/gauss8d_final.png  used on input line 49
+7.
 (pdftex.def)             Requested size: 205.37926pt x 167.23013pt.
-
-Overfull \vbox (1.95155pt too high) detected at line 511
- []
-
-[17
+ [17
 
  <../tex/images/gauss8d_final.png>]
-<../tex/images/gauss12d_final.png, id=180, 777.6252pt x 627.3036pt>
+<../tex/images/gauss12d_final.png, id=179, 777.6252pt x 627.3036pt>
 File: ../tex/images/gauss12d_final.png Graphic file (type png)
 <use ../tex/images/gauss12d_final.png>
 Package pdftex.def Info: ../tex/images/gauss12d_final.png  used on input line 5
-35.
+19.
 (pdftex.def)             Requested size: 205.37926pt x 165.67949pt.
-
-Overfull \vbox (0.40091pt too high) detected at line 535
- []
 
 [18
 
  <../tex/images/gauss12d_final.png>]
-<../tex/images/pineappl_final.png, id=187, 770.3982pt x 627.3036pt>
+<../tex/images/pineappl_final.png, id=186, 770.3982pt x 627.3036pt>
 File: ../tex/images/pineappl_final.png Graphic file (type png)
 <use ../tex/images/pineappl_final.png>
 Package pdftex.def Info: ../tex/images/pineappl_final.png  used on input line 5
-64.
+45.
 (pdftex.def)             Requested size: 209.65604pt x 170.71652pt.
 
-Overfull \hbox (4.27678pt too wide) in paragraph at lines 564--564
+Overfull \hbox (4.27678pt too wide) in paragraph at lines 545--545
  [] 
- []
-
-
-Overfull \vbox (10.90202pt too high) detected at line 564
  []
 
 [19
 
  <../tex/images/pineappl_final.png>]
-<../tex/images/singletop_final.png, id=196, 770.3982pt x 627.3036pt>
+<../tex/images/singletop_final.png, id=195, 770.3982pt x 627.3036pt>
 File: ../tex/images/singletop_final.png Graphic file (type png)
 <use ../tex/images/singletop_final.png>
 Package pdftex.def Info: ../tex/images/singletop_final.png  used on input line 
-601.
+580.
 (pdftex.def)             Requested size: 209.65604pt x 170.71652pt.
 
-Overfull \hbox (4.27678pt too wide) in paragraph at lines 601--601
+Overfull \hbox (4.27678pt too wide) in paragraph at lines 580--580
  [] 
- []
-
-
-Overfull \vbox (11.56853pt too high) detected at line 601
  []
 
 [20
 
  <../tex/images/singletop_final.png>]
-<../tex/images/higgs_correct.png, id=203, 867.24pt x 650.43pt>
+<../tex/images/higgs_correct.png, id=202, 867.24pt x 650.43pt>
 File: ../tex/images/higgs_correct.png Graphic file (type png)
 <use ../tex/images/higgs_correct.png>
-Package pdftex.def Info: ../tex/images/higgs_correct.png  used on input line 63
-1.
+Package pdftex.def Info: ../tex/images/higgs_correct.png  used on input line 60
+6.
 (pdftex.def)             Requested size: 205.37926pt x 154.0321pt.
  [21
 
  <../tex/images/higgs_correct.png>]
-<../tex/images/CPU_final.png, id=210, 1084.05pt x 578.16pt>
+<../tex/images/CPU_final.png, id=209, 1084.05pt x 578.16pt>
 File: ../tex/images/CPU_final.png Graphic file (type png)
 <use ../tex/images/CPU_final.png>
-Package pdftex.def Info: ../tex/images/CPU_final.png  used on input line 659.
+Package pdftex.def Info: ../tex/images/CPU_final.png  used on input line 631.
 (pdftex.def)             Requested size: 239.60567pt x 127.78667pt.
 [22
 
  <../tex/images/CPU_final.png>]
-<../tex/images/GPU_final.png, id=217, 1084.05pt x 578.16pt>
+<../tex/images/GPU_final.png, id=216, 1084.05pt x 578.16pt>
 File: ../tex/images/GPU_final.png Graphic file (type png)
 <use ../tex/images/GPU_final.png>
-Package pdftex.def Info: ../tex/images/GPU_final.png  used on input line 687.
+Package pdftex.def Info: ../tex/images/GPU_final.png  used on input line 656.
 (pdftex.def)             Requested size: 239.60567pt x 127.78667pt.
  [23
 
  <../tex/images/GPU_final.png>]
-<../tex/images/iter_final.png, id=224, 1084.05pt x 578.16pt>
+<../tex/images/iter_final.png, id=223, 1084.05pt x 578.16pt>
 File: ../tex/images/iter_final.png Graphic file (type png)
 <use ../tex/images/iter_final.png>
-Package pdftex.def Info: ../tex/images/iter_final.png  used on input line 720.
+Package pdftex.def Info: ../tex/images/iter_final.png  used on input line 686.
 (pdftex.def)             Requested size: 239.60567pt x 127.78667pt.
  [24
 
@@ -1448,17 +1430,17 @@ Package pdftex.def Info: ../tex/images/iter_final.png  used on input line 720.
 
 ]
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 912.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 878.
 
 
-Overfull \hbox (0.62062pt too wide) detected at line 912
+Overfull \hbox (0.62062pt too wide) detected at line 878
 []
  []
 
-<../tex/images/vegas_grid.png, id=262, 704.6325pt x 654.445pt>
+<../tex/images/vegas_grid.png, id=261, 704.6325pt x 654.445pt>
 File: ../tex/images/vegas_grid.png Graphic file (type png)
 <use ../tex/images/vegas_grid.png>
-Package pdftex.def Info: ../tex/images/vegas_grid.png  used on input line 912.
+Package pdftex.def Info: ../tex/images/vegas_grid.png  used on input line 878.
 (pdftex.def)             Requested size: 122.5384pt x 113.81102pt.
 [30
 
@@ -1469,7 +1451,7 @@ Package pdftex.def Info: ../tex/images/vegas_grid.png  used on input line 912.
 ]
 File: ../tex/images/dy_aa.png Graphic file (type png)
 <use ../tex/images/dy_aa.png>
-Package pdftex.def Info: ../tex/images/dy_aa.png  used on input line 986.
+Package pdftex.def Info: ../tex/images/dy_aa.png  used on input line 952.
 (pdftex.def)             Requested size: 201.07542pt x 170.71652pt.
  [33
 
@@ -1485,20 +1467,19 @@ Package pdftex.def Info: ../tex/images/dy_aa.png  used on input line 986.
 \tf@snm=\write10
 \openout10 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1008.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1008.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 974.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 974.
  (./slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1008.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1008.
-
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 974.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 974.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: 33F46637B1CCACD02A57CE5AD9984356;230.
  ) 
 Here is how much of TeX's memory you used:
- 29054 strings out of 480608
- 573539 string characters out of 5903630
- 870419 words of memory out of 5000000
- 44193 multiletter control sequences out of 15000+600000
+ 28977 strings out of 480608
+ 571974 string characters out of 5903630
+ 870381 words of memory out of 5000000
+ 44117 multiletter control sequences out of 15000+600000
  550526 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,23n,70p,790b,935s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1531,10 +1512,10 @@ r/sfti0600.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/
 sfti0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sf
 tt0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt
 1440.pfb>
-Output written on slides.pdf (34 pages, 1232724 bytes).
+Output written on slides.pdf (34 pages, 1224979 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 297 compressed objects within 3 object streams
- 80 named destinations out of 1000 (max. 500000)
+ 398 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
  179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

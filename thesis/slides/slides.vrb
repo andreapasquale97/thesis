@@ -9,15 +9,7 @@ This is possible thanks to the \texttt{TensorFlow} library which enable us to di
 			Better computational times for physical integrand!
 			\vspace{-0.3cm}
 			\begin{figure}
-				\includegraphics[ width = \columnwidth]{../tex/images/vf_singletop.png}
-				
-				\vspace{-0.2cm}
-					\caption{Comparison of a Leading Order calculation ran in both \texttt{VegasFlow}
-					 and MG5\_aMC@NLO . For the same level
-					of target accuracy \texttt{VegasFlow} is faster than  MG5\_aMC@NLO when using both CPUs and GPUs devices. }
-
-				
-				
+				\includegraphics[ width = \columnwidth]{../tex/images/vf_singletop.png}				
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5 \textwidth}
@@ -27,9 +19,6 @@ This is possible thanks to the \texttt{TensorFlow} library which enable us to di
 				Advantage of graph implementation!
 				
 				\includegraphics[ width = \columnwidth]{../tex/images/graph_mode.png}
-				
-								\vspace{-0.3cm}
-				\caption{Comparison of performance between the eager and graph compilation TensorFlow mode. The results are shown as a ratio of the time it took the eager computation to complete one iteration.}
 			\end{figure}
 		\end{column}
 		
