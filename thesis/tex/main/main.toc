@@ -5,7 +5,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Multi-dimensional integration in HEP}{3}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}MC methos for multi-dimensional integration}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.1}MC methods for multi-dimensional integration}{3}{section.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1.1}A first example of Monte Carlo integration}{3}{subsection.1.1.1}%
 \defcounter {refsection}{0}\relax 
@@ -17,7 +17,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}HEP and multi-dimensional integration}{8}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Cross Section and Decay Rates}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Cross section and decay rates}{8}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}The $S$-matrix formalism}{9}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 

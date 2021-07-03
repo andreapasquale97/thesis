@@ -13,7 +13,7 @@ dims = 3
 n_calls = int(1e7)
 vegas_instance = VegasFlow(dims, n_calls)
 \end{minted}
-\item Compile the integrand function. Obviously the user need to specify to the integrator which function will be integrated. The integrand can be implemented as a simple python function that accepts three arguments: the number of dimensions \texttt{n\_dim}, the weight of each sampled point \texttt{weight} and an array of random numbers \texttt{xarr}.
+\item Compile the integrand function. Obviously the user needs to specify to the integrator which function will be integrated. The integrand can be implemented as a simple python function that accepts three arguments: the number of dimensions \texttt{n\_dim}, the weight of each sampled point \texttt{weight} and an array of random numbers \texttt{xarr}.
 \begin{minted}[fontsize=\footnotesize]{python}
 import tensorflow as tf
 	
@@ -87,7 +87,7 @@ coef -= (n100 + 1) * n100 / 2.0
 return pref * tf.exp(-coef)
 \end{minted}
 
-By adding \texttt{None} to the signature we allow \texttt{TensorFlow} to build only one graph corresponding to the function \texttt{symgauss}, avoiding the creation of multiple graphs for the same function (\emph{retracing}) .
+By adding \texttt{None} to the signature we allow \texttt{TensorFlow} to build only one graph corresponding to the function \texttt{symgauss}, avoiding the creation of multiple graphs for the same function (\emph{retracing}).
 
 After that the integration is performed exactly in the same way using the method \texttt{run\_integration(n\_iter)}.
 

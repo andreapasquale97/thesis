@@ -1,27 +1,27 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
-[1] Config.pm:307> INFO - Logfile is 'main.blg'
-[126] biber-darwin:322> INFO - === Sab Giu 26, 2021, 11:04:32
-[171] Biber.pm:415> INFO - Reading 'main.bcf'
-[331] Biber.pm:940> INFO - Using all citekeys in bib section 0
-[350] Biber.pm:4256> INFO - Processing section 0
-[351] Utils.pm:75> INFO - Globbing data source 'bib.bib'
-[352] Utils.pm:91> INFO - Globbed data source 'bib.bib' to bib.bib
-[372] Biber.pm:4455> INFO - Looking for bibtex format file 'bib.bib' for section 0
-[378] bibtex.pm:1653> INFO - LaTeX decoding ...
-[474] bibtex.pm:1471> INFO - Found BibTeX data source 'bib.bib'
-[479] Utils.pm:304> WARN - Duplicate entry key: 'Bendavid:2017zhk' in file 'bib.bib', skipping ...
-[510] Utils.pm:304> WARN - month field 'Oct' in entry 'Dixon:1613349' is not an integer - this will probably not sort properly.
-[689] Utils.pm:304> WARN - month field 'Jun' in entry 'Cruz_Martinez_2018' is not an integer - this will probably not sort properly.
-[821] Utils.pm:304> WARN - month field 'Dec' in entry 'Carrazza_2020' is not an integer - this will probably not sort properly.
-[829] Utils.pm:304> WARN - month field 'Jul' in entry 'Carrazza_2021' is not an integer - this will probably not sort properly.
-[877] Utils.pm:304> WARN - month field 'May' in entry 'ATL-SOFT-PUB-2021-001' is not an integer - this will probably not sort properly.
-[883] Utils.pm:304> WARN - ISBN '978-1-107-64525-7, 978-1-107-64525-7, 978-0-521-85533-4, 978-1-139-09782-6' in entry 'Collins:2011zzd' is invalid - run biber with '--validate_datamodel' for details.
-[903] Utils.pm:304> WARN - ISBN '978-0-511-82328-2, 978-0-521-54589-1' in entry 'Ellis:1991qj' is invalid - run biber with '--validate_datamodel' for details.
-[936] Utils.pm:304> WARN - month field 'Sep' in entry 'Brucherseifer_2014' is not an integer - this will probably not sort properly.
-[997] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[997] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[997] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[997] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[1052] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1101] bbl.pm:755> INFO - Output to main.bbl
-[1101] Biber.pm:128> INFO - WARNINGS: 9
+[0] Config.pm:307> INFO - Logfile is 'main.blg'
+[122] biber-darwin:322> INFO - === Gio Lug  1, 2021, 13:01:54
+[158] Biber.pm:415> INFO - Reading 'main.bcf'
+[316] Biber.pm:940> INFO - Using all citekeys in bib section 0
+[336] Biber.pm:4256> INFO - Processing section 0
+[338] Utils.pm:75> INFO - Globbing data source 'bib.bib'
+[339] Utils.pm:91> INFO - Globbed data source 'bib.bib' to bib.bib
+[359] Biber.pm:4455> INFO - Looking for bibtex format file 'bib.bib' for section 0
+[366] bibtex.pm:1653> INFO - LaTeX decoding ...
+[462] bibtex.pm:1471> INFO - Found BibTeX data source 'bib.bib'
+[468] Utils.pm:304> WARN - Duplicate entry key: 'Bendavid:2017zhk' in file 'bib.bib', skipping ...
+[505] Utils.pm:304> WARN - month field 'Sep' in entry 'Brucherseifer_2014' is not an integer - this will probably not sort properly.
+[664] Utils.pm:304> WARN - month field 'Dec' in entry 'Carrazza_2020' is not an integer - this will probably not sort properly.
+[672] Utils.pm:304> WARN - ISBN '978-0-511-82328-2, 978-0-521-54589-1' in entry 'Ellis:1991qj' is invalid - run biber with '--validate_datamodel' for details.
+[687] Utils.pm:304> WARN - month field 'Jun' in entry 'Cruz_Martinez_2018' is not an integer - this will probably not sort properly.
+[709] Utils.pm:304> WARN - ISBN '978-1-107-64525-7, 978-1-107-64525-7, 978-0-521-85533-4, 978-1-139-09782-6' in entry 'Collins:2011zzd' is invalid - run biber with '--validate_datamodel' for details.
+[856] Utils.pm:304> WARN - month field 'Oct' in entry 'Dixon:1613349' is not an integer - this will probably not sort properly.
+[865] Utils.pm:304> WARN - month field 'Jul' in entry 'Carrazza_2021' is not an integer - this will probably not sort properly.
+[872] Utils.pm:304> WARN - month field 'May' in entry 'ATL-SOFT-PUB-2021-001' is not an integer - this will probably not sort properly.
+[990] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[991] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[991] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[991] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[1045] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1092] bbl.pm:755> INFO - Output to main.bbl
+[1093] Biber.pm:128> INFO - WARNINGS: 9

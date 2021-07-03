@@ -1696,6 +1696,50 @@
       \verb https://doi.org/10.5281/zenodo.4903010
       \endverb
     \endentry
+    \entry{Carrazza:2020qwu}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
+           family={Carrazza},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e1d0918cc2b061a7688d9333a42d734a}{%
+           family={Cruz-Martinez},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={Juan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ee8dddd87b207e6b999f59a7e5e44a31}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{fullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{bibnamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{authorbibnamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{authornamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \strng{authorfullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Comput. Phys. Commun.}
+      \field{title}{{PDFFlow: Parton distribution functions on GPU}}
+      \field{volume}{264}
+      \field{year}{2021}
+      \field{pages}{107995}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2021.107995
+      \endverb
+      \verb{eprint}
+      \verb 2009.06635
+      \endverb
+    \endentry
     \entry{Gao:2020vdv}{article}{}
       \name{author}{3}{}{%
         {{hash=4abb00fb4eeeb2f40342ba10fbb79fb4}{%
@@ -1739,51 +1783,6 @@
       \endverb
       \verb{eprint}
       \verb 2001.05486
-      \endverb
-    \endentry
-    \entry{Carrazza:2020qwu}{article}{}
-      \name{author}{3}{}{%
-        {{hash=ba52b2df4eb4eca4017ffaf23e227cb7}{%
-           family={Carrazza},
-           familyi={C\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod}}}%
-        {{hash=e1d0918cc2b061a7688d9333a42d734a}{%
-           family={Cruz-Martinez},
-           familyi={C\bibinithyphendelim M\bibinitperiod},
-           given={Juan\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=ee8dddd87b207e6b999f59a7e5e44a31}{%
-           family={Rossi},
-           familyi={R\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{fullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{bibnamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{authorbibnamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{authornamehash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \strng{authorfullhash}{d9b1918dda0db99bdbf1b9fbe9db988d}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ph}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{Comput. Phys. Commun.}
-      \field{title}{{PDFFlow: Parton distribution functions on GPU}}
-      \field{volume}{264}
-      \field{year}{2021}
-      \true{nocite}
-      \field{pages}{107995}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.cpc.2021.107995
-      \endverb
-      \verb{eprint}
-      \verb 2009.06635
       \endverb
     \endentry
     \entry{juan_cruz_martinez_2020_3964191}{software}{}
