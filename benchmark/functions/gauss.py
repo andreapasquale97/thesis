@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 from vegasflow.configflow import DTYPE,DTYPEINT,float_me
 
-dim = 12
+dim = 8
 @tf.function(input_signature=[
                    tf.TensorSpec(shape=[None,dim], dtype=DTYPE),
                    tf.TensorSpec(shape=[], dtype=DTYPEINT),

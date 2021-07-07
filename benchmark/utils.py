@@ -212,23 +212,25 @@ def dim_comparison(device=str, show='time'):
     width = 0.8 / len(integrands)
     Pos = np.array(range(4)) - 2*width
 
-    new_labels = ['Drell-Yan LO', 'Single top LO', 'gauss4d', 'vfb higgs LO', 'gauss8d', 'gauss12d']
+    new_labels = ['Drell-Yan LO', 'Single top LO', 'gauss4d', 'VBF Higgs LO', 'gauss8d', 'gauss12d']
     fig, ax = plt.subplots(figsize=(15, 8))
     for i in range(len(integrands)):
         ax.bar(Pos + i * width, integrands[i], width = width, label=new_labels[i%6])
     if show == 'time':
-        ax.set_ylabel('average time per iterations (s)')
+        ax.set_ylabel('average time per iterations (s)',fontsize=15)
     else:
-        ax.set_ylabel('iterations')
+        ax.set_ylabel('iterations',fontsize=15)
 
     if device == 'GPU':
-        ax.set_title('Dimensional comparison on NVIDIA Titan V')
+        ax.set_title('Dimensional comparison on NVIDIA Titan V',fontsize=18)
+    elif device == 'CPU':
+        ax.set_title('Dimensional comparison on Intel i9-9980XE',fontsize=18)
     else:
-        ax.set_title('Dimensional comparison - number of iterations')
+        ax.set_title('Dimensional comparison - number of iterations',fontsize=18)
 
     ax.set_xticks(x)
-    ax.set_xticklabels(labels1)
-    ax.legend()
+    ax.set_xticklabels(labels1, fontsize=15)
+    ax.legend(fontsize=14)
 
     fig.tight_layout()
     plt.show()
@@ -489,43 +491,44 @@ def make_histo4(function=str, save=False, title=str):
     not_adaptive = data[0]+data[2]#+data[4]+data[6]
     adaptive = data[1]+data[3]#+data[5]+data[7]
 
-    fig, axs  = plt.subplots(3, 3, sharey='row',figsize=(12, 9))
+    fig, axs  = plt.subplots(3, 3, sharey='row',figsize=(12, 10))
     #fig.text(0.02, 0.5, 'samples/iteration', ha='center', va='center', rotation='vertical')
     df_iter1, df_time1, df_rtol1 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-2,index=index)
     df_iter2, df_time2, df_rtol2 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-3,index=index)
     df_iter3, df_time3, df_rtol3 = prepare_data4(data=not_adaptive,data1=adaptive,rtol=1e-4,index=index)
 
-    fig.suptitle(title, fontsize=14,  y=0.95)
+    fig.suptitle(title, fontsize=13,y=0.98)
 
-    axs[0,0] = df_time1.plot.barh(ax=axs[0,0],legend=False)
-    axs[0,1] = df_iter1.plot.barh(ax=axs[0,1],legend=False)
-    axs[0,2] = df_rtol1.plot.barh(ax=axs[0,2],legend=False)
+    axs[0,0] = df_time1.plot.barh(ax=axs[0,0],legend=False,fontsize=12)
+    axs[0,1] = df_iter1.plot.barh(ax=axs[0,1],legend=False,fontsize=12)
+    axs[0,2] = df_rtol1.plot.barh(ax=axs[0,2],legend=False,fontsize=12)
     axs[0,2].axvline(0.01,color='black',ls='--')
     axs[0,2].ticklabel_format(style = 'sci', axis='x',  scilimits=(-2,-2))
 
-    axs[1,0] = df_time2.plot.barh(ax=axs[1,0],legend=False)
-    axs[1,1] = df_iter2.plot.barh(ax=axs[1,1],legend=False)
-    axs[1,2] = df_rtol2.plot.barh(ax=axs[1,2],legend=False)
+    axs[1,0] = df_time2.plot.barh(ax=axs[1,0],legend=False,fontsize=12)
+    axs[1,1] = df_iter2.plot.barh(ax=axs[1,1],legend=False,fontsize=12)
+    axs[1,2] = df_rtol2.plot.barh(ax=axs[1,2],legend=False,fontsize=12)
     axs[1,2].axvline(0.001,color='black',ls='--')
     axs[1,2].ticklabel_format(style = 'sci', axis='x', scilimits=(-3,-3))
 
-    axs[2,0] = df_time3.plot.barh(ax=axs[2,0],legend=False)
-    axs[2,1] = df_iter3.plot.barh(ax=axs[2,1],legend=False)
-    axs[2,2] = df_rtol3.plot.barh(ax=axs[2,2],legend=False)
+    axs[2,0] = df_time3.plot.barh(ax=axs[2,0],legend=False,fontsize=12)
+    axs[2,1] = df_iter3.plot.barh(ax=axs[2,1],legend=False,fontsize=12)
+    axs[2,2] = df_rtol3.plot.barh(ax=axs[2,2],legend=False,fontsize=12)
     axs[2,2].axvline(0.0001,color='black',ls='--')
     axs[2,2].ticklabel_format(style = 'sci', axis='x', scilimits=(-4,-4))
 
-    axs[2,0].set_xlabel('average time per iteration (s)')
-    axs[2,1].set_xlabel('iterations')
-    axs[2,2].set_xlabel('percent uncertainty')
+    axs[2,0].set_xlabel('average time per iteration (s)',fontsize=13)
+    axs[2,1].set_xlabel('iterations',fontsize=13)
+    axs[2,2].set_xlabel('percent uncertainty',fontsize=13)
 
 
     handles, labels = axs[0,0].get_legend_handles_labels()
-    fig.legend(handles, labels,ncol=4, loc='lower center')
+    fig.legend(handles, labels,ncol=4, loc='lower center',fontsize=14)
     outfile = f'plots_CPU_GPU_FINAL/{function}_final'
     if save:
         plt.savefig(outfile,bbox_inches='tight')
     else:
+        plt.subplots_adjust(top=0.95) 
         plt.show()        
 
     

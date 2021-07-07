@@ -7,8 +7,8 @@ if __name__ == '__main__':
     #make_histo("simulation_improved/higgs/lo_final_beta_025.json",outfile="lo_training_beta_025",save=True,showPlus=True)
     #make_histo3("simulation_max_iter_200/drellyan.json",outfile="new_plots/max_iterations_200/drellyan", save=True,title="Perfomance comparison for DrellYan")
     
-    #make_histo4(function='pineappl',save=True,title='Comparison for Drell-Yan process at LO')
-    dim_comparison(device='CPU', show='iter')
+    #make_histo4(function='gauss12d',save=False,title='Comparison for Gaussian Integral in 12 dimensions')
+    dim_comparison(device='GPU')
     '''
     make_histo3("simulation_CPU/higgs_REAL.json",  
                 outfile="CPU_plots/higgs_REAL",
