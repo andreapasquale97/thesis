@@ -84,17 +84,42 @@ The variance of $I_\text{MC}$  can be computed using the previously sampled poin
 \textbf{Advantage of MC}: the error depends only on $N$ $\nRightarrow$ quadrature integration
 \vspace{0.3cm}
 
-\textbf{Aim of MC algorithms}: reduce the variance in the integral estimate through
-\begin{itemize}
-	\item stratified sampling techniques $\Rightarrow$ divide the integration region
-	\item importance sampling techniques $\Rightarrow$ sample using non-uniform distribution
-\end{itemize}
-
-
 	
 	
 \end{frame}
 
+\begin{frame}{Reducing the variance}
+	\scriptsize
+	
+	\textbf{Aim of MC algorithms}: reduce the variance in the integral estimate through
+	\begin{itemize}
+		\item stratified sampling techniques $\Rightarrow$ divide the integration region
+		\item importance sampling techniques $\Rightarrow$ sample using non-uniform distribution
+	\end{itemize}
+	\tiny
+			\begin{equation}
+	\int_0^1 d^2 x \sum_{i=1}^3 e^{-50 |\textbf{x}- \textbf{r}_i|} \quad  \textbf{r}_1 = (0.23, 0.23)\ , \quad  \textbf{r}_2 = (0.39, 0.39)\ ,  \quad  	\textbf{r}_3 =(0.74, 0.74) 
+\end{equation}
+\vspace{-0.8cm}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\includegraphics[height=5cm]{VEGAS.png}
+				\caption{\texttt{VEGAS}: importance sampling grid}
+			\end{figure}
+			
+		\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[height=5cm]{MISER.png}
+			\caption{\texttt{MISER}:  partition of the integration volume}
+		\end{figure}
+	
+		
+	\end{column}
+	\end{columns}
+
+\end{frame}
 
 
 
@@ -949,24 +974,18 @@ We would like to answer the following questions:
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Implementation of \texttt{VegasFlowPlus}}
-	\scriptsize
-	\textbf{Details of the implementation}
-	\begin{itemize}
-		\item Class derived from the \texttt{VegasFlow} integrator (same importance sampling algorithm)
-		\item Adding stratified sampling : \texttt{generate\_samples\_in\_hypercubes} + other modifications
-		\item New feature of \texttt{VEGAS+}: \texttt{redistribute\_samples}
-	\end{itemize}
-	
-	\vspace{2cm}
-	
-	\textbf{Problems during the implementation}:
-	\begin{itemize}
-		\item Number of events not constant $\Rightarrow$ require \texttt{input\_signature}
-		\item Memory problem caused by \texttt{tf.repeat} $\Rightarrow$ limit on number of hypercubes
-	\end{itemize}
-\end{frame}
 
 	
-	
+\begin{frame}{DY at LO}
+	\scriptsize
+	The first example that we consider is the Drell-Yan (DY) process, which consists in an inclusive production of high-mass lepton pairs in hadron-hadron collision:
+	\begin{equation*}
+		h_A + h_B \rightarrow ( \gamma^* + l \bar{l}) + X  \ ,
+	\end{equation*}
+	where $X$ is an undetected final state.
+	\begin{center}
+			\includegraphics[width=0.4\textwidth]{../tex/images/Drell-Yan-process-a-quark-of-one-hadron-and-an-antiquark-of-another-hadron-annihilate.png}
+	\end{center}
+
+\end{frame}	
 \end{document}
