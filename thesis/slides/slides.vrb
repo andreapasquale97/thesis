@@ -2,27 +2,13 @@
 \scriptsize
 \texttt{VegasFlow}: implementation of the Vegas importance sampling using hardware acceleration.
 
-This is possible thanks to the \texttt{TensorFlow} library which enable us to distribute python code to hardware acceleration devices.
-		\begin{columns}
-		\begin{column}{0.5 \textwidth}
-			\tiny
-			Better computational times for physical integrand!
-			\vspace{-0.3cm}
-			\begin{figure}
-				\includegraphics[ width = \columnwidth]{../tex/images/vf_singletop.png}				
-			\end{figure}
-		\end{column}
-		\begin{column}{0.5 \textwidth}
-			\begin{figure}
-				\vspace{-0.6cm}
-				\tiny
-				Advantage of graph implementation!
-				
-				\includegraphics[ width = \columnwidth]{../tex/images/graph_mode.png}
-			\end{figure}
-		\end{column}
-		
-	\end{columns}
+This is possible thanks to the \texttt{TensorFlow} library which enables us to distribute python code to hardware acceleration devices.
+\begin{center}
+				\begin{figure}
+		\includegraphics[ height= 5cm]{../tex/images/vf_singletop.png}				
+	\end{figure}
+\end{center}
+
 
 Our aim is to implement the \texttt{VEGAS+} algorithm within the \texttt{VegasFlow} library, empowering the algorithm by enabling to run the integration in GPUs.
 

@@ -185,11 +185,13 @@ every term is computed as
 High-dimensional integrals arise from:
 \begin{itemize}
 	\item  $d\Phi_n(p_1,\dots, p_n) $  :  $D_\text{integral} = 3 \times n - 4$ 
-	\item $\mathcal{M}^{\text{L- loops}}(p_1,\dots, p_n)$ :  $D_\text{integral} = 4 \times l$ 
+	\item $\mathcal{M}^{\text{L-loops}}(p_1,\dots, p_n)$ :  $D_\text{integral} = 4 \times L$ 
 \end{itemize}
 \vspace{0.5cm}
 
-Higher order terms involve more looops and more particles resulting in complicated integrals to evaluate. Futhermore, they are usually peaked in small region of the integration volume near kinematics divergences which are difficult to sample.
+Higher order terms $\Longrightarrow$ more loops and more particles $\Longrightarrow$ complicated integrals 
+
+Futhermore, they are usually peaked in small region of the integration volume near kinematics divergences which are difficult to sample.
 \end{frame}
 
 
@@ -382,27 +384,13 @@ We focus our analysis on \texttt{VEGAS+}, a new algorithm which employs a novel 
 	\scriptsize
 \texttt{VegasFlow}: implementation of the Vegas importance sampling using hardware acceleration.
 
-This is possible thanks to the \texttt{TensorFlow} library which enable us to distribute python code to hardware acceleration devices.
-		\begin{columns}
-		\begin{column}{0.5 \textwidth}
-			\tiny
-			Better computational times for physical integrand!
-			\vspace{-0.3cm}
-			\begin{figure}
-				\includegraphics[ width = \columnwidth]{../tex/images/vf_singletop.png}				
-			\end{figure}
-		\end{column}
-		\begin{column}{0.5 \textwidth}
-			\begin{figure}
-				\vspace{-0.6cm}
-				\tiny
-				Advantage of graph implementation!
-				
-				\includegraphics[ width = \columnwidth]{../tex/images/graph_mode.png}
-			\end{figure}
-		\end{column}
-		
-	\end{columns}
+This is possible thanks to the \texttt{TensorFlow} library which enables us to distribute python code to hardware acceleration devices.
+\begin{center}
+				\begin{figure}
+		\includegraphics[ height= 5cm]{../tex/images/vf_singletop.png}				
+	\end{figure}
+\end{center}
+
 
 Our aim is to implement the \texttt{VEGAS+} algorithm within the \texttt{VegasFlow} library, empowering the algorithm by enabling to run the integration in GPUs.
 
@@ -469,7 +457,7 @@ We would like to answer the following questions:
 \begin{itemize}
 	\item Can \texttt{VegasFlowPlus} perform better than \texttt{VegasFlow}?
 	\item Can \texttt{VegasFlowPlus} benefit from hardware acceleration?
-	\item Can we provide the user with a \emph{recipe} describing which integrators works best depending on the integral to compute?
+	\item Can we provide the user with a \emph{recipe} describing which integrator works best depending on the integral to compute?
 \end{itemize}	
 	
 \end{frame}
@@ -715,17 +703,38 @@ We would like to answer the following questions:
 	the relative computational costs.
 	
 	We focus on implementing the \texttt{VEGAS+} algorithm and we empower it by taking advantage of hardware acceleration.
+	\vspace{0.5cm}
 	
-	The results of the benchmark show  that:
+	The new algorithm exhibits the following:
+\vspace{0.2cm}
+	\begin{columns}
+		\begin{column}{0.5 \textwidth}
+			\textbf{PRO:}
+			\begin{itemize}
+				\item effective with  physical integrals
+				\item fastest integrator on CPU
+			\end{itemize}
+		\end{column}
+			\begin{column}{0.5 \textwidth}
+		\textbf{CONS:}
+		\begin{itemize}
+			\item less effective with sharp peaks
+			\item lower speed-up factors on GPU
+		\end{itemize}
+	\end{column}
+	\end{columns}
+
+\vspace{0.5cm}
+	
+\textbf{Result benchmark}:
 	
 	\begin{itemize}
 		\item the implementation benefits from highly parallel scenarios $\Rightarrow$ speed-up factors up to 10
-		\item on CPU VEGAS+ is the fastest integrator
-		\item new integrators more accurate when dealing with HEP integrands (Higgs or Single Top)
-		\item classic VEGAS, a variation of VEGAS+, is the most efficient integrator
+
+		\item classic VEGAS, as a  variation of VEGAS+, is the most efficient integrator
 		
 	\end{itemize}
-\vspace{1cm}
+\vspace{0.5cm}
 
 \textbf{Future developments:}
 \begin{itemize}
