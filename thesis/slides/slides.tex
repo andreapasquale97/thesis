@@ -68,9 +68,9 @@
 	\scriptsize
 Monte Carlo (MC) integration enables us to to solve complex multi-dimensional integrals
 \begin{equation}
-	I = \int_{V}   f(\textbf{x}) d \textbf{x} \ 
+	I = \int_{V}   f(\textbf{x}) d^n\textbf{x} \ 
 \end{equation}
-by simply sampling the function $f$ in $N$ random points:
+by simply sampling the function $f$ in $N$ random points in the $n$-dimensional space $V$
 \begin{equation}
 	I \approx I_{\text{MC}} = V \frac{1}{N} \sum_{\textbf{x}_i \in V} f(\textbf{x}_i) = V \langle f \rangle \ 
 \end{equation}
@@ -81,8 +81,13 @@ The variance of $I_\text{MC}$  can be computed using the previously sampled poin
 	- I^2_{\text{MC}}\Big] \Rightarrow \sigma_\text{MC} \sim \frac{1}{\sqrt{N}}
 \end{equation}
 
-\textbf{Advantage of MC}: the error depends only on $N$ $\nRightarrow$ quadrature integration
 \vspace{0.3cm}
+
+\textbf{Advantage of MC} with respect to the standard quadrature integration:
+\begin{itemize}
+	\item $\sigma_\text{MC}$ does not depend on the dimension $n$ but only on the number of samples $N$
+	\item MC integration works also with ill-defined functions
+\end{itemize}
 
 	
 	
@@ -174,24 +179,24 @@ The variance of $I_\text{MC}$  can be computed using the previously sampled poin
 
 \begin{frame}{The Standard Model}
 	\scriptsize
-	In the Standard Model we can predict the value of an observable as a series of terms
+	In the Standard Model we can predict the value of an observable, such as the cross section $\sigma$, as 
+	\vspace{0.3cm}
+	
 	\begin{equation}
-		d\sigma = d\sigma^{\text{LO}} + d\sigma^{\text{NLO}} + d\sigma^{\text{NNLO}} \dots  \ .
+		\sigma \sim \int  \underbrace{|\mathcal{M}(p_1,\dots, p_n)|^2}_{\substack{\text{scattering} \\ \text{amplitude}}} \times \underbrace{d\Phi_n(p_1,\dots, p_n)}_{\substack{\text{phase-space}\\ \text{density}}}  
 	\end{equation}
-every term is computed as
-\begin{equation}
-	d\sigma \sim \underbrace{|\mathcal{M}(p_1,\dots, p_n)|^2}_{\substack{\text{scattering} \\ \text{amplitude}}} \times \underbrace{d\Phi_n(p_1,\dots, p_n)}_{\substack{\text{phase-space}\\ \text{density}}}  
-\end{equation}
+\vspace{0.5cm}
+
 High-dimensional integrals arise from:
 \begin{itemize}
 	\item  $d\Phi_n(p_1,\dots, p_n) $  :  $D_\text{integral} = 3 \times n - 4$ 
 	\item $\mathcal{M}^{\text{L-loops}}(p_1,\dots, p_n)$ :  $D_\text{integral} = 4 \times L$ 
 \end{itemize}
-\vspace{0.5cm}
+\vspace{1cm}
 
 Higher order terms $\Longrightarrow$ more loops and more particles $\Longrightarrow$ complicated integrals 
 
-Futhermore, they are usually peaked in small region of the integration volume near kinematics divergences which are difficult to sample.
+Such integrals are usually peaked in small region of the integration volume near kinematics divergences which are difficult to sample.
 \end{frame}
 
 
@@ -230,7 +235,7 @@ The current integration algorithms  will not be able to produce theoretical pred
 		\textbf{Question}:
 		\begin{itemize}
 			\item How can we obtain high-accuracy predictions 
-			at acceptable CPU costs and computational times?
+			at acceptable performances and computational times?
 		\end{itemize}
 
 
@@ -400,23 +405,23 @@ Our aim is to implement the \texttt{VEGAS+} algorithm within the \texttt{VegasFl
 	
 \end{frame}
 
-\begin{frame}{Implementation of \texttt{VegasFlowPlus}}
-	\scriptsize
-	\textbf{Details of the implementation}
-	\begin{itemize}
-		\item Class derived from the \texttt{VegasFlow} integrator (same importance sampling algorithm)
-		\item Adding stratified sampling : \texttt{generate\_samples\_in\_hypercubes} + other modifications
-		\item New feature of \texttt{VEGAS+}: \texttt{redistribute\_samples}
-	\end{itemize}
-	
-	\vspace{2cm}
-	
-	\textbf{Problems during the implementation}:
-	\begin{itemize}
-		\item Number of events not constant $\Rightarrow$ require \texttt{input\_signature}
-		\item Memory problem caused by \texttt{tf.repeat} $\Rightarrow$ limit on number of hypercubes
-	\end{itemize}
-\end{frame}
+%\begin{frame}{Implementation of \texttt{VegasFlowPlus}}
+%	\scriptsize
+%	\textbf{Details of the implementation}
+%	\begin{itemize}
+%		\item Class derived from the \texttt{VegasFlow} integrator (same importance sampling algorithm)
+%		\item Adding stratified sampling : \texttt{generate\_samples\_in\_hypercubes} + other modifications
+%		\item New feature of \texttt{VEGAS+}: \texttt{redistribute\_samples}
+%	\end{itemize}
+%	
+%	\vspace{2cm}
+%	
+%	\textbf{Problems during the implementation}:
+%	\begin{itemize}
+%		\item Number of events not constant $\Rightarrow$ require \texttt{input\_signature}
+%		\item Memory problem caused by \texttt{tf.repeat} $\Rightarrow$ limit on number of hypercubes
+%	\end{itemize}
+%\end{frame}
 
 
 
@@ -426,7 +431,7 @@ Our aim is to implement the \texttt{VEGAS+} algorithm within the \texttt{VegasFl
 	\scriptsize
 	Integration setup:
 	\begin{itemize}
-		\item warm-up of 5 iterations with 1M samples with grid refinement ($\alpha=1.5$)
+		\item warm-up of 5 iterations with 1M samples with grid refinement 
 		\item 1M samples for each iteration after the warm-up 
 	\end{itemize}
 \tiny
@@ -448,8 +453,8 @@ Our aim is to implement the \texttt{VEGAS+} algorithm within the \texttt{VegasFl
 
 Hardware setup:
 \begin{itemize}
-	\item professional-grade CPU: Intel(R) Core(TM) i9-9980XE - 36 threads
-	\item professional-grade GPU: NVIDIA Titan V
+	\item professional-grade CPU: Intel(R) Core(TM) i9-9980XE - 36 threads - 128 GB RAM
+	\item professional-grade GPU: NVIDIA Titan V - 12 GB
 \end{itemize}
 
 \vspace{0.5cm}
@@ -468,13 +473,14 @@ We would like to answer the following questions:
 \begin{columns}
 	\begin{column}{0.6 \textwidth}
 		\begin{figure}
-			\includegraphics[ height=7.2cm]{gauss4d_final.png}
+			\includegraphics[ height=7cm]{gauss4d_final.png}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.4 \textwidth}
 		\vspace{1cm} 
-		\begin{itemize}
+		\begin{itemize} \setlength\itemsep{5em}
 			\item classic VEGAS is the most accurate integrator followed by the importance sampling
+			
 			\item the VEGAS+ integrators are not effective since we are dealing with an integrand with a non-diagonal sharp peak 
 			\item benefits when running on GPU:  up to 3x improvement
 		\end{itemize}
@@ -491,14 +497,14 @@ We would like to answer the following questions:
 \begin{columns}
 	\begin{column}{0.6 \textwidth}
 		\begin{figure}
-			\includegraphics[ height=7.2cm]{gauss8d_final.png}
+			\includegraphics[ height=7cm]{gauss8d_final.png}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.4 \textwidth}
 		\vspace{1cm} 
-		\begin{itemize}
+		\begin{itemize}\setlength\itemsep{5em}
 			\item trend similar to the previous case with worst perfomance of VEGAS+ integrators
-			\item VEGAS+ algorithm fastest when running on CPU
+			\item VEGAS+ introduces a trade-off: lowering the number of events is very effective on CPU, while it has negative effects on GPU since increases the number of iterations
 			\item significant improvements in the computational times thanks to the graph implementation and the larger number of iterations
 		\end{itemize}
 	\end{column}
@@ -513,12 +519,12 @@ We would like to answer the following questions:
 \begin{columns}
 	\begin{column}{0.6 \textwidth}
 		\begin{figure}
-			\includegraphics[ height=7.2cm]{gauss12d_final.png}
+			\includegraphics[ height=7cm]{gauss12d_final.png}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.4 \textwidth}
 		\vspace{1cm} 
-		\begin{itemize}
+		\begin{itemize}\setlength\itemsep{5em}
 			\item classic VEGAS and importance sampling reach the accuracy required using the same number of iterations
 			\item worst performance of the VEGAS+ algorithm
 			\item speed-up factors: importance sampling 11.5, classic VEGAS 10.1, VEGAS/VEGAS+ hybrid 14.8 and VEGAS+ 7.8.
@@ -537,15 +543,15 @@ We would like to answer the following questions:
 	\begin{columns}
 		\begin{column}{0.6 \textwidth}
 			\begin{figure}
-				\includegraphics[ height = 7.2 cm]{pineappl_final.png}
+				\includegraphics[ height = 7 cm]{pineappl_final.png}
 
 			\end{figure}
 		\end{column}
 		\begin{column}{0.4 \textwidth}
 			\vspace{1cm} 
-			\begin{itemize}
+			\begin{itemize}\setlength\itemsep{5em}
 				\item physical integral with dimension 3
-				\item classic VEGAS is the best performing integrator
+				\item classic VEGAS is the most efficient integrator
 				\item importance sampling is the fastest integrator both on CPU and GPU
 				\item the worst performance of VEGAS+ suggests a that the integral has a sharp peak easily found by the VEGAS grid
 			\end{itemize}
@@ -570,16 +576,15 @@ We would like to answer the following questions:
 	\begin{columns}
 		\begin{column}{0.6 \textwidth}
 			\begin{figure}
-				\includegraphics[ height = 7.2 cm]{singletop_final.png}
+				\includegraphics[ height = 7 cm]{singletop_final.png}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.4 \textwidth}
 			\vspace{1cm} 
-			\begin{itemize}
+			\begin{itemize}\setlength\itemsep{5em}
 				\item physical integral of dimension 3
-				\item the importance sampling is by far the less efficient integrator
-				\item the adaptive stratified sampling of VEGAS+ is particulary effective for this integrand
-				\item on GPU the importance sampling is still the fastest despite the worst performances
+				\item on GPU the importance sampling is still the fastest, when looking at the average time per iteration, despite the worst performances
+				\item again VEGAS+ more fast on CPU due to the lower number of events
 			\end{itemize}
 		\end{column}
 		
@@ -596,16 +601,16 @@ We would like to answer the following questions:
 	\begin{columns}
 		\begin{column}{0.6 \textwidth}
 			\begin{figure}
-				\includegraphics[ height=7.2cm]{higgs_final.png}
+				\includegraphics[ height=7cm]{higgs_final.png}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.4 \textwidth}
 			\vspace{1cm} 
-			\begin{itemize}
+			\begin{itemize}\setlength\itemsep{5em}
 				\item physical integral of dimension 6 with convolution with PDFs
 				\item classic VEGAS is the most efficient integrator overall
 				\item significant benefits from GPU run, with speed-up factors between 4 and 6
-				\item new algorithms more efficient than the importance sampling
+				\item all the algorithms are competitive
 			\end{itemize}
 		\end{column}
 		
@@ -630,10 +635,10 @@ We would like to answer the following questions:
 	\begin{column}{0.3\textwidth}
 					\vspace{0.7cm}
 					
-		\begin{itemize}
+		\begin{itemize}\setlength\itemsep{5em}
 
 			\item VEGAS+ algorithms with shorter times when dealing with complex physical integrands such as Higgs or Top
-		    \item VEGAS+ is the fastest when dealing with a 12-dim Gauss distribution
+		    \item VEGAS+ is the fastest when dealing with a 12-dim Gauss distribution due to the lower number of events
 	\end{itemize}
 	\end{column}
 	\end{columns}
@@ -655,10 +660,10 @@ We would like to answer the following questions:
 		\begin{column}{0.3 \textwidth}
 			\vspace{0.7cm}
 			
-			\begin{itemize}
+			\begin{itemize}\setlength\itemsep{5em}
 				
 				\item fastest integrator importance sampling
-				\item for VBF Higgs the VEGAS+ algorithms are faster than the importance sampling
+				\item VEGAS+ is competitive for more complicated integrals such as the VBF Higgs LO
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -681,9 +686,9 @@ We would like to answer the following questions:
 		\end{column}
 		\hspace{-0.5cm}
 		\begin{column}{0.3 \textwidth}
-			\vspace{1cm}
+			\vspace{0.6cm}
 			
-			\begin{itemize}
+			\begin{itemize}\setlength\itemsep{3em}
 				
 				\item classic VEGAS is the most efficient algorithm
 				\item great performance of the new algorithms for the single Top production
@@ -731,7 +736,7 @@ We would like to answer the following questions:
 	\begin{itemize}
 		\item the implementation benefits from highly parallel scenarios $\Rightarrow$ speed-up factors up to 10
 
-		\item classic VEGAS, as a  variation of VEGAS+, is the most efficient integrator
+		\item the choice of the algorithm depends both on the integrand and on the hardware
 		
 	\end{itemize}
 \vspace{0.5cm}
